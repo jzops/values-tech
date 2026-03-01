@@ -3,8 +3,8 @@ import { Metadata } from 'next'
 import { people, companies, getStanceCountForEntity } from '@/lib/mock-data'
 
 export const metadata: Metadata = {
-  title: 'People — values.tech',
-  description: 'Browse tech executives and their documented public stances on important issues.',
+  title: 'People — receipts.tech',
+  description: 'Check the receipts on tech executives. Documented public stances on important issues.',
 }
 
 export default function PeoplePage() {

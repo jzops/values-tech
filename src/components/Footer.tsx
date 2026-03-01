@@ -9,7 +9,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <LogoMark className="h-8 w-8 text-gray-900" />
             <p className="mt-4 text-sm text-gray-600 max-w-xs">
-              Holding tech accountable by surfacing what they actually stand for.
+              Before they send you their receipts, check theirs.
             </p>
           </div>
 
@@ -84,7 +84,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-gray-200">
           <p className="text-xs text-gray-500 text-center">
-            All data sourced from public records. © {new Date().getFullYear()} values.tech
+            All data sourced from public records. © {new Date().getFullYear()} receipts.tech
           </p>
         </div>
       </div>

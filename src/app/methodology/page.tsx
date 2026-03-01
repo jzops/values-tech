@@ -1,18 +1,18 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Methodology — values.tech',
-  description: 'How we research and verify the stances documented on values.tech.',
+  title: 'Methodology — receipts.tech',
+  description: 'How we research and verify the receipts documented on receipts.tech.',
 }
 
 export default function MethodologyPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       <h1 className="text-3xl font-bold text-gray-900 mb-8">Methodology</h1>
-      
+
       <div className="prose prose-gray max-w-none">
         <p className="text-lg text-gray-600 mb-6">
-          Every stance on values.tech is sourced from public records. Here's how we find, 
+          Every receipt on receipts.tech is sourced from public records. Here's how we find,
           verify, and present information.
         </p>
 
@@ -78,7 +78,7 @@ export default function MethodologyPage() {
           <li>A source supporting the correction</li>
         </ul>
         <p className="text-gray-600 mt-4">
-          Email corrections to: <span className="font-mono">corrections@values.tech</span>
+          Email corrections to: <span className="font-mono">corrections@receipts.tech</span>
         </p>
       </div>
     </div>

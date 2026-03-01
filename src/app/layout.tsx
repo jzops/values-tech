@@ -7,17 +7,17 @@ import { Footer } from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'values.tech — What Tech Actually Stands For',
-  description: 'Holding tech companies, VCs, and executives accountable by surfacing what they actually stand for — based on public record.',
+  title: 'receipts.tech — Before they send you their receipts, check theirs.',
+  description: 'Check the receipts on tech companies, VCs, and executives before you take their money, join their company, or use their products.',
   openGraph: {
-    title: 'values.tech — What Tech Actually Stands For',
-    description: 'Holding tech companies, VCs, and executives accountable by surfacing what they actually stand for — based on public record.',
+    title: 'receipts.tech — Before they send you their receipts, check theirs.',
+    description: 'Check the receipts on tech companies, VCs, and executives before you take their money, join their company, or use their products.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'values.tech — What Tech Actually Stands For',
-    description: 'Holding tech companies, VCs, and executives accountable by surfacing what they actually stand for.',
+    title: 'receipts.tech — Before they send you their receipts, check theirs.',
+    description: 'Check the receipts on tech companies, VCs, and executives.',
   },
 }
 

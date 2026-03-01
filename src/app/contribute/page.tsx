@@ -1,23 +1,23 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contribute — values.tech',
-  description: 'Help document what tech companies stand for. Submit tips and sources.',
+  title: 'Contribute — receipts.tech',
+  description: 'Help document the receipts on tech companies. Submit tips and sources.',
 }
 
 export default function ContributePage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       <h1 className="text-3xl font-bold text-gray-900 mb-8">Contribute</h1>
-      
+
       <div className="prose prose-gray max-w-none">
         <p className="text-lg text-gray-600 mb-6">
-          values.tech is built on public information. Help us document what tech really stands for.
+          receipts.tech is built on public information. Help us document what tech really does.
         </p>
 
-        <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Submit a Tip</h2>
+        <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Submit a Receipt</h2>
         <p className="text-gray-600 mb-4">
-          Know about a public stance we haven't documented? Send us:
+          Know about a receipt we haven't documented? Send us:
         </p>
         <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-4">
           <li>The company, person, or VC involved</li>
@@ -26,7 +26,7 @@ export default function ContributePage() {
           <li>The date it happened</li>
         </ul>
         <p className="text-gray-600 mb-4">
-          Email tips to: <span className="font-mono bg-gray-100 px-2 py-1 rounded">tips@values.tech</span>
+          Email tips to: <span className="font-mono bg-gray-100 px-2 py-1 rounded">tips@receipts.tech</span>
         </p>
 
         <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">What We're Looking For</h2>
@@ -79,11 +79,11 @@ export default function ContributePage() {
 
         <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Become a Contributor</h2>
         <p className="text-gray-600 mb-4">
-          We're building a network of trusted contributors—journalists, researchers, 
+          We're building a network of trusted contributors—journalists, researchers,
           and industry insiders who can help us document tech accountability.
         </p>
         <p className="text-gray-600">
-          Interested? Email us at: <span className="font-mono bg-gray-100 px-2 py-1 rounded">contribute@values.tech</span>
+          Interested? Email us at: <span className="font-mono bg-gray-100 px-2 py-1 rounded">contribute@receipts.tech</span>
         </p>
       </div>
     </div>

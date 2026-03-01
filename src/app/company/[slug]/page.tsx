@@ -1,7 +1,9 @@
 import { notFound } from 'next/navigation'
-import { Building2, Globe, Calendar, Users, DollarSign } from 'lucide-react'
+import { Building2, Globe, Calendar, Users, DollarSign, FileText } from 'lucide-react'
 import { StanceCard } from '@/components/StanceCard'
 import { TopicBadge } from '@/components/TopicBadge'
+import { ReceiptCard } from '@/components/ReceiptCard'
+import { ShareButtons } from '@/components/ShareButtons'
 import { Metadata } from 'next'
 import { getCompanyBySlug, getStancesForEntity, getPeopleAtCompany } from '@/lib/mock-data'
 import Link from 'next/link'
@@ -14,11 +16,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const company = getCompanyBySlug(slug)
   if (!company) return { title: 'Company Not Found' }
-  
+
   const stances = getStancesForEntity('company', company.id)
+  const description = `Check the receipts on ${company.name}. ${stances.length} documented stances on layoffs, DEI, remote work, and more.`
+
   return {
-    title: `${company.name} — values.tech`,
-    description: `See what ${company.name} stands for on layoffs, DEI, remote work, and more. ${stances.length} documented stances.`,
+    title: `${company.name} — receipts.tech`,
+    description,
+    openGraph: {
+      title: `${company.name} — receipts.tech`,
+      description,
+      images: [`/api/og/company/${slug}`],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${company.name} — receipts.tech`,
+      description,
+      images: [`/api/og/company/${slug}`],
+    },
   }
 }
 
@@ -128,7 +143,35 @@ export default async function CompanyPage({ params }: Props) {
         </div>
 
         {/* Sidebar */}
-        <div className="lg:col-span-1">
+        <div className="lg:col-span-1 space-y-6">
+          {/* Receipt Card Preview */}
+          {stances.length > 0 && (
+            <div className="bg-gray-50 rounded-xl p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <FileText className="w-5 h-5 text-gray-500" />
+                <h3 className="font-semibold text-gray-900">Receipt Card</h3>
+              </div>
+              <div className="transform scale-[0.5] origin-top-left -mr-[200px] -mb-[200px]">
+                <ReceiptCard
+                  entity={company}
+                  entityType="company"
+                  stances={stances}
+                  variant="square"
+                />
+              </div>
+            </div>
+          )}
+
+          {/* Share Buttons */}
+          <div className="bg-gray-50 rounded-xl p-6">
+            <h3 className="font-semibold text-gray-900 mb-4">Share this receipt</h3>
+            <ShareButtons
+              entityType="company"
+              entitySlug={company.slug}
+              entityName={company.name}
+            />
+          </div>
+
           {/* Key People */}
           {keyPeople.length > 0 && (
             <div className="bg-gray-50 rounded-xl p-6">

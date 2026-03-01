@@ -1,8 +1,10 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { User, Twitter, Linkedin, Building2 } from 'lucide-react'
+import { User, Twitter, Linkedin, Building2, FileText } from 'lucide-react'
 import { StanceCard } from '@/components/StanceCard'
 import { TopicBadge } from '@/components/TopicBadge'
+import { ReceiptCard } from '@/components/ReceiptCard'
+import { ShareButtons } from '@/components/ShareButtons'
 import { Metadata } from 'next'
 import { getPersonBySlug, getStancesForEntity } from '@/lib/mock-data'
 
@@ -14,11 +16,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const person = getPersonBySlug(slug)
   if (!person) return { title: 'Person Not Found' }
-  
+
   const stances = getStancesForEntity('person', person.id)
+  const description = `Check the receipts on ${person.name}. ${stances.length} documented public stances.`
+
   return {
-    title: `${person.name} — values.tech`,
-    description: `See what ${person.name} stands for. ${stances.length} documented public stances on tech industry issues.`,
+    title: `${person.name} — receipts.tech`,
+    description,
+    openGraph: {
+      title: `${person.name} — receipts.tech`,
+      description,
+      images: [`/api/og/person/${slug}`],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${person.name} — receipts.tech`,
+      description,
+      images: [`/api/og/person/${slug}`],
+    },
   }
 }
 
@@ -130,6 +145,34 @@ export default async function PersonPage({ params }: Props) {
 
         {/* Sidebar */}
         <div className="lg:col-span-1 space-y-6">
+          {/* Receipt Card Preview */}
+          {stances.length > 0 && (
+            <div className="bg-gray-50 rounded-xl p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <FileText className="w-5 h-5 text-gray-500" />
+                <h3 className="font-semibold text-gray-900">Receipt Card</h3>
+              </div>
+              <div className="transform scale-[0.5] origin-top-left -mr-[200px] -mb-[200px]">
+                <ReceiptCard
+                  entity={person}
+                  entityType="person"
+                  stances={stances}
+                  variant="square"
+                />
+              </div>
+            </div>
+          )}
+
+          {/* Share Buttons */}
+          <div className="bg-gray-50 rounded-xl p-6">
+            <h3 className="font-semibold text-gray-900 mb-4">Share this receipt</h3>
+            <ShareButtons
+              entityType="person"
+              entitySlug={person.slug}
+              entityName={person.name}
+            />
+          </div>
+
           {/* Current Company */}
           {person.current_company && (
             <div className="bg-gray-50 rounded-xl p-6">

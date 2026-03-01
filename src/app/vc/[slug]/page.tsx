@@ -1,7 +1,9 @@
 import { notFound } from 'next/navigation'
-import { Landmark, Globe, DollarSign } from 'lucide-react'
+import { Landmark, Globe, DollarSign, FileText } from 'lucide-react'
 import { StanceCard } from '@/components/StanceCard'
 import { TopicBadge } from '@/components/TopicBadge'
+import { ReceiptCard } from '@/components/ReceiptCard'
+import { ShareButtons } from '@/components/ShareButtons'
 import { Metadata } from 'next'
 import { getVCBySlug, getStancesForEntity } from '@/lib/mock-data'
 
@@ -13,11 +15,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const vc = getVCBySlug(slug)
   if (!vc) return { title: 'VC Not Found' }
-  
+
   const stances = getStancesForEntity('vc', vc.id)
+  const description = `Check the receipts on ${vc.name} before taking their money. ${stances.length} documented stances.`
+
   return {
-    title: `${vc.name} — values.tech`,
-    description: `See what ${vc.name} stands for. ${stances.length} documented stances.`,
+    title: `${vc.name} — receipts.tech`,
+    description,
+    openGraph: {
+      title: `${vc.name} — receipts.tech`,
+      description,
+      images: [`/api/og/vc/${slug}`],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${vc.name} — receipts.tech`,
+      description,
+      images: [`/api/og/vc/${slug}`],
+    },
   }
 }
 
@@ -104,8 +119,34 @@ export default async function VCPage({ params }: Props) {
         </div>
 
         {/* Sidebar */}
-        <div className="lg:col-span-1">
-          {/* Could add portfolio companies here in the future */}
+        <div className="lg:col-span-1 space-y-6">
+          {/* Receipt Card Preview */}
+          {stances.length > 0 && (
+            <div className="bg-gray-50 rounded-xl p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <FileText className="w-5 h-5 text-gray-500" />
+                <h3 className="font-semibold text-gray-900">Receipt Card</h3>
+              </div>
+              <div className="transform scale-[0.5] origin-top-left -mr-[200px] -mb-[200px]">
+                <ReceiptCard
+                  entity={vc}
+                  entityType="vc"
+                  stances={stances}
+                  variant="square"
+                />
+              </div>
+            </div>
+          )}
+
+          {/* Share Buttons */}
+          <div className="bg-gray-50 rounded-xl p-6">
+            <h3 className="font-semibold text-gray-900 mb-4">Share this receipt</h3>
+            <ShareButtons
+              entityType="vc"
+              entitySlug={vc.slug}
+              entityName={vc.name}
+            />
+          </div>
         </div>
       </div>
     </div>

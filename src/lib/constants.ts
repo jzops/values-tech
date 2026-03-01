@@ -37,8 +37,8 @@ export const TOPICS = {
   palestine: {
     id: 'palestine',
     name: 'Palestine',
-    description: 'Stance on the Palestine/Israel conflict',
-    icon: '🕊️',
+    description: 'Stance on Palestinian rights. Opposed = supports Israeli military/occupation, censors Palestinian voices. Supported = defends Palestinian rights.',
+    icon: '🇵🇸',
     color: 'green'
   },
   environment: {
@@ -82,6 +82,86 @@ export const TOPICS = {
     description: 'Visa sponsorship and immigration policy stances',
     icon: '🛂',
     color: 'teal'
+  },
+  epstein: {
+    id: 'epstein',
+    name: 'Epstein Files',
+    description: 'Connections to Jeffrey Epstein documented in DOJ files. Number of file mentions indicates depth of relationship.',
+    icon: '📁',
+    color: 'rose'
+  },
+  // Founder/Investor Relations
+  founder_treatment: {
+    id: 'founder_treatment',
+    name: 'Founder Treatment',
+    description: 'How VCs treat founders - down rounds, board coups, forced removals',
+    icon: '🤝',
+    color: 'violet'
+  },
+  term_sheets: {
+    id: 'term_sheets',
+    name: 'Term Sheets',
+    description: 'Predatory vs fair term sheet practices - participating preferred, ratchets',
+    icon: '📝',
+    color: 'slate'
+  },
+  // Worker & Ethics
+  contractor_classification: {
+    id: 'contractor_classification',
+    name: 'Contractor Rights',
+    description: 'Gig economy worker classification and contractor treatment',
+    icon: '🚗',
+    color: 'cyan'
+  },
+  sexual_harassment: {
+    id: 'sexual_harassment',
+    name: 'Sexual Harassment',
+    description: 'Documented harassment cases and how companies handled them',
+    icon: '⚠️',
+    color: 'pink'
+  },
+  whistleblower: {
+    id: 'whistleblower',
+    name: 'Whistleblowers',
+    description: 'Treatment of internal dissent and whistleblower retaliation',
+    icon: '🔔',
+    color: 'fuchsia'
+  },
+  government_contracts: {
+    id: 'government_contracts',
+    name: 'Government Contracts',
+    description: 'ICE, military, surveillance, and controversial government partnerships',
+    icon: '🏛️',
+    color: 'stone'
+  },
+  // Business Practices
+  data_privacy: {
+    id: 'data_privacy',
+    name: 'Data Privacy',
+    description: 'Data breaches, user data sales, surveillance capitalism practices',
+    icon: '🔒',
+    color: 'blue'
+  },
+  antitrust: {
+    id: 'antitrust',
+    name: 'Antitrust',
+    description: 'Anti-competitive practices, killer acquisitions, platform abuse',
+    icon: '⚖️',
+    color: 'red'
+  },
+  tax_avoidance: {
+    id: 'tax_avoidance',
+    name: 'Tax Practices',
+    description: 'Offshore schemes, aggressive tax strategies, tax haven usage',
+    icon: '💸',
+    color: 'lime'
+  },
+  open_source: {
+    id: 'open_source',
+    name: 'Open Source',
+    description: 'Support for or exploitation of open source community',
+    icon: '🌐',
+    color: 'emerald'
   }
 } as const
 

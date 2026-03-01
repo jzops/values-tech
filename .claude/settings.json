@@ -1,0 +1,20 @@
+{
+  "skills": {
+    "find-company": {
+      "description": "Find and add a VC-backed tech company to the database",
+      "path": "skills/find-company.md"
+    },
+    "find-person": {
+      "description": "Find and add a tech executive/founder to the database",
+      "path": "skills/find-person.md"
+    },
+    "find-vc": {
+      "description": "Find and add a VC firm investing in B2B tech to the database",
+      "path": "skills/find-vc.md"
+    },
+    "research-stances": {
+      "description": "Research and document public stances/receipts from X, LinkedIn, news, and public records",
+      "path": "skills/research-stances.md"
+    }
+  }
+}

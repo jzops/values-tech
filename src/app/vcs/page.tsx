@@ -3,8 +3,8 @@ import { Metadata } from 'next'
 import { vcs, getStanceCountForEntity } from '@/lib/mock-data'
 
 export const metadata: Metadata = {
-  title: 'VCs — values.tech',
-  description: 'Browse venture capital firms and their documented stances on tech industry issues.',
+  title: 'VCs — receipts.tech',
+  description: 'Check the receipts on VCs before taking their money. Documented stances on founder treatment, politics, and more.',
 }
 
 export default function VCsPage() {

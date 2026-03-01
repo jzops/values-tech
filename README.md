@@ -1,17 +1,17 @@
-# values.tech
+# receipts.tech
 
-**What tech actually stands for.**
+**Before they send you their receipts, check theirs.**
 
-A public database of tech companies, executives, and VCs - tracking their stances on issues like layoffs, DEI, remote work, Palestine, AI ethics, and more. Every claim is sourced from public records.
+Check the receipts on tech companies, VCs, and executives before you take their money, join their company, or use their products. Every receipt is sourced from public records.
 
 ## Features
 
-- **Company Profiles** - Track stances from Meta, Google, Amazon, Tesla, Stripe, OpenAI, and more
-- **People Profiles** - Elon Musk, Mark Zuckerberg, Sam Altman, Guillermo Rauch, etc.
+- **Company Profiles** - Check receipts on Meta, Google, Amazon, Tesla, Stripe, OpenAI, and more
+- **People Profiles** - Elon Musk, Mark Zuckerberg, Sam Altman, Reid Hoffman, etc.
 - **VC Profiles** - a16z, Sequoia, Founders Fund, Y Combinator, etc.
 - **Topic Pages** - Browse by topic (layoffs, DEI, remote work, etc.)
 - **Search** - Find any company, person, or VC
-- **Sources** - Every stance links to the original source
+- **Sources** - Every receipt links to the original source
 
 ## Tech Stack
 
@@ -19,7 +19,7 @@ A public database of tech companies, executives, and VCs - tracking their stance
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
 - **Database**: Supabase (Postgres) - currently using mock data
-- **Hosting**: Vercel
+- **Hosting**: Netlify
 
 ## Getting Started
 
@@ -39,16 +39,16 @@ npm start
 
 ## Deployment
 
-### Vercel (Recommended)
+### Netlify
 
 1. Push to GitHub
-2. Import project in Vercel
+2. Import project in Netlify
 3. Deploy
 
-Or use the Vercel CLI:
+Or use the Netlify CLI:
 ```bash
-vercel login
-vercel --prod
+npx netlify login
+npx netlify deploy --prod
 ```
 
 ### Environment Variables
@@ -61,19 +61,19 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 
 ## Data
 
-Currently using mock data with 55+ documented stances including:
+Currently tracking 300+ companies, 45+ people, 300+ VCs, and 166+ documented receipts including:
 
-**Companies**: Meta, Google, Amazon, Apple, Microsoft, Tesla, Twitter/X, Stripe, OpenAI, Anthropic, Vercel, Coinbase, Shopify, Salesforce, Netflix, Spotify, Airbnb, Uber, Palantir, Cloudflare
+**Companies**: Meta, Google, Amazon, Apple, Microsoft, Tesla, Twitter/X, Stripe, OpenAI, Anthropic, Uber, Palantir, Activision Blizzard, and more
 
-**People**: Mark Zuckerberg, Elon Musk, Sundar Pichai, Tim Cook, Satya Nadella, Sam Altman, Patrick Collison, Guillermo Rauch, Brian Armstrong, Brian Chesky, Marc Benioff, Peter Thiel
+**People**: Mark Zuckerberg, Elon Musk, Reid Hoffman, Peter Thiel, Marc Andreessen, Travis Kalanick, and more
 
-**VCs**: Andreessen Horowitz, Sequoia Capital, Founders Fund, Y Combinator, Tiger Global, SoftBank
+**VCs**: Andreessen Horowitz, Sequoia Capital, Founders Fund, Y Combinator, Benchmark, SoftBank, Tiger Global
 
-**Topics**: Layoffs, DEI, Remote Work, Unionization, Politics, Palestine, Environment, AI Ethics, Worker Treatment, Executive Pay, Free Speech, Immigration
+**Topics**: Layoffs, DEI, Remote Work, Politics, Palestine, Sexual Harassment, Government Contracts, Data Privacy, Antitrust, Epstein Files, and more
 
 ## Contributing
 
-This is an anonymous project. Contact: tips@values.tech
+This is an independent project. Contact: tips@receipts.tech
 
 ## License
 
