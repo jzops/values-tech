@@ -186,5 +186,59 @@ export const SOURCE_LABELS = {
   sec_filing: 'SEC Filing',
   donation_record: 'Donation Record',
   company_website: 'Company Website',
-  interview: 'Interview'
+  interview: 'Interview',
+  fec_filing: 'FEC Filing',
+  government_record: 'Government Record'
 } as const
+
+// Stats type configuration - neutral factual data
+export const STAT_TYPE_CONFIG = {
+  layoffs: {
+    id: 'layoffs',
+    name: 'Layoffs',
+    icon: '📉',
+    description: 'Workforce reductions and layoff events'
+  },
+  exec_compensation: {
+    id: 'exec_compensation',
+    name: 'Executive Pay',
+    icon: '💰',
+    description: 'CEO and executive compensation packages'
+  },
+  government_contracts: {
+    id: 'government_contracts',
+    name: 'Government Contracts',
+    icon: '🏛️',
+    description: 'Contracts with government agencies'
+  },
+  remote_policy: {
+    id: 'remote_policy',
+    name: 'Remote Policy',
+    icon: '🏠',
+    description: 'Office attendance requirements'
+  }
+} as const
+
+// Topics that are moral stances (pass/fail) vs neutral stats
+export const STANCE_TOPICS = [
+  'epstein',
+  'dei',
+  'sexual_harassment',
+  'union',
+  'worker_treatment',
+  'palestine',
+  'ai_ethics',
+  'whistleblower',
+  'free_speech',
+  'antitrust',
+  'data_privacy',
+  'founder_treatment',
+  'contractor_classification'
+] as const
+
+export const STAT_TOPICS = [
+  'layoffs',
+  'exec_compensation',
+  'government_contracts',
+  'remote_work'
+] as const

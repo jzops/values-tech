@@ -82,6 +82,42 @@ export interface Investment {
 
 export type EntityType = 'company' | 'person' | 'vc'
 
+// Stats - Neutral factual data (no pass/fail judgment)
+export interface Stat {
+  id: string
+  entity_type: 'company' | 'person' | 'vc'
+  entity_id: string
+  stat_type: 'layoffs' | 'exec_compensation' | 'government_contracts' | 'remote_policy'
+  headline: string
+  details: string
+  source_url: string
+  source_type: 'news' | 'sec_filing' | 'company_website' | 'government_record'
+  stat_date: string | null
+  verified: boolean
+  numeric_value: number | null
+  percentage_value: number | null
+  monetary_value: number | null
+  metadata: Record<string, unknown> | null
+  created_at?: string
+}
+
+// Political donations - PACs, candidates, inaugurals
+export interface Donation {
+  id: string
+  entity_type: 'company' | 'person' | 'vc'
+  entity_id: string
+  amount: number
+  recipient: string
+  recipient_type: 'candidate' | 'pac' | 'super_pac' | 'inaugural' | 'party'
+  pac_name: string | null
+  donation_date: string
+  source_url: string
+  source_type: 'fec_filing' | 'news' | 'donation_record'
+  verified: boolean
+  notes: string | null
+  created_at?: string
+}
+
 export interface SearchResult {
   type: EntityType
   id: string

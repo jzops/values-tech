@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { Building2, User, Landmark } from 'lucide-react'
 import { Company, Person, VC, EntityType } from '@/lib/types'
+import { LogoImage } from './LogoImage'
 
 interface EntityCardProps {
   type: EntityType
@@ -13,24 +13,17 @@ export function EntityCard({ type, entity, stanceCount, subtitle }: EntityCardPr
   const href = `/${type}/${entity.slug}`
   const imageUrl = 'logo_url' in entity ? entity.logo_url : 'photo_url' in entity ? entity.photo_url : null
 
-  const Icon = type === 'company' ? Building2 : type === 'person' ? User : Landmark
-
   return (
     <Link
       href={href}
       className="flex items-center gap-4 p-4 rounded-xl border border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm transition-all"
     >
-      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden">
-        {imageUrl ? (
-          <img
-            src={imageUrl}
-            alt={entity.name}
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          <Icon className="w-6 h-6 text-gray-400" />
-        )}
-      </div>
+      <LogoImage
+        src={imageUrl}
+        alt={entity.name}
+        type={type}
+        className="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden"
+      />
 
       <div className="flex-1 min-w-0">
         <h3 className="font-semibold text-gray-900 truncate">{entity.name}</h3>

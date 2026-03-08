@@ -50,7 +50,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 text-red-700 rounded-full text-sm font-medium mb-6">
             <AlertCircle className="w-4 h-4" />
-            <span>166+ documented receipts and counting</span>
+            <span>1,000+ documented receipts and counting</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">

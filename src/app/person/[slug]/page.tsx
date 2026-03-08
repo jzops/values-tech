@@ -2,11 +2,15 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { User, Twitter, Linkedin, Building2, FileText } from 'lucide-react'
 import { StanceCard } from '@/components/StanceCard'
+import { StatCard } from '@/components/StatCard'
+import { StatsSummary } from '@/components/StatsSummary'
+import { DonationsTable } from '@/components/DonationsTable'
 import { TopicBadge } from '@/components/TopicBadge'
 import { ReceiptCard } from '@/components/ReceiptCard'
 import { ShareButtons } from '@/components/ShareButtons'
 import { Metadata } from 'next'
-import { getPersonBySlug, getStancesForEntity } from '@/lib/mock-data'
+import { getPersonBySlug, getStancesForEntity, getStatsForEntity, getDonationsForEntity } from '@/lib/mock-data'
+import { STANCE_TOPICS } from '@/lib/constants'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -40,10 +44,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function PersonPage({ params }: Props) {
   const { slug } = await params
   const person = getPersonBySlug(slug)
-  
+
   if (!person) notFound()
 
-  const stances = getStancesForEntity('person', person.id)
+  const allStances = getStancesForEntity('person', person.id)
+  const stats = getStatsForEntity('person', person.id)
+  const donations = getDonationsForEntity('person', person.id)
+
+  // Filter stances to only show moral judgment topics
+  const stances = allStances.filter(s => STANCE_TOPICS.includes(s.topic as typeof STANCE_TOPICS[number]))
   const topics = [...new Set(stances.map(s => s.topic))]
 
   return (
@@ -111,6 +120,9 @@ export default async function PersonPage({ params }: Props) {
         <p className="text-gray-600 mb-8 max-w-3xl">{person.bio}</p>
       )}
 
+      {/* Stats Summary */}
+      <StatsSummary stats={stats} donations={donations} />
+
       <div className="grid lg:grid-cols-3 gap-8">
         {/* Main content */}
         <div className="lg:col-span-2">
@@ -141,6 +153,23 @@ export default async function PersonPage({ params }: Props) {
               <p className="text-gray-500">No documented stances yet.</p>
             </div>
           )}
+
+          {/* Stats Timeline */}
+          {stats.length > 0 && (
+            <>
+              <h2 className="text-xl font-semibold text-gray-900 mb-4 mt-8">
+                Stats ({stats.length})
+              </h2>
+              <div className="space-y-4">
+                {stats.map(stat => (
+                  <StatCard key={stat.id} stat={stat} />
+                ))}
+              </div>
+            </>
+          )}
+
+          {/* Donations Table */}
+          <DonationsTable donations={donations} />
         </div>
 
         {/* Sidebar */}
