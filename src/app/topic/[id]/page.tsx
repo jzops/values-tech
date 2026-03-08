@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!topic) return { title: 'Topic Not Found' }
   
   return {
-    title: `${topic.name} — receipts.tech`,
+    title: `${topic.name} — Receipts.Tech`,
     description: `${topic.description} Check the receipts on tech companies, executives, and VCs.`,
   }
 }

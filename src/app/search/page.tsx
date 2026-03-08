@@ -2,7 +2,7 @@ import { SearchBox } from '@/components/SearchBox'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Search — receipts.tech',
+  title: 'Search — Receipts.Tech',
   description: 'Search for tech companies, executives, and VCs to check their receipts.',
 }
 

@@ -1,4 +1,4 @@
-// Comprehensive VC database for receipts.tech
+// Comprehensive VC database for Receipts.Tech
 import { VC } from '../lib/types'
 
 export const allVCs: VC[] = [

@@ -24,10 +24,10 @@ export function Logo({ className = 'h-8' }: { className?: string }) {
         fill="currentColor"
         letterSpacing="-0.02em"
       >
-        receipts
+        Receipts
       </text>
 
-      {/* .tech in accent color */}
+      {/* .Tech in accent color */}
       <text
         x="138"
         y="27"
@@ -37,7 +37,7 @@ export function Logo({ className = 'h-8' }: { className?: string }) {
         fill="#FF6B35"
         letterSpacing="-0.02em"
       >
-        .tech
+        .Tech
       </text>
     </svg>
   )

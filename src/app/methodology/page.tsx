@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Methodology — receipts.tech',
-  description: 'How we research and verify the receipts documented on receipts.tech.',
+  title: 'Methodology — Receipts.Tech',
+  description: 'How we research and verify the receipts documented on Receipts.Tech.',
 }
 
 export default function MethodologyPage() {
@@ -12,7 +12,7 @@ export default function MethodologyPage() {
 
       <div className="prose prose-gray max-w-none">
         <p className="text-lg text-gray-600 mb-6">
-          Every receipt on receipts.tech is sourced from public records. Here's how we find,
+          Every receipt on Receipts.Tech is sourced from public records. Here's how we find,
           verify, and present information.
         </p>
 

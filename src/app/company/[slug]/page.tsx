@@ -25,16 +25,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description = `Check the receipts on ${company.name}. ${stances.length} documented stances on layoffs, DEI, remote work, and more.`
 
   return {
-    title: `${company.name} — receipts.tech`,
+    title: `${company.name} — Receipts.Tech`,
     description,
     openGraph: {
-      title: `${company.name} — receipts.tech`,
+      title: `${company.name} — Receipts.Tech`,
       description,
       images: [`/api/og/company/${slug}`],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${company.name} — receipts.tech`,
+      title: `${company.name} — Receipts.Tech`,
       description,
       images: [`/api/og/company/${slug}`],
     },

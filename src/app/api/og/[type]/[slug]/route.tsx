@@ -147,8 +147,8 @@ export async function GET(
               Before they send you their receipts, check theirs.
             </span>
             <div style={{ display: 'flex', alignItems: 'center', marginTop: '12px' }}>
-              <span style={{ fontSize: '28px', fontWeight: 700, color: '#111827' }}>receipts</span>
-              <span style={{ fontSize: '28px', fontWeight: 700, color: '#FF6B35' }}>.tech</span>
+              <span style={{ fontSize: '28px', fontWeight: 700, color: '#111827' }}>Receipts</span>
+              <span style={{ fontSize: '28px', fontWeight: 700, color: '#FF6B35' }}>.Tech</span>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-// Comprehensive company database for receipts.tech
+// Comprehensive company database for Receipts.Tech
 // Organized by industry sector
 
 import { Company } from '../lib/types'

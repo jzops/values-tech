@@ -4,7 +4,7 @@ import { getStanceCountForTopic } from '@/lib/mock-data'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Topics — receipts.tech',
+  title: 'Topics — Receipts.Tech',
   description: 'Browse all topics we track: layoffs, DEI, remote work, unionization, politics, and more.',
 }
 

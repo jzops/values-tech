@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contribute — receipts.tech',
+  title: 'Contribute — Receipts.Tech',
   description: 'Help document the receipts on tech companies. Submit tips and sources.',
 }
 
@@ -12,7 +12,7 @@ export default function ContributePage() {
 
       <div className="prose prose-gray max-w-none">
         <p className="text-lg text-gray-600 mb-6">
-          receipts.tech is built on public information. Help us document what tech really does.
+          Receipts.Tech is built on public information. Help us document what tech really does.
         </p>
 
         <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Submit a Receipt</h2>

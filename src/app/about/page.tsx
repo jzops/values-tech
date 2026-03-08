@@ -1,18 +1,18 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About — receipts.tech',
-  description: 'Learn about receipts.tech and our mission to hold tech accountable.',
+  title: 'About — Receipts.Tech',
+  description: 'Learn about Receipts.Tech and our mission to hold tech accountable.',
 }
 
 export default function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">About receipts.tech</h1>
+      <h1 className="text-3xl font-bold text-gray-900 mb-8">About Receipts.Tech</h1>
 
       <div className="prose prose-gray max-w-none">
         <p className="text-lg text-gray-600 mb-6">
-          <strong>receipts.tech</strong> documents what tech companies, executives, and venture
+          <strong>Receipts.Tech</strong> documents what tech companies, executives, and venture
           capitalists actually do—not what they say. Before you take their money, join their
           company, or use their products, check their receipts.
         </p>
@@ -41,7 +41,7 @@ export default function AboutPage() {
 
         <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Who's Behind This</h2>
         <p className="text-gray-600 mb-4">
-          receipts.tech is an independent project. We're not affiliated with any company,
+          Receipts.Tech is an independent project. We're not affiliated with any company,
           publication, or political organization. We believe transparency and accountability
           matter in tech—and that founders, employees, and users deserve to know who they're
           dealing with.

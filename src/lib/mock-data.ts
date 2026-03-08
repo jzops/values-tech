@@ -1,4 +1,4 @@
-// Combined data for receipts.tech
+// Combined data for Receipts.Tech
 // Imports from modular data files
 
 import { Company, Person, VC, Stance } from './types'

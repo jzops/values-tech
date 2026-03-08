@@ -82,7 +82,7 @@ export function ReceiptCard({ entity, entityType, stances, variant = 'square' }:
           Before they send you their receipts, check theirs.
         </p>
         <div className="flex items-center justify-between">
-          <span className="text-sm font-bold text-gray-900">receipts.tech</span>
+          <span className="text-sm font-bold text-gray-900">Receipts.Tech</span>
           <span className="text-xs text-gray-400">
             {stances.length} receipt{stances.length !== 1 ? 's' : ''} on file
           </span>

@@ -24,16 +24,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description = `Check the receipts on ${vc.name} before taking their money. ${stances.length} documented stances.`
 
   return {
-    title: `${vc.name} — receipts.tech`,
+    title: `${vc.name} — Receipts.Tech`,
     description,
     openGraph: {
-      title: `${vc.name} — receipts.tech`,
+      title: `${vc.name} — Receipts.Tech`,
       description,
       images: [`/api/og/vc/${slug}`],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${vc.name} — receipts.tech`,
+      title: `${vc.name} — Receipts.Tech`,
       description,
       images: [`/api/og/vc/${slug}`],
     },

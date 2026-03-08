@@ -84,7 +84,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-gray-200">
           <p className="text-xs text-gray-500 text-center">
-            All data sourced from public records. © {new Date().getFullYear()} receipts.tech
+            All data sourced from public records. © {new Date().getFullYear()} Receipts.Tech
           </p>
         </div>
       </div>

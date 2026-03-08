@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { people, companies, getStanceCountForEntity } from '@/lib/mock-data'
 
 export const metadata: Metadata = {
-  title: 'People — receipts.tech',
+  title: 'People — Receipts.Tech',
   description: 'Check the receipts on tech executives. Documented public stances on important issues.',
 }
 
