@@ -1,4 +1,4 @@
-// Comprehensive VC database for Receipts.Tech
+// Comprehensive VC database for values.tech
 import { VC } from '../lib/types'
 
 export const allVCs: VC[] = [
@@ -34,7 +34,7 @@ export const allVCs: VC[] = [
   { id: '25', name: 'Dragoneer', slug: 'dragoneer', logo_url: 'https://logo.clearbit.com/dragoneer.com', website: 'https://dragoneer.com', description: 'Growth equity firm. Snowflake, Airbnb, Slack investor.', aum: '$20B+' },
 
   // SoftBank & Large Funds
-  { id: '26', name: 'SoftBank Vision Fund', slug: 'softbank-vision-fund', logo_url: 'https://logo.clearbit.com/softbank.com', website: 'https://visionfund.com', description: 'Massive investment fund led by Masayoshi Son. WeWork, Uber, DoorDash investments.', aum: '$100B+' },
+  { id: '26', name: 'SoftBank Vision Fund', slug: 'softbank-vision-fund', logo_url: 'https://logo.clearbit.com/visionfund.com', website: 'https://visionfund.com', description: 'Massive investment fund led by Masayoshi Son. WeWork, Uber, DoorDash investments.', aum: '$100B+' },
   { id: '27', name: 'DST Global', slug: 'dst-global', logo_url: 'https://logo.clearbit.com/dst-global.com', website: 'https://dst-global.com', description: 'Yuri Milner\'s fund. Early Facebook, Twitter, WhatsApp, Airbnb investor.', aum: '$25B+' },
   { id: '28', name: 'Fidelity Investments', slug: 'fidelity', logo_url: 'https://logo.clearbit.com/fidelity.com', website: 'https://fidelity.com', description: 'Asset manager with late-stage venture arm. SpaceX, Stripe investor.', aum: '$4.5T+' },
   { id: '29', name: 'T. Rowe Price', slug: 't-rowe-price', logo_url: 'https://logo.clearbit.com/troweprice.com', website: 'https://troweprice.com', description: 'Asset manager with growth equity. Uber, Airbnb, Stripe investments.', aum: '$1.4T+' },
@@ -136,7 +136,7 @@ export const allVCs: VC[] = [
   { id: '105', name: 'Nvidia GPU Ventures', slug: 'nvidia-ventures', logo_url: 'https://logo.clearbit.com/nvidia.com', website: 'https://nvidia.com', description: 'Nvidia AI-focused investing.', aum: '$1B+' },
   { id: '106', name: 'Comcast Ventures', slug: 'comcast-ventures', logo_url: 'https://logo.clearbit.com/comcastventures.com', website: 'https://comcastventures.com', description: 'Comcast strategic VC.', aum: '$2B+' },
   { id: '107', name: 'Qualcomm Ventures', slug: 'qualcomm-ventures', logo_url: 'https://logo.clearbit.com/qualcommventures.com', website: 'https://qualcommventures.com', description: 'Qualcomm corporate VC.', aum: '$2B+' },
-  { id: '108', name: 'Samsung Ventures', slug: 'samsung-ventures', logo_url: 'https://logo.clearbit.com/samsung.com', website: 'https://samsungventures.com', description: 'Samsung corporate VC.', aum: '$2B+' },
+  { id: '108', name: 'Samsung Ventures', slug: 'samsung-ventures', logo_url: 'https://logo.clearbit.com/samsungventures.com', website: 'https://samsungventures.com', description: 'Samsung corporate VC.', aum: '$2B+' },
   { id: '109', name: 'Cisco Investments', slug: 'cisco-investments', logo_url: 'https://logo.clearbit.com/cisco.com', website: 'https://cisco.com/go/ventures', description: 'Cisco corporate VC.', aum: '$3B+' },
   { id: '110', name: 'Dell Technologies Capital', slug: 'dtc', logo_url: 'https://logo.clearbit.com/delltechnologiescapital.com', website: 'https://delltechnologiescapital.com', description: 'Dell corporate VC.', aum: '$1B+' },
 

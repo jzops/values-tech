@@ -20,7 +20,7 @@ export const extendedVCs: VC[] = [
   { id: '213', name: '5Y Capital', slug: '5y-capital', logo_url: 'https://logo.clearbit.com/5ycap.com', website: 'https://5ycap.com', description: 'China early-stage.', aum: '$3B+' },
   { id: '214', name: 'Qiming Venture Partners', slug: 'qiming', logo_url: 'https://logo.clearbit.com/qimingvc.com', website: 'https://qimingvc.com', description: 'China multi-stage.', aum: '$10B+' },
   { id: '215', name: 'Source Code Capital', slug: 'source-code', logo_url: 'https://logo.clearbit.com/sourcecodecap.com', website: 'https://sourcecodecap.com', description: 'China tech investor.', aum: '$5B+' },
-  { id: '216', name: 'Rakuten Ventures', slug: 'rakuten', logo_url: 'https://logo.clearbit.com/rakuten.com', website: 'https://global.rakuten.com/corp/ventures', description: 'Rakuten corporate VC.', aum: '$500M+' },
+  { id: '216', name: 'Rakuten Ventures', slug: 'rakuten', logo_url: 'https://logo.clearbit.com/global.rakuten.com', website: 'https://global.rakuten.com/corp/ventures', description: 'Rakuten corporate VC.', aum: '$500M+' },
   { id: '217', name: 'SBI Investment', slug: 'sbi', logo_url: 'https://logo.clearbit.com/sbigroup.co.jp', website: 'https://sbigroup.co.jp', description: 'Japan financial VC.', aum: '$5B+' },
   { id: '218', name: 'JAFCO', slug: 'jafco', logo_url: 'https://logo.clearbit.com/jafco.co.jp', website: 'https://jafco.co.jp', description: 'Japan oldest VC.', aum: '$3B+' },
   { id: '219', name: 'Global Brain', slug: 'global-brain', logo_url: 'https://logo.clearbit.com/globalbrains.com', website: 'https://globalbrains.com', description: 'Japan tech investor.', aum: '$2B+' },
@@ -48,7 +48,7 @@ export const extendedVCs: VC[] = [
   { id: '237', name: 'Welsh Carson', slug: 'welsh-carson', logo_url: 'https://logo.clearbit.com/welshcarson.com', website: 'https://welshcarson.com', description: 'Healthcare and tech PE.', aum: '$28B+' },
   { id: '238', name: 'Apax Partners', slug: 'apax', logo_url: 'https://logo.clearbit.com/apax.com', website: 'https://apax.com', description: 'Global PE.', aum: '$65B+' },
   { id: '239', name: 'Permira', slug: 'permira', logo_url: 'https://logo.clearbit.com/permira.com', website: 'https://permira.com', description: 'European PE with tech focus.', aum: '$80B+' },
-  { id: '240', name: 'Hellman & Friedman', slug: 'hf', logo_url: 'https://logo.clearbit.com/hfrco.com', website: 'https://hf.com', description: 'Tech and media PE.', aum: '$100B+' },
+  { id: '240', name: 'Hellman & Friedman', slug: 'hf', logo_url: 'https://logo.clearbit.com/hf.com', website: 'https://hf.com', description: 'Tech and media PE.', aum: '$100B+' },
 
   // More Crypto
   { id: '241', name: 'Castle Island Ventures', slug: 'castle-island', logo_url: 'https://logo.clearbit.com/castleisland.vc', website: 'https://castleisland.vc', description: 'Bitcoin-focused fund.', aum: '$400M+' },
