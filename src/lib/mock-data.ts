@@ -2246,6 +2246,10 @@ export function getVCBySlug(slug: string) {
   return vcs.find(v => v.slug === slug) || null
 }
 
+export function getStanceById(id: string) {
+  return stances.find(s => s.id === id) || null
+}
+
 export function getStancesForEntity(entityType: string, entityId: string) {
   return stances.filter(s => s.entity_type === entityType && s.entity_id === entityId)
     .sort((a, b) => new Date(b.stance_date || '1970-01-01').getTime() - new Date(a.stance_date || '1970-01-01').getTime())

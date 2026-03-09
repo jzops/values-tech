@@ -74,6 +74,13 @@ export function StanceCard({ stance, showEntity, entityName, entitySlug }: Stanc
                 Verified
               </span>
             )}
+            <Link
+              href={`/stance/${stance.id}`}
+              className="ml-auto text-gray-400 hover:text-[#FF6B35] transition-colors"
+              title="Share this receipt"
+            >
+              Share
+            </Link>
           </div>
         </div>
 

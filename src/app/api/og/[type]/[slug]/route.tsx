@@ -2,6 +2,7 @@ import { ImageResponse } from '@vercel/og'
 import { NextRequest } from 'next/server'
 import { getCompanyBySlug, getPersonBySlug, getVCBySlug, getStancesForEntity } from '@/lib/mock-data'
 import { TOPICS } from '@/lib/constants'
+import { calculateGrade } from '@/lib/grade'
 
 export const runtime = 'edge'
 
@@ -43,20 +44,21 @@ export async function GET(
   }
 
   const stances = getStancesForEntity(entityType, entity.id)
-  const topStances = stances.slice(0, 4)
+  const topStances = stances.slice(0, 5)
+  const { grade, color: gradeColor, label: gradeLabel } = calculateGrade(stances)
 
-  // Determine dominant position for border color
-  const positionCounts = stances.reduce((acc, s) => {
-    acc[s.position] = (acc[s.position] || 0) + 1
-    return acc
-  }, {} as Record<string, number>)
+  // Count positions
+  const counts = { supported: 0, opposed: 0, mixed: 0, silent: 0 }
+  for (const s of stances) {
+    counts[s.position as keyof typeof counts] = (counts[s.position as keyof typeof counts] || 0) + 1
+  }
 
-  const dominantPosition = Object.entries(positionCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || 'silent'
+  const now = new Date()
+  const dateStr = now.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })
+  const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
 
-  const borderColor = dominantPosition === 'opposed' ? '#ef4444'
-    : dominantPosition === 'supported' ? '#22c55e'
-    : dominantPosition === 'mixed' ? '#f59e0b'
-    : '#9ca3af'
+  const divider = '═'.repeat(40)
+  const thinDivider = '─'.repeat(40)
 
   return new ImageResponse(
     (
@@ -65,91 +67,142 @@ export async function GET(
           width: '100%',
           height: '100%',
           display: 'flex',
-          flexDirection: 'column',
-          backgroundColor: '#ffffff',
-          padding: '48px',
-          fontFamily: 'system-ui, sans-serif',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#e8e4df',
+          padding: '24px',
         }}
       >
-        {/* Main card with border */}
+        {/* Receipt paper */}
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
-            flex: 1,
-            border: `6px solid ${borderColor}`,
-            borderRadius: '24px',
-            padding: '40px',
-            backgroundColor: '#fafafa',
+            width: '100%',
+            height: '100%',
+            backgroundColor: '#FFF8F0',
+            padding: '36px 48px',
+            fontFamily: 'monospace',
+            color: '#1a1a1a',
+            position: 'relative',
+            borderTop: '4px dashed #ccc',
+            borderBottom: '4px dashed #ccc',
           }}
         >
-          {/* Header */}
-          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '24px' }}>
-            <span style={{ fontSize: '32px', marginRight: '12px' }}>📑</span>
-            <span style={{ fontSize: '24px', fontWeight: 600, color: '#6b7280', letterSpacing: '2px' }}>
-              RECEIPT
+          {/* Grade stamp - rotated colored element */}
+          <div
+            style={{
+              position: 'absolute',
+              top: '32px',
+              right: '40px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '120px',
+              height: '120px',
+              border: `6px solid ${gradeColor}`,
+              borderRadius: '60px',
+              transform: 'rotate(-12deg)',
+              opacity: 0.85,
+            }}
+          >
+            <span style={{ fontSize: '52px', fontWeight: 900, color: gradeColor, lineHeight: 1 }}>
+              {grade}
+            </span>
+            <span style={{ fontSize: '11px', fontWeight: 700, color: gradeColor, letterSpacing: '1px', textTransform: 'uppercase' }}>
+              {gradeLabel}
             </span>
           </div>
 
-          {/* Entity name */}
-          <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '32px' }}>
-            <span style={{ fontSize: '48px', fontWeight: 700, color: '#111827' }}>
+          {/* Header */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '8px' }}>
+            <span style={{ fontSize: '14px', letterSpacing: '1px', color: '#666' }}>{divider}</span>
+            <span style={{ fontSize: '28px', fontWeight: 700, letterSpacing: '6px', marginTop: '4px' }}>
+              RECEIPT
+            </span>
+            <span style={{ fontSize: '14px', color: '#888', marginTop: '2px' }}>
+              Receipts.Tech
+            </span>
+            <span style={{ fontSize: '14px', letterSpacing: '1px', color: '#666', marginTop: '4px' }}>{divider}</span>
+          </div>
+
+          {/* Entity info */}
+          <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '12px', marginTop: '4px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', color: '#888' }}>
+              <span>DATE: {dateStr}</span>
+              <span>TIME: {timeStr}</span>
+            </div>
+            <span style={{ fontSize: '32px', fontWeight: 700, marginTop: '8px', maxWidth: '70%' }}>
               {entity.name}
             </span>
-            <span style={{ fontSize: '24px', color: '#6b7280', marginTop: '8px' }}>
+            <span style={{ fontSize: '16px', color: '#666', marginTop: '2px' }}>
               {subtitle}
             </span>
           </div>
 
-          {/* Stances list */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', flex: 1 }}>
+          {/* Thin divider */}
+          <span style={{ fontSize: '12px', color: '#ccc', letterSpacing: '0px' }}>{thinDivider}</span>
+
+          {/* Line items */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '10px', flex: 1 }}>
             {topStances.map((stance, i) => {
               const topic = TOPICS[stance.topic as keyof typeof TOPICS]
-              const posColor = stance.position === 'opposed' ? '#dc2626'
-                : stance.position === 'supported' ? '#16a34a'
-                : stance.position === 'mixed' ? '#d97706'
-                : '#6b7280'
+              const posText = stance.position.toUpperCase()
+              const topicName = topic?.name || stance.topic
+              const dots = '.'.repeat(Math.max(2, 28 - topicName.length - posText.length))
 
               return (
-                <div
-                  key={i}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'flex-start',
-                    gap: '12px',
-                  }}
-                >
-                  <span style={{ fontSize: '24px', color: posColor }}>•</span>
-                  <span style={{ fontSize: '22px', color: '#374151', lineHeight: 1.4 }}>
-                    {stance.summary.length > 80 ? stance.summary.slice(0, 77) + '...' : stance.summary}
+                <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
+                  <div style={{ display: 'flex', fontSize: '15px', fontWeight: 600 }}>
+                    <span>{i + 1}. {topicName}</span>
+                    <span style={{ color: '#bbb', margin: '0 4px' }}>{dots}</span>
+                    <span>{posText}</span>
+                  </div>
+                  <span style={{ fontSize: '12px', color: '#777', paddingLeft: '18px', lineHeight: 1.3 }}>
+                    {stance.summary.length > 65 ? stance.summary.slice(0, 62) + '...' : stance.summary}
                   </span>
                 </div>
               )
             })}
-            {stances.length > 4 && (
-              <span style={{ fontSize: '20px', color: '#9ca3af', marginTop: '8px' }}>
-                + {stances.length - 4} more receipts
+            {stances.length > 5 && (
+              <span style={{ fontSize: '13px', color: '#999', marginTop: '4px' }}>
+                + {stances.length - 5} more receipts on file
               </span>
             )}
           </div>
 
+          {/* Thin divider */}
+          <span style={{ fontSize: '12px', color: '#ccc', letterSpacing: '0px' }}>{thinDivider}</span>
+
+          {/* Totals */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', marginTop: '8px', fontSize: '14px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <span>OPPOSED</span>
+              <span style={{ fontWeight: 700 }}>{counts.opposed}</span>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <span>MIXED</span>
+              <span style={{ fontWeight: 700 }}>{counts.mixed}</span>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <span>SUPPORTED</span>
+              <span style={{ fontWeight: 700 }}>{counts.supported}</span>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '4px', borderTop: '2px solid #1a1a1a', paddingTop: '4px' }}>
+              <span style={{ fontWeight: 700, fontSize: '16px' }}>TOTAL RECEIPTS</span>
+              <span style={{ fontWeight: 700, fontSize: '16px' }}>{stances.length}</span>
+            </div>
+          </div>
+
           {/* Footer */}
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              marginTop: 'auto',
-              paddingTop: '24px',
-              borderTop: '2px dashed #e5e7eb',
-            }}
-          >
-            <span style={{ fontSize: '18px', color: '#6b7280', fontStyle: 'italic' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '12px' }}>
+            <span style={{ fontSize: '11px', color: '#999', fontStyle: 'italic' }}>
               Before they send you their receipts, check theirs.
             </span>
-            <div style={{ display: 'flex', alignItems: 'center', marginTop: '12px' }}>
-              <span style={{ fontSize: '28px', fontWeight: 700, color: '#111827' }}>Receipts</span>
-              <span style={{ fontSize: '28px', fontWeight: 700, color: '#FF6B35' }}>.Tech</span>
-            </div>
+            <span style={{ fontSize: '11px', color: '#bbb', marginTop: '4px', letterSpacing: '2px' }}>
+              reciepts.tech/{type}/{slug}
+            </span>
           </div>
         </div>
       </div>
