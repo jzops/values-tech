@@ -7,6 +7,7 @@ import { DonationsTable } from '@/components/DonationsTable'
 import { TopicBadge } from '@/components/TopicBadge'
 import { ReceiptCard } from '@/components/ReceiptCard'
 import { ShareButtons } from '@/components/ShareButtons'
+import { ControversyScore } from '@/components/ControversyScore'
 import { Metadata } from 'next'
 import { getCompanyBySlug, getStancesForEntity, getStatsForEntity, getDonationsForEntity, getPeopleAtCompany } from '@/lib/mock-data'
 import { STANCE_TOPICS } from '@/lib/constants'
@@ -119,6 +120,13 @@ export default async function CompanyPage({ params }: Props) {
         <p className="text-gray-600 mb-8 max-w-3xl">{company.description}</p>
       )}
 
+      {/* Receipt Grade */}
+      {stances.length > 0 && (
+        <div className="mb-8">
+          <ControversyScore stances={stances} />
+        </div>
+      )}
+
       {/* Stats Summary */}
       <StatsSummary stats={stats} donations={donations} />
 
@@ -198,6 +206,7 @@ export default async function CompanyPage({ params }: Props) {
               entityType="company"
               entitySlug={company.slug}
               entityName={company.name}
+              stances={stances}
             />
           </div>
 

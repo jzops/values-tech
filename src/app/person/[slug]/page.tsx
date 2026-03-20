@@ -8,6 +8,7 @@ import { DonationsTable } from '@/components/DonationsTable'
 import { TopicBadge } from '@/components/TopicBadge'
 import { ReceiptCard } from '@/components/ReceiptCard'
 import { ShareButtons } from '@/components/ShareButtons'
+import { ControversyScore } from '@/components/ControversyScore'
 import { Metadata } from 'next'
 import { getPersonBySlug, getStancesForEntity, getStatsForEntity, getDonationsForEntity } from '@/lib/mock-data'
 import { STANCE_TOPICS } from '@/lib/constants'
@@ -120,6 +121,13 @@ export default async function PersonPage({ params }: Props) {
         <p className="text-gray-600 mb-8 max-w-3xl">{person.bio}</p>
       )}
 
+      {/* Receipt Grade */}
+      {stances.length > 0 && (
+        <div className="mb-8">
+          <ControversyScore stances={stances} />
+        </div>
+      )}
+
       {/* Stats Summary */}
       <StatsSummary stats={stats} donations={donations} />
 
@@ -199,6 +207,7 @@ export default async function PersonPage({ params }: Props) {
               entityType="person"
               entitySlug={person.slug}
               entityName={person.name}
+              stances={stances}
             />
           </div>
 

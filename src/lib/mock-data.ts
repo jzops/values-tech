@@ -2228,6 +2228,88 @@ export const stances: Stance[] = [
 
   // PandaDoc (id: 296)
   { id: '1120', entity_type: 'company', entity_id: '296', topic: 'worker_treatment', position: 'opposed', summary: 'PandaDoc laid off 14% of staff in 2023.', source_url: 'https://techcrunch.com/2023/pandadoc-layoffs/', source_type: 'news', stance_date: '2023-01-27', verified: true },
+
+  // ========================================
+  // New stances added 2026-03-18
+  // ========================================
+
+  // Amazon - RTO 5-day mandate
+  { id: '1121', entity_type: 'company', entity_id: '3', topic: 'remote_work', position: 'opposed', summary: 'CEO Andy Jassy mandated five-day in-office return effective January 2, 2025, up from three days. A survey found 73% of Amazon employees considered quitting over the policy.', source_url: 'https://www.cnbc.com/2024/09/16/amazon-jassy-tells-employees-to-return-to-office-five-days-a-week.html', source_type: 'news', stance_date: '2024-09-16', verified: true },
+
+  // Amazon - DEI rollback
+  { id: '1122', entity_type: 'company', entity_id: '3', topic: 'dei', position: 'opposed', summary: 'Amazon halted some DEI programs in December 2024, eliminated references to "inclusion and diversity" in its annual report, and removed website sections titled "Equity for Black people" and "LGBTQ+ rights."', source_url: 'https://techcrunch.com/2025/04/17/here-are-all-the-tech-companies-rolling-back-dei-or-still-committed-to-it-so-far/', source_type: 'news', stance_date: '2024-12-01', verified: true },
+
+  // Amazon - Trump inaugural donation
+  { id: '1123', entity_type: 'company', entity_id: '3', topic: 'politics', position: 'mixed', summary: 'Amazon donated $1 million to Trump\'s 2025 inaugural fund, a significant increase from the $58,000 it donated to his first inauguration.', source_url: 'https://techcrunch.com/2024/12/13/sam-altman-and-jeff-bezos-are-the-latest-billionaires-to-donate-1m-to-trump-fund/', source_type: 'news', stance_date: '2024-12-13', verified: true },
+
+  // Amazon - Project Nimbus worker firing
+  { id: '1124', entity_type: 'company', entity_id: '3', topic: 'palestine', position: 'opposed', summary: 'Amazon fired engineer Ahmed Shahrour for protesting the company\'s $1.2 billion Project Nimbus cloud contract with the Israeli government and military.', source_url: 'https://www.cnbc.com/2025/10/13/amazon-fires-ahmed-shahrour-for-protesting-companys-work-with-israel.html', source_type: 'news', stance_date: '2025-10-13', verified: true },
+
+  // Meta - DEI elimination
+  { id: '1125', entity_type: 'company', entity_id: '1', topic: 'dei', position: 'opposed', summary: 'Meta ended all DEI programs in January 2025, eliminating its DEI team, representation goals, and supplier diversity programs. The Chan Zuckerberg Initiative also ended DEI programs and canceled its $1.5M Science Diversity Leadership Awards.', source_url: 'https://www.cnbc.com/2025/01/10/read-the-memo-meta-announces-end-of-its-dei-programs.html', source_type: 'news', stance_date: '2025-01-10', verified: true },
+
+  // Meta - Performance-based layoffs 2025
+  { id: '1126', entity_type: 'company', entity_id: '1', topic: 'layoffs', position: 'opposed', summary: 'Meta announced 5% cuts targeting lowest-performing employees in January 2025. In October 2025, Meta laid off roughly 600 employees within its AI unit.', source_url: 'https://www.cnbc.com/2025/01/14/meta-targeting-lowest-performing-employees-in-latest-round-of-layoffs.html', source_type: 'news', stance_date: '2025-01-14', verified: true },
+
+  // Meta - Trump inaugural donation
+  { id: '1127', entity_type: 'company', entity_id: '1', topic: 'politics', position: 'mixed', summary: 'Meta donated $1 million to Trump\'s 2025 inaugural fund — notable because Meta did not donate to Trump\'s first inauguration. Mark Zuckerberg attended the inauguration in person.', source_url: 'https://www.cnbc.com/2025/04/23/trump-inauguration-donors-include-meta-amazon-target-delta-ford.html', source_type: 'news', stance_date: '2025-01-20', verified: true },
+
+  // Google - DEI rollback
+  { id: '1128', entity_type: 'company', entity_id: '2', topic: 'dei', position: 'opposed', summary: 'Google retired its aspirational diversity hiring targets in February 2025 following Trump\'s executive orders. Google is evaluating whether to continue releasing diversity reports.', source_url: 'https://techcrunch.com/2025/02/05/google-ditches-dei-hiring-goals/', source_type: 'news', stance_date: '2025-02-05', verified: true },
+
+  // Google - Remote workers threatened with layoffs
+  { id: '1129', entity_type: 'company', entity_id: '2', topic: 'remote_work', position: 'opposed', summary: 'Google restricted its "Work from Anywhere" policy and notified remote workers their jobs would be considered for layoffs if they did not return to offices. In April 2025, remote workers were included in layoff cuts.', source_url: 'https://www.cnbc.com/2025/04/23/google-teams-are-including-remote-workers-in-their-cuts.html', source_type: 'news', stance_date: '2025-04-23', verified: true },
+
+  // Google - Trump inaugural donation
+  { id: '1130', entity_type: 'company', entity_id: '2', topic: 'politics', position: 'mixed', summary: 'Google donated $1 million to Trump\'s 2025 inauguration fund.', source_url: 'https://www.cnbc.com/2025/01/09/google-donates-1-million-to-trumps-inauguration-fund.html', source_type: 'news', stance_date: '2025-01-09', verified: true },
+
+  // Google - Project Nimbus firings
+  { id: '1131', entity_type: 'company', entity_id: '2', topic: 'palestine', position: 'opposed', summary: 'Google fired 28 employees in April 2024 after sit-in protests at offices in NYC, Seattle, and Sunnyvale over the $1.2 billion Project Nimbus contract with the Israeli government. Over 50 employees were fired total.', source_url: 'https://techcrunch.com/2024/04/18/google-fires-28-employees-after-sit-in-protest-over-controversial-project-nimbus-contract-with-israe/', source_type: 'news', stance_date: '2024-04-18', verified: true },
+
+  // Google - DeepMind unionization
+  { id: '1132', entity_type: 'company', entity_id: '2', topic: 'union', position: 'opposed', summary: 'Around 300 London-based Google DeepMind employees sought to unionize with the Communication Workers Union in April 2025, driven by concerns about Google removing its pledge not to use AI for weapons and surveillance.', source_url: 'https://techcrunch.com/2025/04/26/googles-deepmind-uk-team-reportedly-seeks-to-unionize/', source_type: 'news', stance_date: '2025-04-26', verified: true },
+
+  // Apple - Defended DEI
+  { id: '1133', entity_type: 'company', entity_id: '4', topic: 'dei', position: 'supported', summary: 'Apple\'s board opposed a shareholder proposal to eliminate DEI programs. At the February 2025 annual meeting, shareholders voted down the anti-DEI proposal. Tim Cook stated Apple\'s strength comes from diverse perspectives.', source_url: 'https://techcrunch.com/2025/02/25/apple-shareholders-vote-down-anti-dei-proposal/', source_type: 'news', stance_date: '2025-02-25', verified: true },
+
+  // Apple - Tim Cook Trump inaugural donation (person)
+  { id: '1134', entity_type: 'person', entity_id: '4', topic: 'politics', position: 'mixed', summary: 'Tim Cook personally donated $1 million to Trump\'s 2025 inaugural fund.', source_url: 'https://www.cnbc.com/2025/04/23/trump-inauguration-donors-include-meta-amazon-target-delta-ford.html', source_type: 'news', stance_date: '2025-01-20', verified: true },
+
+  // Microsoft - Layoffs 2025
+  { id: '1135', entity_type: 'company', entity_id: '5', topic: 'layoffs', position: 'opposed', summary: 'Microsoft conducted multiple layoff rounds in 2025 totaling over 15,000 employees: ~6,000 in May to reduce management layers, hundreds more in June, and ~9,000 in July.', source_url: 'https://www.cnbc.com/2025/05/13/microsoft-is-cutting-3percent-of-workers-across-the-software-company.html', source_type: 'news', stance_date: '2025-05-13', verified: true },
+
+  // Microsoft - Trump inaugural donation
+  { id: '1136', entity_type: 'company', entity_id: '5', topic: 'politics', position: 'mixed', summary: 'Microsoft donated $1 million to Trump\'s 2025 inauguration fund.', source_url: 'https://www.bloomberg.com/news/articles/2025-01-09/microsoft-google-donate-1-million-to-trump-s-inaugural-fund', source_type: 'news', stance_date: '2025-01-09', verified: true },
+
+  // Microsoft - Palestine worker protests & mixed response
+  { id: '1137', entity_type: 'company', entity_id: '5', topic: 'palestine', position: 'mixed', summary: 'Microsoft employees occupied Redmond HQ in August 2025 demanding the company sever ties with the Israeli military. Microsoft fired 5 protesters and asked the FBI for help. However, in September 2025 Microsoft cut off cloud services to an Israeli military unit after an investigation.', source_url: 'https://www.bloomberg.com/news/articles/2025-08-19/microsoft-workers-protesting-israel-ties-say-they-ve-occupied-hq', source_type: 'news', stance_date: '2025-08-19', verified: true },
+
+  // Tesla - Brand damage from Musk politics
+  { id: '1138', entity_type: 'company', entity_id: '6', topic: 'politics', position: 'mixed', summary: 'Tesla\'s brand value dropped $15.4 billion (36%) in 2025. Profits dropped 71% on weak sales and anti-Musk sentiment. European sales fell 49% YoY; German sales fell 76% after Musk endorsed the far-right AfD party.', source_url: 'https://techcrunch.com/2025/04/22/tesla-profits-drop-71-on-weak-sales-and-anti-elon-musk-sentiment/', source_type: 'news', stance_date: '2025-04-22', verified: true },
+
+  // Elon Musk - DOGE leadership (person)
+  { id: '1139', entity_type: 'person', entity_id: '2', topic: 'politics', position: 'supported', summary: 'Elon Musk led the Department of Government Efficiency (DOGE), initially targeting $2 trillion in federal budget cuts. Claimed $160 billion in savings. Departed DOGE in May 2025 after his 130-day special government employee term.', source_url: 'https://www.cnbc.com/2025/05/28/elon-musk-trump-doge.html', source_type: 'news', stance_date: '2025-05-28', verified: true },
+
+  // xAI - Reckless AI safety
+  { id: '1140', entity_type: 'company', entity_id: '321', topic: 'ai_ethics', position: 'opposed', summary: 'OpenAI and Anthropic researchers publicly called xAI\'s safety culture "reckless" and "completely irresponsible." xAI launched Grok 4 without safety testing documentation. SaferAI ranked xAI poorly for "very weak" risk management. A former employee stated "safety is a dead org at xAI."', source_url: 'https://techcrunch.com/2025/07/16/openai-and-anthropic-researchers-decry-reckless-safety-culture-at-elon-musks-xai/', source_type: 'news', stance_date: '2025-07-16', verified: true },
+
+  // Sam Altman - Trump inaugural donation (person)
+  { id: '1141', entity_type: 'person', entity_id: '7', topic: 'politics', position: 'mixed', summary: 'Sam Altman personally donated $1 million to Trump\'s inaugural fund in December 2024, stating "President Trump will lead our country into the age of AI."', source_url: 'https://techcrunch.com/2024/12/13/sam-altman-and-jeff-bezos-are-the-latest-billionaires-to-donate-1m-to-trump-fund/', source_type: 'news', stance_date: '2024-12-13', verified: true },
+
+  // OpenAI - For-profit conversion
+  { id: '1142', entity_type: 'company', entity_id: '11', topic: 'ai_ethics', position: 'mixed', summary: 'OpenAI initially planned full for-profit conversion but reversed course in May 2025 after pressure from former employees, academics, and Elon Musk. In October 2025 OpenAI completed restructuring: the nonprofit retained a 26% stake (~$130B) in the for-profit public benefit corporation.', source_url: 'https://techcrunch.com/2025/10/28/openai-completes-its-for-profit-recapitalization/', source_type: 'news', stance_date: '2025-10-28', verified: true },
+
+  // OpenAI - Reduced safety testing
+  { id: '1143', entity_type: 'company', entity_id: '11', topic: 'ai_ethics', position: 'opposed', summary: 'OpenAI stated in April 2025 it may "adjust" safety requirements if a competing lab releases high-risk AI without similar protections. Reports indicate OpenAI reduced safety testing time from months to days before releases.', source_url: 'https://techcrunch.com/2025/04/15/openai-says-it-may-adjust-its-safety-requirements-if-a-rival-lab-releases-high-risk-ai/', source_type: 'news', stance_date: '2025-04-15', verified: true },
+
+  // OpenAI - Pentagon deal controversy
+  { id: '1144', entity_type: 'company', entity_id: '11', topic: 'ai_ethics', position: 'mixed', summary: 'OpenAI\'s deal with the US Department of Defense prompted widespread backlash. Altman admitted it "looked opportunistic and sloppy" and outlined revisions including new limits on surveillance.', source_url: 'https://www.cnbc.com/2026/03/03/openai-sam-altman-pentagon-deal-amended-surveillance-limits.html', source_type: 'news', stance_date: '2026-03-03', verified: true },
+
+  // Palantir - Palestine/ICE protests
+  { id: '1145', entity_type: 'company', entity_id: '192', topic: 'palestine', position: 'opposed', summary: 'Protesters demonstrated outside Palantir\'s Manhattan office in June 2025, organized by Planet Over Profit, targeting the company\'s work with ICE, the Israeli military, and deportation infrastructure. Six protesters were detained by NYPD.', source_url: 'https://www.cnbc.com/2025/06/26/palantir-deportations-ice-palestine-israel.html', source_type: 'news', stance_date: '2025-06-26', verified: true },
+
+  // Jeff Bezos - Trump inaugural donation (person)
+  { id: '1146', entity_type: 'person', entity_id: '65', topic: 'politics', position: 'mixed', summary: 'Jeff Bezos personally donated $1 million to Trump\'s 2025 inaugural fund and attended the inauguration.', source_url: 'https://techcrunch.com/2024/12/13/sam-altman-and-jeff-bezos-are-the-latest-billionaires-to-donate-1m-to-trump-fund/', source_type: 'news', stance_date: '2024-12-13', verified: true },
 ]
 
 // Helper functions to query data
@@ -2244,6 +2326,10 @@ export function getPersonBySlug(slug: string) {
 
 export function getVCBySlug(slug: string) {
   return vcs.find(v => v.slug === slug) || null
+}
+
+export function getStanceById(id: string) {
+  return stances.find(s => s.id === id) || null
 }
 
 export function getStancesForEntity(entityType: string, entityId: string) {
