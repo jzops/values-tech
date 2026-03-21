@@ -3,6 +3,12 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Contribute — Receipts.Tech',
   description: 'Help document the receipts on tech companies. Submit tips and sources.',
+  openGraph: {
+    title: 'Contribute — Receipts.Tech',
+    description: 'Help document the receipts on tech companies. Submit tips and sources.',
+    images: ['/api/og/home'],
+  },
+  twitter: { card: 'summary_large_image', images: ['/api/og/home'] },
 }
 
 export default function ContributePage() {

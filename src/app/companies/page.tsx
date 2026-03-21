@@ -5,6 +5,15 @@ import { companies, getStanceCountForEntity } from '@/lib/mock-data'
 export const metadata: Metadata = {
   title: 'Companies — Receipts.Tech',
   description: 'Check the receipts on tech companies. Documented stances on layoffs, DEI, remote work, and more.',
+  openGraph: {
+    title: 'Companies — Receipts.Tech',
+    description: 'Check the receipts on tech companies. Documented stances on layoffs, DEI, remote work, and more.',
+    images: ['/api/og/collection?title=Companies&description=Check+the+receipts+on+tech+companies'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/api/og/collection?title=Companies&description=Check+the+receipts+on+tech+companies'],
+  },
 }
 
 export default function CompaniesPage() {

@@ -5,6 +5,15 @@ import { vcs, getStanceCountForEntity } from '@/lib/mock-data'
 export const metadata: Metadata = {
   title: 'VCs — Receipts.Tech',
   description: 'Check the receipts on VCs before taking their money. Documented stances on founder treatment, politics, and more.',
+  openGraph: {
+    title: 'VCs — Receipts.Tech',
+    description: 'Check the receipts on VCs before taking their money.',
+    images: ['/api/og/collection?title=VCs&description=Check+the+receipts+before+taking+their+money'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/api/og/collection?title=VCs&description=Check+the+receipts+before+taking+their+money'],
+  },
 }
 
 export default function VCsPage() {

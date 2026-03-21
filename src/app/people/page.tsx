@@ -5,6 +5,15 @@ import { people, companies, getStanceCountForEntity } from '@/lib/mock-data'
 export const metadata: Metadata = {
   title: 'People — Receipts.Tech',
   description: 'Check the receipts on tech executives. Documented public stances on important issues.',
+  openGraph: {
+    title: 'People — Receipts.Tech',
+    description: 'Check the receipts on tech executives. Documented public stances on important issues.',
+    images: ['/api/og/collection?title=People&description=Check+the+receipts+on+tech+executives'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/api/og/collection?title=People&description=Check+the+receipts+on+tech+executives'],
+  },
 }
 
 export default function PeoplePage() {

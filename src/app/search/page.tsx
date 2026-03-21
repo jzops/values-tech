@@ -4,6 +4,12 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Search — Receipts.Tech',
   description: 'Search for tech companies, executives, and VCs to check their receipts.',
+  openGraph: {
+    title: 'Search — Receipts.Tech',
+    description: 'Search for tech companies, executives, and VCs to check their receipts.',
+    images: ['/api/og/home'],
+  },
+  twitter: { card: 'summary_large_image', images: ['/api/og/home'] },
 }
 
 export default function SearchPage() {
