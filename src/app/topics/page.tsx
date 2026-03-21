@@ -6,6 +6,15 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Topics — Receipts.Tech',
   description: 'Browse all topics we track: layoffs, DEI, remote work, unionization, politics, and more.',
+  openGraph: {
+    title: 'Topics — Receipts.Tech',
+    description: 'Browse all topics we track: layoffs, DEI, remote work, unionization, politics, and more.',
+    images: ['/api/og/collection?title=Topics&description=Layoffs,+DEI,+remote+work,+politics,+and+more'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/api/og/collection?title=Topics&description=Layoffs,+DEI,+remote+work,+politics,+and+more'],
+  },
 }
 
 export default function TopicsPage() {

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Download, Twitter, Linkedin, Link2, Check, ClipboardList, MessageSquare } from 'lucide-react'
+import { Download, Twitter, Linkedin, Link2, Check, ClipboardList, MessageSquare, ChevronDown } from 'lucide-react'
 import { Stance } from '@/lib/types'
 import { TOPICS } from '@/lib/constants'
 
@@ -57,14 +57,14 @@ function formatReceiptText(entityName: string, entityType: string, entitySlug: s
   lines.push('--------------------------------')
   lines.push(`TOTAL RECEIPTS:        ${stances.length}`)
   lines.push('================================')
-  lines.push(`reciepts.tech/${entityType}/${entitySlug}`)
+  lines.push(`receipts.tech/${entityType}/${entitySlug}`)
 
   return lines.join('\n')
 }
 
 function generateTweetThread(entityName: string, entityType: string, entitySlug: string, stances: Stance[]): string[] {
   const tweets: string[] = []
-  const url = `https://reciepts.tech/${entityType}/${entitySlug}`
+  const url = `https://receipts.tech/${entityType}/${entitySlug}`
 
   // First tweet
   tweets.push(`Here are the receipts on ${entityName} 📑🧵\n\n${stances.length} documented receipts.\n\n${url}`)
@@ -99,27 +99,30 @@ export function ShareButtons({ entityType, entitySlug, entityName, stances = [] 
   const [receiptCopied, setReceiptCopied] = useState(false)
   const [threadCopied, setThreadCopied] = useState(false)
   const [downloading, setDownloading] = useState(false)
+  const [showDownloadMenu, setShowDownloadMenu] = useState(false)
 
   const pageUrl = typeof window !== 'undefined'
     ? `${window.location.origin}/${entityType}/${entitySlug}`
     : `https://receipts.tech/${entityType}/${entitySlug}`
 
-  const ogImageUrl = `${typeof window !== 'undefined' ? window.location.origin : 'https://receipts.tech'}/api/og/${entityType}/${entitySlug}`
+  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://receipts.tech'
 
   const tweetText = `Check the receipts on ${entityName} 📑`
   const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(pageUrl)}`
 
   const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`
 
-  async function handleDownload() {
+  async function handleDownload(format: 'landscape' | 'square' | 'story' = 'square') {
     setDownloading(true)
+    setShowDownloadMenu(false)
     try {
-      const response = await fetch(ogImageUrl)
+      const downloadUrl = `${baseUrl}/api/og/download/${entityType}/${entitySlug}?format=${format}`
+      const response = await fetch(downloadUrl)
       const blob = await response.blob()
       const url = URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = url
-      a.download = `receipt-${entitySlug}-${new Date().toISOString().split('T')[0]}.png`
+      a.download = `receipt-${entitySlug}-${format}-${new Date().toISOString().split('T')[0]}.png`
       document.body.appendChild(a)
       a.click()
       document.body.removeChild(a)
@@ -166,15 +169,52 @@ export function ShareButtons({ entityType, entitySlug, entityName, stances = [] 
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center gap-2">
-        <button
-          onClick={handleDownload}
-          disabled={downloading}
-          className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors disabled:opacity-50"
-          title="Download receipt card"
-        >
-          <Download className="w-4 h-4" />
-          {downloading ? 'Downloading...' : 'Download'}
-        </button>
+        <div className="relative">
+          <div className="flex">
+            <button
+              onClick={() => handleDownload('square')}
+              disabled={downloading}
+              className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-100 rounded-l-lg hover:bg-gray-200 transition-colors disabled:opacity-50"
+              title="Download receipt card"
+            >
+              <Download className="w-4 h-4" />
+              {downloading ? 'Downloading...' : 'Download'}
+            </button>
+            <button
+              onClick={() => setShowDownloadMenu(!showDownloadMenu)}
+              disabled={downloading}
+              className="flex items-center px-1.5 py-1.5 text-sm text-gray-700 bg-gray-100 rounded-r-lg hover:bg-gray-200 transition-colors border-l border-gray-200 disabled:opacity-50"
+              title="More download options"
+            >
+              <ChevronDown className="w-3.5 h-3.5" />
+            </button>
+          </div>
+          {showDownloadMenu && (
+            <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg py-1 z-10 min-w-[180px]">
+              <button
+                onClick={() => handleDownload('square')}
+                className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+              >
+                Square (1080x1080)
+                <span className="block text-xs text-gray-400">Instagram, general sharing</span>
+              </button>
+              <button
+                onClick={() => handleDownload('landscape')}
+                className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+              >
+                Landscape (1200x630)
+                <span className="block text-xs text-gray-400">Twitter, LinkedIn</span>
+              </button>
+              <button
+                onClick={() => handleDownload('story')}
+                className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+              >
+                Story (1080x1920)
+                <span className="block text-xs text-gray-400">Instagram/TikTok stories</span>
+              </button>
+            </div>
+          )}
+        </div>
 
         <a
           href={twitterUrl}

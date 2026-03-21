@@ -3,6 +3,12 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About — Receipts.Tech',
   description: 'Learn about Receipts.Tech and our mission to hold tech accountable.',
+  openGraph: {
+    title: 'About — Receipts.Tech',
+    description: 'Learn about Receipts.Tech and our mission to hold tech accountable.',
+    images: ['/api/og/home'],
+  },
+  twitter: { card: 'summary_large_image', images: ['/api/og/home'] },
 }
 
 export default function AboutPage() {

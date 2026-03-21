@@ -69,6 +69,24 @@ export async function GET(
             borderBottom: '4px dashed #ccc',
           }}
         >
+          {/* Watermark */}
+          <div
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%) rotate(-35deg)',
+              fontSize: '60px',
+              fontWeight: 900,
+              color: 'rgba(0,0,0,0.03)',
+              letterSpacing: '8px',
+              display: 'flex',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            RECEIPTS.TECH
+          </div>
+
           {/* Position stamp */}
           <div
             style={{
@@ -148,8 +166,8 @@ export async function GET(
             <span style={{ fontSize: '11px', color: '#999', fontStyle: 'italic' }}>
               Before they send you their receipts, check theirs.
             </span>
-            <span style={{ fontSize: '11px', color: '#bbb', marginTop: '4px', letterSpacing: '2px' }}>
-              reciepts.tech/stance/{id}
+            <span style={{ fontSize: '13px', color: '#FF6B35', marginTop: '6px', letterSpacing: '3px', fontWeight: 700 }}>
+              RECEIPTS.TECH
             </span>
           </div>
         </div>
