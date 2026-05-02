@@ -30,6 +30,22 @@ export function calculateGrade(stances: Stance[]): GradeResult {
     return { grade: 'C', score: 50, color: GRADE_COLORS.C, label: 'No Data' }
   }
 
+  // Auto-F: any documented Epstein connection forces an F grade
+  // regardless of other stances. The presence of an epstein-topic stance
+  // (silent positions excluded — those just note absence of comment) is
+  // treated as a categorical disqualifier.
+  const hasEpsteinConnection = stances.some(
+    s => s.topic === 'epstein' && s.position !== 'silent'
+  )
+  if (hasEpsteinConnection) {
+    return {
+      grade: 'F',
+      score: 0,
+      color: GRADE_COLORS.F,
+      label: 'Epstein Connection',
+    }
+  }
+
   const counts = { supported: 0, opposed: 0, mixed: 0, silent: 0 }
   for (const s of stances) {
     counts[s.position as keyof typeof counts] = (counts[s.position as keyof typeof counts] || 0) + 1
