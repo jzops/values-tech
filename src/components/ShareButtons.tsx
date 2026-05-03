@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Download, Twitter, Linkedin, Link2, Check, ClipboardList, MessageSquare, ChevronDown } from 'lucide-react'
 import { Stance } from '@/lib/types'
 import { TOPICS } from '@/lib/constants'
@@ -33,7 +33,6 @@ function formatReceiptText(entityName: string, entityType: string, entitySlug: s
     const dots = '.'.repeat(Math.max(2, 26 - topicName.length - posText.length))
     lines.push(`${i + 1}. ${topicName}${dots}${posText}`)
 
-    // Wrap summary to ~32 chars per line
     const summary = s.summary.length > 64 ? s.summary.slice(0, 61) + '...' : s.summary
     const words = summary.split(' ')
     let line = '   '
@@ -66,10 +65,8 @@ function generateTweetThread(entityName: string, entityType: string, entitySlug:
   const tweets: string[] = []
   const url = `https://receipts.tech/${entityType}/${entitySlug}`
 
-  // First tweet
   tweets.push(`Here are the receipts on ${entityName} 📑🧵\n\n${stances.length} documented receipts.\n\n${url}`)
 
-  // One tweet per stance (up to 8)
   const topStances = stances.slice(0, 8)
   topStances.forEach((s, i) => {
     const topic = TOPICS[s.topic as keyof typeof TOPICS]
@@ -84,7 +81,6 @@ function generateTweetThread(entityName: string, entityType: string, entitySlug:
     tweets.push(tweet)
   })
 
-  // Final tweet
   if (stances.length > 8) {
     tweets.push(`${stances.length - 8} more receipts at:\n${url}\n\nBefore they send you their receipts, check theirs. 📑`)
   } else {
@@ -100,16 +96,16 @@ export function ShareButtons({ entityType, entitySlug, entityName, stances = [] 
   const [threadCopied, setThreadCopied] = useState(false)
   const [downloading, setDownloading] = useState(false)
   const [showDownloadMenu, setShowDownloadMenu] = useState(false)
+  const [pageUrl, setPageUrl] = useState(`https://receipts.tech/${entityType}/${entitySlug}`)
+  const [baseUrl, setBaseUrl] = useState('https://receipts.tech')
 
-  const pageUrl = typeof window !== 'undefined'
-    ? `${window.location.origin}/${entityType}/${entitySlug}`
-    : `https://receipts.tech/${entityType}/${entitySlug}`
-
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://receipts.tech'
+  useEffect(() => {
+    setPageUrl(`${window.location.origin}/${entityType}/${entitySlug}`)
+    setBaseUrl(window.location.origin)
+  }, [entityType, entitySlug])
 
   const tweetText = `Check the receipts on ${entityName} 📑`
   const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(pageUrl)}`
-
   const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`
 
   async function handleDownload(format: 'landscape' | 'square' | 'story' = 'square') {
