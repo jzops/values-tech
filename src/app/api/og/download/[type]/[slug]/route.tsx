@@ -7,12 +7,19 @@ import { calculateGrade } from '@/lib/grade'
 export const runtime = 'edge'
 
 const FORMAT_CONFIGS = {
-  landscape: { width: 1200, height: 630, maxStances: 5 },
-  square: { width: 1080, height: 1080, maxStances: 8 },
-  story: { width: 1080, height: 1920, maxStances: 12 },
+  landscape: { width: 1200, height: 630, maxStances: 4 },
+  square: { width: 1080, height: 1080, maxStances: 6 },
+  story: { width: 1080, height: 1920, maxStances: 10 },
 } as const
 
 type Format = keyof typeof FORMAT_CONFIGS
+
+const POS_COLORS: Record<string, { bg: string; text: string; border: string }> = {
+  opposed: { bg: '#fef2f2', text: '#dc2626', border: '#fca5a5' },
+  supported: { bg: '#f0fdf4', text: '#16a34a', border: '#86efac' },
+  mixed: { bg: '#fffbeb', text: '#d97706', border: '#fcd34d' },
+  silent: { bg: '#f9fafb', text: '#6b7280', border: '#d1d5db' },
+}
 
 export async function GET(
   request: NextRequest,
@@ -63,26 +70,28 @@ export async function GET(
     counts[s.position as keyof typeof counts] = (counts[s.position as keyof typeof counts] || 0) + 1
   }
 
-  const now = new Date()
-  const dateStr = now.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })
-  const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
-
-  const divider = '═'.repeat(format === 'landscape' ? 40 : 34)
-  const thinDivider = '─'.repeat(format === 'landscape' ? 40 : 34)
-
   const isStory = format === 'story'
-  const isSquare = format === 'square'
-  const padding = isStory ? '48px 40px' : isSquare ? '40px 44px' : '36px 48px'
-  const nameFontSize = isStory ? '42px' : isSquare ? '36px' : '32px'
-  const stanceFontSize = isStory ? '16px' : '15px'
-  const summaryMaxLen = isStory ? 80 : isSquare ? 70 : 65
+  const isLandscape = format === 'landscape'
 
-  // Zigzag edge points for torn receipt effect
-  const zigzagTop = Array.from({ length: 40 }, (_, i) => {
-    const x = (i / 39) * 100
-    const y = i % 2 === 0 ? 0 : 12
-    return `${x}% ${y}px`
-  }).join(', ')
+  // Responsive sizing
+  const pad = isStory ? 48 : isLandscape ? 32 : 40
+  const headerSize = isStory ? 52 : isLandscape ? 36 : 44
+  const subtitleSize = isStory ? 22 : isLandscape ? 16 : 20
+  const stanceGap = isStory ? 16 : isLandscape ? 8 : 12
+  const topicSize = isStory ? 18 : isLandscape ? 14 : 16
+  const summarySize = isStory ? 16 : isLandscape ? 12 : 14
+  const summaryMax = isStory ? 100 : isLandscape ? 70 : 85
+  const gradeSize = isStory ? 72 : isLandscape ? 48 : 60
+  const gradeLabelSize = isStory ? 14 : isLandscape ? 10 : 12
+  const gradeBoxSize = isStory ? 130 : isLandscape ? 90 : 110
+  const countBarHeight = isStory ? 12 : isLandscape ? 8 : 10
+
+  // Calculate bar widths
+  const total = stances.length || 1
+  const barMax = config.width - pad * 2 - 40
+  const oppWidth = Math.max(4, (counts.opposed / total) * barMax)
+  const mixWidth = Math.max(4, (counts.mixed / total) * barMax)
+  const supWidth = Math.max(4, (counts.supported / total) * barMax)
 
   return new ImageResponse(
     (
@@ -91,166 +100,299 @@ export async function GET(
           width: '100%',
           height: '100%',
           display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#e8e4df',
-          padding: '20px',
+          flexDirection: 'column',
+          backgroundColor: '#0f0f0f',
+          color: '#ffffff',
+          fontFamily: 'system-ui, sans-serif',
+          position: 'relative',
+          overflow: 'hidden',
         }}
       >
-        {/* Receipt paper */}
+        {/* Background accent gradient */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            height: isStory ? '400px' : isLandscape ? '200px' : '300px',
+            background: 'linear-gradient(180deg, rgba(255,107,53,0.15) 0%, rgba(255,107,53,0) 100%)',
+            display: 'flex',
+          }}
+        />
+
+        {/* Subtle grid pattern overlay */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            opacity: 0.03,
+            backgroundSize: '40px 40px',
+            backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)',
+            display: 'flex',
+          }}
+        />
+
+        {/* Top bar - brand stripe */}
+        <div
+          style={{
+            width: '100%',
+            height: '4px',
+            background: 'linear-gradient(90deg, #FF6B35, #FF8F65, #FF6B35)',
+            display: 'flex',
+          }}
+        />
+
+        {/* Content */}
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
-            width: '100%',
-            height: '100%',
-            backgroundColor: '#FFF8F0',
-            padding,
-            fontFamily: 'monospace',
-            color: '#1a1a1a',
-            position: 'relative',
-            borderTop: '4px dashed #ccc',
-            borderBottom: '4px dashed #ccc',
+            flex: 1,
+            padding: `${pad}px`,
           }}
         >
-          {/* Watermark */}
+          {/* Header row: Brand + Grade */}
           <div
             style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%) rotate(-35deg)',
-              fontSize: isStory ? '80px' : '60px',
-              fontWeight: 900,
-              color: 'rgba(0,0,0,0.03)',
-              letterSpacing: '8px',
               display: 'flex',
-              whiteSpace: 'nowrap',
+              justifyContent: 'space-between',
+              alignItems: 'flex-start',
+              marginBottom: isStory ? '32px' : isLandscape ? '16px' : '24px',
             }}
           >
-            RECEIPTS.TECH
-          </div>
+            {/* Left: brand + entity */}
+            <div style={{ display: 'flex', flexDirection: 'column', flex: 1, maxWidth: '70%' }}>
+              {/* Brand tag */}
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  marginBottom: isStory ? '20px' : '12px',
+                }}
+              >
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: isLandscape ? '24px' : '28px',
+                    height: isLandscape ? '24px' : '28px',
+                    backgroundColor: '#FF6B35',
+                    borderRadius: '6px',
+                  }}
+                >
+                  <span style={{ fontSize: isLandscape ? '12px' : '14px', fontWeight: 900, color: '#fff' }}>R</span>
+                </div>
+                <span style={{ fontSize: isLandscape ? '12px' : '14px', fontWeight: 600, color: '#888', letterSpacing: '2px', textTransform: 'uppercase' }}>
+                  Receipts.Tech
+                </span>
+              </div>
 
-          {/* Grade stamp */}
-          <div
-            style={{
-              position: 'absolute',
-              top: isStory ? '48px' : '32px',
-              right: '40px',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: isStory ? '140px' : '120px',
-              height: isStory ? '140px' : '120px',
-              border: `6px solid ${gradeColor}`,
-              borderRadius: isStory ? '70px' : '60px',
-              transform: 'rotate(-12deg)',
-              opacity: 0.85,
-            }}
-          >
-            <span style={{ fontSize: isStory ? '64px' : '52px', fontWeight: 900, color: gradeColor, lineHeight: 1 }}>
-              {grade}
-            </span>
-            <span style={{ fontSize: isStory ? '13px' : '11px', fontWeight: 700, color: gradeColor, letterSpacing: '1px', textTransform: 'uppercase' }}>
-              {gradeLabel}
-            </span>
-          </div>
+              {/* Entity name */}
+              <span
+                style={{
+                  fontSize: `${headerSize}px`,
+                  fontWeight: 800,
+                  lineHeight: 1.1,
+                  letterSpacing: '-0.02em',
+                  color: '#fff',
+                }}
+              >
+                {entity.name}
+              </span>
 
-          {/* Header */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: isStory ? '16px' : '8px' }}>
-            <span style={{ fontSize: '14px', letterSpacing: '1px', color: '#666' }}>{divider}</span>
-            <span style={{ fontSize: isStory ? '32px' : '28px', fontWeight: 700, letterSpacing: '6px', marginTop: '4px' }}>
-              RECEIPT
-            </span>
-            <span style={{ fontSize: '14px', color: '#888', marginTop: '2px' }}>
-              Receipts.Tech
-            </span>
-            <span style={{ fontSize: '14px', letterSpacing: '1px', color: '#666', marginTop: '4px' }}>{divider}</span>
-          </div>
-
-          {/* Entity info */}
-          <div style={{ display: 'flex', flexDirection: 'column', marginBottom: isStory ? '20px' : '12px', marginTop: '4px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', color: '#888' }}>
-              <span>DATE: {dateStr}</span>
-              <span>TIME: {timeStr}</span>
+              {/* Subtitle */}
+              <span
+                style={{
+                  fontSize: `${subtitleSize}px`,
+                  color: '#888',
+                  marginTop: '6px',
+                  fontWeight: 500,
+                }}
+              >
+                {subtitle}
+              </span>
             </div>
-            <span style={{ fontSize: nameFontSize, fontWeight: 700, marginTop: '8px', maxWidth: '70%' }}>
-              {entity.name}
-            </span>
-            <span style={{ fontSize: '16px', color: '#666', marginTop: '2px' }}>
-              {subtitle}
-            </span>
+
+            {/* Right: Grade circle */}
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: `${gradeBoxSize}px`,
+                height: `${gradeBoxSize}px`,
+                borderRadius: '50%',
+                border: `4px solid ${gradeColor}`,
+                backgroundColor: `${gradeColor}15`,
+                flexShrink: 0,
+              }}
+            >
+              <span style={{ fontSize: `${gradeSize}px`, fontWeight: 900, color: gradeColor, lineHeight: 1 }}>
+                {grade}
+              </span>
+              <span style={{ fontSize: `${gradeLabelSize}px`, fontWeight: 700, color: gradeColor, textTransform: 'uppercase', letterSpacing: '1px', marginTop: '2px' }}>
+                {gradeLabel}
+              </span>
+            </div>
           </div>
 
-          {/* Thin divider */}
-          <span style={{ fontSize: '12px', color: '#ccc', letterSpacing: '0px' }}>{thinDivider}</span>
+          {/* Position summary bar */}
+          <div
+            style={{
+              display: 'flex',
+              gap: '3px',
+              marginBottom: isStory ? '28px' : isLandscape ? '12px' : '20px',
+              borderRadius: '6px',
+              overflow: 'hidden',
+            }}
+          >
+            {counts.opposed > 0 && (
+              <div style={{ width: `${oppWidth}px`, height: `${countBarHeight}px`, backgroundColor: '#ef4444', borderRadius: '3px', display: 'flex' }} />
+            )}
+            {counts.mixed > 0 && (
+              <div style={{ width: `${mixWidth}px`, height: `${countBarHeight}px`, backgroundColor: '#f59e0b', borderRadius: '3px', display: 'flex' }} />
+            )}
+            {counts.supported > 0 && (
+              <div style={{ width: `${supWidth}px`, height: `${countBarHeight}px`, backgroundColor: '#22c55e', borderRadius: '3px', display: 'flex' }} />
+            )}
+          </div>
 
-          {/* Line items */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: isStory ? '10px' : '6px', marginTop: '10px', flex: 1 }}>
+          {/* Position counts row */}
+          <div
+            style={{
+              display: 'flex',
+              gap: isLandscape ? '16px' : '24px',
+              marginBottom: isStory ? '32px' : isLandscape ? '14px' : '24px',
+              fontSize: isLandscape ? '12px' : '14px',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#ef4444', display: 'flex' }} />
+              <span style={{ color: '#aaa' }}>Opposed</span>
+              <span style={{ fontWeight: 700, color: '#ef4444' }}>{counts.opposed}</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#f59e0b', display: 'flex' }} />
+              <span style={{ color: '#aaa' }}>Mixed</span>
+              <span style={{ fontWeight: 700, color: '#f59e0b' }}>{counts.mixed}</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#22c55e', display: 'flex' }} />
+              <span style={{ color: '#aaa' }}>Supported</span>
+              <span style={{ fontWeight: 700, color: '#22c55e' }}>{counts.supported}</span>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div style={{ width: '100%', height: '1px', backgroundColor: '#2a2a2a', display: 'flex', marginBottom: isStory ? '28px' : isLandscape ? '12px' : '20px' }} />
+
+          {/* Stances list */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: `${stanceGap}px`, flex: 1 }}>
             {topStances.map((stance, i) => {
               const topic = TOPICS[stance.topic as keyof typeof TOPICS]
-              const posText = stance.position.toUpperCase()
               const topicName = topic?.name || stance.topic
-              const dots = '.'.repeat(Math.max(2, 28 - topicName.length - posText.length))
-              const posColor =
-                stance.position === 'opposed' ? '#ef4444' :
-                stance.position === 'supported' ? '#22c55e' :
-                stance.position === 'mixed' ? '#f59e0b' : '#9ca3af'
+              const topicIcon = topic?.icon || '📋'
+              const pos = POS_COLORS[stance.position] || POS_COLORS.silent
+              const posLabel = stance.position.charAt(0).toUpperCase() + stance.position.slice(1)
+              const summary = stance.summary.length > summaryMax
+                ? stance.summary.slice(0, summaryMax - 3) + '...'
+                : stance.summary
 
               return (
-                <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
-                  <div style={{ display: 'flex', fontSize: stanceFontSize, fontWeight: 600 }}>
-                    <span>{i + 1}. {topicName}</span>
-                    <span style={{ color: '#bbb', margin: '0 4px' }}>{dots}</span>
-                    <span style={{ color: posColor }}>{posText}</span>
+                <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  {/* Topic row */}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <span style={{ fontSize: `${topicSize}px` }}>{topicIcon}</span>
+                    <span style={{ fontSize: `${topicSize}px`, fontWeight: 700, color: '#e5e5e5' }}>
+                      {topicName}
+                    </span>
+                    {/* Position pill */}
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        paddingLeft: '8px',
+                        paddingRight: '8px',
+                        paddingTop: '2px',
+                        paddingBottom: '2px',
+                        borderRadius: '100px',
+                        backgroundColor: pos.bg,
+                        border: `1px solid ${pos.border}`,
+                        marginLeft: '4px',
+                      }}
+                    >
+                      <span style={{ fontSize: `${topicSize - 4}px`, fontWeight: 700, color: pos.text }}>
+                        {posLabel}
+                      </span>
+                    </div>
                   </div>
-                  <span style={{ fontSize: '12px', color: '#777', paddingLeft: '18px', lineHeight: 1.3 }}>
-                    {stance.summary.length > summaryMaxLen ? stance.summary.slice(0, summaryMaxLen - 3) + '...' : stance.summary}
+                  {/* Summary */}
+                  <span style={{ fontSize: `${summarySize}px`, color: '#888', lineHeight: 1.4, paddingLeft: `${topicSize + 8}px` }}>
+                    {summary}
                   </span>
                 </div>
               )
             })}
             {stances.length > config.maxStances && (
-              <span style={{ fontSize: '13px', color: '#999', marginTop: '4px' }}>
+              <span style={{ fontSize: `${summarySize}px`, color: '#555', marginTop: '4px' }}>
                 + {stances.length - config.maxStances} more receipts on file
               </span>
             )}
           </div>
 
-          {/* Thin divider */}
-          <span style={{ fontSize: '12px', color: '#ccc', letterSpacing: '0px' }}>{thinDivider}</span>
-
-          {/* Totals */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', marginTop: '8px', fontSize: isStory ? '16px' : '14px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span>OPPOSED</span>
-              <span style={{ fontWeight: 700, color: '#ef4444' }}>{counts.opposed}</span>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span>MIXED</span>
-              <span style={{ fontWeight: 700, color: '#f59e0b' }}>{counts.mixed}</span>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span>SUPPORTED</span>
-              <span style={{ fontWeight: 700, color: '#22c55e' }}>{counts.supported}</span>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '4px', borderTop: '2px solid #1a1a1a', paddingTop: '4px' }}>
-              <span style={{ fontWeight: 700, fontSize: isStory ? '20px' : '16px' }}>TOTAL RECEIPTS</span>
-              <span style={{ fontWeight: 700, fontSize: isStory ? '20px' : '16px' }}>{stances.length}</span>
-            </div>
-          </div>
-
           {/* Footer */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: isStory ? '24px' : '12px' }}>
-            <span style={{ fontSize: '11px', color: '#999', fontStyle: 'italic' }}>
-              Before they send you their receipts, check theirs.
-            </span>
-            <span style={{ fontSize: '13px', color: '#FF6B35', marginTop: '6px', letterSpacing: '3px', fontWeight: 700 }}>
-              RECEIPTS.TECH
-            </span>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              marginTop: isStory ? '32px' : '16px',
+              paddingTop: isStory ? '24px' : '12px',
+              borderTop: '1px solid #2a2a2a',
+            }}
+          >
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+              <span style={{ fontSize: isLandscape ? '11px' : '13px', color: '#555', fontStyle: 'italic' }}>
+                Before they send you their receipts, check theirs.
+              </span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '20px',
+                  height: '20px',
+                  backgroundColor: '#FF6B35',
+                  borderRadius: '4px',
+                }}
+              >
+                <span style={{ fontSize: '10px', fontWeight: 900, color: '#fff' }}>R</span>
+              </div>
+              <span style={{ fontSize: isLandscape ? '13px' : '16px', fontWeight: 700, color: '#FF6B35', letterSpacing: '1px' }}>
+                RECEIPTS.TECH
+              </span>
+            </div>
           </div>
         </div>
+
+        {/* Bottom bar - brand stripe */}
+        <div
+          style={{
+            width: '100%',
+            height: '4px',
+            background: 'linear-gradient(90deg, #FF6B35, #FF8F65, #FF6B35)',
+            display: 'flex',
+          }}
+        />
       </div>
     ),
     {
