@@ -2676,6 +2676,11 @@ export const stances: Stance[] = [
 
   // Midjourney (Company ID 21) - ai_ethics
   { id: '1257', entity_type: 'company', entity_id: '21', topic: 'ai_ethics', position: 'opposed', summary: 'Midjourney is a named defendant in Andersen v. Stability AI et al., a class-action copyright lawsuit filed by artists in January 2023. The complaint alleges Midjourney trained its image generation models on billions of scraped images without artist consent and marketed the ability to generate art "in the style of" specific artists. In August 2024, a federal judge allowed core copyright-infringement claims to proceed to discovery. Midjourney founder David Holz has said he was unaware of legal issues when building the model.', source_url: 'https://www.saverilawfirm.com/our-cases/ai-artgenerators-copyright-litigation', source_type: 'news', stance_date: '2024-08-01', verified: true },
+
+  // === 2026-08-26 daily populate ===
+
+  // HashiCorp (Company ID 46) - open_source
+  { id: '1258', entity_type: 'company', entity_id: '46', topic: 'open_source', position: 'mixed', summary: 'In August 2023, HashiCorp switched all its products — including Terraform, Vault, and Consul — from the open-source Mozilla Public License v2.0 to the Business Source License 1.1 (BSL), which bars vendors from offering HashiCorp-based competing commercial services. Co-founder Armon Dadgar cited vendors who "take advantage of pure OSS models without contributing back" as justification. The developer community responded by forking Terraform as OpenTofu; the Linux Foundation accepted it in September 2023 and the project reached 29,900+ GitHub stars under MPL 2.0.', source_url: 'https://www.hashicorp.com/blog/hashicorp-adopts-business-source-license', source_type: 'company_website', stance_date: '2023-08-10', verified: true },
 ]
 
 // Helper functions to query data
