@@ -1,18 +1,19 @@
 # reciepts.tech — Netlify (personal account, not the LeanScale team account)
 #
-# Next.js SSR is handled by Netlify's Next Runtime, which reads the build
-# output from `.next` and turns the server routes (including the OG card
-# endpoints) into functions. The font files those routes read at request time
-# are pulled into the function bundle via `outputFileTracingIncludes` in
-# next.config.ts — do not remove that without re-testing /api/og/*.
+# Next.js SSR is handled by Netlify's Next adapter, which turns the server
+# routes (including the OG card endpoints) into functions. The adapter is
+# applied automatically and is deliberately NOT pinned here: declaring
+# @netlify/plugin-nextjs opts out of adapter updates and the newer OpenNext
+# architecture.
+#
+# The fonts the OG routes read at request time reach the function bundle via
+# `outputFileTracingIncludes` in next.config.ts. Don't remove that without
+# re-testing /api/og/* on a deploy preview — a miss there is silent, and every
+# share card falls back to a default face.
 
 [build]
   command = "npm run build"
   publish = ".next"
 
 [build.environment]
-  # Match the Node major the app was built and tested against.
   NODE_VERSION = "20"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
