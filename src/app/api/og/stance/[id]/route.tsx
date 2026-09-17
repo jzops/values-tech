@@ -1,44 +1,38 @@
 import { ImageResponse } from '@vercel/og'
 import { NextRequest } from 'next/server'
 import { getStanceById, getEntityForStance } from '@/lib/mock-data'
-import { TOPICS } from '@/lib/constants'
+import { TOPICS, POSITION_LABELS, SOURCE_LABELS } from '@/lib/constants'
+import { OG, POSITION_HEX, ogFonts, OG_HEADERS, clamp } from '@/lib/og'
 
-export const runtime = 'edge'
+export const runtime = 'nodejs'
+
+/** Summary type shrinks as the claim gets longer so the block always fills. */
+function summarySize(len: number): number {
+  if (len <= 110) return 42
+  if (len <= 180) return 36
+  if (len <= 250) return 31
+  return 27
+}
 
 export async function GET(
-  request: NextRequest,
+  _request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params
   const stance = getStanceById(id)
-
-  if (!stance) {
-    return new Response('Stance not found', { status: 404 })
-  }
+  if (!stance) return new Response('Not found', { status: 404 })
 
   const entity = getEntityForStance(stance)
   const topic = TOPICS[stance.topic as keyof typeof TOPICS]
-  const topicName = topic?.name || stance.topic
-  const topicIcon = topic?.icon || '📋'
+  const color = POSITION_HEX[stance.position] || OG.silent
 
-  const posText = stance.position.toUpperCase()
-  const posColor =
-    stance.position === 'opposed' ? '#ef4444' :
-    stance.position === 'supported' ? '#22c55e' :
-    stance.position === 'mixed' ? '#f59e0b' : '#9ca3af'
-
+  const summary = clamp(stance.summary, 300)
   const dateStr = stance.stance_date
-    ? new Date(stance.stance_date).toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })
-    : 'N/A'
+    ? new Date(stance.stance_date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }).toUpperCase()
+    : null
 
-  const now = new Date()
-  const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
-
-  const divider = '═'.repeat(40)
-  const thinDivider = '─'.repeat(40)
-
-  // Wrap summary text for display
-  const summary = stance.summary.length > 200 ? stance.summary.slice(0, 197) + '...' : stance.summary
+  const sourceLabel =
+    SOURCE_LABELS[stance.source_type as keyof typeof SOURCE_LABELS] || stance.source_type
 
   return new ImageResponse(
     (
@@ -47,135 +41,138 @@ export async function GET(
           width: '100%',
           height: '100%',
           display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#e8e4df',
-          padding: '24px',
+          flexDirection: 'column',
+          backgroundColor: OG.ink,
+          fontFamily: 'Inter',
+          color: OG.paper,
+          position: 'relative',
         }}
       >
-        {/* Receipt paper */}
+        {/* Verdict-tinted bloom */}
+        <div
+          style={{
+            position: 'absolute',
+            top: -280,
+            right: -180,
+            width: 820,
+            height: 820,
+            borderRadius: 820,
+            background: `radial-gradient(circle, ${color}1F, ${color}00 63%)`,
+            display: 'flex',
+          }}
+        />
+
+        {/* Verdict spine down the left edge */}
+        <div
+          style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 10, backgroundColor: color, display: 'flex' }}
+        />
+
+        {/* Header */}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '28px 56px 28px 62px',
+            borderBottom: `1px solid ${OG.line}`,
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ display: 'flex', width: 6, height: 30, backgroundColor: OG.accent, marginRight: 16 }} />
+            <span style={{ fontSize: 25, fontWeight: 900, letterSpacing: 1 }}>RECEIPTS</span>
+            <span style={{ fontSize: 25, fontWeight: 900, letterSpacing: 1, color: OG.accent }}>.TECH</span>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              border: `3px solid ${color}`,
+              borderRadius: 10,
+              padding: '7px 20px',
+            }}
+          >
+            <span style={{ fontSize: 26, fontWeight: 900, color, letterSpacing: 2 }}>
+              {POSITION_LABELS[stance.position].toUpperCase()}
+            </span>
+          </div>
+        </div>
+
+        {/* Body */}
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
-            width: '100%',
-            height: '100%',
-            backgroundColor: '#FFF8F0',
-            padding: '40px 56px',
-            fontFamily: 'monospace',
-            color: '#1a1a1a',
-            position: 'relative',
-            borderTop: '4px dashed #ccc',
-            borderBottom: '4px dashed #ccc',
+            flex: 1,
+            justifyContent: 'center',
+            padding: '0 56px 0 62px',
           }}
         >
-          {/* Watermark */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%) rotate(-35deg)',
-              fontSize: '60px',
-              fontWeight: 900,
-              color: 'rgba(0,0,0,0.03)',
-              letterSpacing: '8px',
-              display: 'flex',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            RECEIPTS.TECH
-          </div>
-
-          {/* Position stamp */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '32px',
-              right: '40px',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: '140px',
-              height: '60px',
-              border: `4px solid ${posColor}`,
-              borderRadius: '8px',
-              transform: 'rotate(-6deg)',
-              opacity: 0.85,
-            }}
-          >
-            <span style={{ fontSize: '24px', fontWeight: 900, color: posColor, letterSpacing: '2px' }}>
-              {posText}
+          {/* Topic + date */}
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <span style={{ fontFamily: 'Mono', fontSize: 19, letterSpacing: 2.5, color }}>
+              {(topic?.name || stance.topic).toUpperCase()}
             </span>
-          </div>
-
-          {/* Header */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '12px' }}>
-            <span style={{ fontSize: '14px', letterSpacing: '1px', color: '#666' }}>{divider}</span>
-            <span style={{ fontSize: '22px', fontWeight: 700, letterSpacing: '6px', marginTop: '4px' }}>
-              SINGLE RECEIPT
-            </span>
-            <span style={{ fontSize: '14px', color: '#888', marginTop: '2px' }}>
-              Receipts.Tech
-            </span>
-            <span style={{ fontSize: '14px', letterSpacing: '1px', color: '#666', marginTop: '4px' }}>{divider}</span>
-          </div>
-
-          {/* Entity & meta info */}
-          <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '16px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', color: '#888' }}>
-              <span>DATE: {dateStr}</span>
-              <span>TIME: {timeStr}</span>
-            </div>
-            <span style={{ fontSize: '28px', fontWeight: 700, marginTop: '8px', maxWidth: '70%' }}>
-              {entity.name}
-            </span>
-          </div>
-
-          {/* Thin divider */}
-          <span style={{ fontSize: '12px', color: '#ccc', letterSpacing: '0px' }}>{thinDivider}</span>
-
-          {/* Topic line */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '16px', fontSize: '20px', fontWeight: 700 }}>
-            <span>{topicIcon}</span>
-            <span>{topicName}</span>
-          </div>
-
-          {/* Summary */}
-          <div style={{ display: 'flex', flexDirection: 'column', marginTop: '16px', flex: 1 }}>
-            <span style={{ fontSize: '18px', color: '#333', lineHeight: 1.5 }}>
-              {summary}
-            </span>
-          </div>
-
-          {/* Source */}
-          {stance.source_url && (
-            <div style={{ display: 'flex', marginTop: '12px' }}>
-              <span style={{ fontSize: '12px', color: '#999' }}>
-                SOURCE: {stance.source_url.length > 60 ? stance.source_url.slice(0, 57) + '...' : stance.source_url}
+            {dateStr && (
+              <span style={{ fontFamily: 'Mono', fontSize: 19, letterSpacing: 2.5, color: OG.mute, marginLeft: 16 }}>
+                · {dateStr}
               </span>
-            </div>
-          )}
+            )}
+          </div>
 
-          {/* Thin divider */}
-          <span style={{ fontSize: '12px', color: '#ccc', letterSpacing: '0px', marginTop: '12px' }}>{thinDivider}</span>
+          {/* Entity */}
+          <span style={{ fontSize: 58, fontWeight: 900, letterSpacing: -2, lineHeight: 1.08, marginTop: 12 }}>
+            {clamp(entity.name, 34)}
+          </span>
 
-          {/* Footer */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '12px' }}>
-            <span style={{ fontSize: '11px', color: '#999', fontStyle: 'italic' }}>
-              Before they send you their receipts, check theirs.
+          {/* The claim */}
+          <span
+            style={{
+              fontSize: summarySize(summary.length),
+              fontWeight: 500,
+              color: OG.dim,
+              lineHeight: 1.38,
+              marginTop: 22,
+            }}
+          >
+            {summary}
+          </span>
+        </div>
+
+        {/* Footer */}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '20px 56px 20px 62px',
+            borderTop: `1px solid ${OG.line}`,
+            backgroundColor: OG.raised,
+          }}
+        >
+          <span style={{ fontFamily: 'Mono', fontSize: 21, color: OG.accent, letterSpacing: 2 }}>
+            reciepts.tech
+          </span>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <span style={{ fontFamily: 'Mono', fontSize: 18, letterSpacing: 1.5, color: OG.mute }}>
+              SOURCE: {sourceLabel.toUpperCase()}
             </span>
-            <span style={{ fontSize: '13px', color: '#FF6B35', marginTop: '6px', letterSpacing: '3px', fontWeight: 700 }}>
-              RECEIPTS.TECH
-            </span>
+            {stance.verified && (
+              <span
+                style={{
+                  fontFamily: 'Mono',
+                  fontSize: 18,
+                  letterSpacing: 1.5,
+                  color: OG.supported,
+                  marginLeft: 18,
+                }}
+              >
+                ✓ VERIFIED
+              </span>
+            )}
           </div>
         </div>
       </div>
     ),
-    {
-      width: 1200,
-      height: 630,
-    }
+    { width: OG.W, height: OG.H, fonts: await ogFonts(), headers: OG_HEADERS }
   )
 }

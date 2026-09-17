@@ -1,46 +1,35 @@
-import { EntityCard } from '@/components/EntityCard'
-import { Metadata } from 'next'
-import { companies, getStanceCountForEntity } from '@/lib/mock-data'
+import type { Metadata } from 'next'
+import { Board } from '@/components/Board'
+import { CollectionHeader } from '@/components/CollectionHeader'
+import { getBoard, toLite } from '@/lib/board'
+import { collectionMetadata } from '@/lib/metadata'
+import { companies } from '@/lib/mock-data'
 
-export const metadata: Metadata = {
-  title: 'Companies — Receipts.Tech',
-  description: 'Check the receipts on tech companies. Documented stances on layoffs, DEI, remote work, and more.',
-  openGraph: {
-    title: 'Companies — Receipts.Tech',
-    description: 'Check the receipts on tech companies. Documented stances on layoffs, DEI, remote work, and more.',
-    images: ['/api/og/collection?title=Companies&description=Check+the+receipts+on+tech+companies'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    images: ['/api/og/collection?title=Companies&description=Check+the+receipts+on+tech+companies'],
-  },
-}
+export const metadata: Metadata = collectionMetadata({
+  title: 'Companies',
+  description: 'Every tech company with a documented public record — ranked by how much of it cuts against them.',
+  path: '/companies',
+})
 
 export default function CompaniesPage() {
-  const companiesWithCounts = companies.map(company => ({
-    ...company,
-    stanceCount: getStanceCountForEntity('company', company.id)
-  })).sort((a, b) => b.stanceCount - a.stanceCount)
+  const rows = getBoard(1).filter(r => r.entityType === 'company').map(toLite)
+  const ranked = rows.length
+  const receipts = rows.reduce((n, r) => n + r.receipts, 0)
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Companies</h1>
-        <p className="mt-2 text-gray-600">
-          {companies.length} tech companies tracked
-        </p>
-      </div>
-
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {companiesWithCounts.map(company => (
-          <EntityCard
-            key={company.id}
-            type="company"
-            entity={company}
-            stanceCount={company.stanceCount}
-            subtitle={company.industry || undefined}
-          />
-        ))}
+    <div>
+      <CollectionHeader
+        eyebrow="The board"
+        title="Companies"
+        blurb="Every tech company with a documented public record — ranked by how much of it cuts against them."
+        stats={[
+          { n: companies.length, l: 'Tracked' },
+          { n: ranked, l: 'With receipts' },
+          { n: receipts, l: 'Receipts' },
+        ]}
+      />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <Board rows={rows} showFilters={false} pageSize={25} maxRows={500} />
       </div>
     </div>
   )

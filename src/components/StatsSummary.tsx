@@ -36,7 +36,7 @@ export function StatsSummary({ stats, donations }: StatsSummaryProps) {
     cards.push(
       <SummaryCard
         key="layoffs"
-        icon={<TrendingDown className="w-5 h-5 text-gray-600" />}
+        icon={<TrendingDown className="w-5 h-5 text-paper-dim" />}
         label="Total Layoffs"
         value={totalLayoffs.toLocaleString('en-US')}
         subtext={latestLayoffDate ? `Last: ${formatDate(latestLayoffDate)}` : undefined}
@@ -48,7 +48,7 @@ export function StatsSummary({ stats, donations }: StatsSummaryProps) {
     cards.push(
       <SummaryCard
         key="donations"
-        icon={<DollarSign className="w-5 h-5 text-gray-600" />}
+        icon={<DollarSign className="w-5 h-5 text-paper-dim" />}
         label="Political Donations"
         value={formatCurrency(totalDonations)}
         subtext={`${donations.length} donation${donations.length !== 1 ? 's' : ''}`}
@@ -60,7 +60,7 @@ export function StatsSummary({ stats, donations }: StatsSummaryProps) {
     cards.push(
       <SummaryCard
         key="contracts"
-        icon={<Building2 className="w-5 h-5 text-gray-600" />}
+        icon={<Building2 className="w-5 h-5 text-paper-dim" />}
         label="Gov't Contracts"
         value={formatCurrency(totalContractValue)}
         subtext={`${govContracts.length} contract${govContracts.length !== 1 ? 's' : ''}`}
@@ -72,7 +72,7 @@ export function StatsSummary({ stats, donations }: StatsSummaryProps) {
     cards.push(
       <SummaryCard
         key="compensation"
-        icon={<DollarSign className="w-5 h-5 text-gray-600" />}
+        icon={<DollarSign className="w-5 h-5 text-paper-dim" />}
         label="CEO Compensation"
         value={formatCurrency(latestCompensation.monetary_value)}
         subtext={latestCompensation.stat_date ? formatDate(latestCompensation.stat_date) : undefined}
@@ -83,13 +83,9 @@ export function StatsSummary({ stats, donations }: StatsSummaryProps) {
   if (cards.length === 0) return null
 
   return (
-    <div className="bg-gray-100 rounded-xl p-6 mb-8">
-      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-        Key Stats
-      </h3>
-      <div className={`grid gap-4 ${cards.length === 1 ? 'grid-cols-1' : cards.length === 2 ? 'grid-cols-2' : 'grid-cols-2 md:grid-cols-4'}`}>
-        {cards}
-      </div>
+    <div className="mb-10">
+      <h3 className="label mb-3">Key stats</h3>
+      <div className="flex flex-wrap gap-3">{cards}</div>
     </div>
   )
 }
@@ -101,13 +97,13 @@ function SummaryCard({ icon, label, value, subtext }: {
   subtext?: string
 }) {
   return (
-    <div className="bg-white rounded-lg p-4 shadow-sm">
+    <div className="rounded-xl border border-line bg-ink-raised px-5 py-4 min-w-[11rem]">
       <div className="flex items-center gap-2 mb-2">
         {icon}
-        <span className="text-xs text-gray-500 uppercase tracking-wide">{label}</span>
+        <span className="label">{label}</span>
       </div>
-      <p className="text-2xl font-bold text-gray-900">{value}</p>
-      {subtext && <p className="text-xs text-gray-500 mt-1">{subtext}</p>}
+      <p className="text-2xl font-bold text-paper">{value}</p>
+      {subtext && <p className="text-xs text-paper-mute mt-1">{subtext}</p>}
     </div>
   )
 }

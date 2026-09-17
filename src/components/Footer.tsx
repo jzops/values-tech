@@ -1,91 +1,73 @@
 import Link from 'next/link'
-import { LogoMark } from './Logo'
+import { Logo } from './Logo'
+import { SITE_TAGLINE } from '@/lib/site'
+import { getSiteStats } from '@/lib/board'
+
+const COLUMNS = [
+  {
+    title: 'Browse',
+    links: [
+      { href: '/companies', label: 'Companies' },
+      { href: '/people', label: 'People' },
+      { href: '/vcs', label: 'VCs' },
+      { href: '/topics', label: 'Topics' },
+    ],
+  },
+  {
+    title: 'About',
+    links: [
+      { href: '/about', label: 'What this is' },
+      { href: '/methodology', label: 'Methodology' },
+      { href: '/contribute', label: 'Submit a receipt' },
+    ],
+  },
+]
 
 export function Footer() {
+  const stats = getSiteStats()
+
   return (
-    <footer className="border-t border-gray-200 bg-gray-50 mt-auto">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="col-span-2 md:col-span-1">
-            <LogoMark className="h-8 w-8 text-gray-900" />
-            <p className="mt-4 text-sm text-gray-600 max-w-xs">
-              Before they send you their receipts, check theirs.
+    <footer className="border-t border-line mt-24">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+        <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+          <div>
+            <Logo className="h-7 text-paper" />
+            <p className="mt-4 text-sm text-paper-dim max-w-xs leading-relaxed">
+              {SITE_TAGLINE}
+            </p>
+            <p className="mt-4 label">
+              {stats.receipts.toLocaleString('en-US')} receipts · {stats.entities} entities tracked
             </p>
           </div>
 
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-3">Browse</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/companies" className="text-sm text-gray-600 hover:text-gray-900">
-                  Companies
-                </Link>
-              </li>
-              <li>
-                <Link href="/people" className="text-sm text-gray-600 hover:text-gray-900">
-                  People
-                </Link>
-              </li>
-              <li>
-                <Link href="/vcs" className="text-sm text-gray-600 hover:text-gray-900">
-                  VCs
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-3">Topics</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/topic/layoffs" className="text-sm text-gray-600 hover:text-gray-900">
-                  Layoffs
-                </Link>
-              </li>
-              <li>
-                <Link href="/topic/dei" className="text-sm text-gray-600 hover:text-gray-900">
-                  DEI
-                </Link>
-              </li>
-              <li>
-                <Link href="/topic/remote_work" className="text-sm text-gray-600 hover:text-gray-900">
-                  Remote Work
-                </Link>
-              </li>
-              <li>
-                <Link href="/topic/palestine" className="text-sm text-gray-600 hover:text-gray-900">
-                  Palestine
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-3">About</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-sm text-gray-600 hover:text-gray-900">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/methodology" className="text-sm text-gray-600 hover:text-gray-900">
-                  Methodology
-                </Link>
-              </li>
-              <li>
-                <Link href="/contribute" className="text-sm text-gray-600 hover:text-gray-900">
-                  Contribute
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {COLUMNS.map(col => (
+            <div key={col.title}>
+              <h3 className="label">{col.title}</h3>
+              <ul className="mt-4 space-y-2.5">
+                {col.links.map(link => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-paper-dim hover:text-accent transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <p className="text-xs text-gray-500 text-center">
-            All data sourced from public records. © {new Date().getFullYear()} Receipts.Tech
+        <div className="rule my-10" />
+
+        <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+          <p className="text-xs text-paper-mute leading-relaxed max-w-2xl">
+            Every entry links to a public source — filings, donation records, press releases,
+            reporting, or the subject&rsquo;s own posts. Found something wrong?{' '}
+            <Link href="/contribute" className="text-accent hover:underline">Tell us</Link>.
           </p>
+          <p className="label shrink-0">reciepts.tech</p>
         </div>
       </div>
     </footer>

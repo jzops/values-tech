@@ -95,7 +95,7 @@ export function SearchBox({ autoFocus = false, onSelect, size = 'lg' }: SearchBo
   return (
     <div className="relative w-full">
       <div className="relative">
-        <Search className={`absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 ${size === 'lg' ? 'w-5 h-5' : 'w-4 h-4'}`} />
+        <Search className={`absolute left-4 top-1/2 -translate-y-1/2 text-paper-mute ${size === 'lg' ? 'w-5 h-5' : 'w-4 h-4'}`} />
         <input
           ref={inputRef}
           type="text"
@@ -103,13 +103,13 @@ export function SearchBox({ autoFocus = false, onSelect, size = 'lg' }: SearchBo
           onChange={e => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
           onFocus={() => query.length >= 2 && setShowResults(true)}
-          placeholder="Search companies, people, or VCs..."
-          className={`w-full ${sizeClasses} pl-12 pr-10 rounded-xl border border-gray-300 focus:border-gray-400 focus:ring-2 focus:ring-gray-200 outline-none transition-all`}
+          placeholder="Search a company, exec, or VC…"
+          className={`w-full ${sizeClasses} pl-12 pr-10 rounded-xl bg-ink-raised border border-line text-paper placeholder:text-paper-mute focus:border-accent outline-none transition-colors`}
         />
         {query && (
           <button
             onClick={() => { setQuery(''); setResults([]) }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-paper-mute hover:text-paper"
           >
             <X className="w-4 h-4" />
           </button>
@@ -117,27 +117,27 @@ export function SearchBox({ autoFocus = false, onSelect, size = 'lg' }: SearchBo
       </div>
 
       {showResults && results.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden z-50">
+        <div className="absolute top-full left-0 right-0 mt-2 bg-ink-raised rounded-xl border border-[var(--line-str)] shadow-2xl shadow-black/60 overflow-hidden z-50">
           {results.map((result, index) => {
             const ResultIcon = Icon(result.type)
             return (
               <button
                 key={`${result.type}-${result.id}`}
                 onClick={() => handleSelect(result)}
-                className={`w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-gray-50 ${
-                  index === selectedIndex ? 'bg-gray-50' : ''
-                } ${index > 0 ? 'border-t border-gray-100' : ''}`}
+                className={`w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-white/5 transition-colors ${
+                  index === selectedIndex ? 'bg-white/5' : ''
+                } ${index > 0 ? 'border-t border-line' : ''}`}
               >
-                <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center">
-                  <ResultIcon className="w-4 h-4 text-gray-500" />
+                <div className="w-8 h-8 rounded-lg bg-white/5 border border-line flex items-center justify-center shrink-0">
+                  <ResultIcon className="w-4 h-4 text-paper-dim" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900">{result.name}</p>
+                  <p className="font-medium text-paper">{result.name}</p>
                   {result.subtitle && (
-                    <p className="text-xs text-gray-500">{result.subtitle}</p>
+                    <p className="text-xs text-paper-mute">{result.subtitle}</p>
                   )}
                 </div>
-                <span className="ml-auto text-xs text-gray-400 capitalize">{result.type}</span>
+                <span className="ml-auto label !text-[0.625rem]">{result.type}</span>
               </button>
             )
           })}
@@ -145,8 +145,8 @@ export function SearchBox({ autoFocus = false, onSelect, size = 'lg' }: SearchBo
       )}
 
       {showResults && query.length >= 2 && results.length === 0 && !isLoading && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl border border-gray-200 shadow-lg p-4 text-center text-gray-500 z-50">
-          No results found for "{query}"
+        <div className="absolute top-full left-0 right-0 mt-2 bg-ink-raised rounded-xl border border-[var(--line-str)] shadow-2xl shadow-black/60 p-4 text-center text-sm text-paper-mute z-50">
+          No results for &ldquo;{query}&rdquo;
         </div>
       )}
     </div>

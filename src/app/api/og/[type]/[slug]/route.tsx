@@ -1,64 +1,55 @@
 import { ImageResponse } from '@vercel/og'
 import { NextRequest } from 'next/server'
-import { getCompanyBySlug, getPersonBySlug, getVCBySlug, getStancesForEntity } from '@/lib/mock-data'
+import { getBoardRow, getBoardRank } from '@/lib/board'
 import { TOPICS } from '@/lib/constants'
-import { calculateGrade } from '@/lib/grade'
+import { OG, POSITION_HEX, ogFonts, OG_HEADERS, clamp, nameSize } from '@/lib/og'
+import type { EntityType } from '@/lib/types'
 
-export const runtime = 'edge'
+export const runtime = 'nodejs'
+
+const TYPE_LABEL: Record<EntityType, string> = {
+  company: 'Company',
+  person: 'Executive',
+  vc: 'Venture Fund',
+}
 
 export async function GET(
-  request: NextRequest,
+  _request: NextRequest,
   { params }: { params: Promise<{ type: string; slug: string }> }
 ) {
   const { type, slug } = await params
 
-  let entity: { name: string; id: string; slug: string } | null = null
-  let subtitle = ''
-  let entityType: 'company' | 'person' | 'vc' = 'company'
-
-  if (type === 'company') {
-    const company = getCompanyBySlug(slug)
-    if (company) {
-      entity = company
-      subtitle = company.industry || 'Tech Company'
-      entityType = 'company'
-    }
-  } else if (type === 'person') {
-    const person = getPersonBySlug(slug)
-    if (person) {
-      entity = person
-      subtitle = person.current_role || 'Tech Executive'
-      entityType = 'person'
-    }
-  } else if (type === 'vc') {
-    const vc = getVCBySlug(slug)
-    if (vc) {
-      entity = vc
-      subtitle = 'Venture Capital'
-      entityType = 'vc'
-    }
+  if (type !== 'company' && type !== 'person' && type !== 'vc') {
+    return new Response('Unknown entity type', { status: 404 })
   }
 
-  if (!entity) {
-    return new Response('Entity not found', { status: 404 })
-  }
+  const row = getBoardRow(type, slug)
+  if (!row) return new Response('Not found', { status: 404 })
 
-  const stances = getStancesForEntity(entityType, entity.id)
-  const topStances = stances.slice(0, 5)
-  const { grade, color: gradeColor, label: gradeLabel } = calculateGrade(stances)
+  const rank = getBoardRank(type, row.id)
+  const { grade } = row
 
-  // Count positions
-  const counts = { supported: 0, opposed: 0, mixed: 0, silent: 0 }
-  for (const s of stances) {
-    counts[s.position as keyof typeof counts] = (counts[s.position as keyof typeof counts] || 0) + 1
-  }
+  // Up to three topics this entity is flagged on, heaviest first.
+  const flags = Object.entries(
+    row.stances.reduce<Record<string, number>>((acc, s) => {
+      if (s.position === 'opposed') acc[s.topic] = (acc[s.topic] || 0) + 1
+      return acc
+    }, {})
+  )
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3)
+    .map(([id, count]) => ({
+      name: TOPICS[id as keyof typeof TOPICS]?.name || id,
+      count,
+    }))
 
-  const now = new Date()
-  const dateStr = now.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })
-  const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
-
-  const divider = '═'.repeat(40)
-  const thinDivider = '─'.repeat(40)
+  const total = row.receipts || 1
+  const bar = [
+    { c: POSITION_HEX.opposed, n: row.counts.opposed },
+    { c: POSITION_HEX.mixed, n: row.counts.mixed },
+    { c: POSITION_HEX.silent, n: row.counts.silent },
+    { c: POSITION_HEX.supported, n: row.counts.supported },
+  ].filter(s => s.n > 0)
 
   return new ImageResponse(
     (
@@ -67,171 +58,188 @@ export async function GET(
           width: '100%',
           height: '100%',
           display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#e8e4df',
-          padding: '24px',
+          flexDirection: 'column',
+          backgroundColor: OG.ink,
+          fontFamily: 'Inter',
+          color: OG.paper,
+          position: 'relative',
         }}
       >
-        {/* Receipt paper */}
+        {/* Grade-tinted bloom, keyed to the verdict */}
+        <div
+          style={{
+            position: 'absolute',
+            top: -260,
+            left: -160,
+            width: 760,
+            height: 760,
+            borderRadius: 760,
+            background: `radial-gradient(circle, ${grade.color}22, ${grade.color}00 65%)`,
+            display: 'flex',
+          }}
+        />
+
+        {/* ── Header ── */}
         <div
           style={{
             display: 'flex',
-            flexDirection: 'column',
-            width: '100%',
-            height: '100%',
-            backgroundColor: '#FFF8F0',
-            padding: '36px 48px',
-            fontFamily: 'monospace',
-            color: '#1a1a1a',
-            position: 'relative',
-            borderTop: '4px dashed #ccc',
-            borderBottom: '4px dashed #ccc',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '30px 56px',
+            borderBottom: `1px solid ${OG.line}`,
           }}
         >
-          {/* Watermark */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%) rotate(-35deg)',
-              fontSize: '60px',
-              fontWeight: 900,
-              color: 'rgba(0,0,0,0.03)',
-              letterSpacing: '8px',
-              display: 'flex',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            RECEIPTS.TECH
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ display: 'flex', width: 6, height: 30, backgroundColor: OG.accent, marginRight: 16 }} />
+            <span style={{ fontSize: 25, fontWeight: 900, letterSpacing: 1 }}>RECEIPTS</span>
+            <span style={{ fontSize: 25, fontWeight: 900, letterSpacing: 1, color: OG.accent }}>.TECH</span>
           </div>
-
-          {/* Grade stamp - rotated colored element */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '32px',
-              right: '40px',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: '120px',
-              height: '120px',
-              border: `6px solid ${gradeColor}`,
-              borderRadius: '60px',
-              transform: 'rotate(-12deg)',
-              opacity: 0.85,
-            }}
-          >
-            <span style={{ fontSize: '52px', fontWeight: 900, color: gradeColor, lineHeight: 1 }}>
-              {grade}
+          {rank !== null && rank <= 50 && (
+            <span style={{ fontFamily: 'Mono', fontSize: 20, color: OG.mute, letterSpacing: 2 }}>
+              #{rank} ON THE BOARD
             </span>
-            <span style={{ fontSize: '11px', fontWeight: 700, color: gradeColor, letterSpacing: '1px', textTransform: 'uppercase' }}>
-              {gradeLabel}
-            </span>
-          </div>
+          )}
+        </div>
 
-          {/* Header */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '8px' }}>
-            <span style={{ fontSize: '14px', letterSpacing: '1px', color: '#666' }}>{divider}</span>
-            <span style={{ fontSize: '28px', fontWeight: 700, letterSpacing: '6px', marginTop: '4px' }}>
-              RECEIPT
-            </span>
-            <span style={{ fontSize: '14px', color: '#888', marginTop: '2px' }}>
-              Receipts.Tech
-            </span>
-            <span style={{ fontSize: '14px', letterSpacing: '1px', color: '#666', marginTop: '4px' }}>{divider}</span>
-          </div>
-
-          {/* Entity info */}
-          <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '12px', marginTop: '4px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', color: '#888' }}>
-              <span>DATE: {dateStr}</span>
-              <span>TIME: {timeStr}</span>
-            </div>
-            <span style={{ fontSize: '32px', fontWeight: 700, marginTop: '8px', maxWidth: '70%' }}>
-              {entity.name}
-            </span>
-            <span style={{ fontSize: '16px', color: '#666', marginTop: '2px' }}>
-              {subtitle}
-            </span>
-          </div>
-
-          {/* Thin divider */}
-          <span style={{ fontSize: '12px', color: '#ccc', letterSpacing: '0px' }}>{thinDivider}</span>
-
-          {/* Line items */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '10px', flex: 1 }}>
-            {topStances.map((stance, i) => {
-              const topic = TOPICS[stance.topic as keyof typeof TOPICS]
-              const posText = stance.position.toUpperCase()
-              const topicName = topic?.name || stance.topic
-              const dots = '.'.repeat(Math.max(2, 28 - topicName.length - posText.length))
-              const posColor =
-                stance.position === 'opposed' ? '#ef4444' :
-                stance.position === 'supported' ? '#22c55e' :
-                stance.position === 'mixed' ? '#f59e0b' : '#9ca3af'
-
-              return (
-                <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
-                  <div style={{ display: 'flex', fontSize: '15px', fontWeight: 600 }}>
-                    <span>{i + 1}. {topicName}</span>
-                    <span style={{ color: '#bbb', margin: '0 4px' }}>{dots}</span>
-                    <span style={{ color: posColor }}>{posText}</span>
-                  </div>
-                  <span style={{ fontSize: '12px', color: '#777', paddingLeft: '18px', lineHeight: 1.3 }}>
-                    {stance.summary.length > 65 ? stance.summary.slice(0, 62) + '...' : stance.summary}
-                  </span>
-                </div>
-              )
-            })}
-            {stances.length > 5 && (
-              <span style={{ fontSize: '13px', color: '#999', marginTop: '4px' }}>
-                + {stances.length - 5} more receipts on file
+        {/* ── Body ── */}
+        <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'center', padding: '0 56px' }}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            {/* Grade block */}
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: 168,
+                height: 168,
+                borderRadius: 26,
+                border: `6px solid ${grade.color}`,
+                backgroundColor: `${grade.color}1A`,
+                marginRight: 40,
+              }}
+            >
+              <span style={{ fontSize: 112, fontWeight: 900, color: grade.color, lineHeight: 1 }}>
+                {grade.grade}
               </span>
-            )}
+            </div>
+
+            {/* Name + meta */}
+            <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+              <span
+                style={{
+                  fontSize: nameSize(row.name),
+                  fontWeight: 900,
+                  letterSpacing: -2,
+                  lineHeight: 1.05,
+                }}
+              >
+                {clamp(row.name, 38)}
+              </span>
+              <div style={{ display: 'flex', alignItems: 'center', marginTop: 14 }}>
+                <span
+                  style={{
+                    fontFamily: 'Mono',
+                    fontSize: 19,
+                    letterSpacing: 2,
+                    color: OG.ink,
+                    backgroundColor: OG.dim,
+                    padding: '5px 12px',
+                    borderRadius: 6,
+                  }}
+                >
+                  {TYPE_LABEL[type].toUpperCase()}
+                </span>
+                <span style={{ fontSize: 26, color: OG.dim, marginLeft: 16 }}>
+                  {clamp(grade.label, 30)}
+                </span>
+              </div>
+            </div>
           </div>
 
-          {/* Thin divider */}
-          <span style={{ fontSize: '12px', color: '#ccc', letterSpacing: '0px' }}>{thinDivider}</span>
-
-          {/* Totals */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', marginTop: '8px', fontSize: '14px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span>OPPOSED</span>
-              <span style={{ fontWeight: 700, color: '#ef4444' }}>{counts.opposed}</span>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span>MIXED</span>
-              <span style={{ fontWeight: 700, color: '#f59e0b' }}>{counts.mixed}</span>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span>SUPPORTED</span>
-              <span style={{ fontWeight: 700, color: '#22c55e' }}>{counts.supported}</span>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '4px', borderTop: '2px solid #1a1a1a', paddingTop: '4px' }}>
-              <span style={{ fontWeight: 700, fontSize: '16px' }}>TOTAL RECEIPTS</span>
-              <span style={{ fontWeight: 700, fontSize: '16px' }}>{stances.length}</span>
-            </div>
+          {/* Verdict bar */}
+          <div style={{ display: 'flex', width: '100%', height: 10, borderRadius: 6, overflow: 'hidden', marginTop: 40, backgroundColor: OG.raised }}>
+            {bar.map((s, i) => (
+              <div key={i} style={{ display: 'flex', width: `${(s.n / total) * 100}%`, backgroundColor: s.c }} />
+            ))}
           </div>
 
-          {/* Footer */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '12px' }}>
-            <span style={{ fontSize: '11px', color: '#999', fontStyle: 'italic' }}>
-              Before they send you their receipts, check theirs.
-            </span>
-            <span style={{ fontSize: '13px', color: '#FF6B35', marginTop: '6px', letterSpacing: '3px', fontWeight: 700 }}>
-              RECEIPTS.TECH
-            </span>
+          {/* Numbers */}
+          <div style={{ display: 'flex', marginTop: 38 }}>
+            <Stat value={String(row.receipts)} label="Receipts on file" />
+            <Stat value={String(row.counts.opposed)} label="Count against" color={OG.opposed} />
+            <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+              <span style={{ fontFamily: 'Mono', fontSize: 17, letterSpacing: 2, color: OG.mute }}>
+                FLAGGED ON
+              </span>
+              <div style={{ display: 'flex', flexWrap: 'wrap', marginTop: 12 }}>
+                {flags.length > 0 ? (
+                  flags.map(f => (
+                    <div
+                      key={f.name}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        border: `1px solid ${OG.line}`,
+                        backgroundColor: OG.raised,
+                        borderRadius: 8,
+                        padding: '7px 13px',
+                        marginRight: 10,
+                        marginBottom: 8,
+                      }}
+                    >
+                      <span style={{ fontSize: 22, fontWeight: 700 }}>{f.name}</span>
+                      <span style={{ fontSize: 20, fontWeight: 700, color: OG.opposed, marginLeft: 9 }}>
+                        ×{f.count}
+                      </span>
+                    </div>
+                  ))
+                ) : (
+                  <span style={{ fontSize: 24, color: OG.dim }}>No receipts against</span>
+                )}
+              </div>
+            </div>
           </div>
+        </div>
+
+        {/* ── Footer ── */}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '22px 56px',
+            borderTop: `1px solid ${OG.line}`,
+            backgroundColor: OG.raised,
+          }}
+        >
+          <span style={{ fontFamily: 'Mono', fontSize: 21, color: OG.accent, letterSpacing: 2 }}>
+            reciepts.tech
+          </span>
+          <span style={{ fontSize: 21, color: OG.mute }}>
+            Every line links to a public source.
+          </span>
         </div>
       </div>
     ),
     {
-      width: 1200,
-      height: 630,
+      width: OG.W,
+      height: OG.H,
+      fonts: await ogFonts(),
+      headers: OG_HEADERS,
     }
+  )
+}
+
+function Stat({ value, label, color }: { value: string; label: string; color?: string }) {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', width: 232, paddingRight: 20 }}>
+      <span style={{ fontFamily: 'Mono', fontSize: 17, letterSpacing: 2, color: OG.mute }}>
+        {label.toUpperCase()}
+      </span>
+      <span style={{ fontSize: 66, fontWeight: 900, lineHeight: 1.1, marginTop: 6, color: color || OG.paper }}>
+        {value}
+      </span>
+    </div>
   )
 }

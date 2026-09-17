@@ -1,41 +1,163 @@
 @import "tailwindcss";
 
+/* ============================================================
+   RECEIPTS.TECH DESIGN SYSTEM
+   Dark, evidentiary, high-contrast. Built so any screenshot of
+   any section reads as a document, not a web page.
+   ============================================================ */
+
 :root {
-  --accent: #FF6B35;
-  --accent-light: #FF8F66;
+  /* Ground */
+  --ink:        #0A0A0C;   /* page */
+  --ink-raised: #121216;   /* cards, table rows */
+  --ink-hi:     #1A1A20;   /* hover / elevated */
+  --line:       rgba(255, 255, 255, 0.08);
+  --line-str:   rgba(255, 255, 255, 0.16);
+
+  /* Type */
+  --paper:      #F7F4EF;   /* primary text, warm white */
+  --paper-dim:  #A7A7B2;   /* secondary */
+  --paper-mute: #6E6E7A;   /* tertiary / meta */
+
+  /* Brand */
+  --accent:     #FF6B35;
+  --accent-hi:  #FF8A5C;
+  --accent-dim: rgba(255, 107, 53, 0.14);
+
+  /* Verdicts */
+  --opposed:    #FF4D4F;
+  --supported:  #34D399;
+  --mixed:      #F5A524;
+  --silent:     #6E6E7A;
+
+  color-scheme: dark;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-raised: var(--ink-raised);
+  --color-ink-hi: var(--ink-hi);
+  --color-paper: var(--paper);
+  --color-paper-dim: var(--paper-dim);
+  --color-paper-mute: var(--paper-mute);
+  --color-accent: var(--accent);
+  --color-line: var(--line);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono);
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #a1a1a1;
-}
-
-/* Smooth scroll */
 html {
   scroll-behavior: smooth;
+  background: var(--ink);
 }
 
-/* Focus states */
+body {
+  background: var(--ink);
+  color: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Display type ---------- */
+/* Tight, heavy, slightly negative tracking. Reads as a headline,
+   survives being shrunk into a Twitter card thumbnail. */
+.display {
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+}
+
+.display-xl { font-size: clamp(2.75rem, 7.5vw, 5.5rem); }
+.display-lg { font-size: clamp(2rem, 5vw, 3.25rem); }
+
+/* Label: the small all-caps mono tag used above every section. */
+.label {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--paper-mute);
+}
+
+/* Tabular figures everywhere a number sits in a column. */
+.tnum {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* ---------- Texture ---------- */
+/* Faint scanline + grain so the dark ground has depth instead of
+   reading as flat #000. Kept under 3% opacity. */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.6) 0px,
+    rgba(255, 255, 255, 0.6) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+/* Hairline rule that fades at both ends — used between sections. */
+.rule {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--line-str) 12%,
+    var(--line-str) 88%,
+    transparent
+  );
+}
+
+/* Perforated edge, for anything presented as a torn receipt. */
+.perf {
+  background-image: radial-gradient(circle at 5px -2px, transparent 5px, var(--ink-raised) 5px);
+  background-size: 14px 10px;
+  background-repeat: repeat-x;
+}
+
+/* ---------- Interaction ---------- */
 *:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+  border-radius: 2px;
 }
 
-/* Selection */
 ::selection {
-  background: #FF6B3520;
+  background: var(--accent);
+  color: #0A0A0C;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb {
+  background: #2A2A32;
+  border-radius: 6px;
+  border: 2px solid var(--ink);
+}
+::-webkit-scrollbar-thumb:hover { background: #3A3A44; }
+
+/* Table rows animate in on the board so the page feels alive
+   without any layout shift. */
+@keyframes rowIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: none; }
+}
+.row-in { animation: rowIn 0.4s ease both; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .row-in { animation: none; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

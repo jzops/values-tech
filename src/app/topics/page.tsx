@@ -1,58 +1,73 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
+import { CollectionHeader } from '@/components/CollectionHeader'
 import { TOPICS } from '@/lib/constants'
-import { getStanceCountForTopic } from '@/lib/mock-data'
-import { Metadata } from 'next'
+import { getTopicLeaderboard, getSiteStats } from '@/lib/board'
+import { collectionMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
-  title: 'Topics — Receipts.Tech',
-  description: 'Browse all topics we track: layoffs, DEI, remote work, unionization, politics, and more.',
-  openGraph: {
-    title: 'Topics — Receipts.Tech',
-    description: 'Browse all topics we track: layoffs, DEI, remote work, unionization, politics, and more.',
-    images: ['/api/og/collection?title=Topics&description=Layoffs,+DEI,+remote+work,+politics,+and+more'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    images: ['/api/og/collection?title=Topics&description=Layoffs,+DEI,+remote+work,+politics,+and+more'],
-  },
-}
+export const metadata: Metadata = collectionMetadata({
+  title: 'Topics',
+  description:
+    'Every issue we track — layoffs, DEI, Palestine, unions, surveillance, antitrust, and money in politics.',
+  path: '/topics',
+})
 
 export default function TopicsPage() {
-  const topicsWithCounts = Object.values(TOPICS).map(topic => ({
-    ...topic,
-    count: getStanceCountForTopic(topic.id)
-  })).sort((a, b) => b.count - a.count)
+  const topics = getTopicLeaderboard()
+  const stats = getSiteStats()
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Topics</h1>
-        <p className="mt-2 text-gray-600">
-          Browse stances by topic
-        </p>
-      </div>
+    <div>
+      <CollectionHeader
+        eyebrow="By issue"
+        title="Topics"
+        blurb="Every issue we track, ordered by how much documented evidence sits behind it."
+        stats={[
+          { n: topics.length, l: 'Topics' },
+          { n: stats.receipts, l: 'Receipts' },
+        ]}
+      />
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {topicsWithCounts.map(topic => (
-          <Link
-            key={topic.id}
-            href={`/topic/${topic.id}`}
-            className="group p-6 rounded-xl border border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm transition-all"
-          >
-            <div className="flex items-start justify-between">
-              <span className="text-3xl">{topic.icon}</span>
-              <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-700">
-                {topic.count} stances
-              </span>
-            </div>
-            <h2 className="mt-4 text-lg font-semibold text-gray-900 group-hover:text-[#FF6B35] transition-colors">
-              {topic.name}
-            </h2>
-            <p className="mt-1 text-sm text-gray-600">
-              {topic.description}
-            </p>
-          </Link>
-        ))}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {topics.map(t => {
+            const topic = TOPICS[t.id as keyof typeof TOPICS]
+            const againstPct = t.total > 0 ? Math.round((t.opposed / t.total) * 100) : 0
+            return (
+              <Link
+                key={t.id}
+                href={`/topic/${t.id}`}
+                className="group flex flex-col p-5 rounded-xl border border-line bg-ink-raised hover:border-accent transition-colors"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <span className="text-3xl">{t.icon}</span>
+                  <span className="tnum text-2xl font-bold text-paper leading-none">{t.total}</span>
+                </div>
+
+                <h2 className="mt-4 text-lg font-semibold text-paper group-hover:text-accent transition-colors">
+                  {t.name}
+                </h2>
+                {topic?.description && (
+                  <p className="mt-1.5 text-sm text-paper-dim leading-relaxed flex-1">
+                    {topic.description}
+                  </p>
+                )}
+
+                <div className="mt-4">
+                  <div className="h-1 rounded-full bg-white/5 overflow-hidden">
+                    <div
+                      className="h-full rounded-full"
+                      style={{ width: `${againstPct}%`, backgroundColor: 'var(--opposed)' }}
+                    />
+                  </div>
+                  <p className="label mt-2">
+                    {t.opposed} against · {againstPct}%
+                  </p>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
       </div>
     </div>
   )

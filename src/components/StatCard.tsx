@@ -21,33 +21,33 @@ export function StatCard({ stat }: StatCardProps) {
   const sourceLabel = SOURCE_LABELS[stat.source_type as keyof typeof SOURCE_LABELS] || stat.source_type
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+    <div className="rounded-lg border border-line bg-ink-raised p-4">
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-lg">{config?.icon || '📊'}</span>
-            <span className="font-semibold text-gray-900">
+            <span className="font-semibold text-paper">
               {config?.name || stat.stat_type}
             </span>
             {formattedDate && (
-              <span className="text-xs text-gray-500">{formattedDate}</span>
+              <span className="text-xs text-paper-mute">{formattedDate}</span>
             )}
           </div>
 
           {/* Headline with numbers */}
-          <p className="mt-2 text-lg font-medium text-gray-900">{stat.headline}</p>
+          <p className="mt-2 text-lg font-medium text-paper">{stat.headline}</p>
 
           {/* Details */}
-          <p className="mt-1 text-sm text-gray-600 leading-relaxed">{stat.details}</p>
+          <p className="mt-1 text-sm text-paper-dim leading-relaxed">{stat.details}</p>
 
           {/* Numeric breakdown if applicable */}
           {stat.numeric_value !== null && (
             <div className="mt-3 flex items-center gap-4 text-sm">
-              <span className="font-mono text-gray-700">
+<span className="font-mono text-paper-dim">
                 {stat.numeric_value.toLocaleString('en-US')} affected
               </span>
               {stat.percentage_value !== null && (
-                <span className="text-gray-500">
+                <span className="text-paper-mute">
                   ({stat.percentage_value}% of workforce)
                 </span>
               )}
@@ -56,18 +56,18 @@ export function StatCard({ stat }: StatCardProps) {
 
           {stat.monetary_value !== null && (
             <div className="mt-3 text-sm">
-              <span className="font-mono text-gray-700">
+              <span className="font-mono text-paper-dim">
                 {formatCurrency(stat.monetary_value)}
               </span>
             </div>
           )}
 
           {/* Source */}
-          <div className="mt-3 flex items-center gap-2 text-xs text-gray-500">
+          <div className="mt-3 flex items-center gap-2 text-xs text-paper-mute">
             <span className="font-medium">Source:</span>
             <span>{sourceLabel}</span>
             {stat.verified && (
-              <span className="text-green-600">✓ Verified</span>
+              <span className="text-[var(--supported)]">✓ Verified</span>
             )}
           </div>
         </div>
@@ -76,7 +76,7 @@ export function StatCard({ stat }: StatCardProps) {
           href={stat.source_url}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-shrink-0 p-2 text-gray-400 hover:text-gray-600 rounded-lg transition-colors"
+          className="flex-shrink-0 p-2 text-paper-mute hover:text-paper rounded-lg transition-colors"
         >
           <ExternalLink className="w-4 h-4" />
         </a>

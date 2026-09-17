@@ -1,117 +1,126 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { StanceCard } from '@/components/StanceCard'
-import { TOPICS, POSITION_COLORS } from '@/lib/constants'
-import { Metadata } from 'next'
+import { CollectionHeader } from '@/components/CollectionHeader'
+import { TOPICS, POSITION_LABELS } from '@/lib/constants'
+import { collectionMetadata } from '@/lib/metadata'
 import { getStancesByTopic, getEntityForStance } from '@/lib/mock-data'
 
 interface Props {
   params: Promise<{ id: string }>
 }
 
+const POSITION_VAR = {
+  opposed: 'var(--opposed)',
+  mixed: 'var(--mixed)',
+  silent: 'var(--silent)',
+  supported: 'var(--supported)',
+} as const
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params
   const topic = TOPICS[id as keyof typeof TOPICS]
-  if (!topic) return { title: 'Topic Not Found' }
-  
-  return {
-    title: `${topic.name} — Receipts.Tech`,
-    description: `${topic.description} Check the receipts on tech companies, executives, and VCs.`,
-  }
+  if (!topic) return { title: 'Topic not found' }
+
+  const count = getStancesByTopic(id).length
+  return collectionMetadata({
+    title: topic.name,
+    description: `${count} documented receipts on ${topic.name.toLowerCase()} across tech companies, executives, and VCs. Every line links to a public source.`,
+    path: `/topic/${id}`,
+  })
 }
 
 export default async function TopicPage({ params }: Props) {
   const { id } = await params
   const topic = TOPICS[id as keyof typeof TOPICS]
-  
   if (!topic) notFound()
 
-  const rawStances = getStancesByTopic(id)
-  const stances = rawStances.map(stance => ({
-    ...stance,
-    entityName: getEntityForStance(stance).name,
-    entitySlug: getEntityForStance(stance).slug
-  }))
+  const stances = getStancesByTopic(id).map(s => {
+    const e = getEntityForStance(s)
+    return { ...s, entityName: e.name, entitySlug: e.slug }
+  })
 
-  const positionCounts = {
-    supported: stances.filter(s => s.position === 'supported').length,
+  const counts = {
     opposed: stances.filter(s => s.position === 'opposed').length,
+    mixed: stances.filter(s => s.position === 'mixed').length,
     silent: stances.filter(s => s.position === 'silent').length,
-    mixed: stances.filter(s => s.position === 'mixed').length
+    supported: stances.filter(s => s.position === 'supported').length,
   }
 
+  const entities = new Set(stances.map(s => `${s.entity_type}:${s.entity_id}`)).size
+
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-      {/* Header */}
-      <div className="mb-8">
-        <div className="flex items-center gap-3 mb-4">
-          <span className="text-4xl">{topic.icon}</span>
-          <h1 className="text-3xl font-bold text-gray-900">{topic.name}</h1>
-        </div>
-        <p className="text-lg text-gray-600 max-w-2xl">{topic.description}</p>
-      </div>
+    <div>
+      <CollectionHeader
+        eyebrow={`${topic.icon}  Topic`}
+        title={topic.name}
+        blurb={topic.description}
+        stats={[
+          { n: stances.length, l: 'Receipts' },
+          { n: entities, l: 'Entities' },
+        ]}
+      />
 
-      {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div className={`rounded-xl p-4 ${POSITION_COLORS.supported.bg} ${POSITION_COLORS.supported.border} border`}>
-          <p className="text-2xl font-bold text-green-700">{positionCounts.supported}</p>
-          <p className="text-sm text-green-600">Supported</p>
-        </div>
-        <div className={`rounded-xl p-4 ${POSITION_COLORS.opposed.bg} ${POSITION_COLORS.opposed.border} border`}>
-          <p className="text-2xl font-bold text-red-700">{positionCounts.opposed}</p>
-          <p className="text-sm text-red-600">Opposed</p>
-        </div>
-        <div className={`rounded-xl p-4 ${POSITION_COLORS.mixed.bg} ${POSITION_COLORS.mixed.border} border`}>
-          <p className="text-2xl font-bold text-amber-700">{positionCounts.mixed}</p>
-          <p className="text-sm text-amber-600">Mixed</p>
-        </div>
-        <div className={`rounded-xl p-4 ${POSITION_COLORS.silent.bg} ${POSITION_COLORS.silent.border} border`}>
-          <p className="text-2xl font-bold text-gray-600">{positionCounts.silent}</p>
-          <p className="text-sm text-gray-500">Silent</p>
-        </div>
-      </div>
-
-      {/* Other Topics */}
-      <div className="mb-8">
-        <h2 className="text-sm font-medium text-gray-500 mb-3">Other Topics</h2>
-        <div className="flex flex-wrap gap-2">
-          {Object.values(TOPICS)
-            .filter(t => t.id !== id)
-            .slice(0, 8)
-            .map(t => (
-              <Link
-                key={t.id}
-                href={`/topic/${t.id}`}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-gray-200 transition-colors"
-              >
-                <span>{t.icon}</span>
-                <span>{t.name}</span>
-              </Link>
-            ))}
-        </div>
-      </div>
-
-      {/* Stances */}
-      <h2 className="text-xl font-semibold text-gray-900 mb-4">
-        All Stances ({stances.length})
-      </h2>
-      {stances.length > 0 ? (
-        <div className="space-y-4">
-          {stances.map(stance => (
-            <StanceCard
-              key={stance.id}
-              stance={stance}
-              showEntity
-              entityName={stance.entityName}
-              entitySlug={stance.entitySlug}
-            />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        {/* Verdict split */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+          {(['opposed', 'mixed', 'silent', 'supported'] as const).map(k => (
+            <div
+              key={k}
+              className="rounded-xl border border-line bg-ink-raised px-5 py-4"
+              style={{ borderLeftWidth: '3px', borderLeftColor: POSITION_VAR[k] }}
+            >
+              <p className="tnum text-3xl font-bold leading-none" style={{ color: POSITION_VAR[k] }}>
+                {counts[k]}
+              </p>
+              <p className="label mt-2">{POSITION_LABELS[k]}</p>
+            </div>
           ))}
         </div>
-      ) : (
-        <div className="text-center py-12 bg-gray-50 rounded-xl">
-          <p className="text-gray-500">No documented stances yet.</p>
+
+        <h2 className="display text-2xl mb-5">
+          Every receipt <span className="text-paper-mute tnum font-normal">({stances.length})</span>
+        </h2>
+
+        {stances.length > 0 ? (
+          <div className="grid gap-4 md:grid-cols-2">
+            {stances.map(s => (
+              <StanceCard
+                key={s.id}
+                stance={s}
+                showEntity
+                entityName={s.entityName}
+                entitySlug={s.entitySlug}
+                hideTopic
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-xl border border-line bg-ink-raised p-10 text-center">
+            <p className="text-paper-dim">No documented receipts on this topic yet.</p>
+          </div>
+        )}
+
+        {/* Other topics */}
+        <div className="mt-14 pt-10 border-t border-line">
+          <h2 className="label mb-4">Other topics</h2>
+          <div className="flex flex-wrap gap-2">
+            {Object.values(TOPICS)
+              .filter(t => t.id !== id)
+              .map(t => (
+                <Link
+                  key={t.id}
+                  href={`/topic/${t.id}`}
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-line bg-ink-raised text-sm font-medium text-paper-dim hover:text-paper hover:border-accent transition-colors"
+                >
+                  <span>{t.icon}</span>
+                  {t.name}
+                </Link>
+              ))}
+          </div>
         </div>
-      )}
+      </div>
     </div>
   )
 }

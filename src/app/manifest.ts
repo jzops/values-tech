@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'Check the receipts on tech companies, VCs, and executives before you take their money, join their company, or use their products.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#FFFFFF',
+    background_color: '#0A0A0C',
     theme_color: '#FF6B35',
     icons: [
       {

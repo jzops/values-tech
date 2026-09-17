@@ -39,3 +39,6 @@ next-env.d.ts
 
 # Local Netlify folder
 .netlify
+
+# Finder/iCloud duplicate copies ("file 2.ts") created by folder sync
+* [0-9].*

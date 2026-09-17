@@ -1,23 +1,19 @@
 import { ImageResponse } from '@vercel/og'
 import { NextRequest } from 'next/server'
-import { companies, people, vcs, stances } from '@/lib/mock-data'
+import { getSiteStats } from '@/lib/board'
+import { OG, ogFonts, OG_HEADERS, clamp } from '@/lib/og'
 
-export const runtime = 'edge'
+export const runtime = 'nodejs'
 
+/** Generic card for list pages: ?title=Companies&description=… */
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
-  const title = searchParams.get('title') || 'Collection'
-  const description = searchParams.get('description') || ''
-
-  // Auto-generate count based on title
-  let count = 0
-  if (title.toLowerCase().includes('compan')) count = companies.length
-  else if (title.toLowerCase().includes('people') || title.toLowerCase().includes('executive')) count = people.length
-  else if (title.toLowerCase().includes('vc')) count = vcs.length
-  else if (title.toLowerCase().includes('topic')) count = 12
-
-  const divider = '═'.repeat(40)
-  const thinDivider = '─'.repeat(40)
+  const title = clamp(searchParams.get('title') || 'Receipts.Tech', 34)
+  const description = clamp(
+    searchParams.get('description') || 'Check the receipts before you take the money.',
+    130
+  )
+  const stats = getSiteStats()
 
   return new ImageResponse(
     (
@@ -26,83 +22,91 @@ export async function GET(request: NextRequest) {
           width: '100%',
           height: '100%',
           display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#e8e4df',
-          padding: '24px',
+          flexDirection: 'column',
+          backgroundColor: OG.ink,
+          fontFamily: 'Inter',
+          color: OG.paper,
+          position: 'relative',
         }}
       >
         <div
           style={{
+            position: 'absolute',
+            top: -280,
+            left: -180,
+            width: 860,
+            height: 860,
+            borderRadius: 860,
+            background: `radial-gradient(circle, ${OG.accent}1F, ${OG.accent}00 62%)`,
             display: 'flex',
-            flexDirection: 'column',
-            width: '100%',
-            height: '100%',
-            backgroundColor: '#FFF8F0',
-            padding: '40px 56px',
-            fontFamily: 'monospace',
-            color: '#1a1a1a',
-            position: 'relative',
-            borderTop: '4px dashed #ccc',
-            borderBottom: '4px dashed #ccc',
+          }}
+        />
+
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            padding: '30px 56px',
+            borderBottom: `1px solid ${OG.line}`,
           }}
         >
-          {/* Brand header */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '12px' }}>
-            <span style={{ fontSize: '14px', letterSpacing: '1px', color: '#666' }}>{divider}</span>
-            <span style={{ fontSize: '20px', fontWeight: 700, letterSpacing: '4px', marginTop: '4px', color: '#888' }}>
-              RECEIPTS.TECH
-            </span>
-            <span style={{ fontSize: '14px', letterSpacing: '1px', color: '#666', marginTop: '4px' }}>{divider}</span>
+          <div style={{ display: 'flex', width: 6, height: 30, backgroundColor: OG.accent, marginRight: 16 }} />
+          <span style={{ fontSize: 25, fontWeight: 900, letterSpacing: 1 }}>RECEIPTS</span>
+          <span style={{ fontSize: 25, fontWeight: 900, letterSpacing: 1, color: OG.accent }}>.TECH</span>
+        </div>
+
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            flex: 1,
+            justifyContent: 'center',
+            padding: '0 56px',
+          }}
+        >
+          <span style={{ fontSize: 94, fontWeight: 900, letterSpacing: -3.5, lineHeight: 1.02 }}>
+            {title}
+          </span>
+          <span style={{ fontSize: 30, color: OG.dim, lineHeight: 1.42, marginTop: 22, maxWidth: 960 }}>
+            {description}
+          </span>
+
+          <div style={{ display: 'flex', marginTop: 38 }}>
+            {[
+              { n: stats.receipts.toLocaleString('en-US'), l: 'RECEIPTS' },
+              { n: String(stats.companies), l: 'COMPANIES' },
+              { n: String(stats.people), l: 'EXECS' },
+              { n: String(stats.vcs), l: 'VCS' },
+            ].map(s => (
+              <div key={s.l} style={{ display: 'flex', flexDirection: 'column', width: 210 }}>
+                <span style={{ fontSize: 46, fontWeight: 900, lineHeight: 1 }}>{s.n}</span>
+                <span
+                  style={{ fontFamily: 'Mono', fontSize: 16, letterSpacing: 2, color: OG.mute, marginTop: 8 }}
+                >
+                  {s.l}
+                </span>
+              </div>
+            ))}
           </div>
+        </div>
 
-          {/* Collection title */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '32px', marginBottom: '16px' }}>
-            <span style={{ fontSize: '52px', fontWeight: 900, letterSpacing: '6px', textTransform: 'uppercase' }}>
-              {title}
-            </span>
-            {count > 0 && (
-              <span style={{ fontSize: '24px', color: '#666', marginTop: '8px' }}>
-                {count} entries tracked
-              </span>
-            )}
-          </div>
-
-          {/* Description */}
-          {description && (
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '8px' }}>
-              <span style={{ fontSize: '18px', color: '#555', fontStyle: 'italic', textAlign: 'center', maxWidth: '80%' }}>
-                {description}
-              </span>
-            </div>
-          )}
-
-          {/* Thin divider */}
-          <span style={{ fontSize: '12px', color: '#ccc', letterSpacing: '0px', textAlign: 'center', marginTop: '32px' }}>{thinDivider}</span>
-
-          {/* Stats summary */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '48px', marginTop: '24px', fontSize: '16px', color: '#888' }}>
-            <span>{companies.length} companies</span>
-            <span>{people.length} executives</span>
-            <span>{vcs.length} VCs</span>
-            <span>{stances.length} receipts</span>
-          </div>
-
-          {/* Footer */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 'auto', paddingTop: '16px' }}>
-            <span style={{ fontSize: '11px', color: '#999', fontStyle: 'italic' }}>
-              Before they send you their receipts, check theirs.
-            </span>
-            <span style={{ fontSize: '11px', color: '#bbb', marginTop: '4px', letterSpacing: '2px' }}>
-              receipts.tech
-            </span>
-          </div>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '20px 56px',
+            borderTop: `1px solid ${OG.line}`,
+            backgroundColor: OG.raised,
+          }}
+        >
+          <span style={{ fontFamily: 'Mono', fontSize: 21, color: OG.accent, letterSpacing: 2 }}>
+            reciepts.tech
+          </span>
+          <span style={{ fontSize: 21, color: OG.mute }}>Every line links to a public source.</span>
         </div>
       </div>
     ),
-    {
-      width: 1200,
-      height: 630,
-    }
+    { width: OG.W, height: OG.H, fonts: await ogFonts(), headers: OG_HEADERS }
   )
 }

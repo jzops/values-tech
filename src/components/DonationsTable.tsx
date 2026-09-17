@@ -19,47 +19,47 @@ export function DonationsTable({ donations }: DonationsTableProps) {
   return (
     <div className="mt-8">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-gray-900">
+        <h3 className="text-lg font-semibold text-paper">
           Political Donations ({donations.length})
         </h3>
-        <span className="text-sm font-mono text-gray-600">
+        <span className="text-sm font-mono text-paper-dim">
           Total: {formatCurrency(totalAmount)}
         </span>
       </div>
-      <div className="overflow-x-auto rounded-lg border border-gray-200">
+      <div className="overflow-x-auto rounded-lg border border-line">
         <table className="w-full text-sm">
-          <thead className="bg-gray-50">
+          <thead className="bg-ink-raised">
             <tr className="text-left">
-              <th className="px-4 py-3 font-medium text-gray-500">Date</th>
-              <th className="px-4 py-3 font-medium text-gray-500">Amount</th>
-              <th className="px-4 py-3 font-medium text-gray-500">Recipient</th>
-              <th className="px-4 py-3 font-medium text-gray-500">Type</th>
-              <th className="px-4 py-3 font-medium text-gray-500 w-10"></th>
+              <th className="px-4 py-3 font-medium text-paper-mute">Date</th>
+              <th className="px-4 py-3 font-medium text-paper-mute">Amount</th>
+              <th className="px-4 py-3 font-medium text-paper-mute">Recipient</th>
+              <th className="px-4 py-3 font-medium text-paper-mute">Type</th>
+              <th className="px-4 py-3 font-medium text-paper-mute w-10"></th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-100 bg-white">
+          <tbody className="divide-y divide-[var(--line)] bg-ink-raised">
             {sortedDonations.map((donation) => (
-              <tr key={donation.id} className="hover:bg-gray-50">
-                <td className="px-4 py-3 text-gray-600">
+              <tr key={donation.id} className="hover:bg-white/5">
+                <td className="px-4 py-3 text-paper-dim">
                   {new Date(donation.donation_date).toLocaleDateString('en-US', {
                     month: 'short',
                     day: 'numeric',
                     year: 'numeric'
                   })}
                 </td>
-                <td className="px-4 py-3 font-mono font-medium text-gray-900">
+                <td className="px-4 py-3 font-mono font-medium text-paper">
                   {formatCurrency(donation.amount)}
                 </td>
-                <td className="px-4 py-3 text-gray-900">
+                <td className="px-4 py-3 text-paper">
                   <span>{donation.recipient}</span>
                   {donation.pac_name && (
-                    <span className="text-gray-500 text-xs ml-1 block">
+                    <span className="text-paper-mute text-xs ml-1 block">
                       via {donation.pac_name}
                     </span>
                   )}
                 </td>
                 <td className="px-4 py-3">
-                  <span className="inline-flex px-2 py-0.5 rounded text-xs bg-gray-100 text-gray-700 capitalize">
+                  <span className="inline-flex px-2 py-0.5 rounded text-xs bg-white/5 text-paper-dim capitalize">
                     {donation.recipient_type.replace('_', ' ')}
                   </span>
                 </td>
@@ -68,7 +68,7 @@ export function DonationsTable({ donations }: DonationsTableProps) {
                     href={donation.source_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-gray-600"
+                    className="text-paper-mute hover:text-paper"
                   >
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -81,7 +81,7 @@ export function DonationsTable({ donations }: DonationsTableProps) {
       {donations.some(d => d.notes) && (
         <div className="mt-3 space-y-1">
           {donations.filter(d => d.notes).map(d => (
-            <p key={d.id} className="text-xs text-gray-500 italic">
+            <p key={d.id} className="text-xs text-paper-mute italic">
               * {d.notes}
             </p>
           ))}
