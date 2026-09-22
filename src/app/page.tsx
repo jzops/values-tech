@@ -124,8 +124,13 @@ export default function HomePage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-20">
         <div className="flex items-end justify-between gap-4 mb-8">
           <div>
-            <p className="label">Latest</p>
-            <h2 className="display display-lg mt-2.5">Just added</h2>
+            <p className="label">By date</p>
+            {/*
+              Ordered by when the event happened (`stance_date`), not when it was
+              added here — `created_at` is null on every record, so ingestion
+              recency is not computable. Don't call this "Just added".
+            */}
+            <h2 className="display display-lg mt-2.5">Most recent receipts</h2>
           </div>
           <Link
             href="/topics"

@@ -30,12 +30,17 @@ export function calculateGrade(stances: Stance[]): GradeResult {
     return { grade: 'C', score: 50, color: GRADE_COLORS.C, label: 'No Data' }
   }
 
-  // Auto-F: any documented Epstein connection forces an F grade
-  // regardless of other stances. The presence of an epstein-topic stance
-  // (silent positions excluded — those just note absence of comment) is
-  // treated as a categorical disqualifier.
+  // Auto-F: a documented Epstein connection forces an F regardless of the
+  // rest of the record.
+  //
+  // This MUST key on `opposed` only. The epstein topic is also used to record
+  // the absence of a connection — e.g. "Safra Catz no Epstein connections
+  // documented" is filed as `mixed`. The previous predicate was
+  // `position !== 'silent'`, which turned a clearing record into an
+  // "F — Epstein Connection" on the profile, the board, the share card and
+  // the page description. Never let a non-`opposed` position trip this.
   const hasEpsteinConnection = stances.some(
-    s => s.topic === 'epstein' && s.position !== 'silent'
+    s => s.topic === 'epstein' && s.position === 'opposed'
   )
   if (hasEpsteinConnection) {
     return {

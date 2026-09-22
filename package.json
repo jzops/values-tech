@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 5000 -H 0.0.0.0",
-    "prebuild": "node scripts/sync-content.mjs",
+    "prebuild": "node scripts/sync-content.mjs && node scripts/check-data.mjs",
     "build": "next build",
     "start": "next start -p 5000 -H 0.0.0.0",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:data": "node scripts/check-data.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.8.0",
