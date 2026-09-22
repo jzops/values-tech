@@ -13,7 +13,7 @@ export const metadata: Metadata = collectionMetadata({
 
 export default function PeoplePage() {
   const rows = getBoard(1).filter(r => r.entityType === 'person').map(toLite)
-  const ranked = rows.length
+  const rated = rows.filter(r => r.grade.rated).length
   const receipts = rows.reduce((n, r) => n + r.receipts, 0)
 
   return (
@@ -24,7 +24,7 @@ export default function PeoplePage() {
         blurb="Founders, CEOs, and operators with a documented public record. Ranked by paper trail."
         stats={[
           { n: people.length, l: 'Tracked' },
-          { n: ranked, l: 'With receipts' },
+          { n: rated, l: 'Rated' },
           { n: receipts, l: 'Receipts' },
         ]}
       />

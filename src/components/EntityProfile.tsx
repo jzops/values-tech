@@ -115,7 +115,20 @@ export function EntityProfile({
                 <span className="text-lg font-medium" style={{ color: grade.color }}>
                   {grade.label}
                 </span>
-                <span className="label">{grade.score}/100</span>
+                {grade.rated && <span className="label">{grade.score}/100</span>}
+                {grade.rated && (
+                  <span className="label">
+                    {grade.confidence} confidence · {grade.evidence.scoredTopics} issues
+                  </span>
+                )}
+                {grade.flags.includes('epstein') && (
+                  <span
+                    className="label !text-ink px-2 py-0.5 rounded"
+                    style={{ backgroundColor: 'var(--opposed)' }}
+                  >
+                    Named in Epstein files
+                  </span>
+                )}
               </div>
             </div>
           </div>

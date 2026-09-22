@@ -17,7 +17,7 @@ const TYPE_LABEL: Record<string, string> = {
  */
 export async function GET() {
   const stats = getSiteStats()
-  const top = getBoard(2).slice(0, 4)
+  const top = getBoard({ ratedOnly: true }).slice(0, 4)
 
   return new ImageResponse(
     (

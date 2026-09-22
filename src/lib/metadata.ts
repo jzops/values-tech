@@ -21,10 +21,31 @@ export function entityMetadata(row: BoardRow): Metadata {
   const flagPart = topFlag
     ? ` Most flagged on ${topFlag.name} (${topFlag.count}).`
     : ''
-  const description =
-    `Grade ${grade.grade} — ${grade.label.toLowerCase()}. ` +
-    `${receipts} documented receipt${receipts === 1 ? '' : 's'} on this ${TYPE_NOUN[entityType]}, ` +
-    `${counts.opposed} of them against.${flagPart} Every line links to a public source.`
+
+  // Unrated entities must never syndicate as "Grade — …". This text is what
+  // Google indexes and what Twitter and Slack cache, so it has to read as a
+  // sentence in both states.
+  const verdict = grade.rated
+    ? `Grade ${grade.letter} — ${grade.label.toLowerCase()}. `
+    : receipts === 0
+      ? 'No receipts on file yet. '
+      : `Not yet rated — we don't grade on fewer than 3 receipts across 2 issues. `
+
+  const description = grade.rated || receipts > 0
+    ? verdict +
+      `${receipts} documented receipt${receipts === 1 ? '' : 's'} on this ${TYPE_NOUN[entityType]}, ` +
+      `${counts.opposed} of them against.${flagPart} Every line links to a public source.`
+    : verdict +
+      `This ${TYPE_NOUN[entityType]} is tracked but nothing is documented yet.`
+
+  /** Headline used in the page title and on both card types. */
+  const headline = grade.rated
+    ? `${name} — Grade ${grade.letter} on ${SITE_NAME}`
+    : `${name} — the receipts on ${SITE_NAME}`
+
+  const imageAlt = grade.rated
+    ? `${name}: grade ${grade.letter}, ${receipts} receipts on file, ${counts.opposed} against.`
+    : `${name}: not yet rated, ${receipts} receipt${receipts === 1 ? '' : 's'} on file.`
 
   const image = abs(entityOgPath(entityType, slug))
   const url = abs(entityPath(entityType, slug))
@@ -37,19 +58,14 @@ export function entityMetadata(row: BoardRow): Metadata {
       type: 'profile',
       siteName: SITE_NAME,
       url,
-      title: `${name} — Grade ${grade.grade} on ${SITE_NAME}`,
+      title: headline,
       description,
-      images: [{
-        url: image,
-        width: 1200,
-        height: 630,
-        alt: `${name}: grade ${grade.grade}, ${receipts} receipts on file, ${counts.opposed} against.`,
-      }],
+      images: [{ url: image, width: 1200, height: 630, alt: imageAlt }],
     },
     twitter: {
       card: 'summary_large_image',
       site: TWITTER_HANDLE,
-      title: `${name} — Grade ${grade.grade} on ${SITE_NAME}`,
+      title: headline,
       description,
       images: [image],
     },

@@ -93,7 +93,12 @@ function toRow(entity: Company | Person | VC, entityType: EntityType): BoardRow 
  * the board leads with the entities that have the deepest paper trail, then
  * break ties on the grade score.
  */
-export function getBoard(minReceipts = 1): BoardRow[] {
+export function getBoard(
+  opts: number | { minReceipts?: number; ratedOnly?: boolean } = 1
+): BoardRow[] {
+  const { minReceipts = 1, ratedOnly = false } =
+    typeof opts === 'number' ? { minReceipts: opts, ratedOnly: false } : opts
+
   const rows: BoardRow[] = [
     ...companies.map(c => toRow(c, 'company')),
     ...people.map(p => toRow(p, 'person')),
@@ -101,10 +106,13 @@ export function getBoard(minReceipts = 1): BoardRow[] {
   ]
 
   return rows
-    .filter(r => r.receipts >= minReceipts)
+    .filter(r => r.receipts >= minReceipts && (!ratedOnly || r.grade.rated))
+    // `sortScore` rather than `score`: score is null for every unrated entity,
+    // and a comparator that returns NaN makes Array.sort emit an arbitrary
+    // order. sortScore falls back to a neutral 50.
     .sort((a, b) =>
       b.opposed - a.opposed ||
-      a.grade.score - b.grade.score ||
+      a.grade.sortScore - b.grade.sortScore ||
       b.receipts - a.receipts ||
       a.name.localeCompare(b.name)
     )

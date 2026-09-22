@@ -155,7 +155,9 @@ export function Board({
                     backgroundColor: `${row.grade.color}14`,
                     letterSpacing: '-0.04em',
                   }}
-                  title={`${row.grade.label} — ${row.grade.score}/100`}
+                  title={row.grade.rated
+                    ? `${row.grade.label} — ${row.grade.score}/100`
+                    : row.grade.label}
                 >
                   {row.grade.grade}
                 </span>

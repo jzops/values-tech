@@ -63,7 +63,7 @@ export async function GET(
 
   const stances = getStancesForEntity(entityType, entity.id)
   const topStances = stances.slice(0, config.maxStances)
-  const { grade, color: gradeColor, label: gradeLabel } = calculateGrade(stances)
+  const { grade, color: gradeColor, shortLabel: gradeLabel } = calculateGrade(stances)
 
   const counts = { supported: 0, opposed: 0, mixed: 0, silent: 0 }
   for (const s of stances) {

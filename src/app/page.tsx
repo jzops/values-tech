@@ -8,7 +8,7 @@ import { getRecentStances, getEntityForStance } from '@/lib/mock-data'
 
 export default function HomePage() {
   const stats = getSiteStats()
-  const board = getBoard(2).map(toLite)
+  const board = getBoard({ ratedOnly: true }).map(toLite)
   const topics = getTopicLeaderboard().slice(0, 12)
   const recent = getRecentStances(6).map(s => ({ ...s, ...getEntityForStance(s) }))
 

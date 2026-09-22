@@ -31,11 +31,18 @@ function composePost(
   }
   const top = [...flags.entries()].sort((a, b) => b[1] - a[1])[0]
 
-  const lines = [
-    `${name}: grade ${grade.grade}.`,
-    '',
-    `${stances.length} receipts on file. ${opposed} against.`,
-  ]
+  const lines = grade.rated
+    ? [
+        `${name}: grade ${grade.letter}.`,
+        '',
+        `${stances.length} receipts on file. ${opposed} against.`,
+      ]
+    : [
+        `${name}: not yet rated.`,
+        '',
+        `${stances.length} receipt${stances.length === 1 ? '' : 's'} on file — ` +
+          `not enough to grade.`,
+      ]
   if (top) {
     const topicName = TOPICS[top[0] as keyof typeof TOPICS]?.name || top[0]
     lines.push(`Most flagged: ${topicName} (×${top[1]}).`)

@@ -13,7 +13,7 @@ export const metadata: Metadata = collectionMetadata({
 
 export default function CompaniesPage() {
   const rows = getBoard(1).filter(r => r.entityType === 'company').map(toLite)
-  const ranked = rows.length
+  const rated = rows.filter(r => r.grade.rated).length
   const receipts = rows.reduce((n, r) => n + r.receipts, 0)
 
   return (
@@ -24,7 +24,7 @@ export default function CompaniesPage() {
         blurb="Every tech company with a documented public record — ranked by how much of it cuts against them."
         stats={[
           { n: companies.length, l: 'Tracked' },
-          { n: ranked, l: 'With receipts' },
+          { n: rated, l: 'Rated' },
           { n: receipts, l: 'Receipts' },
         ]}
       />
