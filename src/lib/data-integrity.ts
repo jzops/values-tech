@@ -98,6 +98,130 @@ export function checkDataIntegrity(): IntegrityIssue[] {
     })
   }
 
+  // ── Misattribution ─────────────────────────────────────────────────
+  // 13 records were deleted for naming an entity unrelated to the one they
+  // were filed against ("Accel endorsed Trump…" actually described a16z).
+  // A firm's record legitimately describes its own founder, so only flag a
+  // summary that OPENS with a different tracked entity that has no link to it.
+  // Restricted to ORG-on-ORG, which is where the real errors were. A firm's
+  // record naming a partner ("Peter Thiel's firm", "Marc Andreessen endorsed…")
+  // is legitimate and would otherwise swamp this with ~140 false positives;
+  // one firm's record opening with a DIFFERENT firm's name essentially never is.
+  const orgNames = [...companies.map(c => c.name), ...vcs.map(v => v.name)]
+    .filter(n => n.length >= 5)
+    .sort((a, b) => b.length - a.length)
+
+  const ownName = (s: (typeof stances)[number]): string => {
+    const src = s.entity_type === 'company' ? companies : s.entity_type === 'person' ? people : vcs
+    return (src as { id: string; name: string }[]).find(e => e.id === s.entity_id)?.name || ''
+  }
+
+  // Word-boundary match, or "Square" matches "Squarespace" and "Remote"
+  // matches "Remote-first" — both produced false positives.
+  const escapeRe = (v: string) => v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  const opensWith = (text: string, name: string) =>
+    new RegExp(`^${escapeRe(name)}(?![A-Za-z0-9-])`).test(text)
+
+  // A record describing a RELATIONSHIP usually concerns the filed entity, not
+  // the company it opens with ("Anduril partnership announced" is OpenAI's pivot).
+  const relational = /partner|partnership|acquired|acquisition|merger|alongside|competitor|rival|versus|\bvs\b/i
+
+  const misattributed = stances.filter(s => {
+    if (s.entity_type === 'person') return false // person records routinely name their employer
+    const own = ownName(s)
+    if (!own) return false
+    const other = orgNames.find(n => opensWith(s.summary.slice(0, 60), n))
+    if (!other || other === own) return false
+    // Related if either name contains the other (Alphabet / Google, a16z funds).
+    if (own.includes(other) || other.includes(own)) return false
+    if (s.summary.includes(own) || relational.test(s.summary)) return false
+    return true
+  })
+  if (misattributed.length > 0) {
+    issues.push({
+      severity: 'warn',
+      check: 'possible-misattribution',
+      detail:
+        `${misattributed.length} receipt(s) open by naming a different tracked entity — ` +
+        `verify before publishing: ` +
+        misattributed.slice(0, 10).map(s => `${s.id}(${ownName(s)})`).join(', '),
+    })
+  }
+
+  // ── Polarity ───────────────────────────────────────────────────────
+  // `government_contracts` defines itself as controversial work, so holding it
+  // is the mark AGAINST. A `supported` record here is either a company that
+  // DECLINED the work or a sign error — the latter scored Palantir's ICE
+  // contracts at +100 before it was caught.
+  const govSupported = stances.filter(
+    s => s.topic === 'government_contracts' && s.position === 'supported'
+  )
+  if (govSupported.length > 0) {
+    issues.push({
+      severity: 'warn',
+      check: 'gov-contracts-polarity',
+      detail:
+        `${govSupported.length} government_contracts receipt(s) marked 'supported' ` +
+        `(ids ${govSupported.map(s => s.id).join(', ')}). Only correct when the entity ` +
+        `DECLINED the work — otherwise holding these contracts is the mark against.`,
+    })
+  }
+
+  // ── Near-duplicates ────────────────────────────────────────────────
+  // Same entity, same topic, same position is usually one story filed twice.
+  // Grading rolls up by topic so this no longer skews scores, but it still
+  // double-renders on the profile.
+  const seen = new Map<string, number>()
+  for (const s of stances) {
+    const k = `${s.entity_type}:${s.entity_id}:${s.topic}:${s.position}`
+    seen.set(k, (seen.get(k) || 0) + 1)
+  }
+  const dupPairs = [...seen.values()].filter(n => n > 1).reduce((a, n) => a + n - 1, 0)
+  if (dupPairs > 0) {
+    issues.push({
+      severity: 'warn',
+      check: 'near-duplicate-receipts',
+      detail: `${dupPairs} receipt(s) repeat an existing entity+topic+position combination.`,
+    })
+  }
+
+  // ── Source quality ─────────────────────────────────────────────────
+  // The share card footer claims "Every line links to a public source". A URL
+  // with no path points at a homepage, not at the evidence.
+  const bareSources = stances.filter(s => {
+    if (!s.source_url) return true
+    try {
+      const u = new URL(s.source_url)
+      return (u.pathname === '' || u.pathname === '/') && !u.search
+    } catch {
+      return true
+    }
+  })
+  if (bareSources.length > stances.length * 0.25) {
+    issues.push({
+      severity: 'warn',
+      check: 'shallow-sources',
+      detail:
+        `${bareSources.length} of ${stances.length} receipts ` +
+        `(${Math.round((bareSources.length / stances.length) * 100)}%) link to a homepage ` +
+        `rather than the evidence. New receipts should deep-link.`,
+    })
+  }
+
+  // ── Dates ──────────────────────────────────────────────────────────
+  const today = new Date().toISOString().slice(0, 10)
+  const future = stances.filter(s => s.stance_date && s.stance_date > today)
+  if (future.length > 0) {
+    issues.push({
+      severity: 'error',
+      check: 'future-dated',
+      detail: `${future.length} receipt(s) dated in the future: ${future
+        .slice(0, 8)
+        .map(s => `${s.id}@${s.stance_date}`)
+        .join(', ')}`,
+    })
+  }
+
   return issues
 }
 
