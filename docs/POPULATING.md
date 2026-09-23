@@ -160,8 +160,18 @@ with that position. 204 receipts currently repeat an existing
 entity+topic+position — one story filed several times. Grading rolls up by topic
 so it no longer skews scores, but it double-renders on the profile.
 
-Prefer a **new topic** for an entity over a second receipt on one it already has
-— new topics are what make an entity gradeable.
+Prefer a **new topic** for an entity over a second receipt on one it already has,
+*where one genuinely exists*.
+
+**A second receipt on a topic the entity already has is a perfectly good
+outcome.** It will not move the entity across the gradeable line, and that is
+fine — the line is a reporting threshold, not a target to hit. What is never
+acceptable is filing a layoff under `worker_treatment`, or a securities fine
+under `worker_treatment`, because the entity needed a second topic. Two honest
+`layoffs` receipts beat one `layoffs` plus one stretched.
+
+If you notice yourself reaching for a topic because the entity is one short,
+stop. That is the tell.
 
 ---
 
