@@ -37,6 +37,13 @@ new company with none.
 **Work the worklist top-down.** Do not pick entities at random. Do not add new
 entities unless you are also adding 3+ receipts across 2+ topics for them.
 
+The list is ranked by **value**, not just by how close an entity is to being
+gradeable. A still-private startup someone is weighing an offer from beats
+another megacap — nobody needs this site to learn that Amazon handled layoffs
+badly, but they do need to know what the Series D they are about to join did.
+Ranking purely by gap surfaced obscure funds with no public record and wasted
+whole runs.
+
 **The worklist is a priority hint, not a quota.** It tells you where a receipt
 would be worth most — it does not tell you one exists. Moving an entity across
 the gradeable line is never a reason to file a receipt under a topic that does

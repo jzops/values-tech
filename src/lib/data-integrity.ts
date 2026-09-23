@@ -46,7 +46,7 @@ export function checkDataIntegrity(): IntegrityIssue[] {
 
   // ── Unique slugs per entity type ───────────────────────────────────
   // Same failure mode via getCompanyBySlug / getPersonBySlug / getVCBySlug.
-  const bySlug: [string, { slug: string }[]][] = [
+  const bySlug: [string, { slug: string; name: string }[]][] = [
     ['company', companies],
     ['person', people],
     ['vc', vcs],
@@ -58,6 +58,23 @@ export function checkDataIntegrity(): IntegrityIssue[] {
         severity: 'error',
         check: `${label}-slug-unique`,
         detail: `${dup.size} duplicated ${label} slug(s): ${[...dup.keys()].join(', ')}`,
+      })
+    }
+  }
+
+  // ── Duplicate entity NAMES ─────────────────────────────────────────
+  // Slug-uniqueness does not catch this: "Anthropic" existed twice as
+  // /anthropic (14 receipts) and /anthropic-2 (0), the second rendering as a
+  // permanently empty page for a company that is in fact well documented.
+  for (const [label, list] of bySlug) {
+    const dupNames = duplicates(list as { name: string }[], e => e.name)
+    if (dupNames.size > 0) {
+      issues.push({
+        severity: 'error',
+        check: `${label}-name-unique`,
+        detail:
+          `${dupNames.size} duplicated ${label} name(s) under different slugs — ` +
+          `one of each pair will render as an empty page: ${[...dupNames.keys()].join(', ')}`,
       })
     }
   }

@@ -110,7 +110,6 @@ const dataAnalytics: Company[] = [
 
 // More Startups - Batch 1
 const startupsB1: Company[] = [
-  { id: '201', name: 'Anthropic', slug: 'anthropic-2', logo_url: 'https://icon.horse/icon/anthropic.com', website: 'https://anthropic.com', founded_year: 2021, headcount_range: '500+', funding_stage: 'Series D', total_raised: 7000000000, industry: 'AI', description: 'AI safety company.' },
   { id: '202', name: 'Retool', slug: 'retool', logo_url: 'https://icon.horse/icon/retool.com', website: 'https://retool.com', founded_year: 2017, headcount_range: '500+', funding_stage: 'Series D', total_raised: 445000000, industry: 'Developer Tools', description: 'Internal tool builder.' },
   { id: '203', name: 'Webflow', slug: 'webflow', logo_url: 'https://icon.horse/icon/webflow.com', website: 'https://webflow.com', founded_year: 2013, headcount_range: '800+', funding_stage: 'Series C', total_raised: 335000000, industry: 'Developer Tools', description: 'No-code website builder.' },
   { id: '204', name: 'Zapier', slug: 'zapier', logo_url: 'https://icon.horse/icon/zapier.com', website: 'https://zapier.com', founded_year: 2011, headcount_range: '800+', funding_stage: 'Bootstrapped', total_raised: 1400000, industry: 'SaaS', description: 'Workflow automation platform.' },

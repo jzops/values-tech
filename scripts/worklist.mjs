@@ -38,16 +38,30 @@ for (const s of stances) {
   byEntity.get(k).push(s)
 }
 
-/** Rough prominence, used only to break ties among entities with no receipts. */
+/**
+ * How much public record probably exists, and how much a reader cares.
+ *
+ * Ranking purely by "closest to gradeable" surfaced obscure VCs that nobody is
+ * deciding about and that have almost nothing documented — low yield per hour
+ * of research, and low value even when it lands. A private company someone is
+ * weighing an offer from is worth far more than another megacap everyone has
+ * already made their mind up about.
+ */
 function prominence(type, e) {
   if (type === 'vc') {
     const m = String(e.aum || '').match(/([\d.]+)\s*B/i)
-    return m ? Number(m[1]) * 10 : 1
+    return m ? Math.min(Number(m[1]), 60) : 1
   }
-  if (type === 'person') return e.twitter_handle ? 50 : 10
-  const raised = Number(e.total_raised || 0)
-  const head = Number(String(e.headcount_range || '').replace(/[^\d]/g, '')) || 0
-  return raised / 1e8 + head / 1000
+  if (type === 'person') return e.twitter_handle ? 40 : 8
+  const raised = Number(e.total_raised || 0) / 1e9
+  const head = (Number(String(e.headcount_range || '').replace(/[^\d]/g, '')) || 0) / 1000
+  const base = raised * 12 + head * 2
+
+  // A still-private company is a live decision — join it, take its money, use
+  // it. A listed megacap is largely a settled question for most readers.
+  const stage = String(e.funding_stage || '')
+  const isPrivate = stage && !/public|ipo|acquired/i.test(stage)
+  return isPrivate ? base * 2.5 + 15 : base * 0.4
 }
 
 /** Topics that carry the most receipts for this entity type, minus what it has. */
@@ -92,8 +106,11 @@ for (const [type, list] of [['company', companies], ['person', people], ['vc', v
   }
 }
 
-// Smallest gap first — those convert an unrated page into a graded one cheapest.
-rows.sort((a, b) => a.gap - b.gap || b.prominence - a.prominence || a.name.localeCompare(b.name))
+// Value = how likely research is to land x how much anyone cares, discounted
+// by how much work it needs. Gap still matters — it is just no longer the only
+// thing, which is what pushed obscure two-receipt VCs to the top.
+for (const r of rows) r.value = Math.round((r.prominence / (r.gap + 0.5)) * 10) / 10
+rows.sort((a, b) => b.value - a.value || a.gap - b.gap || a.name.localeCompare(b.name))
 
 const picked = rows.slice(0, limit)
 
@@ -109,12 +126,12 @@ if (asJson) {
   console.log(`\n  RESEARCH WORKLIST — ${new Date().toISOString().slice(0, 10)}`)
   console.log(`  ${rated} entities gradeable today.`)
   console.log(`  ${oneAway} are ONE receipt away → researching those takes it to ${rated + oneAway}.\n`)
-  console.log(`  ${'ENTITY'.padEnd(30)} ${'TYPE'.padEnd(8)} HAVE  NEED  SUGGESTED TOPICS`)
+  console.log(`  ${'ENTITY'.padEnd(28)} ${'TYPE'.padEnd(8)} HAVE NEED  VALUE  SUGGESTED TOPICS`)
   console.log(`  ${'-'.repeat(94)}`)
   for (const r of picked) {
     const topics = r.suggest.map(t => TOPICS[t]?.name || t).join(', ')
     console.log(
-      `  ${r.name.slice(0, 29).padEnd(30)} ${r.type.padEnd(8)} ${String(r.receipts).padStart(2)}    ${String(r.gap).padStart(2)}    ${topics}`
+      `  ${r.name.slice(0, 27).padEnd(28)} ${r.type.padEnd(8)} ${String(r.receipts).padStart(2)}   ${String(r.gap).padStart(2)}  ${String(r.value).padStart(6)}  ${topics}`
     )
   }
   console.log(`\n  ${picked.length} shown of ${rows.length} ungraded. --json for the machine-readable form.\n`)
