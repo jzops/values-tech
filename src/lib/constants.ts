@@ -2,35 +2,35 @@ export const TOPICS = {
   layoffs: {
     id: 'layoffs',
     name: 'Layoffs',
-    description: 'How they handled layoffs — severance, notice, communication',
+    description: 'How they handled layoffs. Opposed = cut staff hard, poor notice or severance. Supported = avoided cuts or handled them generously.',
     icon: '📉',
     color: 'red'
   },
   dei: {
     id: 'dei',
     name: 'DEI',
-    description: 'Diversity, equity, and inclusion stances and actions',
+    description: 'Opposed = rolled back or ended DEI programs. Supported = maintained or expanded them.',
     icon: '🌈',
     color: 'purple'
   },
   remote_work: {
     id: 'remote_work',
     name: 'Remote Work',
-    description: 'Remote, hybrid, or return-to-office policies',
+    description: 'Opposed = forced return-to-office against staff wishes. Supported = kept remote or hybrid flexibility.',
     icon: '🏠',
     color: 'blue'
   },
   union: {
     id: 'union',
     name: 'Unionization',
-    description: 'Stance on worker unionization efforts',
+    description: 'Opposed = fought organising efforts. Supported = stayed neutral or recognised the union.',
     icon: '✊',
     color: 'orange'
   },
   politics: {
     id: 'politics',
     name: 'Politics',
-    description: 'Political donations and endorsements',
+    description: 'Opposed = funded or endorsed efforts that attacked democratic institutions or civil rights. Supported = funded or endorsed efforts defending them. Inaugural donations are mixed.',
     icon: '🗳️',
     color: 'gray'
   },
@@ -44,49 +44,49 @@ export const TOPICS = {
   environment: {
     id: 'environment',
     name: 'Environment',
-    description: 'Climate and sustainability actions',
+    description: 'Opposed = walked back climate commitments or lobbied against them. Supported = made and kept substantive commitments.',
     icon: '🌍',
     color: 'emerald'
   },
   ai_ethics: {
     id: 'ai_ethics',
     name: 'AI Ethics',
-    description: 'AI safety and responsible AI development',
+    description: 'Opposed = shipped unsafe systems, gutted safety teams, lobbied against oversight. Supported = invested in safety or accepted regulation.',
     icon: '🤖',
     color: 'indigo'
   },
   worker_treatment: {
     id: 'worker_treatment',
     name: 'Worker Treatment',
-    description: 'General treatment of employees',
+    description: 'Opposed = documented mistreatment of workers. Supported = documented good practice.',
     icon: '👷',
     color: 'amber'
   },
   exec_compensation: {
     id: 'exec_compensation',
     name: 'Executive Pay',
-    description: 'CEO pay vs worker pay disparities',
+    description: 'Opposed = extreme pay disparity against worker pay. Supported = restraint or shared upside.',
     icon: '💰',
     color: 'yellow'
   },
   free_speech: {
     id: 'free_speech',
     name: 'Free Speech',
-    description: 'Content moderation and speech policies',
+    description: 'Opposed = censored or suppressed lawful speech, or let harm spread through wilful under-moderation. Supported = protected users and speech responsibly. Age or safety gating to protect minors is NOT a mark against.',
     icon: '📢',
     color: 'sky'
   },
   immigration: {
     id: 'immigration',
     name: 'Immigration',
-    description: 'Visa sponsorship and immigration policy stances',
+    description: 'Opposed = worked against immigrants or visa holders. Supported = defended or sponsored them.',
     icon: '🛂',
     color: 'teal'
   },
   epstein: {
     id: 'epstein',
     name: 'Epstein Files',
-    description: 'Connections to Jeffrey Epstein documented in DOJ files. Number of file mentions indicates depth of relationship.',
+    description: 'Documented connections in the DOJ files. Only `opposed` indicates a connection and it is the ONLY position that affects the grade. `mixed` is used to record the ABSENCE of a connection and must never imply one.',
     icon: '📁',
     color: 'rose'
   },
@@ -94,14 +94,14 @@ export const TOPICS = {
   founder_treatment: {
     id: 'founder_treatment',
     name: 'Founder Treatment',
-    description: 'How VCs treat founders - down rounds, board coups, forced removals',
+    description: 'Opposed = pushed out founders, punitive down rounds, board coups. Supported = backed founders through hard times.',
     icon: '🤝',
     color: 'violet'
   },
   term_sheets: {
     id: 'term_sheets',
     name: 'Term Sheets',
-    description: 'Predatory vs fair term sheet practices - participating preferred, ratchets',
+    description: 'Opposed = predatory terms — participating preferred, ratchets. Supported = clean, founder-fair terms.',
     icon: '📝',
     color: 'slate'
   },
@@ -109,28 +109,28 @@ export const TOPICS = {
   contractor_classification: {
     id: 'contractor_classification',
     name: 'Contractor Rights',
-    description: 'Gig economy worker classification and contractor treatment',
+    description: 'Opposed = misclassified workers to avoid benefits. Supported = classified and paid fairly.',
     icon: '🚗',
     color: 'cyan'
   },
   sexual_harassment: {
     id: 'sexual_harassment',
     name: 'Sexual Harassment',
-    description: 'Documented harassment cases and how companies handled them',
+    description: 'Opposed = mishandled or covered up cases. Supported = handled them properly.',
     icon: '⚠️',
     color: 'pink'
   },
   whistleblower: {
     id: 'whistleblower',
     name: 'Whistleblowers',
-    description: 'Treatment of internal dissent and whistleblower retaliation',
+    description: 'Opposed = retaliated against internal dissent. Supported = protected it.',
     icon: '🔔',
     color: 'fuchsia'
   },
   government_contracts: {
     id: 'government_contracts',
     name: 'Government Contracts',
-    description: 'ICE, military, surveillance, and controversial government partnerships',
+    description: 'ICE, military, surveillance and other controversial government work. Opposed = holds that work. Supported = declined or withdrew from it.',
     icon: '🏛️',
     color: 'stone'
   },
@@ -138,28 +138,28 @@ export const TOPICS = {
   data_privacy: {
     id: 'data_privacy',
     name: 'Data Privacy',
-    description: 'Data breaches, user data sales, surveillance capitalism practices',
+    description: 'Opposed = sold out user privacy, breaches through negligence, surveillance. Supported = defended user privacy.',
     icon: '🔒',
     color: 'blue'
   },
   antitrust: {
     id: 'antitrust',
     name: 'Antitrust',
-    description: 'Anti-competitive practices, killer acquisitions, platform abuse',
+    description: 'Opposed = anti-competitive conduct, killer acquisitions, platform abuse. Supported = competed fairly.',
     icon: '⚖️',
     color: 'red'
   },
   tax_avoidance: {
     id: 'tax_avoidance',
     name: 'Tax Practices',
-    description: 'Offshore schemes, aggressive tax strategies, tax haven usage',
+    description: 'Opposed = aggressive avoidance or tax-haven schemes. Supported = paid without engineering around it.',
     icon: '💸',
     color: 'lime'
   },
   open_source: {
     id: 'open_source',
     name: 'Open Source',
-    description: 'Support for or exploitation of open source community',
+    description: 'Opposed = exploited or rug-pulled the open source community. Supported = contributed to and sustained it.',
     icon: '🌐',
     color: 'emerald'
   }

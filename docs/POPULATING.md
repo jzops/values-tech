@@ -71,6 +71,11 @@ damaging error in this database and it has happened twice at scale.
 | `ai_ethics` | shipped unsafe, gutted safety teams | invested in safety, accepted regulation |
 | `worker_treatment` | documented mistreatment | documented good practice |
 
+**Every topic in `src/lib/constants.ts` now states its own polarity in its
+`description`. Read the description for the topic you are coding and follow it.**
+If a topic's description does not state a direction, that is a bug — stop and say
+so rather than guessing.
+
 Specific rules learned the hard way:
 
 - **Declining to engage is not an attack.** "We don't do politics" is `mixed`.
@@ -94,6 +99,11 @@ Specific rules learned the hard way:
   Andreessen is fine). A firm's record must never describe a *different firm*.
 - Partner conduct filed against a firm is acceptable only when the summary makes
   the relationship explicit.
+
+**Company conduct vs the CEO.** A corporate action (an SEC filing, a layoff, a
+legal settlement) belongs on the COMPANY. File it against the executive as well
+only when they personally drove or publicly owned it, and say so in the summary.
+Prefer the company record when in doubt — it is the entity that acted.
 
 ---
 
