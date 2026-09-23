@@ -37,6 +37,20 @@ new company with none.
 **Work the worklist top-down.** Do not pick entities at random. Do not add new
 entities unless you are also adding 3+ receipts across 2+ topics for them.
 
+**The worklist is a priority hint, not a quota.** It tells you where a receipt
+would be worth most — it does not tell you one exists. Moving an entity across
+the gradeable line is never a reason to file a receipt under a topic that does
+not genuinely fit. If the only honest answer is "nothing publishable here", that
+is the answer; say so and move on. Three real receipts beat ten forced ones, and
+a stretched topic is a false claim with extra steps.
+
+Real examples of what NOT to do, all caught in review:
+- A CEO's congressional testimony about trading restrictions filed under
+  `politics`. It is not a donation or an endorsement. No topic fitted; it should
+  not have been filed.
+- An SEC fine for misleading *investors* about licensing filed under
+  `worker_treatment`. Securities fraud is not worker treatment.
+
 An entity becomes gradeable at **3 receipts across 2 distinct topics.**
 
 ---
@@ -124,6 +138,11 @@ Verge, TechCrunch, CNBC) → company newsroom → executive's own post.
 
 Verify the URL resolves before writing it. No paywalled-only sources where a
 free equivalent exists. No anonymous claims.
+
+**Not acceptable as a source:** employee-review sites (Glassdoor, Blind),
+workforce-analytics estimates (Revelio, LiveData), aggregators with no reporting
+of their own, or any page that infers an event rather than reporting it. A
+headcount estimate falling 17% is not a documented layoff — find the layoff.
 
 ---
 
