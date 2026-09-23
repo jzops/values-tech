@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { EntityProfile } from '@/components/EntityProfile'
-import { getBoardRow, getBoardRank } from '@/lib/board'
+import { getBoardRow, getBoardRank, getPortfolio } from '@/lib/board'
 import { entityMetadata } from '@/lib/metadata'
 import { getVCBySlug, getStatsForEntity, getDonationsForEntity } from '@/lib/mock-data'
 
@@ -36,6 +36,7 @@ export default async function VCPage({ params }: Props) {
       facts={facts}
       stats={getStatsForEntity('vc', vc.id)}
       donations={getDonationsForEntity('vc', vc.id)}
+      portfolio={getPortfolio(vc.id)}
     />
   )
 }

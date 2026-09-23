@@ -7,7 +7,7 @@ import { DonationsTable } from './DonationsTable'
 import { ShareButtons } from './ShareButtons'
 import { LogoImage } from './LogoImage'
 import { TOPICS, STANCE_TOPICS } from '@/lib/constants'
-import type { BoardRow } from '@/lib/board'
+import type { BoardRow, PortfolioEntry } from '@/lib/board'
 import type { Stat, Donation, Person } from '@/lib/types'
 
 const TYPE_LABEL = {
@@ -27,6 +27,10 @@ export interface EntityProfileProps {
   donations: Donation[]
   relatedPeople?: Person[]
   relatedLabel?: string
+  /** VC pages only: companies this fund has backed. */
+  portfolio?: PortfolioEntry[]
+  /** Company pages only: funds that backed this company. */
+  backers?: { vc: { id: string; name: string; slug: string }; round: string | null }[]
 }
 
 export function EntityProfile({
@@ -39,6 +43,8 @@ export function EntityProfile({
   donations,
   relatedPeople = [],
   relatedLabel = 'Key people',
+  portfolio = [],
+  backers = [],
 }: EntityProfileProps) {
   const { grade, counts, entityType } = row
 
@@ -255,6 +261,44 @@ export function EntityProfile({
             )}
 
             <DonationsTable donations={donations} />
+
+            {portfolio.length > 0 && (
+              <section className="mt-12">
+                <h2 className="display text-2xl mb-2">
+                  What they funded{' '}
+                  <span className="text-paper-mute tnum font-normal">({portfolio.length})</span>
+                </h2>
+                <p className="text-sm text-paper-dim mb-5 max-w-2xl leading-relaxed">
+                  Documented funding relationships. A cheque is a fact, not a verdict — these
+                  do not affect the grade above.
+                </p>
+                <div className="rounded-xl border border-line overflow-hidden">
+                  {portfolio.map((p, i) => (
+                    <Link
+                      key={p.company.id}
+                      href={`/company/${p.company.slug}`}
+                      className={`group flex items-center gap-4 px-4 py-3 hover:bg-white/[0.035] transition-colors ${i > 0 ? 'border-t border-line' : ''}`}
+                    >
+                      <span
+                        className="w-8 h-8 rounded-md border-2 flex items-center justify-center text-sm font-black shrink-0"
+                        style={{ color: p.grade.color, borderColor: p.grade.color, backgroundColor: `${p.grade.color}14` }}
+                      >
+                        {p.grade.grade}
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block font-semibold text-paper truncate group-hover:text-accent transition-colors">
+                          {p.company.name}
+                        </span>
+                        <span className="label !text-[0.625rem]">
+                          {p.round}{p.date ? ` · from ${p.date}` : ''} · {p.receipts} receipts
+                        </span>
+                      </span>
+                      <ArrowUpRight className="w-3.5 h-3.5 text-paper-mute opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
 
           {/* Sidebar */}
@@ -273,6 +317,25 @@ export function EntityProfile({
                 opposed={counts.opposed}
               />
             </div>
+
+            {backers.length > 0 && (
+              <div className="rounded-xl border border-line bg-ink-raised p-5">
+                <h3 className="label mb-1">Backed by</h3>
+                <p className="text-xs text-paper-mute mb-4">Documented investors.</p>
+                <div className="flex flex-wrap gap-2">
+                  {backers.map(b => (
+                    <Link
+                      key={b.vc.id}
+                      href={`/vc/${b.vc.slug}`}
+                      className="inline-flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-line text-xs font-medium text-paper-dim hover:text-paper hover:border-accent transition-colors"
+                    >
+                      {b.vc.name}
+                      {b.round && <span className="label !text-[0.5625rem]">{b.round}</span>}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {relatedPeople.length > 0 && (
               <div className="rounded-xl border border-line bg-ink-raised p-5">

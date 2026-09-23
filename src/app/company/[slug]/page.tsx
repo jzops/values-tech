@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { EntityProfile } from '@/components/EntityProfile'
-import { getBoardRow, getBoardRank } from '@/lib/board'
+import { getBoardRow, getBoardRank, getBackers } from '@/lib/board'
 import { entityMetadata } from '@/lib/metadata'
 import { getCompanyBySlug, getStatsForEntity, getDonationsForEntity, getPeopleAtCompany } from '@/lib/mock-data'
 
@@ -52,6 +52,7 @@ export default async function CompanyPage({ params }: Props) {
       donations={getDonationsForEntity('company', company.id)}
       relatedPeople={getPeopleAtCompany(company.id)}
       relatedLabel="Key people"
+      backers={getBackers(company.id)}
     />
   )
 }

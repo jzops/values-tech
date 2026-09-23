@@ -175,3 +175,39 @@ export function toLite({ stances, ...rest }: BoardRow): BoardRowLite {
   void stances
   return rest
 }
+
+// ── Portfolio graph ──────────────────────────────────────────────────
+import { investments } from '../data/investments'
+
+export interface PortfolioEntry {
+  company: Company
+  round: string | null
+  date: string | null
+  grade: GradeResult
+  receipts: number
+}
+
+/** Companies this fund has backed, worst-graded first. */
+export function getPortfolio(vcId: string): PortfolioEntry[] {
+  return investments
+    .filter(i => i.vc_id === vcId)
+    .map(i => {
+      const company = companies.find(c => c.id === i.company_id)
+      if (!company) return null
+      const st = stances.filter(s => s.entity_type === 'company' && s.entity_id === company.id)
+      return { company, round: i.round, date: i.date, grade: calculateGrade(st), receipts: st.length }
+    })
+    .filter((e): e is PortfolioEntry => e !== null)
+    .sort((a, b) => a.grade.sortScore - b.grade.sortScore || b.receipts - a.receipts)
+}
+
+/** Funds that backed this company. */
+export function getBackers(companyId: string) {
+  return investments
+    .filter(i => i.company_id === companyId)
+    .map(i => {
+      const vc = vcs.find(v => v.id === i.vc_id)
+      return vc ? { vc, round: i.round, date: i.date } : null
+    })
+    .filter((e): e is { vc: VC; round: string | null; date: string | null } => e !== null)
+}
