@@ -8,6 +8,13 @@ Research and add sourced receipts to the reciepts.tech database.
 **Repo:** `jzops/values-tech` — you are already inside a checkout.
 **Live:** https://reciepts.tech (Netlify, auto-deploys on push to `main`)
 
+> **Run this locally, not in a cloud sandbox.** The Anthropic cloud environment's
+> egress policy allows only GitHub and package registries — sec.gov, nlrb.gov,
+> reuters, AP, TechCrunch and the rest are all rejected by the proxy, so a cloud
+> run cannot verify that a source URL resolves and will correctly refuse to
+> publish anything. Scheduled twice daily on the local machine via
+> `scripts/populate-local.sh` + `~/Library/LaunchAgents/tech.reciepts.populate.plist`.
+
 ## Arguments
 `$ARGUMENTS` — optional. An entity name ("Meta"), a type (`--type vc`), or empty
 to work the generated worklist. Default: work the worklist.
