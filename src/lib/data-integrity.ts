@@ -237,6 +237,7 @@ export function checkDataIntegrity(): IntegrityIssue[] {
   const BANNED_SOURCE_HOSTS = [
     'glassdoor.', 'teamblind.', 'blind.com', 'levels.fyi', 'comparably.',
     'indeed.com', 'jobsbyculture.', 'reveliolabs.', 'layoffs.fyi',
+    'repvue.', 'kununu.', 'ambitionbox.', 'thelayoff.com', 'fishbowlapp.',
   ]
   const bannedSourced = stances.filter(s => {
     const u = (s.source_url || '').toLowerCase()
