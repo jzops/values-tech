@@ -225,6 +225,35 @@ export function checkDataIntegrity(): IntegrityIssue[] {
     })
   }
 
+  // ── Banned source domains ──────────────────────────────────────────
+  // An ERROR, not a warning, deliberately. POPULATING.md has excluded these in
+  // prose since the first run and two consecutive runs cited them anyway —
+  // three Glassdoor links plus a content farm that had already been removed
+  // once. Instructions did not hold; a failing build will.
+  //
+  // Review sites are anonymous claims. Workforce-analytics pages infer events
+  // from headcount estimates rather than reporting them. Content farms restate
+  // other people's reporting with nothing checkable behind it.
+  const BANNED_SOURCE_HOSTS = [
+    'glassdoor.', 'teamblind.', 'blind.com', 'levels.fyi', 'comparably.',
+    'indeed.com', 'jobsbyculture.', 'reveliolabs.', 'layoffs.fyi',
+  ]
+  const bannedSourced = stances.filter(s => {
+    const u = (s.source_url || '').toLowerCase()
+    return BANNED_SOURCE_HOSTS.some(h => u.includes(h))
+  })
+  if (bannedSourced.length > 0) {
+    issues.push({
+      severity: 'error',
+      check: 'banned-source',
+      detail:
+        `${bannedSourced.length} receipt(s) cite a banned source (review sites, ` +
+        `workforce-analytics estimates, content farms): ` +
+        bannedSourced.map(s => `${s.id}`).join(', ') +
+        `. Replace with reporting or a primary document, or drop the receipt.`,
+    })
+  }
+
   // ── Dates ──────────────────────────────────────────────────────────
   const today = new Date().toISOString().slice(0, 10)
   const future = stances.filter(s => s.stance_date && s.stance_date > today)
