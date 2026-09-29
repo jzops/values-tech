@@ -227,7 +227,7 @@ export const stances: Stance[] = [
   { id: '53', entity_type: 'vc', entity_id: '1', topic: 'ai_ethics', position: 'supported', summary: 'Marc Andreessen wrote "Techno-Optimist Manifesto" rejecting AI doomerism.', source_url: 'https://a16z.com/the-techno-optimist-manifesto/', source_type: 'company_website', stance_date: '2023-10-16', verified: true },
 
   // VC stances - Sequoia
-  { id: '54', entity_type: 'vc', entity_id: '2', topic: 'layoffs', position: 'mixed', summary: 'Sent "R.I.P. Good Times" memo warning founders to cut costs.', source_url: 'https://twitter.com/sequoia/status/1527316464345636864', source_type: 'social_media', stance_date: '2022-05-19', verified: true },
+  { id: '54', entity_type: 'vc', entity_id: '2', topic: 'layoffs', position: 'mixed', summary: 'Sent "R.I.P. Good Times" memo warning founders to cut costs.', source_url: 'https://articles.sequoiacap.com/rip-good-times', source_type: 'company_website', stance_date: '2008-10-07', verified: true },
 
   // VC stances - Founders Fund
   { id: '55', entity_type: 'vc', entity_id: '5', topic: 'politics', position: 'opposed', summary: 'Peter Thiel\'s firm. Major Trump and Republican donors.', source_url: 'https://www.nytimes.com/founders-fund-politics', source_type: 'news', stance_date: '2024-01-01', verified: true },
@@ -836,7 +836,7 @@ export const stances: Stance[] = [
 
   // ========== SHOPIFY STANCES (ID 71) ==========
   { id: '300', entity_type: 'company', entity_id: '71', topic: 'layoffs', position: 'opposed', summary: 'Laid off 20% of workforce (2,300+) in May 2023. CEO Tobi Lütke admitted over-hiring. Sold logistics business.', source_url: 'https://news.shopify.com/important-team-and-business-changes', source_type: 'company_website', stance_date: '2023-05-04', verified: true },
-  { id: '301', entity_type: 'company', entity_id: '71', topic: 'remote_work', position: 'supported', summary: 'Declared "digital by default" permanently. Closed most offices. Tobi Lütke advocates for remote work.', source_url: 'https://twitter.com/tolobi/status/1263483497631449088', source_type: 'social_media', stance_date: '2020-05-21', verified: true },
+  { id: '301', entity_type: 'company', entity_id: '71', topic: 'remote_work', position: 'supported', summary: 'Declared "digital by default" permanently. Closed most offices. Tobi Lütke advocates for remote work.', source_url: 'https://www.cbc.ca/lite/story/1.5578614', source_type: 'news', stance_date: '2020-05-21', verified: true },
 
   // ========== UBER STANCES (ID 81) ==========
   { id: '302', entity_type: 'company', entity_id: '81', topic: 'contractor_classification', position: 'opposed', summary: 'Co-funded $200M Prop 22. Fights driver reclassification globally. Drivers lack benefits and protections. Exploits gig economy loopholes.', source_url: 'https://www.reuters.com/business/uber-lyft-doordash-spend-200-million-prop-22-fight-2020-10-28/', source_type: 'news', stance_date: '2020-10-28', verified: true },
@@ -919,7 +919,7 @@ export const stances: Stance[] = [
 
   // Tobi Lütke (Person ID 27) - Shopify
   { id: '339', entity_type: 'person', entity_id: '27', topic: 'layoffs', position: 'mixed', summary: 'Took responsibility for over-hiring in 2023 layoffs (20% cut). But continued aggressive cost cuts in 2024. Sold logistics business.', source_url: 'https://news.shopify.com/important-team-and-business-changes', source_type: 'company_website', stance_date: '2023-05-04', verified: true },
-  { id: '340', entity_type: 'person', entity_id: '27', topic: 'remote_work', position: 'supported', summary: 'Declared "digital by default" permanently in 2020. Closed most offices. Strong advocate for remote-first work.', source_url: 'https://twitter.com/tolobi/status/1263483497631449088', source_type: 'social_media', stance_date: '2020-05-21', verified: true },
+  { id: '340', entity_type: 'person', entity_id: '27', topic: 'remote_work', position: 'supported', summary: 'Declared "digital by default" permanently in 2020. Closed most offices. Strong advocate for remote-first work.', source_url: 'https://www.cbc.ca/lite/story/1.5578614', source_type: 'news', stance_date: '2020-05-21', verified: true },
 
   // Steve Huffman (Person ID 47) - Reddit
   { id: '341', entity_type: 'person', entity_id: '47', topic: 'worker_treatment', position: 'opposed', summary: 'API changes killed third-party apps. Dismissed mod protests. "Never been profitable" excuse. IPO over community.', source_url: 'https://www.theverge.com/2023/6/8/reddit-api-changes-pricing', source_type: 'news', stance_date: '2023-06-08', verified: true },

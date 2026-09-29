@@ -146,6 +146,18 @@ Verge, TechCrunch, CNBC) → company newsroom → executive's own post.
 Verify the URL resolves before writing it. No paywalled-only sources where a
 free equivalent exists. No anonymous claims.
 
+**X / Twitter.** An executive's own post is a genuine primary source, but treat
+the platform with care:
+
+- **Never cite a bare profile.** `twitter.com/elonmusk` does not show that he
+  said anything. Only a `/status/` permalink does. 47 receipts got this wrong.
+- **X links rot fast.** Of the four `/status/` links in the corpus, three are
+  already 404. Prefer **reporting that quotes the post** — it survives deletion,
+  adds context, and is checkable. Cite the post alongside it if you like, but the
+  durable URL should be the primary one.
+- A deleted post is not a retracted fact, but an unverifiable link is an
+  unsupported claim. If the only evidence is a post you cannot load, skip it.
+
 **Not acceptable as a source:** employee-review sites (Glassdoor, Blind),
 workforce-analytics estimates (Revelio, LiveData), aggregators with no reporting
 of their own, or any page that infers an event rather than reporting it. A

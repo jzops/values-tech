@@ -321,6 +321,30 @@ export function checkDataIntegrity(): IntegrityIssue[] {
     })
   }
 
+  // ── Social sources must point at the post ──────────────────────────
+  // A link to twitter.com/elonmusk is not evidence that he said anything. 47
+  // receipts cited a bare profile, so the claim was unverifiable by a reader
+  // even when true. Only a /status/ permalink shows the statement.
+  //
+  // Warn rather than error: these are pre-existing and each needs research to
+  // upgrade, but nothing new should be added this way.
+  const socialProfileOnly = stances.filter(s => {
+    const u = (s.source_url || '').toLowerCase()
+    if (!/\/\/(www\.)?(twitter|x)\.com\//.test(u)) return false
+    return !u.includes('/status/')
+  })
+  if (socialProfileOnly.length > 0) {
+    issues.push({
+      severity: 'warn',
+      check: 'social-profile-only-source',
+      detail:
+        `${socialProfileOnly.length} receipt(s) cite an X/Twitter PROFILE rather than ` +
+        `a /status/ permalink, so the statement cannot be checked: ` +
+        socialProfileOnly.slice(0, 8).map(s => s.id).join(', ') +
+        `. Link the post, or cite reporting that quotes it.`,
+    })
+  }
+
   // ── Dates ──────────────────────────────────────────────────────────
   const today = new Date().toISOString().slice(0, 10)
   const future = stances.filter(s => s.stance_date && s.stance_date > today)
