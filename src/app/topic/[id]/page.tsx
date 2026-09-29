@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: topic.name,
     description: `${count} documented receipts on ${topic.name.toLowerCase()} across tech companies, executives, and VCs. Every line links to a public source.`,
     path: `/topic/${id}`,
+    image: `/api/og/topic/${id}`,
   })
 }
 

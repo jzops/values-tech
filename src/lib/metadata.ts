@@ -77,8 +77,14 @@ export function collectionMetadata(opts: {
   title: string
   description: string
   path: string
+  /** Dedicated card for this page. Falls back to the generic collection card,
+   *  which is still better than the homepage card every list page used to share. */
+  image?: string
 }): Metadata {
-  const image = abs('/api/og/home')
+  const image = opts.image
+    ? abs(opts.image)
+    : abs(`/api/og/collection?title=${encodeURIComponent(opts.title)}` +
+          `&description=${encodeURIComponent(opts.description)}`)
   return {
     title: opts.title,
     description: opts.description,
