@@ -165,6 +165,72 @@ export function checkDataIntegrity(): IntegrityIssue[] {
     })
   }
 
+  // ── Source-domain misattribution ───────────────────────────────────
+  // The earlier misattribution check only compared against OTHER TRACKED
+  // entities, so a receipt describing a company absent from this database
+  // sailed through. Faire's only receipt described Magento and was sourced to
+  // magento.com; Dropbox's described DigitalOcean, Box's described Linode.
+  // Seventy of these were live.
+  //
+  // The tell is precise: the summary OPENS with the brand that owns the source
+  // domain, and that brand is not the filed entity. A company citing its own
+  // newsroom is the normal case and is excluded by the name check.
+  const OUTLET = /wired|reuters|bloomberg|techcrunch|nlrb|defense|justice|sec\b/
+  // Match on name, slug AND website host: a16z is stored as "Andreessen
+  // Horowitz" with slug a16z, so a name-only check calls its own domain foreign.
+  const entityKeys = (s: (typeof stances)[number]): string[] => {
+    const src = s.entity_type === 'company' ? companies : s.entity_type === 'person' ? people : vcs
+    const e = (src as { id: string; name: string; slug: string; website?: string | null }[])
+      .find(x => x.id === s.entity_id)
+    if (!e) return []
+    const keys = [e.name, e.slug]
+    if (e.website) {
+      try { keys.push(new URL(e.website).hostname.replace(/^www\./, '').split('.')[0]) } catch {}
+    }
+    return keys.map(v => v.toLowerCase().replace(/[^a-z0-9]/g, '')).filter(Boolean)
+  }
+
+  // Verified exceptions the heuristic cannot tell apart from a misfiling:
+  // 151 — Susan Fowler's own blog, and the post is about Uber.
+  // 871 — Block is Square's parent after the rename.
+  const DOMAIN_MISATTRIB_OK = new Set(['151', '871'])
+
+  const domainMisattributed = stances.filter(s => {
+    if (DOMAIN_MISATTRIB_OK.has(s.id)) return false
+    if (s.entity_type === 'person') return false // a person's own company is fine
+    const own = ownName(s)
+    if (!own || !s.source_url) return false
+    let brand = ''
+    try {
+      const parts = new URL(s.source_url).hostname.replace(/^www\./, '').split('.')
+      brand = (parts[parts.length - 2] || '').toLowerCase()
+    } catch {
+      return false
+    }
+    if (brand.length < 4 || OUTLET.test(brand)) return false
+    const n = (v: string) => v.toLowerCase().replace(/[^a-z0-9]/g, '')
+    const keys = entityKeys(s)
+    // Own domain under any of its names, or a parent/subsidiary.
+    if (keys.some(k => k.includes(brand) || brand.includes(k))) return false
+    const ne = n(own)
+    if (brand.startsWith(ne.slice(0, 6)) || ne.startsWith(brand.slice(0, 6))) return false
+    const lead = n((s.summary.match(/^([A-Za-z0-9.&'-]+)/) || [])[1] || '')
+    // A short lead ("In", "At") is a substring of unrelated brands.
+    if (lead.length < 4) return false
+    return lead.includes(brand) || brand.includes(lead)
+  })
+  if (domainMisattributed.length > 0) {
+    issues.push({
+      severity: 'error',
+      check: 'source-domain-misattribution',
+      detail:
+        `${domainMisattributed.length} receipt(s) open by naming the company that owns ` +
+        `their source domain, which is not the entity they are filed under: ` +
+        domainMisattributed.slice(0, 10).map(s => `${s.id}(${ownName(s)})`).join(', ') +
+        `. Re-file against the company described, or remove.`,
+    })
+  }
+
   // ── Polarity ───────────────────────────────────────────────────────
   // `government_contracts` defines itself as controversial work, so holding it
   // is the mark AGAINST. A `supported` record here is either a company that
