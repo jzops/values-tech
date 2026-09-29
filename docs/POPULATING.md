@@ -135,6 +135,23 @@ Prefer the company record when in doubt — it is the entity that acted.
 
 ---
 
+## 3b. Executive statements — a rich seam, sourced carefully
+
+Executives state positions publicly all the time, and those are genuine
+primary evidence. Two rules make them usable:
+
+1. **Quote the statement and date it.** "Vocal Trump supporter" is not a
+   receipt. `Posted "DEI is just another word for racism. Shame on anyone who
+   uses it" on 3 January 2024, responding to Bill Ackman's essay` is. If you
+   cannot quote what was actually said and when, you do not have a receipt.
+2. **Source it to reporting that quotes the post**, with the permalink only if
+   it still loads. Three of the four permalinks in this corpus were already
+   404 — the platform forgets, the reporting does not.
+
+There is also standing work: run `npm run check:data` and look for
+`social-profile-only-source`. Those receipts cite a bare profile and cannot be
+checked by a reader. Upgrading one is worth as much as adding a new receipt.
+
 ## 4. Sources
 
 Deep-link to the evidence, never a homepage — 41% of existing receipts link to a
