@@ -6,7 +6,7 @@ import { StatsSummary } from './StatsSummary'
 import { DonationsTable } from './DonationsTable'
 import { ShareButtons } from './ShareButtons'
 import { LogoImage } from './LogoImage'
-import { TOPICS, STANCE_TOPICS } from '@/lib/constants'
+import { TOPICS } from '@/lib/constants'
 import type { BoardRow, PortfolioEntry } from '@/lib/board'
 import type { Stat, Donation, Person } from '@/lib/types'
 
@@ -48,9 +48,15 @@ export function EntityProfile({
 }: EntityProfileProps) {
   const { grade, counts, entityType } = row
 
-  // Moral-stance topics only; the neutral stat topics render in their own block.
-  const stances = row.stances.filter(s =>
-    STANCE_TOPICS.includes(s.topic as (typeof STANCE_TOPICS)[number])
+  // Every receipt renders. This used to filter to STANCE_TOPICS, a
+  // "moral stances vs neutral stats" split from the original design, which
+  // hid 420 receipts — a third of the corpus, including all 200 layoffs and
+  // 98 politics records. They still counted toward the grade, so a reader
+  // could not reproduce the score from what the page showed. The split stopped
+  // meaning anything once every topic in constants.ts was given an explicit
+  // polarity: layoffs and politics are positions, not neutral facts.
+  const stances = [...row.stances].sort((a, b) =>
+    (b.stance_date || '').localeCompare(a.stance_date || '')
   )
 
   const flags = Object.entries(
