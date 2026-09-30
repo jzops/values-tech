@@ -152,6 +152,65 @@ There is also standing work: run `npm run check:data` and look for
 `social-profile-only-source`. Those receipts cite a bare profile and cannot be
 checked by a reader. Upgrading one is worth as much as adding a new receipt.
 
+## 3c. Bulk primary sources — the way past ~30 receipts a day
+
+Reading one story at a time caps you around 30 receipts a day. Two primary
+sources can be read in bulk instead, so the limit becomes the number of
+documents rather than the number of hours. Both live in `scripts/`.
+
+**SEC EDGAR — `scripts/edgar/`.** Three stages, run in order:
+
+```
+node scripts/edgar/match-ciks.mjs      # tracked companies -> CIK + 10-K history
+node scripts/edgar/find-dei-drops.mjs  # screen, then verify against the filing
+node scripts/edgar/emit-receipts.mjs   # write receipts into mock-data.ts
+```
+
+Full-text search is only the cheap screen: it indexes the whole submission,
+exhibits included, and throws transient 500s under load (retried with backoff).
+Nothing is proposed until `find-dei-drops.mjs` has downloaded the later filing
+and confirmed the phrase is genuinely missing from it. The first run put that at
+42 candidates, 42 confirmed, 0 refuted. Keep that gate.
+
+Note what these receipts may and may not claim. A filing proves a **phrase was
+deleted from an annual report**. It does not prove a programme ended, so they are
+`mixed`, not `opposed` — see §2. The same query generalises to any phrase with a
+stated polarity; only the claim has to shrink to what the document shows.
+
+**FEC — `scripts/fec/`.** `import-fec.mjs` reads `roster.json` and writes
+`proposed.json`; `emit-donations.mjs` writes them in.
+
+These land in `donations`, **never** in `stances`. A donation is a verifiable
+act, but the `politics` topic grades funding efforts that attacked democratic
+institutions or civil rights, and that is a judgement about the *recipient*.
+Andreessen's $24M to Fairshake is real and publishable; it is crypto-policy
+spending, not that. Publish it as a fact and let it carry no grade. If a
+donation genuinely belongs under `politics`, file that receipt by hand.
+
+The public `DEMO_KEY` allows 30 requests an hour. A free key from
+api.data.gov/signup raises it to 1,000 — set `FEC_API_KEY`. Responses cache to
+`scripts/fec/cache/`, so re-runs and resumes cost nothing already spent.
+
+### Name resolution is where these pipelines can do real damage
+
+Neither pipeline infers an identity, because the failure is silent and looks
+exactly like success.
+
+- `Mercury` → "Mercury Systems" is a defense contractor. `Uber` → "Uber
+  Technologies" is correct. Identical shape, opposite answer. That is why
+  `scripts/edgar/aliases.json` is hand-verified and carries a blocklist.
+- Every CIK is re-checked against `data.sec.gov` before use. That is what caught
+  the SEC ticker file's `OURA` entry, whose CIK the SEC itself resolves to
+  **BlackRock, Inc.**
+- FEC records must match `"LAST, FIRST"` exactly *and* carry a corroborating
+  employer. Treat employer as a **soft** signal: people at this level routinely
+  file as "SELF", and an early run silently dropped 87 of Musk's 100 records
+  because his employer reads "SPACE EXPLORATION TECHNOLOGIES CORP.", which does
+  not contain the string "spacex". Generic employers pass; a concrete employer
+  that contradicts the person does not.
+
+Whatever a pipeline emits still goes through §6 before it is committed.
+
 ## 4. Sources
 
 Deep-link to the evidence, never a homepage — 41% of existing receipts link to a
