@@ -42,3 +42,12 @@ next-env.d.ts
 
 # Finder/iCloud duplicate copies ("file 2.ts") created by folder sync
 * [0-9].*
+
+# Bulk-source pipeline working files: re-downloadable, and large.
+# The reviewed outputs (ciks.json, dei-drops.json, proposed.json) ARE committed —
+# they are the audit trail for every receipt these pipelines produce.
+/scripts/fec/cache
+/scripts/edgar/company_tickers.json
+
+# Agent worktrees — nested git repos, never part of the site.
+/.claude/worktrees

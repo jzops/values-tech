@@ -1,0 +1,21 @@
+[
+  { "name": "Marc Andreessen",  "fec_name": "ANDREESSEN, MARC",   "employer_match": ["andreessen", "a16z", "horowitz", "netscape"] },
+  { "name": "Ben Horowitz",     "fec_name": "HOROWITZ, BEN",      "employer_match": ["andreessen", "a16z", "horowitz", "opsware"] },
+  { "name": "Peter Thiel",      "fec_name": "THIEL, PETER",       "employer_match": ["thiel", "founders fund", "palantir", "clarium", "mithril"] },
+  { "name": "Dustin Moskovitz", "fec_name": "MOSKOVITZ, DUSTIN",  "employer_match": ["asana", "open philanthropy", "good ventures", "facebook"] },
+  { "name": "Reid Hoffman",     "fec_name": "HOFFMAN, REID",      "employer_match": ["greylock", "linkedin", "microsoft", "investor", "inflection"] },
+  { "name": "Elon Musk",        "fec_name": "MUSK, ELON",         "employer_match": ["tesla", "spacex", "space exploration", "x corp", "boring", "neuralink", "twitter"] },
+  { "name": "Mark Zuckerberg",  "fec_name": "ZUCKERBERG, MARK",   "employer_match": ["meta", "facebook"] },
+  { "name": "Sam Altman",       "fec_name": "ALTMAN, SAM",        "employer_match": ["openai", "open ai", "y combinator", "loopt", "worldcoin"] },
+  { "name": "Marc Benioff",     "fec_name": "BENIOFF, MARC",      "employer_match": ["salesforce"] },
+  { "name": "Reed Hastings",    "fec_name": "HASTINGS, REED",     "employer_match": ["netflix"] },
+  { "name": "Brian Chesky",     "fec_name": "CHESKY, BRIAN",      "employer_match": ["airbnb"] },
+  { "name": "Max Levchin",      "fec_name": "LEVCHIN, MAX",       "employer_match": ["affirm", "paypal", "hvf", "slide"] },
+  { "name": "Vinod Khosla",     "fec_name": "KHOSLA, VINOD",      "employer_match": ["khosla", "sun microsystems"] },
+  { "name": "Palmer Luckey",    "fec_name": "LUCKEY, PALMER",     "employer_match": ["anduril", "oculus"] },
+  { "name": "Keith Rabois",     "fec_name": "RABOIS, KEITH",      "employer_match": ["founders fund", "khosla", "opendoor", "openstore"] },
+  { "name": "Garry Tan",        "fec_name": "TAN, GARRY",         "employer_match": ["y combinator", "initialized"] },
+  { "name": "Jack Dorsey",      "fec_name": "DORSEY, JACK",       "employer_match": ["block", "square", "twitter"] },
+  { "name": "Brian Armstrong",  "fec_name": "ARMSTRONG, BRIAN",   "employer_match": ["coinbase"] },
+  { "name": "Alex Karp",        "fec_name": "KARP, ALEX",         "employer_match": ["palantir"] }
+]

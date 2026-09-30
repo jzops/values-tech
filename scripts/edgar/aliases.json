@@ -1,0 +1,40 @@
+{
+  "_comment": [
+    "Hand-verified tracked-company -> SEC ticker map, for cases where the legal",
+    "name on EDGAR differs from the name we track (Uber -> 'Uber Technologies',",
+    "Meta -> 'Meta Platforms'). Every entry here was checked by eye against the",
+    "tracked company's own description.",
+    "",
+    "This file exists because automatic prefix matching cannot tell a correct",
+    "qualifier from a different company: 'Uber' -> 'Uber Technologies' is right,",
+    "'Mercury' -> 'Mercury Systems' is a defense contractor. Same shape, opposite",
+    "answer. Never replace this with a heuristic.",
+    "",
+    "Entries are verified again at run time against data.sec.gov (entity name +",
+    "10-K presence); anything that fails there drops out rather than being trusted."
+  ],
+  "aliases": {
+    "Meta": "META", "Amazon": "AMZN", "Google": "GOOGL",
+    "Klarna": "KLAR", "Chime": "CHYM", "Robinhood": "HOOD", "Coinbase": "COIN",
+    "Affirm": "AFRM", "SoFi": "SOFI", "Circle": "CRCL", "Better": "BETR",
+    "Zoom": "ZM", "Uber": "UBER", "Rivian": "RIVN", "Aurora": "AUR",
+    "Expedia": "EXPE", "Hims & Hers": "HIMS", "Tempus": "TEM",
+    "CrowdStrike": "CRWD", "Unity": "U", "Opendoor": "OPEN", "Zillow": "ZG",
+    "Nextdoor": "NXDR", "CAVA": "CAVA", "Palantir": "PLTR", "ZoomInfo": "GTM",
+    "LegalZoom": "LZ", "Hippo": "HIPO", "Procore": "PCOR", "Planet Labs": "PL",
+    "Ginkgo Bioworks": "DNA", "Recursion": "RXRX", "Rigetti": "RGTI",
+    "D-Wave": "QBTS", "Peloton": "PTON", "Lightspeed": "LSPD",
+    "Cisco": "CSCO", "Qualcomm": "QCOM", "IBM": "IBM", "AMD": "AMD",
+    "Instacart": "CART", "Redfin": "RDFN", "Root Insurance": "ROOT",
+    "Udemy": "UDMY", "Square": "XYZ", "Spotify": "SPOT"
+  },
+  "_blocklist_comment": [
+    "Names that must NEVER be auto-matched. Each one previously resolved to an",
+    "unrelated public company. 'Oura' is the worst: the ticker file's OURA entry",
+    "carries a CIK that data.sec.gov resolves to BlackRock, Inc."
+  ],
+  "blocklist": [
+    "Icon", "Oura", "Mercury", "Runway", "Jasper", "Linear", "Bolt",
+    "Calm", "Alchemy", "Lattice", "Coda", "Adyen", "Wise", "Xanadu"
+  ]
+}

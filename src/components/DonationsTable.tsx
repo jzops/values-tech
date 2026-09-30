@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { ExternalLink } from 'lucide-react'
 import { Donation } from '@/lib/types'
 
@@ -7,14 +8,23 @@ interface DonationsTableProps {
   donations: Donation[]
 }
 
+/** Rows shown before the table collapses behind a toggle. FEC imports push some
+ *  people past 80 donations, which buries the rest of the profile. */
+const PREVIEW_ROWS = 15
+
 export function DonationsTable({ donations }: DonationsTableProps) {
+  const [expanded, setExpanded] = useState(false)
   if (donations.length === 0) return null
 
-  const sortedDonations = [...donations].sort(
-    (a, b) => new Date(b.donation_date).getTime() - new Date(a.donation_date).getTime()
-  )
-
+  // Largest first: with FEC data loaded, the point of this table is the size of
+  // the cheques, not their chronology.
+  const sorted = [...donations].sort((a, b) => b.amount - a.amount)
+  const shown = expanded ? sorted : sorted.slice(0, PREVIEW_ROWS)
   const totalAmount = donations.reduce((sum, d) => sum + d.amount, 0)
+
+  // Attribution notes repeat almost verbatim across a donor's records (same name,
+  // same employer), so they are deduped — one line each, not one per row.
+  const notes = [...new Set(donations.map(d => d.notes).filter(Boolean) as string[])]
 
   return (
     <div className="mt-8">
@@ -38,28 +48,28 @@ export function DonationsTable({ donations }: DonationsTableProps) {
             </tr>
           </thead>
           <tbody className="divide-y divide-[var(--line)] bg-ink-raised">
-            {sortedDonations.map((donation) => (
+            {shown.map((donation) => (
               <tr key={donation.id} className="hover:bg-white/5">
-                <td className="px-4 py-3 text-paper-dim">
+                <td className="px-4 py-3 text-paper-dim whitespace-nowrap">
                   {new Date(donation.donation_date).toLocaleDateString('en-US', {
                     month: 'short',
                     day: 'numeric',
                     year: 'numeric'
                   })}
                 </td>
-                <td className="px-4 py-3 font-mono font-medium text-paper">
+                <td className="px-4 py-3 font-mono font-medium text-paper tnum">
                   {formatCurrency(donation.amount)}
                 </td>
                 <td className="px-4 py-3 text-paper">
                   <span>{donation.recipient}</span>
-                  {donation.pac_name && (
+                  {donation.pac_name && donation.pac_name !== donation.recipient && (
                     <span className="text-paper-mute text-xs ml-1 block">
                       via {donation.pac_name}
                     </span>
                   )}
                 </td>
                 <td className="px-4 py-3">
-                  <span className="inline-flex px-2 py-0.5 rounded text-xs bg-white/5 text-paper-dim capitalize">
+                  <span className="inline-flex px-2 py-0.5 rounded text-xs bg-white/5 text-paper-dim capitalize whitespace-nowrap">
                     {donation.recipient_type.replace('_', ' ')}
                   </span>
                 </td>
@@ -68,6 +78,7 @@ export function DonationsTable({ donations }: DonationsTableProps) {
                     href={donation.source_url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="View this record on fec.gov"
                     className="text-paper-mute hover:text-paper"
                   >
                     <ExternalLink className="w-4 h-4" />
@@ -78,12 +89,18 @@ export function DonationsTable({ donations }: DonationsTableProps) {
           </tbody>
         </table>
       </div>
-      {donations.some(d => d.notes) && (
+      {sorted.length > PREVIEW_ROWS && (
+        <button
+          onClick={() => setExpanded(v => !v)}
+          className="mt-3 text-xs label text-paper-mute hover:text-paper transition-colors"
+        >
+          {expanded ? 'Show fewer' : `Show all ${sorted.length} donations`}
+        </button>
+      )}
+      {notes.length > 0 && (
         <div className="mt-3 space-y-1">
-          {donations.filter(d => d.notes).map(d => (
-            <p key={d.id} className="text-xs text-paper-mute italic">
-              * {d.notes}
-            </p>
+          {notes.map(n => (
+            <p key={n} className="text-xs text-paper-mute italic">* {n}</p>
           ))}
         </div>
       )}

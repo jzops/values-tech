@@ -1,0 +1,4414 @@
+[
+  {
+    "id": "1",
+    "name": "Meta",
+    "slug": "meta",
+    "cik": "0001326801",
+    "ticker": "META",
+    "title": "Meta Platforms, Inc.",
+    "sec_name": "Meta Platforms, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-01-29",
+        "accession": "0001628280-26-003942",
+        "doc": "meta-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-01-30",
+        "accession": "0001326801-25-000017",
+        "doc": "meta-20241231.htm"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Google",
+    "slug": "google",
+    "cik": "0001652044",
+    "ticker": "GOOGL",
+    "title": "Alphabet Inc.",
+    "sec_name": "Alphabet Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-05",
+        "accession": "0001652044-26-000018",
+        "doc": "goog-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-05",
+        "accession": "0001652044-25-000014",
+        "doc": "goog-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-01-31",
+        "accession": "0001652044-24-000022",
+        "doc": "goog-20231231.htm"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Amazon",
+    "slug": "amazon",
+    "cik": "0001018724",
+    "ticker": "AMZN",
+    "title": "AMAZON COM INC",
+    "sec_name": "AMAZON COM INC",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-06",
+        "accession": "0001018724-26-000004",
+        "doc": "amzn-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-07",
+        "accession": "0001018724-25-000004",
+        "doc": "amzn-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-02",
+        "accession": "0001018724-24-000008",
+        "doc": "amzn-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-03",
+        "accession": "0001018724-23-000004",
+        "doc": "amzn-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-04",
+        "accession": "0001018724-22-000005",
+        "doc": "amzn-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-03",
+        "accession": "0001018724-21-000004",
+        "doc": "amzn-20201231.htm"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Apple",
+    "slug": "apple",
+    "cik": "0000320193",
+    "ticker": "AAPL",
+    "title": "Apple Inc.",
+    "sec_name": "Apple Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2025-10-31",
+        "accession": "0000320193-25-000079",
+        "doc": "aapl-20250927.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-11-01",
+        "accession": "0000320193-24-000123",
+        "doc": "aapl-20240928.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-11-03",
+        "accession": "0000320193-23-000106",
+        "doc": "aapl-20230930.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-10-28",
+        "accession": "0000320193-22-000108",
+        "doc": "aapl-20220924.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-10-29",
+        "accession": "0000320193-21-000105",
+        "doc": "aapl-20210925.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-10-30",
+        "accession": "0000320193-20-000096",
+        "doc": "aapl-20200926.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-10-31",
+        "accession": "0000320193-19-000119",
+        "doc": "a10-k20199282019.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2018-11-05",
+        "accession": "0000320193-18-000145",
+        "doc": "a10-k20189292018.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2017-11-03",
+        "accession": "0000320193-17-000070",
+        "doc": "a10-k20179302017.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2016-10-26",
+        "accession": "0001628280-16-020309",
+        "doc": "a201610-k9242016.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2015-10-28",
+        "accession": "0001193125-15-356351",
+        "doc": "d17062d10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Microsoft",
+    "slug": "microsoft",
+    "cik": "0000789019",
+    "ticker": "MSFT",
+    "title": "MICROSOFT CORP",
+    "sec_name": "MICROSOFT CORP",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-07-29",
+        "accession": "0001193125-26-323660",
+        "doc": "msft-20260630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-07-30",
+        "accession": "0000950170-25-100235",
+        "doc": "msft-20250630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-07-30",
+        "accession": "0000950170-24-087843",
+        "doc": "msft-20240630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-07-27",
+        "accession": "0000950170-23-035122",
+        "doc": "msft-20230630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-07-28",
+        "accession": "0001564590-22-026876",
+        "doc": "msft-10k_20220630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-07-29",
+        "accession": "0001564590-21-039151",
+        "doc": "msft-10k_20210630.htm"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Tesla",
+    "slug": "tesla",
+    "cik": "0001318605",
+    "ticker": "TSLA",
+    "title": "Tesla, Inc.",
+    "sec_name": "Tesla, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-01-29",
+        "accession": "0001628280-26-003952",
+        "doc": "tsla-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-01-30",
+        "accession": "0001628280-25-003063",
+        "doc": "tsla-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-01-29",
+        "accession": "0001628280-24-002390",
+        "doc": "tsla-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-01-31",
+        "accession": "0000950170-23-001409",
+        "doc": "tsla-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-07",
+        "accession": "0000950170-22-000796",
+        "doc": "tsla-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-08",
+        "accession": "0001564590-21-004599",
+        "doc": "tsla-10k_20201231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-02-13",
+        "accession": "0001564590-20-004475",
+        "doc": "tsla-10k_20191231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-02-19",
+        "accession": "0001564590-19-003165",
+        "doc": "tsla-10k_20181231.htm"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Netflix",
+    "slug": "netflix",
+    "cik": "0001065280",
+    "ticker": "NFLX",
+    "title": "NETFLIX INC",
+    "sec_name": "NETFLIX INC",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-01-23",
+        "accession": "0001065280-26-000034",
+        "doc": "nflx-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-01-27",
+        "accession": "0001065280-25-000044",
+        "doc": "nflx-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-01-26",
+        "accession": "0001065280-24-000030",
+        "doc": "nflx-20231231.htm"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Nvidia",
+    "slug": "nvidia",
+    "cik": "0001045810",
+    "ticker": "NVDA",
+    "title": "NVIDIA CORP",
+    "sec_name": "NVIDIA CORP",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-25",
+        "accession": "0001045810-26-000021",
+        "doc": "nvda-20260125.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-26",
+        "accession": "0001045810-25-000023",
+        "doc": "nvda-20250126.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-21",
+        "accession": "0001045810-24-000029",
+        "doc": "nvda-20240128.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-24",
+        "accession": "0001045810-23-000017",
+        "doc": "nvda-20230129.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-18",
+        "accession": "0001045810-22-000036",
+        "doc": "nvda-20220130.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-26",
+        "accession": "0001045810-21-000010",
+        "doc": "nvda-20210131.htm"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Adobe",
+    "slug": "adobe",
+    "cik": "0000796343",
+    "ticker": "ADBE",
+    "title": "ADOBE INC.",
+    "sec_name": "ADOBE INC.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-01-15",
+        "accession": "0000796343-26-000003",
+        "doc": "adbe-20251128.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-01-13",
+        "accession": "0000796343-25-000004",
+        "doc": "adbe-20241129.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-01-17",
+        "accession": "0000796343-24-000006",
+        "doc": "adbe-20231201.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-01-17",
+        "accession": "0000796343-23-000007",
+        "doc": "adbe-20221202.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-01-21",
+        "accession": "0000796343-22-000032",
+        "doc": "adbe-20211203.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-01-15",
+        "accession": "0000796343-21-000004",
+        "doc": "adbe-20201127.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-01-21",
+        "accession": "0000796343-20-000013",
+        "doc": "adbe10kfy19.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-01-25",
+        "accession": "0000796343-19-000019",
+        "doc": "adbe10kfy18.htm"
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "name": "Chime",
+    "slug": "chime",
+    "cik": "0001795586",
+    "ticker": "CHYM",
+    "title": "Chime Financial, Inc.",
+    "sec_name": "Chime Financial, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-06",
+        "accession": "0001795586-26-000013",
+        "doc": "chym-20251231.htm"
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "name": "Robinhood",
+    "slug": "robinhood",
+    "cik": "0001783879",
+    "ticker": "HOOD",
+    "title": "Robinhood Markets, Inc.",
+    "sec_name": "Robinhood Markets, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-18",
+        "accession": "0001783879-26-000023",
+        "doc": "hood-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-18",
+        "accession": "0001783879-25-000049",
+        "doc": "hood-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-27",
+        "accession": "0001783879-24-000054",
+        "doc": "hood-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-27",
+        "accession": "0001783879-23-000045",
+        "doc": "hood-20221231.htm"
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "name": "Coinbase",
+    "slug": "coinbase",
+    "cik": "0001679788",
+    "ticker": "COIN",
+    "title": "Coinbase Global, Inc.",
+    "sec_name": "Coinbase Global, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-12",
+        "accession": "0001679788-26-000015",
+        "doc": "coin-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-13",
+        "accession": "0001679788-25-000022",
+        "doc": "coin-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-15",
+        "accession": "0001679788-24-000022",
+        "doc": "coin-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-21",
+        "accession": "0001679788-23-000031",
+        "doc": "coin-20221231.htm"
+      }
+    ]
+  },
+  {
+    "id": "38",
+    "name": "Affirm",
+    "slug": "affirm",
+    "cik": "0001820953",
+    "ticker": "AFRM",
+    "title": "Affirm Holdings, Inc.",
+    "sec_name": "Affirm Holdings, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-08-27",
+        "accession": "0001628280-26-059279",
+        "doc": "afrm-20260630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-08-28",
+        "accession": "0001820953-25-000080",
+        "doc": "afrm-20250630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-08-28",
+        "accession": "0001820953-24-000035",
+        "doc": "afrm-20240630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-08-25",
+        "accession": "0001820953-23-000016",
+        "doc": "afrm-20230630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-08-29",
+        "accession": "0001628280-22-023828",
+        "doc": "afrm-20220630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-09-17",
+        "accession": "0001820953-21-000102",
+        "doc": "afrm-20210630.htm"
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "name": "SoFi",
+    "slug": "sofi",
+    "cik": "0001818874",
+    "ticker": "SOFI",
+    "title": "SoFi Technologies, Inc.",
+    "sec_name": "SoFi Technologies, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-17",
+        "accession": "0001818874-26-000013",
+        "doc": "sofi-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-24",
+        "accession": "0001818874-25-000016",
+        "doc": "sofi-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-27",
+        "accession": "0001818874-24-000026",
+        "doc": "sofi-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-01",
+        "accession": "0001818874-23-000018",
+        "doc": "sofi-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-01",
+        "accession": "0001818874-22-000031",
+        "doc": "sofi-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-17",
+        "accession": "0001104659-21-037483",
+        "doc": "tm211754d1_10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "name": "Marqeta",
+    "slug": "marqeta",
+    "cik": "0001522540",
+    "ticker": "MQ",
+    "title": "Marqeta, Inc.",
+    "sec_name": "Marqeta, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-24",
+        "accession": "0001522540-26-000017",
+        "doc": "mq-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-26",
+        "accession": "0001628280-25-008232",
+        "doc": "mq-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-28",
+        "accession": "0001628280-24-007663",
+        "doc": "mq-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-28",
+        "accession": "0001522540-23-000015",
+        "doc": "mq-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-11",
+        "accession": "0001522540-22-000013",
+        "doc": "mq-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "name": "GitLab",
+    "slug": "gitlab",
+    "cik": "0001653482",
+    "ticker": "GTLB",
+    "title": "Gitlab Inc.",
+    "sec_name": "Gitlab Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-17",
+        "accession": "0001628280-26-018731",
+        "doc": "gtlb-20260131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-21",
+        "accession": "0001628280-25-014344",
+        "doc": "gtlb-20250131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-26",
+        "accession": "0001628280-24-012963",
+        "doc": "gtlb-20240131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-30",
+        "accession": "0001628280-23-009925",
+        "doc": "gtlb-20230131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-04-08",
+        "accession": "0001628280-22-008836",
+        "doc": "gtlb-20220131.htm"
+      }
+    ]
+  },
+  {
+    "id": "44",
+    "name": "Atlassian",
+    "slug": "atlassian",
+    "cik": "0001650372",
+    "ticker": "TEAM",
+    "title": "Atlassian Corp",
+    "sec_name": "Atlassian Corp",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-08-14",
+        "accession": "0001650372-26-000036",
+        "doc": "team-20260630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-08-15",
+        "accession": "0001650372-25-000036",
+        "doc": "team-20250630.htm"
+      }
+    ]
+  },
+  {
+    "id": "47",
+    "name": "Datadog",
+    "slug": "datadog",
+    "cik": "0001561550",
+    "ticker": "DDOG",
+    "title": "Datadog, Inc.",
+    "sec_name": "Datadog, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-18",
+        "accession": "0001628280-26-008819",
+        "doc": "ddog-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-20",
+        "accession": "0001561550-25-000025",
+        "doc": "ddog-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-23",
+        "accession": "0001561550-24-000009",
+        "doc": "ddog-20231231.htm"
+      }
+    ]
+  },
+  {
+    "id": "48",
+    "name": "Cloudflare",
+    "slug": "cloudflare",
+    "cik": "0001477333",
+    "ticker": "NET",
+    "title": "Cloudflare, Inc.",
+    "sec_name": "Cloudflare, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-26",
+        "accession": "0001477333-26-000016",
+        "doc": "cloud-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-20",
+        "accession": "0001477333-25-000043",
+        "doc": "cloud-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-21",
+        "accession": "0001477333-24-000013",
+        "doc": "cloud-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-24",
+        "accession": "0001477333-23-000017",
+        "doc": "cloud-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-01",
+        "accession": "0001477333-22-000008",
+        "doc": "cloud-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "56",
+    "name": "Salesforce",
+    "slug": "salesforce",
+    "cik": "0001108524",
+    "ticker": "CRM",
+    "title": "Salesforce, Inc.",
+    "sec_name": "Salesforce, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-02",
+        "accession": "0001108524-26-000060",
+        "doc": "crm-20260131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-05",
+        "accession": "0001108524-25-000006",
+        "doc": "crm-20250131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-06",
+        "accession": "0001108524-24-000005",
+        "doc": "crm-20240131.htm"
+      }
+    ]
+  },
+  {
+    "id": "59",
+    "name": "Figma",
+    "slug": "figma",
+    "cik": "0001579878",
+    "ticker": "FIG",
+    "title": "Figma, Inc.",
+    "sec_name": "Figma, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-18",
+        "accession": "0001628280-26-009228",
+        "doc": "fig-20251231.htm"
+      }
+    ]
+  },
+  {
+    "id": "63",
+    "name": "Asana",
+    "slug": "asana",
+    "cik": "0001477720",
+    "ticker": "ASAN",
+    "title": "Asana, Inc.",
+    "sec_name": "Asana, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-13",
+        "accession": "0001477720-26-000021",
+        "doc": "asan-20260131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-18",
+        "accession": "0001477720-25-000045",
+        "doc": "asan-20250131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-14",
+        "accession": "0001477720-24-000011",
+        "doc": "asan-20240131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-24",
+        "accession": "0001477720-23-000012",
+        "doc": "asan-20230131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-24",
+        "accession": "0001477720-22-000012",
+        "doc": "asan-20220131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-30",
+        "accession": "0001477720-21-000007",
+        "doc": "asan-20210131.htm"
+      }
+    ]
+  },
+  {
+    "id": "64",
+    "name": "Zoom",
+    "slug": "zoom",
+    "cik": "0001585521",
+    "ticker": "ZM",
+    "title": "Zoom Communications, Inc.",
+    "sec_name": "Zoom Communications, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-27",
+        "accession": "0001585521-26-000030",
+        "doc": "zm-20260131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-28",
+        "accession": "0001585521-25-000042",
+        "doc": "zm-20250131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-04",
+        "accession": "0001585521-24-000030",
+        "doc": "zm-20240131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-03",
+        "accession": "0001585521-23-000035",
+        "doc": "zm-20230131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-07",
+        "accession": "0001585521-22-000037",
+        "doc": "zm-20220131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-18",
+        "accession": "0001585521-21-000048",
+        "doc": "zm-20210131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-03-20",
+        "accession": "0001585521-20-000095",
+        "doc": "zm-20200131.htm"
+      }
+    ]
+  },
+  {
+    "id": "65",
+    "name": "Dropbox",
+    "slug": "dropbox",
+    "cik": "0001467623",
+    "ticker": "DBX",
+    "title": "DROPBOX, INC.",
+    "sec_name": "DROPBOX, INC.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-20",
+        "accession": "0001467623-26-000008",
+        "doc": "dbx-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-21",
+        "accession": "0001467623-25-000011",
+        "doc": "dbx-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-16",
+        "accession": "0001467623-24-000008",
+        "doc": "dbx-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-23",
+        "accession": "0001467623-23-000012",
+        "doc": "dbx-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-18",
+        "accession": "0001467623-22-000015",
+        "doc": "dbx-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-19",
+        "accession": "0001467623-21-000012",
+        "doc": "dbx-20201231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-02-21",
+        "accession": "0001467623-20-000011",
+        "doc": "a12311910-k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-02-25",
+        "accession": "0001467623-19-000005",
+        "doc": "a12311810-k.htm"
+      }
+    ]
+  },
+  {
+    "id": "66",
+    "name": "Box",
+    "slug": "box",
+    "cik": "0001372612",
+    "ticker": "BOX",
+    "title": "BOX INC",
+    "sec_name": "BOX INC",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-09",
+        "accession": "0001193125-26-098466",
+        "doc": "box-20260131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-10",
+        "accession": "0000950170-25-036261",
+        "doc": "box-20250131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-11",
+        "accession": "0000950170-24-029241",
+        "doc": "box-20240131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-13",
+        "accession": "0000950170-23-007573",
+        "doc": "box-20230131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-16",
+        "accession": "0000950170-22-003913",
+        "doc": "box-20220131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-19",
+        "accession": "0001564590-21-014377",
+        "doc": "box-10k_20210131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-03-19",
+        "accession": "0001564590-20-011799",
+        "doc": "box-10k_20200131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-03-20",
+        "accession": "0001564590-19-008669",
+        "doc": "box-10k_20190131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2018-03-22",
+        "accession": "0001564590-18-006572",
+        "doc": "box-10k_20180131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2017-03-24",
+        "accession": "0001564590-17-005227",
+        "doc": "box-10k_20170131.htm"
+      }
+    ]
+  },
+  {
+    "id": "67",
+    "name": "Twilio",
+    "slug": "twilio",
+    "cik": "0001447669",
+    "ticker": "TWLO",
+    "title": "TWILIO INC",
+    "sec_name": "TWILIO INC",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-24",
+        "accession": "0001447669-26-000021",
+        "doc": "twlo-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-26",
+        "accession": "0001447669-25-000035",
+        "doc": "twlo-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-27",
+        "accession": "0001447669-24-000034",
+        "doc": "twlo-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-27",
+        "accession": "0001447669-23-000049",
+        "doc": "twlo-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-22",
+        "accession": "0001447669-22-000049",
+        "doc": "twlo-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-26",
+        "accession": "0001447669-21-000070",
+        "doc": "twlo-20201231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-03-02",
+        "accession": "0001447669-20-000045",
+        "doc": "twlo-20191231x10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "68",
+    "name": "HubSpot",
+    "slug": "hubspot",
+    "cik": "0001404655",
+    "ticker": "HUBS",
+    "title": "HUBSPOT INC",
+    "sec_name": "HUBSPOT INC",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-11",
+        "accession": "0001193125-26-046646",
+        "doc": "hubs-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-12",
+        "accession": "0000950170-25-018873",
+        "doc": "hubs-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-14",
+        "accession": "0000950170-24-015277",
+        "doc": "hubs-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-16",
+        "accession": "0000950170-23-003077",
+        "doc": "hubs-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-14",
+        "accession": "0000950170-22-001221",
+        "doc": "hubs-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-16",
+        "accession": "0001564590-21-006083",
+        "doc": "hubs-10k_20201231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-02-12",
+        "accession": "0001564590-20-004381",
+        "doc": "hubs-10k_20191231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-02-12",
+        "accession": "0001564590-19-002699",
+        "doc": "hubs-10k_20181231.htm"
+      }
+    ]
+  },
+  {
+    "id": "70",
+    "name": "ServiceNow",
+    "slug": "servicenow",
+    "cik": "0001373715",
+    "ticker": "NOW",
+    "title": "ServiceNow, Inc.",
+    "sec_name": "ServiceNow, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-01-29",
+        "accession": "0001373715-26-000007",
+        "doc": "now-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-01-30",
+        "accession": "0001373715-25-000010",
+        "doc": "now-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-01-25",
+        "accession": "0001373715-24-000030",
+        "doc": "now-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-01-31",
+        "accession": "0001373715-23-000035",
+        "doc": "now-20221231.htm"
+      }
+    ]
+  },
+  {
+    "id": "71",
+    "name": "Shopify",
+    "slug": "shopify",
+    "cik": "0001594805",
+    "ticker": "SHOP",
+    "title": "SHOPIFY INC.",
+    "sec_name": "SHOPIFY INC.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-11",
+        "accession": "0001594805-26-000007",
+        "doc": "shop-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-11",
+        "accession": "0001594805-25-000012",
+        "doc": "shop-20241231.htm"
+      }
+    ]
+  },
+  {
+    "id": "72",
+    "name": "Instacart",
+    "slug": "instacart",
+    "cik": "0001579091",
+    "ticker": "CART",
+    "title": "Maplebear Inc.",
+    "sec_name": "Maplebear Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-26",
+        "accession": "0001579091-26-000018",
+        "doc": "cart-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-28",
+        "accession": "0001579091-25-000015",
+        "doc": "cart-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-05",
+        "accession": "0001579091-24-000027",
+        "doc": "cart-20231231.htm"
+      }
+    ]
+  },
+  {
+    "id": "73",
+    "name": "DoorDash",
+    "slug": "doordash",
+    "cik": "0001792789",
+    "ticker": "DASH",
+    "title": "DoorDash, Inc.",
+    "sec_name": "DoorDash, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-18",
+        "accession": "0001792789-26-000013",
+        "doc": "dash-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-14",
+        "accession": "0001628280-25-005715",
+        "doc": "dash-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-20",
+        "accession": "0001628280-24-005600",
+        "doc": "dash-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-27",
+        "accession": "0001628280-23-005131",
+        "doc": "dash-20221231.htm"
+      }
+    ]
+  },
+  {
+    "id": "81",
+    "name": "Uber",
+    "slug": "uber",
+    "cik": "0001543151",
+    "ticker": "UBER",
+    "title": "Uber Technologies, Inc",
+    "sec_name": "Uber Technologies, Inc",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-13",
+        "accession": "0001543151-26-000015",
+        "doc": "uber-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-14",
+        "accession": "0001543151-25-000008",
+        "doc": "uber-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-15",
+        "accession": "0001543151-24-000012",
+        "doc": "uber-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-21",
+        "accession": "0001543151-23-000010",
+        "doc": "uber-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-24",
+        "accession": "0001543151-22-000008",
+        "doc": "uber-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-01",
+        "accession": "0001543151-21-000014",
+        "doc": "uber-20201231.htm"
+      }
+    ]
+  },
+  {
+    "id": "82",
+    "name": "Lyft",
+    "slug": "lyft",
+    "cik": "0001759509",
+    "ticker": "LYFT",
+    "title": "Lyft, Inc.",
+    "sec_name": "Lyft, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-11",
+        "accession": "0001628280-26-006960",
+        "doc": "lyft-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-14",
+        "accession": "0001759509-25-000025",
+        "doc": "lyft-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-20",
+        "accession": "0001759509-24-000019",
+        "doc": "lyft-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-27",
+        "accession": "0001759509-23-000028",
+        "doc": "lyft-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-28",
+        "accession": "0001759509-22-000016",
+        "doc": "lyft-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-01",
+        "accession": "0001759509-21-000011",
+        "doc": "lyft-20201231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-02-28",
+        "accession": "0001759509-20-000009",
+        "doc": "lyft-20191231.htm"
+      }
+    ]
+  },
+  {
+    "id": "84",
+    "name": "Rivian",
+    "slug": "rivian",
+    "cik": "0001874178",
+    "ticker": "RIVN",
+    "title": "Rivian Automotive, Inc. / DE",
+    "sec_name": "Rivian Automotive, Inc. / DE",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-12",
+        "accession": "0001874178-26-000008",
+        "doc": "rivn-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-24",
+        "accession": "0001874178-25-000007",
+        "doc": "rivn-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-26",
+        "accession": "0001874178-24-000014",
+        "doc": "rivn-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-28",
+        "accession": "0001874178-23-000009",
+        "doc": "rivn-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-31",
+        "accession": "0001874178-22-000008",
+        "doc": "rivn-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "88",
+    "name": "Aurora",
+    "slug": "aurora",
+    "cik": "0001828108",
+    "ticker": "AUR",
+    "title": "Aurora Innovation, Inc.",
+    "sec_name": "Aurora Innovation, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-11",
+        "accession": "0001828108-26-000016",
+        "doc": "aur-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-14",
+        "accession": "0001828108-25-000028",
+        "doc": "aur-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-15",
+        "accession": "0001828108-24-000028",
+        "doc": "aur-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-21",
+        "accession": "0001828108-23-000020",
+        "doc": "aur-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-11",
+        "accession": "0001628280-22-005886",
+        "doc": "aur-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "91",
+    "name": "Airbnb",
+    "slug": "airbnb",
+    "cik": "0001559720",
+    "ticker": "ABNB",
+    "title": "Airbnb, Inc.",
+    "sec_name": "Airbnb, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-12",
+        "accession": "0001559720-26-000004",
+        "doc": "abnb-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-13",
+        "accession": "0001559720-25-000010",
+        "doc": "abnb-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-16",
+        "accession": "0001559720-24-000006",
+        "doc": "abnb-20231231.htm"
+      }
+    ]
+  },
+  {
+    "id": "93",
+    "name": "Expedia",
+    "slug": "expedia",
+    "cik": "0001324424",
+    "ticker": "EXPE",
+    "title": "Expedia Group, Inc.",
+    "sec_name": "Expedia Group, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-13",
+        "accession": "0001324424-26-000008",
+        "doc": "expe-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-07",
+        "accession": "0001324424-25-000008",
+        "doc": "expe-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-09",
+        "accession": "0001324424-24-000007",
+        "doc": "expe-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-10",
+        "accession": "0001324424-23-000007",
+        "doc": "expe-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-11",
+        "accession": "0001324424-22-000009",
+        "doc": "expe-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-12",
+        "accession": "0001324424-21-000015",
+        "doc": "expe-20201231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-02-14",
+        "accession": "0001324424-20-000009",
+        "doc": "q42019-10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-02-08",
+        "accession": "0001324424-19-000006",
+        "doc": "q42018-10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2018-02-09",
+        "accession": "0001324424-18-000006",
+        "doc": "q42017-10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "96",
+    "name": "Oscar Health",
+    "slug": "oscar-health",
+    "cik": "0001568651",
+    "ticker": "OSCR",
+    "title": "Oscar Health, Inc.",
+    "sec_name": "Oscar Health, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-13",
+        "accession": "0001568651-26-000011",
+        "doc": "oscr-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-20",
+        "accession": "0001568651-25-000008",
+        "doc": "oscr-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-15",
+        "accession": "0001568651-24-000006",
+        "doc": "oscr-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-24",
+        "accession": "0001568651-23-000017",
+        "doc": "oscr-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-25",
+        "accession": "0001568651-22-000011",
+        "doc": "oscr-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "98",
+    "name": "Hims & Hers",
+    "slug": "hims-hers",
+    "cik": "0001773751",
+    "ticker": "HIMS",
+    "title": "Hims & Hers Health, Inc.",
+    "sec_name": "Hims & Hers Health, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-23",
+        "accession": "0001773751-26-000022",
+        "doc": "hims-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-24",
+        "accession": "0001773751-25-000062",
+        "doc": "hims-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-26",
+        "accession": "0001773751-24-000025",
+        "doc": "hims-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-27",
+        "accession": "0001773751-23-000029",
+        "doc": "hims-20221231.htm"
+      }
+    ]
+  },
+  {
+    "id": "102",
+    "name": "Tempus",
+    "slug": "tempus",
+    "cik": "0001717115",
+    "ticker": "TEM",
+    "title": "Tempus AI, Inc.",
+    "sec_name": "Tempus AI, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-24",
+        "accession": "0001193125-26-066961",
+        "doc": "tem-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-24",
+        "accession": "0000950170-25-025603",
+        "doc": "tem-20241231.htm"
+      }
+    ]
+  },
+  {
+    "id": "110",
+    "name": "Circle",
+    "slug": "circle",
+    "cik": "0001876042",
+    "ticker": "CRCL",
+    "title": "Circle Internet Group, Inc.",
+    "sec_name": "Circle Internet Group, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-09",
+        "accession": "0001876042-26-000062",
+        "doc": "crcl-20251231.htm"
+      }
+    ]
+  },
+  {
+    "id": "116",
+    "name": "CrowdStrike",
+    "slug": "crowdstrike",
+    "cik": "0001535527",
+    "ticker": "CRWD",
+    "title": "CrowdStrike Holdings, Inc.",
+    "sec_name": "CrowdStrike Holdings, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-05",
+        "accession": "0001535527-26-000010",
+        "doc": "crwd-20260131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-10",
+        "accession": "0001535527-25-000009",
+        "doc": "crwd-20250131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-07",
+        "accession": "0001535527-24-000007",
+        "doc": "crwd-20240131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-09",
+        "accession": "0001535527-23-000008",
+        "doc": "crwd-20230131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-16",
+        "accession": "0001535527-22-000006",
+        "doc": "crwd-20220131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-18",
+        "accession": "0001535527-21-000007",
+        "doc": "crwd-20210131.htm"
+      }
+    ]
+  },
+  {
+    "id": "117",
+    "name": "Palo Alto Networks",
+    "slug": "palo-alto-networks",
+    "cik": "0001327567",
+    "ticker": "PANW",
+    "title": "Palo Alto Networks Inc",
+    "sec_name": "Palo Alto Networks Inc",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-09-10",
+        "accession": "0001327567-26-000023",
+        "doc": "panw-20260731.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-08-29",
+        "accession": "0001327567-25-000027",
+        "doc": "panw-20250731.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-09-06",
+        "accession": "0001327567-24-000029",
+        "doc": "panw-20240731.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-09-01",
+        "accession": "0001327567-23-000024",
+        "doc": "panw-20230731.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-09-06",
+        "accession": "0001327567-22-000028",
+        "doc": "panw-20220731.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-09-03",
+        "accession": "0001327567-21-000029",
+        "doc": "panw-20210731.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-09-04",
+        "accession": "0001327567-20-000032",
+        "doc": "panw-20200731.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-09-09",
+        "accession": "0001327567-19-000032",
+        "doc": "panw-7312019x10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "118",
+    "name": "Okta",
+    "slug": "okta",
+    "cik": "0001660134",
+    "ticker": "OKTA",
+    "title": "Okta, Inc.",
+    "sec_name": "Okta, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-05",
+        "accession": "0001660134-26-000020",
+        "doc": "okta-20260131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-05",
+        "accession": "0001660134-25-000049",
+        "doc": "okta-20250131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-01",
+        "accession": "0001660134-24-000025",
+        "doc": "okta-20240131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-03",
+        "accession": "0001660134-23-000013",
+        "doc": "okta-20230131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-07",
+        "accession": "0001660134-22-000010",
+        "doc": "okta-20220131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-04",
+        "accession": "0001660134-21-000007",
+        "doc": "okta-20210131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-03-06",
+        "accession": "0001660134-20-000006",
+        "doc": "okta-131202010k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-03-14",
+        "accession": "0001660134-19-000006",
+        "doc": "okta-1312019_10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2018-03-12",
+        "accession": "0001660134-18-000007",
+        "doc": "okta-1312018_10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "122",
+    "name": "Netskope",
+    "slug": "netskope",
+    "cik": "0002063196",
+    "ticker": "NTSK",
+    "title": "Netskope Inc",
+    "sec_name": "Netskope Inc",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-31",
+        "accession": "0001193125-26-135011",
+        "doc": "ck0002063196-20260131.htm"
+      }
+    ]
+  },
+  {
+    "id": "123",
+    "name": "SentinelOne",
+    "slug": "sentinelone",
+    "cik": "0001583708",
+    "ticker": "S",
+    "title": "SentinelOne, Inc.",
+    "sec_name": "SentinelOne, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-19",
+        "accession": "0001583708-26-000020",
+        "doc": "s-20260131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-26",
+        "accession": "0001583708-25-000051",
+        "doc": "s-20250131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-27",
+        "accession": "0001583708-24-000016",
+        "doc": "s-20240131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-29",
+        "accession": "0001583708-23-000014",
+        "doc": "s-20230131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-04-07",
+        "accession": "0001583708-22-000016",
+        "doc": "s-20220131.htm"
+      }
+    ]
+  },
+  {
+    "id": "126",
+    "name": "Coursera",
+    "slug": "coursera",
+    "cik": "0001651562",
+    "ticker": "COUR",
+    "title": "Coursera, Inc.",
+    "sec_name": "Coursera, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-23",
+        "accession": "0001651562-26-000015",
+        "doc": "cour-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-24",
+        "accession": "0001651562-25-000013",
+        "doc": "cour-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-22",
+        "accession": "0001651562-24-000012",
+        "doc": "cour-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-23",
+        "accession": "0000950170-23-004143",
+        "doc": "cour-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-03",
+        "accession": "0000950170-22-002807",
+        "doc": "cour-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "127",
+    "name": "Duolingo",
+    "slug": "duolingo",
+    "cik": "0001562088",
+    "ticker": "DUOL",
+    "title": "Duolingo, Inc.",
+    "sec_name": "Duolingo, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "doc": "duol-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-28",
+        "accession": "0001562088-25-000042",
+        "doc": "duol-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-29",
+        "accession": "0001562088-24-000050",
+        "doc": "duol-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-01",
+        "accession": "0001562088-23-000052",
+        "doc": "duol-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-04",
+        "accession": "0001562088-22-000039",
+        "doc": "duol-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "130",
+    "name": "Chegg",
+    "slug": "chegg",
+    "cik": "0001364954",
+    "ticker": "CHGG",
+    "title": "CHEGG, INC",
+    "sec_name": "CHEGG, INC",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-09",
+        "accession": "0001364954-26-000021",
+        "doc": "chgg-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-24",
+        "accession": "0001364954-25-000013",
+        "doc": "chgg-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-20",
+        "accession": "0001364954-24-000009",
+        "doc": "chgg-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-21",
+        "accession": "0001364954-23-000013",
+        "doc": "chgg-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-22",
+        "accession": "0001364954-22-000011",
+        "doc": "chgg-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-22",
+        "accession": "0001364954-21-000013",
+        "doc": "chgg-20201231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-02-20",
+        "accession": "0001364954-20-000041",
+        "doc": "chegg2019-12x3110k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-02-25",
+        "accession": "0001364954-19-000027",
+        "doc": "chegg2018-12x3110k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2018-02-26",
+        "accession": "0001364954-18-000039",
+        "doc": "chegg2017-12x3110k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2017-02-23",
+        "accession": "0001364954-17-000031",
+        "doc": "chegg2016-12x3110k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2016-03-04",
+        "accession": "0001364954-16-000291",
+        "doc": "chegg2015-12x3110k.htm"
+      }
+    ]
+  },
+  {
+    "id": "137",
+    "name": "Roblox",
+    "slug": "roblox",
+    "cik": "0001315098",
+    "ticker": "RBLX",
+    "title": "Roblox Corp",
+    "sec_name": "Roblox Corp",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-11",
+        "accession": "0001315098-26-000024",
+        "doc": "rblx-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-18",
+        "accession": "0001315098-25-000033",
+        "doc": "rblx-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-21",
+        "accession": "0001315098-24-000026",
+        "doc": "rblx-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-28",
+        "accession": "0001315098-23-000035",
+        "doc": "rblx-20221231.htm"
+      }
+    ]
+  },
+  {
+    "id": "138",
+    "name": "Unity",
+    "slug": "unity",
+    "cik": "0001810806",
+    "ticker": "U",
+    "title": "Unity Software Inc.",
+    "sec_name": "Unity Software Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-11",
+        "accession": "0001810806-26-000011",
+        "doc": "unity-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-21",
+        "accession": "0001810806-25-000026",
+        "doc": "unity-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-29",
+        "accession": "0001810806-24-000053",
+        "doc": "unity-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-27",
+        "accession": "0001810806-23-000016",
+        "doc": "unity-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-22",
+        "accession": "0001810806-22-000004",
+        "doc": "unity-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-05",
+        "accession": "0001810806-21-000052",
+        "doc": "unity-20201231.htm"
+      }
+    ]
+  },
+  {
+    "id": "152",
+    "name": "Beyond Meat",
+    "slug": "beyond-meat",
+    "cik": "0001655210",
+    "ticker": "BYND",
+    "title": "BEYOND MEAT, INC.",
+    "sec_name": "BEYOND MEAT, INC.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-04-09",
+        "accession": "0001655210-26-000022",
+        "doc": "bynd-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-05",
+        "accession": "0001655210-25-000034",
+        "doc": "bynd-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-01",
+        "accession": "0001655210-24-000025",
+        "doc": "bynd-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-01",
+        "accession": "0001655210-23-000017",
+        "doc": "bynd-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-02",
+        "accession": "0001655210-22-000019",
+        "doc": "bynd-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-01",
+        "accession": "0001655210-21-000032",
+        "doc": "bynd-20201231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-03-19",
+        "accession": "0001628280-20-003841",
+        "doc": "bynd201910k.htm"
+      }
+    ]
+  },
+  {
+    "id": "154",
+    "name": "QuantumScape",
+    "slug": "quantumscape",
+    "cik": "0001811414",
+    "ticker": "QS",
+    "title": "QuantumScape Corp",
+    "sec_name": "QuantumScape Corp",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-25",
+        "accession": "0001193125-26-071556",
+        "doc": "qs-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-26",
+        "accession": "0000950170-25-027308",
+        "doc": "qs-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-27",
+        "accession": "0000950170-24-021100",
+        "doc": "qs-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-28",
+        "accession": "0000950170-23-005129",
+        "doc": "qs-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-28",
+        "accession": "0000950170-22-002330",
+        "doc": "qs-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-23",
+        "accession": "0001564590-21-007621",
+        "doc": "qs-10k_20201231.htm"
+      }
+    ]
+  },
+  {
+    "id": "165",
+    "name": "Workday",
+    "slug": "workday",
+    "cik": "0001327811",
+    "ticker": "WDAY",
+    "title": "Workday, Inc.",
+    "sec_name": "Workday, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-06",
+        "accession": "0001327811-26-000014",
+        "doc": "wday-20260131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-11",
+        "accession": "0001327811-25-000056",
+        "doc": "wday-20250131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-08",
+        "accession": "0001327811-24-000044",
+        "doc": "wday-20240131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-27",
+        "accession": "0001327811-23-000024",
+        "doc": "wday-20230131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-28",
+        "accession": "0001327811-22-000030",
+        "doc": "wday-20220131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-02",
+        "accession": "0001327811-21-000020",
+        "doc": "wday-20210131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-03-03",
+        "accession": "0001327811-20-000022",
+        "doc": "wday-20200131.htm"
+      }
+    ]
+  },
+  {
+    "id": "166",
+    "name": "Opendoor",
+    "slug": "opendoor",
+    "cik": "0001801169",
+    "ticker": "OPEN",
+    "title": "Opendoor Technologies Inc.",
+    "sec_name": "Opendoor Technologies Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-19",
+        "accession": "0001801169-26-000010",
+        "doc": "open-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-27",
+        "accession": "0001801169-25-000017",
+        "doc": "open-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-15",
+        "accession": "0001801169-24-000016",
+        "doc": "open-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-23",
+        "accession": "0001801169-23-000024",
+        "doc": "open-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-24",
+        "accession": "0001801169-22-000027",
+        "doc": "open-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-04",
+        "accession": "0001801169-21-000011",
+        "doc": "open-20201231.htm"
+      }
+    ]
+  },
+  {
+    "id": "167",
+    "name": "Compass",
+    "slug": "compass",
+    "cik": "0001563190",
+    "ticker": "COMP",
+    "title": "Compass, Inc.",
+    "sec_name": "Compass, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-27",
+        "accession": "0001563190-26-000057",
+        "doc": "comp-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-25",
+        "accession": "0001563190-25-000050",
+        "doc": "comp-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-28",
+        "accession": "0001563190-24-000039",
+        "doc": "comp-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-01",
+        "accession": "0001563190-23-000038",
+        "doc": "comp-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-28",
+        "accession": "0001193125-22-058265",
+        "doc": "d82155d10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "168",
+    "name": "Zillow",
+    "slug": "zillow",
+    "cik": "0001617640",
+    "ticker": "ZG",
+    "title": "ZILLOW GROUP, INC.",
+    "sec_name": "ZILLOW GROUP, INC.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-11",
+        "accession": "0001617640-26-000015",
+        "doc": "z-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-11",
+        "accession": "0001617640-25-000016",
+        "doc": "z-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-15",
+        "accession": "0001617640-24-000022",
+        "doc": "z-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-15",
+        "accession": "0001617640-23-000010",
+        "doc": "z-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-10",
+        "accession": "0001617640-22-000013",
+        "doc": "z-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-12",
+        "accession": "0001617640-21-000012",
+        "doc": "z-20201231.htm"
+      }
+    ]
+  },
+  {
+    "id": "172",
+    "name": "Latch",
+    "slug": "latch",
+    "cik": "0001826000",
+    "ticker": "LTCH",
+    "title": "Latch, Inc.",
+    "sec_name": "Latch, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-31",
+        "accession": "0001826000-26-000030",
+        "doc": "lat-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-11-05",
+        "accession": "0001826000-25-000076",
+        "doc": "lat-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-26",
+        "accession": "0001826000-25-000035",
+        "doc": "lat-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-12-19",
+        "accession": "0001826000-24-000073",
+        "doc": "lat-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-01",
+        "accession": "0001826000-22-000020",
+        "doc": "lat-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-16",
+        "accession": "0001193125-21-083025",
+        "doc": "d135208d10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "173",
+    "name": "Better",
+    "slug": "better",
+    "cik": "0001835856",
+    "ticker": "BETR",
+    "title": "Better Home & Finance Holding Co",
+    "sec_name": "Better Home & Finance Holding Co",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-13",
+        "accession": "0001628280-26-017747",
+        "doc": "aurcu-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-19",
+        "accession": "0001628280-25-013683",
+        "doc": "aurcu-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-04-08",
+        "accession": "0001628280-24-015134",
+        "doc": "aurcu-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-04-17",
+        "accession": "0001104659-23-046240",
+        "doc": "aurcu-20221231x10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-25",
+        "accession": "0001104659-22-037661",
+        "doc": "aurcu-20211231x10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "177",
+    "name": "Pinterest",
+    "slug": "pinterest",
+    "cik": "0001506293",
+    "ticker": "PINS",
+    "title": "PINTEREST, INC.",
+    "sec_name": "PINTEREST, INC.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-12",
+        "accession": "0001506293-26-000021",
+        "doc": "pins-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-06",
+        "accession": "0001506293-25-000022",
+        "doc": "pins-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-08",
+        "accession": "0001506293-24-000018",
+        "doc": "pins-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-06",
+        "accession": "0001506293-23-000023",
+        "doc": "pins-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-03",
+        "accession": "0001506293-22-000016",
+        "doc": "pins-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-05",
+        "accession": "0001506293-21-000025",
+        "doc": "pins-20201231.htm"
+      }
+    ]
+  },
+  {
+    "id": "178",
+    "name": "Snap",
+    "slug": "snap",
+    "cik": "0001564408",
+    "ticker": "SNAP",
+    "title": "Snap Inc",
+    "sec_name": "Snap Inc",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-05",
+        "accession": "0001564408-26-000013",
+        "doc": "snap-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-05",
+        "accession": "0001564408-25-000019",
+        "doc": "snap-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-07",
+        "accession": "0001564408-24-000019",
+        "doc": "snap-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-01",
+        "accession": "0001564408-23-000013",
+        "doc": "snap-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-04",
+        "accession": "0001564590-22-003868",
+        "doc": "snap-10k_20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-05",
+        "accession": "0001564590-21-004377",
+        "doc": "snap-10k_20201231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-02-05",
+        "accession": "0001564590-20-003323",
+        "doc": "snap-10k_20191231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-02-06",
+        "accession": "0001564590-19-002053",
+        "doc": "snap-10k_20181231.htm"
+      }
+    ]
+  },
+  {
+    "id": "180",
+    "name": "Reddit",
+    "slug": "reddit",
+    "cik": "0001713445",
+    "ticker": "RDDT",
+    "title": "Reddit, Inc.",
+    "sec_name": "Reddit, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-06",
+        "accession": "0001713445-26-000022",
+        "doc": "rddt-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-13",
+        "accession": "0001713445-25-000018",
+        "doc": "rddt-20241231.htm"
+      }
+    ]
+  },
+  {
+    "id": "183",
+    "name": "Nextdoor",
+    "slug": "nextdoor",
+    "cik": "0001846069",
+    "ticker": "NXDR",
+    "title": "Nextdoor Holdings, Inc.",
+    "sec_name": "Nextdoor Holdings, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-18",
+        "accession": "0001846069-26-000023",
+        "doc": "kind-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-27",
+        "accession": "0001846069-25-000017",
+        "doc": "kind-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-27",
+        "accession": "0001846069-24-000047",
+        "doc": "kind-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-28",
+        "accession": "0001846069-23-000010",
+        "doc": "kind-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-15",
+        "accession": "0001846069-22-000006",
+        "doc": "kvsb-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "186",
+    "name": "Sweetgreen",
+    "slug": "sweetgreen",
+    "cik": "0001477815",
+    "ticker": "SG",
+    "title": "Sweetgreen, Inc.",
+    "sec_name": "Sweetgreen, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-27",
+        "accession": "0001628280-26-012520",
+        "doc": "sg-20251228.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-27",
+        "accession": "0001628280-25-008367",
+        "doc": "sg-20241229.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-29",
+        "accession": "0001628280-24-008066",
+        "doc": "sg-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-23",
+        "accession": "0001628280-23-004857",
+        "doc": "sg-20221225.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-04",
+        "accession": "0001628280-22-005116",
+        "doc": "sweetgreeninc10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "187",
+    "name": "CAVA",
+    "slug": "cava",
+    "cik": "0001639438",
+    "ticker": "CAVA",
+    "title": "CAVA GROUP, INC.",
+    "sec_name": "CAVA GROUP, INC.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-25",
+        "accession": "0001628280-26-011296",
+        "doc": "cava-20251228.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-26",
+        "accession": "0001628280-25-007882",
+        "doc": "cava-20241229.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-27",
+        "accession": "0001628280-24-007277",
+        "doc": "cava-20231231.htm"
+      }
+    ]
+  },
+  {
+    "id": "191",
+    "name": "Snowflake",
+    "slug": "snowflake",
+    "cik": "0001640147",
+    "ticker": "SNOW",
+    "title": "Snowflake Inc.",
+    "sec_name": "Snowflake Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-20",
+        "accession": "0001640147-26-000008",
+        "doc": "snow-20260131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-21",
+        "accession": "0001640147-25-000052",
+        "doc": "snow-20250131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-26",
+        "accession": "0001640147-24-000101",
+        "doc": "snow-20240131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-29",
+        "accession": "0001640147-23-000030",
+        "doc": "snow-20230131.htm"
+      }
+    ]
+  },
+  {
+    "id": "192",
+    "name": "Palantir",
+    "slug": "palantir",
+    "cik": "0001321655",
+    "ticker": "PLTR",
+    "title": "Palantir Technologies Inc.",
+    "sec_name": "Palantir Technologies Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-17",
+        "accession": "0001321655-26-000011",
+        "doc": "pltr-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-18",
+        "accession": "0001321655-25-000022",
+        "doc": "pltr-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-20",
+        "accession": "0001321655-24-000022",
+        "doc": "pltr-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-21",
+        "accession": "0001321655-23-000011",
+        "doc": "pltr-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-24",
+        "accession": "0001193125-22-050913",
+        "doc": "d273589d10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-26",
+        "accession": "0001193125-21-060650",
+        "doc": "d65934d10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "198",
+    "name": "Amplitude",
+    "slug": "amplitude",
+    "cik": "0001866692",
+    "ticker": "AMPL",
+    "title": "Amplitude, Inc.",
+    "sec_name": "Amplitude, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-19",
+        "accession": "0001193125-26-057847",
+        "doc": "ampl-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-20",
+        "accession": "0000950170-25-024135",
+        "doc": "ampl-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-20",
+        "accession": "0000950170-24-017102",
+        "doc": "ampl-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-16",
+        "accession": "0000950170-23-003045",
+        "doc": "ampl-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-17",
+        "accession": "0000950170-22-001372",
+        "doc": "ampl-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "213",
+    "name": "ZoomInfo",
+    "slug": "zoominfo",
+    "cik": "0001794515",
+    "ticker": "GTM",
+    "title": "ZoomInfo Technologies Inc.",
+    "sec_name": "ZoomInfo Technologies Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-12",
+        "accession": "0001794515-26-000012",
+        "doc": "zi-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-25",
+        "accession": "0001794515-25-000045",
+        "doc": "zi-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-15",
+        "accession": "0001794515-24-000016",
+        "doc": "zi-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-16",
+        "accession": "0001794515-23-000034",
+        "doc": "zi-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-24",
+        "accession": "0001794515-22-000015",
+        "doc": "zi-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "222",
+    "name": "LegalZoom",
+    "slug": "legalzoom",
+    "cik": "0001286139",
+    "ticker": "LZ",
+    "title": "LEGALZOOM.COM, INC.",
+    "sec_name": "LEGALZOOM.COM, INC.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-23",
+        "accession": "0001286139-26-000012",
+        "doc": "lz-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-26",
+        "accession": "0001286139-25-000044",
+        "doc": "lz-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-29",
+        "accession": "0001286139-24-000031",
+        "doc": "lz-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-01",
+        "accession": "0001286139-23-000036",
+        "doc": "lz-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-24",
+        "accession": "0001286139-22-000048",
+        "doc": "lz-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "224",
+    "name": "DocuSign",
+    "slug": "docusign",
+    "cik": "0001261333",
+    "ticker": "DOCU",
+    "title": "DOCUSIGN, INC.",
+    "sec_name": "DOCUSIGN, INC.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-18",
+        "accession": "0001261333-26-000021",
+        "doc": "docu-20260131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-18",
+        "accession": "0001261333-25-000024",
+        "doc": "docu-20250131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-21",
+        "accession": "0001261333-24-000045",
+        "doc": "docu-20240131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-27",
+        "accession": "0001261333-23-000050",
+        "doc": "docu-20230131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-25",
+        "accession": "0001261333-22-000049",
+        "doc": "docu-20220131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-31",
+        "accession": "0001261333-21-000059",
+        "doc": "docu-20210131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-03-27",
+        "accession": "0001261333-20-000033",
+        "doc": "docu-20200131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-03-26",
+        "accession": "0001261333-19-000012",
+        "doc": "fy1910k.htm"
+      }
+    ]
+  },
+  {
+    "id": "226",
+    "name": "Braze",
+    "slug": "braze",
+    "cik": "0001676238",
+    "ticker": "BRZE",
+    "title": "Braze, Inc.",
+    "sec_name": "Braze, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-25",
+        "accession": "0001676238-26-000013",
+        "doc": "brze-20260131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-31",
+        "accession": "0001676238-25-000054",
+        "doc": "brze-20250131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-04-01",
+        "accession": "0001676238-24-000049",
+        "doc": "brze-20240131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-31",
+        "accession": "0001676238-23-000031",
+        "doc": "brze-20230131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-31",
+        "accession": "0001676238-22-000005",
+        "doc": "brze-20220131.htm"
+      }
+    ]
+  },
+  {
+    "id": "227",
+    "name": "Klaviyo",
+    "slug": "klaviyo",
+    "cik": "0001835830",
+    "ticker": "KVYO",
+    "title": "Klaviyo, Inc.",
+    "sec_name": "Klaviyo, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-10",
+        "accession": "0001835830-26-000007",
+        "doc": "kvyo-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-19",
+        "accession": "0001835830-25-000014",
+        "doc": "kvyo-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-29",
+        "accession": "0001835830-24-000022",
+        "doc": "kvyo-20231231.htm"
+      }
+    ]
+  },
+  {
+    "id": "231",
+    "name": "Lemonade",
+    "slug": "lemonade",
+    "cik": "0001691421",
+    "ticker": "LMND",
+    "title": "Lemonade, Inc.",
+    "sec_name": "Lemonade, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-25",
+        "accession": "0001691421-26-000016",
+        "doc": "lmnd-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-26",
+        "accession": "0001691421-25-000031",
+        "doc": "lmnd-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-28",
+        "accession": "0001691421-24-000026",
+        "doc": "lmnd-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-03",
+        "accession": "0001691421-23-000032",
+        "doc": "lmnd-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-01",
+        "accession": "0001691421-22-000015",
+        "doc": "lmnd-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-08",
+        "accession": "0001691421-21-000024",
+        "doc": "lmda-20201231.htm"
+      }
+    ]
+  },
+  {
+    "id": "232",
+    "name": "Root Insurance",
+    "slug": "root-insurance",
+    "cik": "0001788882",
+    "ticker": "ROOT",
+    "title": "Root, Inc.",
+    "sec_name": "Root, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-25",
+        "accession": "0001788882-26-000014",
+        "doc": "root-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-26",
+        "accession": "0001628280-25-008137",
+        "doc": "root-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-21",
+        "accession": "0001628280-24-005906",
+        "doc": "root-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-22",
+        "accession": "0001628280-23-004580",
+        "doc": "root-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-23",
+        "accession": "0001628280-22-003524",
+        "doc": "root-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-04",
+        "accession": "0001788882-21-000011",
+        "doc": "root-20201231.htm"
+      }
+    ]
+  },
+  {
+    "id": "233",
+    "name": "Hippo",
+    "slug": "hippo",
+    "cik": "0001828105",
+    "ticker": "HIPO",
+    "title": "Hippo Holdings Inc.",
+    "sec_name": "Hippo Holdings Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-05",
+        "accession": "0001828105-26-000008",
+        "doc": "hippo-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-06",
+        "accession": "0001828105-25-000013",
+        "doc": "hippo-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-06",
+        "accession": "0001828105-24-000008",
+        "doc": "hippo-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-02",
+        "accession": "0001828105-23-000011",
+        "doc": "hippo-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-14",
+        "accession": "0001628280-22-006061",
+        "doc": "hippo-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-08",
+        "accession": "0001193125-21-072153",
+        "doc": "d65436d10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "236",
+    "name": "Procore",
+    "slug": "procore",
+    "cik": "0001611052",
+    "ticker": "PCOR",
+    "title": "PROCORE TECHNOLOGIES, INC.",
+    "sec_name": "PROCORE TECHNOLOGIES, INC.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-24",
+        "accession": "0001628280-26-011055",
+        "doc": "pcor-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-26",
+        "accession": "0001628280-25-008121",
+        "doc": "pcor-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-26",
+        "accession": "0001628280-24-006848",
+        "doc": "pcor-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-01",
+        "accession": "0001564590-23-002828",
+        "doc": "pcor-10k_20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-04",
+        "accession": "0001564590-22-008783",
+        "doc": "pcor-10k_20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "243",
+    "name": "Planet Labs",
+    "slug": "planet-labs",
+    "cik": "0001836833",
+    "ticker": "PL",
+    "title": "Planet Labs PBC",
+    "sec_name": "Planet Labs PBC",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-23",
+        "accession": "0001193125-26-119957",
+        "doc": "pl-20260131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-26",
+        "accession": "0001836833-25-000050",
+        "doc": "pl-20250131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-29",
+        "accession": "0001836833-24-000037",
+        "doc": "pl-20240131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-30",
+        "accession": "0001836833-23-000014",
+        "doc": "pl-20230131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-04-14",
+        "accession": "0001836833-22-000018",
+        "doc": "pl-20220131.htm"
+      }
+    ]
+  },
+  {
+    "id": "244",
+    "name": "Rocket Lab",
+    "slug": "rocket-lab",
+    "cik": "0001819994",
+    "ticker": "RKLB",
+    "title": "Rocket Lab Corp",
+    "sec_name": "Rocket Lab Corp",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-26",
+        "accession": "0001819994-26-000013",
+        "doc": "rklb-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-27",
+        "accession": "0001628280-25-008724",
+        "doc": "rklb-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-28",
+        "accession": "0000950170-24-022160",
+        "doc": "rklb-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-07",
+        "accession": "0000950170-23-006499",
+        "doc": "rklb-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-24",
+        "accession": "0000950170-22-004458",
+        "doc": "rklb-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-31",
+        "accession": "0001193125-21-100852",
+        "doc": "d157321d10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "246",
+    "name": "Moderna",
+    "slug": "moderna",
+    "cik": "0001682852",
+    "ticker": "MRNA",
+    "title": "Moderna, Inc.",
+    "sec_name": "Moderna, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-20",
+        "accession": "0001682852-26-000033",
+        "doc": "mrna-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-21",
+        "accession": "0001682852-25-000022",
+        "doc": "mrna-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-23",
+        "accession": "0001682852-24-000015",
+        "doc": "mrna-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-24",
+        "accession": "0001682852-23-000011",
+        "doc": "mrna-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-25",
+        "accession": "0001682852-22-000012",
+        "doc": "mrna-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "248",
+    "name": "Ginkgo Bioworks",
+    "slug": "ginkgo-bioworks",
+    "cik": "0001830214",
+    "ticker": "DNA",
+    "title": "Ginkgo Bioworks Holdings, Inc.",
+    "sec_name": "Ginkgo Bioworks Holdings, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-26",
+        "accession": "0001628280-26-012346",
+        "doc": "dna-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-25",
+        "accession": "0001628280-25-007819",
+        "doc": "dna-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-29",
+        "accession": "0001628280-24-008052",
+        "doc": "dna-20231231.htm"
+      }
+    ]
+  },
+  {
+    "id": "249",
+    "name": "Recursion",
+    "slug": "recursion",
+    "cik": "0001601830",
+    "ticker": "RXRX",
+    "title": "RECURSION PHARMACEUTICALS, INC.",
+    "sec_name": "RECURSION PHARMACEUTICALS, INC.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-25",
+        "accession": "0001601830-26-000039",
+        "doc": "rxrx-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-28",
+        "accession": "0001601830-25-000035",
+        "doc": "rxrx-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-29",
+        "accession": "0001601830-24-000019",
+        "doc": "rxrx-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-27",
+        "accession": "0001601830-23-000010",
+        "doc": "rxrx-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-23",
+        "accession": "0001601830-22-000012",
+        "doc": "rxrx-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "251",
+    "name": "IonQ",
+    "slug": "ionq",
+    "cik": "0001824920",
+    "ticker": "IONQ",
+    "title": "IonQ, Inc.",
+    "sec_name": "IonQ, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-25",
+        "accession": "0001193125-26-071562",
+        "doc": "ionq-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-26",
+        "accession": "0000950170-25-027722",
+        "doc": "ionq-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-28",
+        "accession": "0000950170-24-022072",
+        "doc": "ionq-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-30",
+        "accession": "0001193125-23-085558",
+        "doc": "d424437d10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-28",
+        "accession": "0001193125-22-086738",
+        "doc": "d257705d10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-03-25",
+        "accession": "0001193125-21-094052",
+        "doc": "d78322d10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "252",
+    "name": "Rigetti",
+    "slug": "rigetti",
+    "cik": "0001838359",
+    "ticker": "RGTI",
+    "title": "Rigetti Computing, Inc.",
+    "sec_name": "Rigetti Computing, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-04",
+        "accession": "0001104659-26-023454",
+        "doc": "rgti-20251231x10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-07",
+        "accession": "0001558370-25-002499",
+        "doc": "rgti-20241231x10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-14",
+        "accession": "0001558370-24-003234",
+        "doc": "tmb-20231231x10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-27",
+        "accession": "0001193125-23-080486",
+        "doc": "d426335d10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-23",
+        "accession": "0001564590-22-006345",
+        "doc": "snii-10k_20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "253",
+    "name": "D-Wave",
+    "slug": "d-wave",
+    "cik": "0001907982",
+    "ticker": "QBTS",
+    "title": "D-Wave Quantum Inc.",
+    "sec_name": "D-Wave Quantum Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-26",
+        "accession": "0001907982-26-000026",
+        "doc": "qbts-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-14",
+        "accession": "0001907982-25-000060",
+        "doc": "qbts-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-29",
+        "accession": "0001907982-24-000049",
+        "doc": "qbts-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-04-18",
+        "accession": "0001907982-23-000011",
+        "doc": "qbts-20221231.htm"
+      }
+    ]
+  },
+  {
+    "id": "261",
+    "name": "Peloton",
+    "slug": "peloton",
+    "cik": "0001639825",
+    "ticker": "PTON",
+    "title": "PELOTON INTERACTIVE, INC.",
+    "sec_name": "PELOTON INTERACTIVE, INC.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-08-06",
+        "accession": "0001639825-26-000038",
+        "doc": "pton-20260630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-08-07",
+        "accession": "0001639825-25-000138",
+        "doc": "pton-20250630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-08-22",
+        "accession": "0001639825-24-000128",
+        "doc": "pton-20240630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-08-23",
+        "accession": "0001639825-23-000132",
+        "doc": "pton-20230630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-09-07",
+        "accession": "0001639825-22-000117",
+        "doc": "pton-20220630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-08-27",
+        "accession": "0001639825-21-000256",
+        "doc": "pton-20210630.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-09-11",
+        "accession": "0001639825-20-000122",
+        "doc": "pton-20200630.htm"
+      }
+    ]
+  },
+  {
+    "id": "286",
+    "name": "Square",
+    "slug": "square",
+    "cik": "0001512673",
+    "ticker": "XYZ",
+    "title": "Block, Inc.",
+    "sec_name": "Block, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-26",
+        "accession": "0001628280-26-012254",
+        "doc": "xyz-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-24",
+        "accession": "0001628280-25-007376",
+        "doc": "sq-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-22",
+        "accession": "0001628280-24-006354",
+        "doc": "sq-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-23",
+        "accession": "0001628280-23-004840",
+        "doc": "sq-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-24",
+        "accession": "0001628280-22-003825",
+        "doc": "sq-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "287",
+    "name": "Toast",
+    "slug": "toast",
+    "cik": "0001650164",
+    "ticker": "TOST",
+    "title": "Toast, Inc.",
+    "sec_name": "Toast, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-18",
+        "accession": "0001650164-26-000057",
+        "doc": "tost-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-26",
+        "accession": "0001650164-25-000072",
+        "doc": "tost-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-27",
+        "accession": "0001650164-24-000084",
+        "doc": "tost-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-03-01",
+        "accession": "0001650164-23-000069",
+        "doc": "tost-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-01",
+        "accession": "0001650164-22-000009",
+        "doc": "tost-20211231.htm"
+      }
+    ]
+  },
+  {
+    "id": "293",
+    "name": "RingCentral",
+    "slug": "ringcentral",
+    "cik": "0001384905",
+    "ticker": "RNG",
+    "title": "RingCentral, Inc.",
+    "sec_name": "RingCentral, Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-27",
+        "accession": "0001384905-26-000021",
+        "doc": "rng-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-26",
+        "accession": "0001384905-25-000014",
+        "doc": "rng-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-22",
+        "accession": "0001384905-24-000013",
+        "doc": "rng-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-23",
+        "accession": "0001384905-23-000017",
+        "doc": "rng-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-03-01",
+        "accession": "0001384905-22-000011",
+        "doc": "rng-20211231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-26",
+        "accession": "0001384905-21-000007",
+        "doc": "rng-20201231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-02-26",
+        "accession": "0001384905-20-000008",
+        "doc": "rng-20191231x10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "306",
+    "name": "Oracle",
+    "slug": "oracle",
+    "cik": "0001341439",
+    "ticker": "ORCL",
+    "title": "ORACLE CORP",
+    "sec_name": "ORACLE CORP",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-06-22",
+        "accession": "0001193125-26-277521",
+        "doc": "orcl-20260531.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-06-18",
+        "accession": "0000950170-25-087926",
+        "doc": "orcl-20250531.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-06-20",
+        "accession": "0000950170-24-075605",
+        "doc": "orcl-20240531.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-06-20",
+        "accession": "0000950170-23-028914",
+        "doc": "orcl-20230531.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-06-21",
+        "accession": "0001564590-22-023675",
+        "doc": "orcl-10k_20220531.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-06-21",
+        "accession": "0001564590-21-033616",
+        "doc": "orcl-10k_20210531.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-06-22",
+        "accession": "0001564590-20-030125",
+        "doc": "orcl-10k_20200531.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-06-21",
+        "accession": "0001564590-19-023119",
+        "doc": "orcl-10k_20190531.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2018-06-22",
+        "accession": "0001193125-18-201034",
+        "doc": "d568983d10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2017-06-27",
+        "accession": "0001193125-17-214833",
+        "doc": "d385998d10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2016-06-22",
+        "accession": "0001193125-16-628942",
+        "doc": "d203801d10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "307",
+    "name": "IBM",
+    "slug": "ibm",
+    "cik": "0000051143",
+    "ticker": "IBM",
+    "title": "INTERNATIONAL BUSINESS MACHINES CORP",
+    "sec_name": "INTERNATIONAL BUSINESS MACHINES CORP",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-24",
+        "accession": "0000051143-26-000010",
+        "doc": "ibm-20251231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-25",
+        "accession": "0000051143-25-000015",
+        "doc": "ibm-20241231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-02-26",
+        "accession": "0000051143-24-000012",
+        "doc": "ibm-20231231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-28",
+        "accession": "0001558370-23-002376",
+        "doc": "ibm-20221231x10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-22",
+        "accession": "0001558370-22-001584",
+        "doc": "ibm-20211231x10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-02-23",
+        "accession": "0001558370-21-001489",
+        "doc": "ibm-20201231x10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-02-25",
+        "accession": "0001558370-20-001334",
+        "doc": "ibm-20191231x10k2af531.htm"
+      }
+    ]
+  },
+  {
+    "id": "308",
+    "name": "Cisco",
+    "slug": "cisco",
+    "cik": "0000858877",
+    "ticker": "CSCO",
+    "title": "CISCO SYSTEMS, INC.",
+    "sec_name": "CISCO SYSTEMS, INC.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-09-02",
+        "accession": "0000858877-26-000132",
+        "doc": "csco-20260725.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-09-03",
+        "accession": "0000858877-25-000111",
+        "doc": "csco-20250726.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-09-05",
+        "accession": "0000858877-24-000017",
+        "doc": "csco-20240727.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-09-07",
+        "accession": "0000858877-23-000023",
+        "doc": "csco-20230729.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-09-08",
+        "accession": "0000858877-22-000013",
+        "doc": "csco-20220730.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-09-09",
+        "accession": "0000858877-21-000013",
+        "doc": "csco-20210731.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-09-03",
+        "accession": "0000858877-20-000010",
+        "doc": "csco-2020725x10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "309",
+    "name": "Dell Technologies",
+    "slug": "dell",
+    "cik": "0001571996",
+    "ticker": "DELL",
+    "title": "Dell Technologies Inc.",
+    "sec_name": "Dell Technologies Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-03-16",
+        "accession": "0001571996-26-000008",
+        "doc": "dell-20260130.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-03-25",
+        "accession": "0001571996-25-000034",
+        "doc": "dell-20250131.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-03-25",
+        "accession": "0001571996-24-000036",
+        "doc": "dell-20240202.htm"
+      }
+    ]
+  },
+  {
+    "id": "310",
+    "name": "Intel",
+    "slug": "intel",
+    "cik": "0000050863",
+    "ticker": "INTC",
+    "title": "INTEL CORP",
+    "sec_name": "INTEL CORP",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-01-23",
+        "accession": "0000050863-26-000011",
+        "doc": "intc-20251227.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-01-31",
+        "accession": "0000050863-25-000009",
+        "doc": "intc-20241228.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-01-26",
+        "accession": "0000050863-24-000010",
+        "doc": "intc-20231230.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-01-27",
+        "accession": "0000050863-23-000006",
+        "doc": "intc-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-01-27",
+        "accession": "0000050863-22-000007",
+        "doc": "intc-20211225.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-01-22",
+        "accession": "0000050863-21-000010",
+        "doc": "intc-20201226.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-01-24",
+        "accession": "0000050863-20-000011",
+        "doc": "a12282019q4-10kdocument.htm"
+      }
+    ]
+  },
+  {
+    "id": "311",
+    "name": "HP Inc",
+    "slug": "hp",
+    "cik": "0000047217",
+    "ticker": "HPQ",
+    "title": "HP INC",
+    "sec_name": "HP INC",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2025-12-10",
+        "accession": "0000047217-25-000071",
+        "doc": "hpq-20251031.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-12-13",
+        "accession": "0000047217-24-000080",
+        "doc": "hpq-20241031.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-12-18",
+        "accession": "0000047217-23-000100",
+        "doc": "hpq-20231031.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-12-06",
+        "accession": "0000047217-22-000068",
+        "doc": "hpq-20221031.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-12-09",
+        "accession": "0000047217-21-000060",
+        "doc": "hpq-20211031.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-12-10",
+        "accession": "0000047217-20-000045",
+        "doc": "hpq-20201031.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-12-12",
+        "accession": "0000047217-19-000071",
+        "doc": "hp-103119x10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2018-12-13",
+        "accession": "0000047217-18-000052",
+        "doc": "hp-103118x10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2017-12-14",
+        "accession": "0000047217-17-000043",
+        "doc": "hp-103117x10k1.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2016-12-15",
+        "accession": "0000047217-16-000093",
+        "doc": "hp-103116x10k1.htm"
+      }
+    ]
+  },
+  {
+    "id": "312",
+    "name": "Hewlett Packard Enterprise",
+    "slug": "hpe",
+    "cik": "0001645590",
+    "ticker": "HPE",
+    "title": "Hewlett Packard Enterprise Co",
+    "sec_name": "Hewlett Packard Enterprise Co",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2025-12-18",
+        "accession": "0001645590-25-000130",
+        "doc": "hpe-20251031.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-12-19",
+        "accession": "0001645590-24-000139",
+        "doc": "hpe-20241031.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-12-22",
+        "accession": "0001645590-23-000117",
+        "doc": "hpe-20231031.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-12-08",
+        "accession": "0001645590-22-000071",
+        "doc": "hpe-20221031.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-12-10",
+        "accession": "0001645590-21-000068",
+        "doc": "hpe-20211031.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-12-10",
+        "accession": "0001645590-20-000056",
+        "doc": "hpe-20201031.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-12-13",
+        "accession": "0001645590-19-000044",
+        "doc": "hpe-10312019x10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "313",
+    "name": "Qualcomm",
+    "slug": "qualcomm",
+    "cik": "0000804328",
+    "ticker": "QCOM",
+    "title": "QUALCOMM INC/DE",
+    "sec_name": "QUALCOMM INC/DE",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2025-11-05",
+        "accession": "0000804328-25-000085",
+        "doc": "qcom-20250928.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-11-06",
+        "accession": "0000804328-24-000075",
+        "doc": "qcom-20240929.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-11-01",
+        "accession": "0000804328-23-000055",
+        "doc": "qcom-20230924.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-11-02",
+        "accession": "0000804328-22-000021",
+        "doc": "qcom-20220925.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-11-03",
+        "accession": "0001728949-21-000076",
+        "doc": "qcom-20210926.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-11-04",
+        "accession": "0001728949-20-000067",
+        "doc": "qcom-20200927.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-11-06",
+        "accession": "0001728949-19-000072",
+        "doc": "qcom10-k2019.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2018-11-07",
+        "accession": "0001728949-18-000095",
+        "doc": "qcom10-k2018.htm"
+      }
+    ]
+  },
+  {
+    "id": "314",
+    "name": "AMD",
+    "slug": "amd",
+    "cik": "0000002488",
+    "ticker": "AMD",
+    "title": "ADVANCED MICRO DEVICES INC",
+    "sec_name": "ADVANCED MICRO DEVICES INC",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-02-04",
+        "accession": "0000002488-26-000018",
+        "doc": "amd-20251227.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-02-05",
+        "accession": "0000002488-25-000012",
+        "doc": "amd-20241228.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-01-31",
+        "accession": "0000002488-24-000012",
+        "doc": "amd-20231230.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-02-27",
+        "accession": "0000002488-23-000047",
+        "doc": "amd-20221231.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-02-03",
+        "accession": "0000002488-22-000016",
+        "doc": "amd-20211225.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-01-29",
+        "accession": "0001628280-21-001185",
+        "doc": "amd-20201226.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-02-04",
+        "accession": "0000002488-20-000008",
+        "doc": "amdform10-kfy2019.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-02-08",
+        "accession": "0000002488-19-000011",
+        "doc": "amd-12292018x10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2018-02-27",
+        "accession": "0000002488-18-000042",
+        "doc": "amd-12302017x10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "315",
+    "name": "Broadcom",
+    "slug": "broadcom",
+    "cik": "0001730168",
+    "ticker": "AVGO",
+    "title": "Broadcom Inc.",
+    "sec_name": "Broadcom Inc.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2025-12-18",
+        "accession": "0001730168-25-000121",
+        "doc": "avgo-20251102.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-12-20",
+        "accession": "0001730168-24-000139",
+        "doc": "avgo-20241103.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-12-14",
+        "accession": "0001730168-23-000096",
+        "doc": "avgo-20231029.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-12-16",
+        "accession": "0001730168-22-000118",
+        "doc": "avgo-20221030.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-12-17",
+        "accession": "0001730168-21-000153",
+        "doc": "avgo-20211031.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-12-18",
+        "accession": "0001730168-20-000226",
+        "doc": "avgo-20201101.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2019-12-20",
+        "accession": "0001730168-19-000144",
+        "doc": "avgo-11032019x10k.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2018-12-21",
+        "accession": "0001730168-18-000084",
+        "doc": "avgo-11042018x10k.htm"
+      }
+    ]
+  },
+  {
+    "id": "320",
+    "name": "Intuit",
+    "slug": "intuit",
+    "cik": "0000896878",
+    "ticker": "INTU",
+    "title": "INTUIT INC.",
+    "sec_name": "INTUIT INC.",
+    "ten_ks": [
+      {
+        "form": "10-K",
+        "date": "2026-09-09",
+        "accession": "0000896878-26-000037",
+        "doc": "intu-20260731.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2025-09-03",
+        "accession": "0000896878-25-000035",
+        "doc": "intu-20250731.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2024-09-04",
+        "accession": "0000896878-24-000039",
+        "doc": "intu-20240731.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2023-09-01",
+        "accession": "0000896878-23-000034",
+        "doc": "intu-20230731.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2022-09-02",
+        "accession": "0000896878-22-000028",
+        "doc": "intu-20220731.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2021-09-08",
+        "accession": "0000896878-21-000233",
+        "doc": "intu-20210731.htm"
+      },
+      {
+        "form": "10-K",
+        "date": "2020-08-31",
+        "accession": "0000896878-20-000148",
+        "doc": "fy20q410-kdocument.htm"
+      }
+    ]
+  }
+]

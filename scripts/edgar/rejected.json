@@ -1,0 +1,42 @@
+[
+  {
+    "id": "28",
+    "name": "Klarna",
+    "slug": "klarna",
+    "cik": "0002003292",
+    "ticker": "KLAR",
+    "title": "Klarna Group plc",
+    "sec_name": "Klarna Group plc",
+    "why": "no 10-K on file"
+  },
+  {
+    "id": "62",
+    "name": "Monday.com",
+    "slug": "monday-com",
+    "cik": "0001845338",
+    "ticker": "MNDY",
+    "title": "monday.com Ltd.",
+    "sec_name": "monday.com Ltd.",
+    "why": "no 10-K on file"
+  },
+  {
+    "id": "176",
+    "name": "Spotify",
+    "slug": "spotify",
+    "cik": "0001639920",
+    "ticker": "SPOT",
+    "title": "Spotify Technology S.A.",
+    "sec_name": "Spotify Technology S.A.",
+    "why": "no 10-K on file"
+  },
+  {
+    "id": "288",
+    "name": "Lightspeed",
+    "slug": "lightspeed",
+    "cik": "0001823306",
+    "ticker": "LSPD",
+    "title": "Lightspeed Commerce Inc.",
+    "sec_name": "Lightspeed Commerce Inc.",
+    "why": "no 10-K on file"
+  }
+]
