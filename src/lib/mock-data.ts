@@ -4479,6 +4479,9 @@ export const stances: Stance[] = [
 
   // Paradigm (vc ID 51) - founder_treatment (mixed - FTX loss but expressed regret, testified against SBF)
   { id: '1929', entity_type: 'vc', entity_id: '51', topic: 'founder_treatment', position: 'mixed', summary: 'Paradigm lost $278 million when FTX collapsed in November 2022, writing the investment to zero. Co-founder Matt Huang testified against Sam Bankman-Fried, revealing Paradigm had concerns about FTX\'s lack of corporate governance and Alameda relationship but was "manipulated" to invest. Huang expressed "deep regret" stating SBF "did not align with crypto\'s values." The firm was sued in a class action for hyping FTX\'s legitimacy.', source_url: 'https://cointelegraph.com/news/paradigm-co-founder-feels-deep-regret-investing-in-sbf-and-ftx', source_type: 'news', stance_date: '2022-11-11', verified: true },
+
+  // Paradigm (vc ID 51) - ai_ethics (supported - EVMbench with OpenAI, AI safety through cryptographic verification)
+  { id: '1930', entity_type: 'vc', entity_id: '51', topic: 'ai_ethics', position: 'supported', summary: 'Paradigm partnered with OpenAI to release EVMbench, a benchmark testing whether AI models can identify and patch smart contract vulnerabilities. The firm invested $50M in Nous Research (AI infrastructure) and developed internal AI project Centaur. Co-founder Matt Huang has emphasized how cryptographic primitives can enhance AI safety and transparency, positioning the firm at the intersection of AI safety and blockchain verification.', source_url: 'https://en.wikipedia.org/wiki/Paradigm_(venture_capital_firm)', source_type: 'news', stance_date: '2024-06-01', verified: true },
 ]
 
 // Helper functions to query data
