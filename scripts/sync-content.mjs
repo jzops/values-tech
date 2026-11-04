@@ -12,6 +12,12 @@
 
 import { writeFile } from "node:fs/promises";
 
+// Skip sync during Netlify PR preview builds — the PR branch IS the content.
+if (process.env.CONTEXT === "deploy-preview" || process.env.PULL_REQUEST === "true") {
+  console.log("[sync-content] deploy-preview detected — skipping sync, using branch content");
+  process.exit(0);
+}
+
 const REPO = "jzops/values-tech";
 const BRANCH = "main";
 const FILES = [
