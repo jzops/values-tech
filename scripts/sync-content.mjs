@@ -12,6 +12,15 @@
 
 import { writeFile } from "node:fs/promises";
 
+// Skip the sync for Netlify deploy-preview and branch-deploy builds: the
+// checkout already has the branch's own version of these files, and overwriting
+// them with main would discard the PR's changes.
+const netlifyContext = process.env.CONTEXT; // 'production' | 'deploy-preview' | 'branch-deploy'
+if (netlifyContext && netlifyContext !== "production") {
+  console.log(`[sync-content] skip: Netlify context is '${netlifyContext}', not production`);
+  process.exit(0);
+}
+
 const REPO = "jzops/values-tech";
 const BRANCH = "main";
 const FILES = [
