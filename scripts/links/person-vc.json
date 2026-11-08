@@ -1,0 +1,32 @@
+{
+  "_comment": [
+    "Hand-verified person -> VC firm links. Each one was checked by eye; none",
+    "were inferred from a role string.",
+    "",
+    "A heuristic pass proposed Marc Benioff -> Salesforce Ventures and Eric",
+    "Schmidt -> Google Ventures. Both are wrong: they ran the parent company and",
+    "were never partners at the fund. Linking them would have attributed a fund's",
+    "record to a person who never worked there. Hence this file.",
+    "",
+    "Skipped deliberately: Naval Ravikant (AngelList), Jason Calacanis (LAUNCH),",
+    "Travis Kalanick (10100) and Bill Ackman (Pershing Square) are real investors",
+    "whose vehicles are not tracked funds here, so there is nothing to link to.",
+    "",
+    "The link is navigation only. A partner's grade and the firm's are computed",
+    "from their own receipts and neither inherits the other's."
+  ],
+  "links": {
+    "31": { "vc": "1",   "who": "Marc Andreessen -> Andreessen Horowitz (co-founder)" },
+    "32": { "vc": "1",   "who": "Ben Horowitz -> Andreessen Horowitz (co-founder)" },
+    "63": { "vc": "1",   "who": "Steven Sinofsky -> Andreessen Horowitz (board partner, per his own role)" },
+    "15": { "vc": "5",   "who": "Peter Thiel -> Founders Fund (co-founder)" },
+    "33": { "vc": "113", "who": "Vinod Khosla -> Khosla Ventures (founder)" },
+    "59": { "vc": "113", "who": "Keith Rabois -> Khosla Ventures (returned 2024 after Founders Fund)" },
+    "34": { "vc": "7",   "who": "Reid Hoffman -> Greylock Partners (partner)" },
+    "35": { "vc": "116", "who": "Chamath Palihapitiya -> Social Capital (founder)" },
+    "38": { "vc": "11",  "who": "Michael Seibel -> Y Combinator (group partner)" },
+    "37": { "vc": "11",  "who": "Garry Tan -> Y Combinator (CEO)" },
+    "39": { "vc": "114", "who": "David Sacks -> Craft Ventures (co-founder)" },
+    "96": { "vc": "2",   "who": "Shaun Maguire -> Sequoia Capital (partner)" }
+  }
+}
