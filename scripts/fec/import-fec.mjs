@@ -34,6 +34,10 @@ async function fecSearch(name) {
   if (r.status === 429) throw new Error('RATE_LIMIT')
   if (!r.ok) throw new Error(`FEC ${r.status}`)
   const d = await r.json()
+  // Only cache a real result set. An error body ("over rate limit") written
+  // here would be replayed as "this donor has no records" on every later run,
+  // silently and permanently.
+  if (!Array.isArray(d.results)) throw new Error(d.error?.message || 'FEC: no results array')
   fs.writeFileSync(f, JSON.stringify(d))
   await sleep(1200)
   return d
@@ -52,7 +56,7 @@ for (const entry of ROSTER) {
   if (!person) { errors.push(`${entry.name}: not a tracked person`); continue }
   let d
   try { d = await fecSearch(entry.fec_name) }
-  catch (e) { errors.push(`${entry.name}: ${e.message}`); if (String(e.message) === 'RATE_LIMIT') break; continue }
+  catch (e) { errors.push(`${entry.name}: ${e.message}`); continue }
 
   const want = norm(entry.fec_name)
   for (const r of d.results || []) {

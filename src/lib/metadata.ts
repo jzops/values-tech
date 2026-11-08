@@ -1,20 +1,13 @@
 import type { Metadata } from 'next'
 import { SITE_NAME, TWITTER_HANDLE, abs, entityPath, entityOgPath } from './site'
 import type { BoardRow } from './board'
-import type { EntityType } from './types'
-
-const TYPE_NOUN: Record<EntityType, string> = {
-  company: 'company',
-  person: 'executive',
-  vc: 'venture fund',
-}
 
 /**
  * One builder for all three entity types so the page title, the card, and the
  * card's alt text can never disagree about what the record says.
  */
 export function entityMetadata(row: BoardRow): Metadata {
-  const { name, entityType, slug, grade, receipts, counts, topFlag } = row
+  const { name, entityType, slug, grade, receipts, counts, topFlag, typeLabel } = row
 
   const title = `${name} — the receipts`
 
@@ -33,10 +26,10 @@ export function entityMetadata(row: BoardRow): Metadata {
 
   const description = grade.rated || receipts > 0
     ? verdict +
-      `${receipts} documented receipt${receipts === 1 ? '' : 's'} on this ${TYPE_NOUN[entityType]}, ` +
+      `${receipts} documented receipt${receipts === 1 ? '' : 's'} on this ${typeLabel.toLowerCase()}, ` +
       `${counts.opposed} of them against.${flagPart} Every line links to a public source.`
     : verdict +
-      `This ${TYPE_NOUN[entityType]} is tracked but nothing is documented yet.`
+      `This ${typeLabel.toLowerCase()} is tracked but nothing is documented yet.`
 
   /** Headline used in the page title and on both card types. */
   const headline = grade.rated

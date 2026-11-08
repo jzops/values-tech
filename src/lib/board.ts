@@ -25,6 +25,21 @@ export interface BoardRow {
   grade: GradeResult
   /** Topic with the most `opposed` receipts — the headline flag. */
   topFlag: { id: string; name: string; icon: string; count: number } | null
+  /**
+   * What to call this entity on the card and in the page description.
+   *
+   * A partner at a fund is not an "executive". Calling one that collapses the
+   * person/firm distinction the moment someone shares the card, which is the
+   * one thing a VC partner's page exists to keep apart. Computed here so the
+   * share card and the metadata cannot drift.
+   */
+  typeLabel: string
+}
+
+function typeLabelFor(entity: Company | Person | VC, type: EntityType): string {
+  if (type === 'vc') return 'Venture Fund'
+  if (type === 'company') return 'Company'
+  return (entity as Person).current_vc_id ? 'Investor' : 'Executive'
 }
 
 function subtitleFor(entity: Company | Person | VC, type: EntityType): string | null {
@@ -69,6 +84,7 @@ function toRow(entity: Company | Person | VC, entityType: EntityType): BoardRow 
   }
 
   return {
+    typeLabel: typeLabelFor(entity, entityType),
     id: entity.id,
     name: entity.name,
     slug: entity.slug,

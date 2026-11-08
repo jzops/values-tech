@@ -27,6 +27,10 @@ export interface EntityProfileProps {
   donations: Donation[]
   relatedPeople?: Person[]
   relatedLabel?: string
+  /** Person pages: the fund or company this person belongs to, as a link.
+   *  The firm's grade and theirs stay separate — this is navigation, not
+   *  inheritance. */
+  affiliation?: { label: string; name: string; href: string; logo_url: string | null } | null
   /** VC pages only: companies this fund has backed. */
   portfolio?: PortfolioEntry[]
   /** Company pages only: funds that backed this company. */
@@ -43,6 +47,7 @@ export function EntityProfile({
   donations,
   relatedPeople = [],
   relatedLabel = 'Key people',
+  affiliation = null,
   portfolio = [],
   backers = [],
 }: EntityProfileProps) {
@@ -340,6 +345,30 @@ export function EntityProfile({
                     </Link>
                   ))}
                 </div>
+              </div>
+            )}
+
+            {affiliation && (
+              <div className="rounded-xl border border-line bg-ink-raised p-5">
+                <h3 className="label mb-4">{affiliation.label}</h3>
+                <Link
+                  href={affiliation.href}
+                  className="group flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-white/5 transition-colors"
+                >
+                  <LogoImage
+                    src={affiliation.logo_url}
+                    alt=""
+                    type="vc"
+                    className="w-9 h-9 rounded-lg overflow-hidden shrink-0 border border-line"
+                  />
+                  <span className="min-w-0 flex-1 text-sm font-medium text-paper truncate group-hover:text-accent transition-colors">
+                    {affiliation.name}
+                  </span>
+                </Link>
+                <p className="mt-3 text-xs text-paper-mute leading-relaxed">
+                  Graded separately. A partner&rsquo;s record is their own, and the
+                  firm&rsquo;s is the firm&rsquo;s.
+                </p>
               </div>
             )}
 

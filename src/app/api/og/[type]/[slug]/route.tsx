@@ -3,15 +3,8 @@ import { NextRequest } from 'next/server'
 import { getBoardRow, getBoardRank } from '@/lib/board'
 import { TOPICS } from '@/lib/constants'
 import { OG, POSITION_HEX, ogFonts, OG_HEADERS, clamp, nameSize } from '@/lib/og'
-import type { EntityType } from '@/lib/types'
 
 export const runtime = 'nodejs'
-
-const TYPE_LABEL: Record<EntityType, string> = {
-  company: 'Company',
-  person: 'Executive',
-  vc: 'Venture Fund',
-}
 
 export async function GET(
   _request: NextRequest,
@@ -148,7 +141,7 @@ export async function GET(
                     borderRadius: 6,
                   }}
                 >
-                  {TYPE_LABEL[type].toUpperCase()}
+                  {row.typeLabel.toUpperCase()}
                 </span>
                 <span style={{ fontSize: 26, color: OG.dim, marginLeft: 16 }}>
                   {clamp(grade.label, 30)}

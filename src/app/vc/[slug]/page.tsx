@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { EntityProfile } from '@/components/EntityProfile'
 import { getBoardRow, getBoardRank, getPortfolio } from '@/lib/board'
 import { entityMetadata } from '@/lib/metadata'
-import { getVCBySlug, getStatsForEntity, getDonationsForEntity } from '@/lib/mock-data'
+import { getVCBySlug, getStatsForEntity, getDonationsForEntity, getPeopleAtVC } from '@/lib/mock-data'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -36,6 +36,8 @@ export default async function VCPage({ params }: Props) {
       facts={facts}
       stats={getStatsForEntity('vc', vc.id)}
       donations={getDonationsForEntity('vc', vc.id)}
+      relatedPeople={getPeopleAtVC(vc.id)}
+      relatedLabel="Partners we track"
       portfolio={getPortfolio(vc.id)}
     />
   )

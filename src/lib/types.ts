@@ -19,6 +19,16 @@ export interface Person {
   slug: string
   photo_url: string | null
   current_company_id: string | null
+  /**
+   * The VC firm this person is a partner at, when they are one.
+   *
+   * Without this, a partner's conduct had nowhere to live but the firm's own
+   * record — which is how Shaun Maguire's posts ended up filed as Sequoia
+   * receipts, with no page of his own to point at. A person and their firm are
+   * now separate entities that link to each other, and neither inherits the
+   * other's grade.
+   */
+  current_vc_id?: string | null
   current_role: string | null
   twitter_handle: string | null
   linkedin_url: string | null

@@ -8,6 +8,7 @@ import {
   getStatsForEntity,
   getDonationsForEntity,
   companies,
+  vcs,
 } from '@/lib/mock-data'
 
 interface Props {
@@ -30,10 +31,14 @@ export default async function PersonPage({ params }: Props) {
   const company = person.current_company_id
     ? companies.find(c => c.id === person.current_company_id)
     : null
+  const firm = person.current_vc_id
+    ? vcs.find(v => v.id === person.current_vc_id)
+    : null
 
   const facts = [
     person.current_role && { label: 'Role', value: person.current_role },
     company && { label: 'Company', value: company.name },
+    firm && { label: 'Firm', value: firm.name },
     person.twitter_handle && { label: 'X', value: `@${person.twitter_handle}` },
   ].filter(Boolean) as { label: string; value: string }[]
 
@@ -46,6 +51,11 @@ export default async function PersonPage({ params }: Props) {
       facts={facts}
       stats={getStatsForEntity('person', person.id)}
       donations={getDonationsForEntity('person', person.id)}
+      affiliation={
+        firm
+          ? { label: 'Firm', name: firm.name, href: `/vc/${firm.slug}`, logo_url: firm.logo_url }
+          : null
+      }
     />
   )
 }
