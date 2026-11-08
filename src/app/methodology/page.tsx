@@ -1,15 +1,11 @@
 import { Metadata } from 'next'
+import { collectionMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
-  title: 'Methodology — Receipts.Tech',
-  description: 'How we research and verify the receipts documented on Receipts.Tech.',
-  openGraph: {
-    title: 'Methodology — Receipts.Tech',
-    description: 'How we research and verify the receipts documented on Receipts.Tech.',
-    images: ['/api/og/home'],
-  },
-  twitter: { card: 'summary_large_image', images: ['/api/og/home'] },
-}
+export const metadata: Metadata = collectionMetadata({
+  title: 'Methodology',
+  description: 'How we research, source and verify every receipt documented on Receipts.Tech.',
+  path: '/methodology',
+})
 
 export default function MethodologyPage() {
   return (

@@ -1,15 +1,11 @@
 import { Metadata } from 'next'
+import { collectionMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
-  title: 'Contribute — Receipts.Tech',
-  description: 'Help document the receipts on tech companies. Submit tips and sources.',
-  openGraph: {
-    title: 'Contribute — Receipts.Tech',
-    description: 'Help document the receipts on tech companies. Submit tips and sources.',
-    images: ['/api/og/home'],
-  },
-  twitter: { card: 'summary_large_image', images: ['/api/og/home'] },
-}
+export const metadata: Metadata = collectionMetadata({
+  title: 'Contribute',
+  description: 'Help document the receipts on tech companies, VCs and executives. Submit a tip, a source, or a correction.',
+  path: '/contribute',
+})
 
 export default function ContributePage() {
   return (

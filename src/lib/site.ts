@@ -12,11 +12,15 @@ export const SITE_URL =
 export const SITE_NAME = 'Receipts.Tech'
 export const SITE_TAGLINE = 'Before they send you their receipts, check theirs.'
 /**
- * Only emitted when set. A guessed handle in `twitter:site` attributes the
- * card to whoever actually owns it, so we publish nothing rather than a guess.
- * Set NEXT_PUBLIC_TWITTER_HANDLE (e.g. "@receiptstech") once the account exists.
+ * The account that owns the share cards. X renders this as the attribution line
+ * on every large-image card, so it must be the real handle — a guess credits
+ * the card to whoever actually owns that name.
+ *
+ * NOTE THE SPELLING, as with the domain: rec-I-E-pts. The handle is
+ * `@recieptsdottech` ("reciepts dot tech"), not `@receiptstech`.
  */
-export const TWITTER_HANDLE = process.env.NEXT_PUBLIC_TWITTER_HANDLE || undefined
+export const TWITTER_HANDLE =
+  process.env.NEXT_PUBLIC_TWITTER_HANDLE || '@recieptsdottech'
 
 /** Absolute URL for a site-relative path. */
 export function abs(path: string): string {
