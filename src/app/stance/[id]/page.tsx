@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { ShareActions } from '@/components/ShareActions'
 import { StanceCard } from '@/components/StanceCard'
-import { getStanceById, getEntityForStance, getStancesForEntity } from '@/lib/mock-data'
+import { getStanceById, getEntityForStance, getStancesForEntity, people } from '@/lib/mock-data'
 import { TOPICS, POSITION_LABELS, SOURCE_LABELS } from '@/lib/constants'
 import { SITE_NAME, TWITTER_HANDLE, SITE_URL, abs } from '@/lib/site'
 
@@ -134,6 +134,43 @@ export default async function StancePage({ params }: Props) {
             {stance.summary}
           </p>
 
+          {stance.quote && (
+            <figure className="mt-7 border-l-2 pl-5" style={{ borderColor: POSITION_VAR[stance.position] }}>
+              <blockquote className="text-lg md:text-xl text-paper leading-relaxed">
+                &ldquo;{stance.quote.text}&rdquo;
+              </blockquote>
+              <figcaption className="mt-2 text-sm text-paper-mute">
+                {(() => {
+                  const sid = stance.quote?.speaker_person_id
+                  const sp = sid ? people.find(p => p.id === sid) : null
+                  return sp
+                    ? <Link href={`/person/${sp.slug}`} className="hover:text-accent transition-colors">— {stance.quote!.speaker}</Link>
+                    : <>— {stance.quote!.speaker}</>
+                })()}
+              </figcaption>
+            </figure>
+          )}
+
+          {stance.outcome && (
+            <div className="mt-7">
+              <p className="label mb-1.5">What happened next</p>
+              <p className="text-base text-paper-dim leading-relaxed">{stance.outcome}</p>
+            </div>
+          )}
+
+          {(() => {
+            const aid = stance.actor_person_id
+            const a = aid ? people.find(p => p.id === aid) : null
+            if (!a) return null
+            return (
+              <p className="mt-5 text-sm text-paper-dim">
+                Attributed to{' '}
+                <Link href={`/person/${a.slug}`} className="text-accent hover:underline">{a.name}</Link>
+                {a.current_role ? `, ${a.current_role}` : ''}. They are graded separately.
+              </p>
+            )
+          })()}
+
           <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2">
             <span className="label">
               Source: {SOURCE_LABELS[stance.source_type as keyof typeof SOURCE_LABELS] || stance.source_type}
@@ -155,6 +192,32 @@ export default async function StancePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {(stance.corroboration?.length ?? 0) > 0 && (
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-10">
+          <div className="rounded-xl border border-line bg-ink-raised p-5">
+            <h2 className="label mb-1">Also reported by</h2>
+            <p className="text-sm text-paper-dim mb-4">
+              Independent reporting of the same event. One source is a claim; several are a record.
+            </p>
+            <ul className="space-y-2">
+              {stance.corroboration!.map(c => (
+                <li key={c.url}>
+                  <a
+                    href={c.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm text-accent hover:underline"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+                    {c.publisher}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
         <div className="rounded-xl border border-line bg-ink-raised p-5">

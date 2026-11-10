@@ -60,6 +60,51 @@ export interface Stance {
   stance_date: string | null
   verified: boolean
   created_at?: string
+
+  // ── Depth. All optional, so every existing receipt stays valid. ──────────
+  //
+  // A receipt used to be one paraphrased line and one link. A third of them
+  // were under 120 characters ("Coda laid off 12% of staff in 2023"), 58%
+  // carried no quote, and the single `source_url` meant nothing could ever be
+  // corroborated. These four fields are what turns a line into evidence.
+
+  /**
+   * The actual words, kept apart from our paraphrase of them. This is the most
+   * portable thing on the page — it is what gets screenshotted — and it is the
+   * part a subject cannot dispute without disputing their own statement.
+   */
+  quote?: {
+    text: string
+    speaker: string
+    /** Links the quote to that person's own page when we track them. */
+    speaker_person_id?: string | null
+  } | null
+
+  /**
+   * Independent reporting of the same event, beyond `source_url`.
+   *
+   * One source is a claim; three are a record. This is the difference between
+   * a receipt that survives being attacked and one that does not.
+   */
+  corroboration?: { url: string; publisher: string }[]
+
+  /**
+   * The tracked person who actually did or said this, when a company or fund
+   * receipt is really about one individual.
+   *
+   * Sequoia carried two receipts whose summaries were entirely about Shaun
+   * Maguire. Naming the actor is what keeps a firm's record honest about whose
+   * conduct it is describing, and links the two pages together.
+   */
+  actor_person_id?: string | null
+
+  /**
+   * What happened next — resigned, retracted, settled, fined, nothing.
+   *
+   * "Nothing happened" is a finding, not a blank. Say so explicitly rather
+   * than leaving the field off.
+   */
+  outcome?: string | null
 }
 
 export interface Topic {

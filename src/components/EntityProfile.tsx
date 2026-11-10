@@ -10,12 +10,6 @@ import { TOPICS } from '@/lib/constants'
 import type { BoardRow, PortfolioEntry } from '@/lib/board'
 import type { Stat, Donation, Person } from '@/lib/types'
 
-const TYPE_LABEL = {
-  company: 'Company',
-  person: 'Executive',
-  vc: 'Venture Fund',
-} as const
-
 export interface EntityProfileProps {
   row: BoardRow
   rank: number | null
@@ -127,7 +121,7 @@ export function EntityProfile({
 
               <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
                 <span className="label !text-ink bg-paper-dim px-2 py-0.5 rounded">
-                  {TYPE_LABEL[entityType]}
+                  {row.typeLabel}
                 </span>
                 <span className="text-lg font-medium" style={{ color: grade.color }}>
                   {grade.label}

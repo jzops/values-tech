@@ -82,6 +82,52 @@ Append to the `stances` array in `src/lib/mock-data.ts`.
 
 ---
 
+## 1b. Depth — the four fields that turn a line into evidence
+
+A receipt used to be one paraphrased sentence and one link. Measured across the
+corpus: **790 of 2,438 (32%) were under 120 characters** — "Coda laid off 12% of
+staff in 2023" — **58% carried no quote**, and the single `source_url` meant
+nothing could ever be corroborated. Four optional fields fix that. Use them.
+
+```typescript
+quote?: { text, speaker, speaker_person_id? }   // the actual words
+corroboration?: { url, publisher }[]            // independent reporting
+actor_person_id?: string                        // who actually did it
+outcome?: string                                // what happened next
+```
+
+**`quote`** is the highest-value field. It is the part that gets screenshotted,
+and the part a subject cannot dispute without disputing themselves. Quote
+verbatim, never tidied. Set `speaker_person_id` when we track the speaker — the
+quote then links to their page.
+
+**`corroboration`** is what makes a receipt survive being attacked. One source is
+a claim; three are a record. Every URL must resolve before you write it — check
+them, two of ten in the last batch were a 403 and a redirect and were dropped.
+
+**`actor_person_id`** names the individual behind a company or fund receipt. This
+is how a firm's record stays honest about whose conduct it describes, and it
+links the two pages. Sequoia once carried two receipts whose summaries were
+entirely about one partner.
+
+**`outcome`** answers "so what happened". *Nothing happened* is a finding — write
+it ("Maguire remains a partner and has not retracted the posts"), do not leave
+the field off. Never assert causation the sources do not: say an executive
+stepped aside the following month, not that they stepped aside **because** of it.
+
+### The three must not repeat each other
+
+This is the rule that makes the format read well rather than stutter. The first
+enriched batch had the quote sitting inside the summary and the outcome restated
+almost verbatim below it, so each receipt said everything twice.
+
+- **summary** — the setup. What happened, who, when, in what context.
+- **quote** — the words themselves. Never paraphrased again in the summary.
+- **outcome** — the consequence. Never previewed in the summary.
+
+Check it: the summary must not contain the quote, and must share no run of eight
+words with the outcome.
+
 ## 2. Position polarity — read this before coding anything
 
 `opposed` is the mark **against**. `supported` is the mark **in favour**. Each

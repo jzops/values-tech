@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ExternalLink } from 'lucide-react'
 import { Stance } from '@/lib/types'
 import { TOPICS, POSITION_LABELS, SOURCE_LABELS } from '@/lib/constants'
+import { people } from '@/lib/mock-data'
 
 const POSITION_COLOR: Record<Stance['position'], string> = {
   opposed: 'var(--opposed)',
@@ -28,6 +29,11 @@ export function StanceCard({
 }: StanceCardProps) {
   const topic = TOPICS[stance.topic as keyof typeof TOPICS]
   const color = POSITION_COLOR[stance.position]
+
+  // A company or fund receipt is often really about one person. Link them.
+  const actorId = stance.actor_person_id ?? stance.quote?.speaker_person_id ?? null
+  const actor = actorId ? people.find(p => p.id === actorId) : null
+  const extraSources = stance.corroboration ?? []
 
   const formattedDate = stance.stance_date
     ? new Date(stance.stance_date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
@@ -72,6 +78,33 @@ export function StanceCard({
 
           <p className="mt-2 text-sm text-paper-dim leading-relaxed">{stance.summary}</p>
 
+          {stance.quote && (
+            <figure
+              className="mt-3.5 border-l-2 pl-3.5"
+              style={{ borderColor: color }}
+            >
+              <blockquote className="text-sm text-paper leading-relaxed">
+                &ldquo;{stance.quote.text}&rdquo;
+              </blockquote>
+              <figcaption className="mt-1.5 label !text-[0.625rem]">
+                {actor ? (
+                  <Link href={`/person/${actor.slug}`} className="hover:!text-accent transition-colors">
+                    {stance.quote.speaker}
+                  </Link>
+                ) : (
+                  stance.quote.speaker
+                )}
+              </figcaption>
+            </figure>
+          )}
+
+          {stance.outcome && (
+            <p className="mt-3 text-sm text-paper-dim leading-relaxed">
+              <span className="label !text-[0.625rem] mr-1.5">What happened</span>
+              {stance.outcome}
+            </p>
+          )}
+
           <div className="mt-3.5 flex items-center gap-3 flex-wrap">
             <span className="label !text-[0.625rem]">
               {SOURCE_LABELS[stance.source_type as keyof typeof SOURCE_LABELS] || stance.source_type}
@@ -79,6 +112,19 @@ export function StanceCard({
             {stance.verified && (
               <span className="label !text-[0.625rem]" style={{ color: 'var(--supported)' }}>
                 ✓ Verified
+              </span>
+            )}
+            {actor && !stance.quote && (
+              <Link
+                href={`/person/${actor.slug}`}
+                className="label !text-[0.625rem] hover:!text-accent transition-colors"
+              >
+                ↳ {actor.name}
+              </Link>
+            )}
+            {extraSources.length > 0 && (
+              <span className="label !text-[0.625rem]" title={extraSources.map(c => c.publisher).join(', ')}>
+                +{extraSources.length} source{extraSources.length === 1 ? '' : 's'}
               </span>
             )}
             <Link
