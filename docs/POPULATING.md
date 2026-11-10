@@ -162,30 +162,39 @@ is the one other state with a real API (`data.texas.gov`, dataset `8w53-c4f6`),
 but it matched 13 of 314 tracked companies and several of those were collisions.
 Use `source_type: 'government_record'`, not `sec_filing`.
 
-**X — `scripts/x/fetch-quote.mjs`.** Tested, as of now:
+**X — `scripts/x/`.** Three different products get confused here. Tested:
 
-| endpoint | result |
+| what | result |
 |---|---|
-| `api.x.com/2` | 401 — needs a paid key |
+| `publish.x.com/oembed` | **200, no key** — verbatim text of a known post |
+| `api.x.ai` + `x_search` tool | **works, pay as you go** — searches X posts |
+| `api.x.com/2` (X API) | 401; Basic tier is ~$200/mo. Not needed |
 | `x.com/<user>/status/<id>` | 404 logged out |
-| `publish.x.com/oembed` | **200, no key, no auth** |
 
-So X **cannot be searched** for free — there is no way to discover posts by
-topic or account, and scraping the site requires auth. But oEmbed returns the
-exact text, author name and handle of any post whose URL you already have, which
-is the half that matters: a quote must be verbatim, and retyping one from a
-screenshot in an article is how quotes drift.
+A **Grok subscription is not API access.** X Premium / SuperGrok give you the
+chatbot; `x_search` needs an xAI API key from console.x.ai, billed separately at
+**$5 per 1,000 posts fetched** and $10 per 1,000 profiles, plus tokens. Put it in
+`~/.xai_key` or `$XAI_API_KEY`.
+
+The two halves are a pipeline, and the split matters:
 
 ```bash
-node scripts/x/fetch-quote.mjs https://x.com/<user>/status/<id>
+node scripts/x/discover.mjs --handle sequoia --topic dei    # find candidates
+node scripts/x/fetch-quote.mjs <post-url>                   # verify the wording
 ```
 
-It prints the `quote:` field ready to paste. Find the post through reporting,
-then confirm the wording through oEmbed — never the other way round.
+**Grok is discovery, never evidence.** It is a language model: it can paraphrase
+a post, merge two, or invent one. The only thing taken from `discover.mjs` is a
+**post URL**. The wording always comes from oEmbed, which returns what was
+actually posted. Never write a quote from model output, and never cite Grok as
+a source — cite the post, or the reporting that covered it.
 
-A 404 means deleted, private, or the account is gone. **That is a finding, not a
-dead end**: cite the article that preserved the post and say in the summary that
-it was later removed.
+`discover.mjs` supports `allowed_x_handles` (max 20), `excluded_x_handles`, and
+`from_date` / `to_date`. Allowed and excluded handles cannot be combined.
+
+An oEmbed 404 means deleted, private, or the account is gone. **That is a
+finding, not a dead end**: cite the article that preserved the post and say in
+the summary that it was later removed.
 
 ## 2. Position polarity — read this before coding anything
 
