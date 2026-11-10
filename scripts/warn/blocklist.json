@@ -1,0 +1,18 @@
+{
+  "_comment": [
+    "Tracked company names that must never be matched against a WARN filing.",
+    "",
+    "WARN rows carry a job-site employer name, so a common word matches the",
+    "wrong business constantly. Texas WARN alone produced 'Wise' (the tracked",
+    "company is a UK fintech with no 2019 Fort Worth site), 'Tempus' (Tempus AI",
+    "is Chicago-based) and fourteen 'Compass' notices averaging two employees.",
+    "",
+    "Same rule as scripts/edgar/aliases.json: if a name cannot be told apart",
+    "from an unrelated employer, it does not get matched at all."
+  ],
+  "blocklist": [
+    "Compass", "Wise", "Tempus", "Mercury", "Icon", "Oura", "Bolt", "Linear",
+    "Calm", "Alchemy", "Lattice", "Coda", "Runway", "Jasper", "Better",
+    "Box", "Ramp", "Remote", "Lever", "Circle", "Unity", "Root Insurance"
+  ]
+}

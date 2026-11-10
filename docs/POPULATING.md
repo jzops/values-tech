@@ -128,6 +128,65 @@ almost verbatim below it, so each receipt said everything twice.
 Check it: the summary must not contain the quote, and must share no run of eight
 words with the outcome.
 
+## 1c. Bulk sources for depth — WARN and X
+
+**California WARN — `scripts/warn/`.** The thinnest receipts in the corpus were
+layoff one-liners. WARN notices are the cure: a legally required state filing
+with an exact headcount, a notice date, an effective date and a county.
+
+```bash
+python3 scripts/warn/fetch-ca.py          # downloads the live .xlsx -> ca-warn.json
+node scripts/warn/import-warn.mjs         # dry run
+node scripts/warn/import-warn.mjs --write # append receipts
+```
+
+Four things this script knows that cost real time to learn:
+
+1. The sheet is named `'Detailed WARN Report '` **with a trailing space**. Match
+   it without stripping and you silently land on the summary sheet, which has
+   nine rows and no company column.
+2. One company files several notices on one day for different sites. That is one
+   layoff event. Intel filed 24 and 10 on the same date; Netflix 267 and 227.
+   Aggregate by company + notice date or you publish the same layoff five times.
+3. **2% of California's own rows list an effective date before the notice date**
+   — Netflix's October filing says 14 September. Publishing "took effect on X"
+   for a notice filed after X reads as our error, not the state's, so the date
+   is dropped whenever it is incoherent. The permanence still stands.
+4. Employer names collide worse here than anywhere, because the field is a job
+   *site* name. Texas WARN alone produced "Wise" (the tracked company is a UK
+   fintech), "Tempus" (Tempus AI is Chicago-based) and fourteen "Compass"
+   notices averaging two employees. `scripts/warn/blocklist.json` is the guard.
+
+Only the current fiscal year is machine-readable; earlier years are PDFs. Texas
+is the one other state with a real API (`data.texas.gov`, dataset `8w53-c4f6`),
+but it matched 13 of 314 tracked companies and several of those were collisions.
+Use `source_type: 'government_record'`, not `sec_filing`.
+
+**X — `scripts/x/fetch-quote.mjs`.** Tested, as of now:
+
+| endpoint | result |
+|---|---|
+| `api.x.com/2` | 401 — needs a paid key |
+| `x.com/<user>/status/<id>` | 404 logged out |
+| `publish.x.com/oembed` | **200, no key, no auth** |
+
+So X **cannot be searched** for free — there is no way to discover posts by
+topic or account, and scraping the site requires auth. But oEmbed returns the
+exact text, author name and handle of any post whose URL you already have, which
+is the half that matters: a quote must be verbatim, and retyping one from a
+screenshot in an article is how quotes drift.
+
+```bash
+node scripts/x/fetch-quote.mjs https://x.com/<user>/status/<id>
+```
+
+It prints the `quote:` field ready to paste. Find the post through reporting,
+then confirm the wording through oEmbed — never the other way round.
+
+A 404 means deleted, private, or the account is gone. **That is a finding, not a
+dead end**: cite the article that preserved the post and say in the summary that
+it was later removed.
+
 ## 2. Position polarity — read this before coding anything
 
 `opposed` is the mark **against**. `supported` is the mark **in favour**. Each

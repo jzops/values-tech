@@ -56,7 +56,12 @@ export interface Stance {
   position: 'supported' | 'opposed' | 'silent' | 'mixed'
   summary: string
   source_url: string
-  source_type: 'social_media' | 'press_release' | 'news' | 'sec_filing' | 'donation_record' | 'company_website' | 'interview'
+  source_type: 'social_media' | 'press_release' | 'news' | 'sec_filing' | 'donation_record'
+    | 'company_website' | 'interview'
+    /** State or federal filings that are not SEC: WARN layoff notices, NLRB
+     *  cases, FEC records. SOURCE_LABELS already carried this; the union did
+     *  not, so WARN receipts were briefly mislabelled as SEC filings. */
+    | 'government_record'
   stance_date: string | null
   verified: boolean
   created_at?: string

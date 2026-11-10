@@ -1,0 +1,4128 @@
+{
+ "source_url": "https://edd.ca.gov/siteassets/files/jobs_and_training/warn/warn_report1.xlsx",
+ "report": "WARN REPORT - 07/01/26 to 11/04/2026 A detailed WARN summary by county and filtered according to processed date. Table Spans cells A2 through I460.",
+ "rows": [
+  {
+   "company": "McDonald's Corporation",
+   "county": "Los Angeles County",
+   "notice": "2026-06-30",
+   "effective": "2026-09-01",
+   "employees": "2",
+   "kind": "Closure Permanent",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "Genentech, Inc.",
+   "county": "San Mateo County",
+   "notice": "2026-06-26",
+   "effective": "2026-07-29",
+   "employees": "103",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Athwal FDS Corporation",
+   "county": "San Bernardino County",
+   "notice": "2026-06-30",
+   "effective": "2026-08-30",
+   "employees": "35",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Blue Diamond Growers",
+   "county": "Sacramento County",
+   "notice": "2026-07-02",
+   "effective": "2026-09-04",
+   "employees": "31",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Kingdom Animalia, LLC (Hourglass Cosmetics)",
+   "county": "Los Angeles County",
+   "notice": "2026-07-02",
+   "effective": "2026-09-15",
+   "employees": "7",
+   "kind": "Closure Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "DHL Supply Chain",
+   "county": "Orange County",
+   "notice": "2026-07-02",
+   "effective": "2026-09-03",
+   "employees": "33",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "Obsidian",
+   "county": "Orange County",
+   "notice": "2026-07-06",
+   "effective": "2026-09-04",
+   "employees": "52",
+   "kind": "Layoff Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "Chevron",
+   "county": "Contra Costa County",
+   "notice": "2026-07-01",
+   "effective": "2026-09-01",
+   "employees": "180",
+   "kind": "Layoff Permanent",
+   "industry": "21 Mining Quarrying Oil and Gas Exraction"
+  },
+  {
+   "company": "LeeMAH Electronics",
+   "county": "San Mateo County",
+   "notice": "2026-07-07",
+   "effective": "2026-09-08",
+   "employees": "212",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Xpress Delivery LLC (DSJ9)",
+   "county": "Alameda County",
+   "notice": "2026-07-09",
+   "effective": "2026-09-09",
+   "employees": "80",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "OnPoint Logistics LLC",
+   "county": "San Francisco County",
+   "notice": "2026-07-09",
+   "effective": "2026-09-07",
+   "employees": "96",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "6th Street Center for Youth (Youth for Change)",
+   "county": "Butte County",
+   "notice": "2026-07-10",
+   "effective": "2026-08-31",
+   "employees": "6",
+   "kind": "Closure Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Sentinel Restaurant & Hospitality Group LLC",
+   "county": "Orange County",
+   "notice": "2026-07-08",
+   "effective": "2026-09-08",
+   "employees": "113",
+   "kind": "Closure Permanent",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "The Vons Companies Inc.",
+   "county": "Los Angeles County",
+   "notice": "2026-07-07",
+   "effective": "2026-09-05",
+   "employees": "55",
+   "kind": "Closure Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "GEODIS",
+   "county": "San Bernardino County",
+   "notice": "2026-07-06",
+   "effective": "2026-09-03",
+   "employees": "81",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "Conduent",
+   "county": "Orange County",
+   "notice": "2026-06-26",
+   "effective": "2026-08-28",
+   "employees": "51",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "GMRI, Inc. dba Yard House",
+   "county": "Orange County",
+   "notice": "2026-07-14",
+   "effective": "2026-09-14",
+   "employees": "78",
+   "kind": "Closure Permanent",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "GXO Logistics Worldwide, LLC",
+   "county": "San Bernardino County",
+   "notice": "2026-07-10",
+   "effective": "2026-09-18",
+   "employees": "46",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "Udemy, Inc.",
+   "county": "San Francisco County",
+   "notice": "2026-07-14",
+   "effective": "2026-09-11",
+   "employees": "28",
+   "kind": "Layoff Permanent",
+   "industry": "61 Educational Services"
+  },
+  {
+   "company": "AWCS, LLC (Cottonwood Post-Acute Rehab",
+   "county": "Yolo County",
+   "notice": "2026-07-13",
+   "effective": "2026-09-11",
+   "employees": "158",
+   "kind": "Closure Temporary",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Coursera, Inc.",
+   "county": "Santa Clara County",
+   "notice": "2026-07-14",
+   "effective": "2026-09-11",
+   "employees": "31",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "ELC Beauty LLC (Too Faced Cosmetics, LLC)",
+   "county": "Orange County",
+   "notice": "2026-07-14",
+   "effective": "2026-09-30",
+   "employees": "67",
+   "kind": "Closure Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Eargo, Inc.",
+   "county": "Santa Clara County",
+   "notice": "2026-07-15",
+   "effective": "2026-09-14",
+   "employees": "57",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Red Lobster Restaurants LLC",
+   "county": "Santa Barbara County",
+   "notice": "2026-07-14",
+   "effective": "2026-08-31",
+   "employees": "37",
+   "kind": "Closure Permanent",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "Phillips 66",
+   "county": "Los Angeles County",
+   "notice": "2026-07-16",
+   "effective": "2026-09-16",
+   "employees": "5",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "NBCUniversal Media, LLC - 1320",
+   "county": "Los Angeles County",
+   "notice": "2026-07-17",
+   "effective": "2026-08-28",
+   "employees": "3",
+   "kind": "Layoff Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "NBCUniversal Media, LLC - 1360",
+   "county": "Los Angeles County",
+   "notice": "2026-07-17",
+   "effective": "2026-08-28",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "NBCUniversal Media, LLC -1440",
+   "county": "Los Angeles County",
+   "notice": "2026-07-17",
+   "effective": "2026-08-28",
+   "employees": "87",
+   "kind": "Layoff Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "NBCUniversal Media, LLC - 1460",
+   "county": "Los Angeles County",
+   "notice": "2026-07-17",
+   "effective": "2026-08-28",
+   "employees": "55",
+   "kind": "Layoff Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "Aramark Campus, LLC",
+   "county": "San Bernardino County",
+   "notice": "2026-07-16",
+   "effective": "2026-07-31",
+   "employees": "94",
+   "kind": "Layoff Permanent",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "Monterey Mushrooms, LLC",
+   "county": "Santa Clara County",
+   "notice": "2026-07-17",
+   "effective": "2026-09-20",
+   "employees": "253",
+   "kind": "Layoff Permanent",
+   "industry": "11 Agriculture Forestry Fishing Hunting"
+  },
+  {
+   "company": "Ventura Coastal",
+   "county": "Tulare County",
+   "notice": "2026-07-15",
+   "effective": "2026-09-18",
+   "employees": "71",
+   "kind": "Layoff Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Magic Leap, Inc.",
+   "county": "Santa Clara County",
+   "notice": "2026-07-17",
+   "effective": "2026-10-01",
+   "employees": "76",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Wind & Sea Restaurant",
+   "county": "Orange County",
+   "notice": "2026-07-14",
+   "effective": "2026-09-15",
+   "employees": "198",
+   "kind": "Closure Permanent",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "DesigneRX Pharmaceuticals, Inc.",
+   "county": "Solano County",
+   "notice": "2026-07-20",
+   "effective": "2026-09-21",
+   "employees": "25",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Queen City Staffing",
+   "county": "Sonoma County",
+   "notice": "2026-07-14",
+   "effective": "2026-09-13",
+   "employees": "49",
+   "kind": "Closure Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "New Leaf Community Markets, Inc.",
+   "county": "Santa Clara County",
+   "notice": "2026-07-21",
+   "effective": "2026-09-20",
+   "employees": "61",
+   "kind": "Closure Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Pixar",
+   "county": "Alameda County",
+   "notice": "2026-07-21",
+   "effective": "2026-09-26",
+   "employees": "108",
+   "kind": "Layoff Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "CraftForce Services, Inc. (2330 Circadian Way)",
+   "county": "Sonoma County",
+   "notice": "2026-07-22",
+   "effective": "2026-09-20",
+   "employees": "51",
+   "kind": "Closure Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "CraftForce Services, Inc. (2753 Giffen Avenue)",
+   "county": "Sonoma County",
+   "notice": "2026-07-22",
+   "effective": "2026-09-20",
+   "employees": "7",
+   "kind": "Closure Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Fortrex",
+   "county": "Imperial County",
+   "notice": "2026-07-23",
+   "effective": "2026-08-21",
+   "employees": "91",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Uber Technologies, Inc. (1655 3rd Street)",
+   "county": "San Francisco County",
+   "notice": "2026-07-22",
+   "effective": "2026-09-21",
+   "employees": "26",
+   "kind": "Layoff Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "Uber Technologies, Inc. (1725 3rd St.)",
+   "county": "San Francisco County",
+   "notice": "2026-07-22",
+   "effective": "2026-09-21",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "Uber Technologies, Inc. (Remote)",
+   "county": "San Francisco County",
+   "notice": "2026-07-22",
+   "effective": "2026-09-21",
+   "employees": "14",
+   "kind": "Layoff Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "Chick-fil-A & Fig",
+   "county": "Los Angeles County",
+   "notice": "2026-07-24",
+   "effective": "2026-09-27",
+   "employees": "77",
+   "kind": "Layoff Temporary",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "PD Systems",
+   "county": "Monterey County",
+   "notice": "2026-07-27",
+   "effective": "2026-08-28",
+   "employees": "81",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Intel Corporation - Robert Noyce Building",
+   "county": "Santa Clara County",
+   "notice": "2026-07-24",
+   "effective": "2026-08-15",
+   "employees": "24",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Intel Corporation - SC-9",
+   "county": "Santa Clara County",
+   "notice": "2026-07-24",
+   "effective": "2026-08-15",
+   "employees": "10",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Intel Corporation - SC11",
+   "county": "Santa Clara County",
+   "notice": "2026-07-24",
+   "effective": "2026-08-15",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Intel Corporation - SC-12",
+   "county": "Santa Clara County",
+   "notice": "2026-07-24",
+   "effective": "2026-08-15",
+   "employees": "67",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "O'Brien's Market Inc.",
+   "county": "Stanislaus County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-26",
+   "employees": "50",
+   "kind": "Closure Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "O'Briens Market Inc.",
+   "county": "Stanislaus County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-27",
+   "employees": "67",
+   "kind": "Closure Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Sodexo",
+   "county": "Orange County",
+   "notice": "2026-07-24",
+   "effective": "2026-09-30",
+   "employees": "164",
+   "kind": "Closure Permanent",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "Yerba Mate Co., LLC - San Leandro",
+   "county": "Alameda County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-01",
+   "employees": "4",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Yerba Mate Co., LLC - Bakersfield/Fresno",
+   "county": "Kern County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-01",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Yerba Mate Co., LLC",
+   "county": "Los Angeles County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-01",
+   "employees": "6",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Yerba Mate Co., LLC - San Fernando Valley",
+   "county": "Los Angeles County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-01",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Yerba Mate Co., LLC - Santa Ana",
+   "county": "Orange County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-01",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Yerba Mate Co., LLC - Riverside",
+   "county": "Riverside County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-01",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Yerba Mate Co., LLC - Sacramento",
+   "county": "Sacramento County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-01",
+   "employees": "3",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Yerba Mate Co., LLC - South San Francisco",
+   "county": "San Mateo County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-01",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Yerba Mate Co., LLC - Santa Barbara",
+   "county": "Santa Barbara County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-01",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Yerba Mate Co., LLC - Santa Maria",
+   "county": "Santa Barbara County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-01",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Yerba Mate Co., LLC - Santa Cruz",
+   "county": "Santa Cruz County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-01",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Yerba Mate Co., LLC - Petaluma",
+   "county": "Sonoma County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-01",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Yerba Mate Co., LLC - Santa Rosa",
+   "county": "Sonoma County",
+   "notice": "2026-07-27",
+   "effective": "2026-09-01",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "ServiceNow, Inc.",
+   "county": "Santa Clara County",
+   "notice": "2026-07-28",
+   "effective": "2026-09-28",
+   "employees": "154",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "ServiceNow, Inc.",
+   "county": "San Diego County",
+   "notice": "2026-07-28",
+   "effective": "2026-09-28",
+   "employees": "133",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Silgan Containers",
+   "county": "Stanislaus County",
+   "notice": "2026-07-21",
+   "effective": "2026-09-21",
+   "employees": "55",
+   "kind": "Layoff Temporary",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Tencent America LLC",
+   "county": "Orange County",
+   "notice": "2026-07-29",
+   "effective": "2026-09-28",
+   "employees": "68",
+   "kind": "Layoff Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "Federal Express Corporation",
+   "county": "Riverside County",
+   "notice": "2026-07-29",
+   "effective": "2026-09-29",
+   "employees": "62",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "Federal Express Corporation",
+   "county": "San Bernardino County",
+   "notice": "2026-07-28",
+   "effective": "2026-09-28",
+   "employees": "54",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "Sunnyside Restaurant and Lodge",
+   "county": "Placer County",
+   "notice": "2026-07-28",
+   "effective": "2026-10-04",
+   "employees": "47",
+   "kind": "Closure Permanent",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "International Rescue Committee, Inc.",
+   "county": "Sacramento County",
+   "notice": "2026-07-28",
+   "effective": "2026-09-30",
+   "employees": "41",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "International Rescue Committee, Inc.",
+   "county": "Stanislaus County",
+   "notice": "2026-07-28",
+   "effective": "2026-09-30",
+   "employees": "15",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "WeDriveU, Inc.",
+   "county": "Kern County",
+   "notice": "2026-07-31",
+   "effective": "2026-10-01",
+   "employees": "34",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "WeDriveU, Inc.",
+   "county": "Kern County",
+   "notice": "2026-07-31",
+   "effective": "2026-10-01",
+   "employees": "12",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "WeDriveU, Inc.",
+   "county": "Kern County",
+   "notice": "2026-07-31",
+   "effective": "2026-10-01",
+   "employees": "15",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "WeDriveU, Inc.",
+   "county": "Kern County",
+   "notice": "2026-07-31",
+   "effective": "2026-10-01",
+   "employees": "1",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "WeDriveU, Inc.",
+   "county": "Kern County",
+   "notice": "2026-07-31",
+   "effective": "2026-10-01",
+   "employees": "1",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "Visa",
+   "county": "San Mateo County",
+   "notice": "2026-07-31",
+   "effective": "2026-10-01",
+   "employees": "320",
+   "kind": "Layoff Permanent",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "Veritone, Inc.",
+   "county": "Orange County",
+   "notice": "2026-07-30",
+   "effective": "2026-09-28",
+   "employees": "10",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Yamaha Motor Finance Corporation U.S.A.",
+   "county": "Orange County",
+   "notice": "2026-07-31",
+   "effective": "2026-10-01",
+   "employees": "61",
+   "kind": "Closure Permanent",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "TPE Acquisition, LLC - 5116",
+   "county": "San Bernardino County",
+   "notice": "2026-07-31",
+   "effective": "2026-09-30",
+   "employees": "3",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "TPE Acquisition, LLC - 5026",
+   "county": "San Bernardino County",
+   "notice": "2026-07-31",
+   "effective": "2026-09-30",
+   "employees": "12",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "Chime Financial, Inc.",
+   "county": "San Francisco County",
+   "notice": "2026-07-31",
+   "effective": "2026-09-30",
+   "employees": "135",
+   "kind": "Layoff Permanent",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "San Francisco Pretrial Diversion Project, Inc.",
+   "county": "San Francisco County",
+   "notice": "2026-07-30",
+   "effective": "2026-11-13",
+   "employees": "82",
+   "kind": "Closure Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Nutanix, Inc.",
+   "county": "Santa Clara County",
+   "notice": "2026-08-04",
+   "effective": "2026-10-05",
+   "employees": "65",
+   "kind": "Layoff Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "Eclipse Advantage, LLC",
+   "county": "San Bernardino County",
+   "notice": "2026-08-05",
+   "effective": "2026-10-05",
+   "employees": "18",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Salesforce, Inc.",
+   "county": "San Francisco County",
+   "notice": "2026-08-05",
+   "effective": "2026-10-05",
+   "employees": "74",
+   "kind": "Layoff Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "LAZ Parking California (9610 Sky Way)",
+   "county": "Los Angeles County",
+   "notice": "2026-08-06",
+   "effective": "2026-10-06",
+   "employees": "139",
+   "kind": "Layoff Permanent",
+   "industry": "81 Other Services Except Public Administration"
+  },
+  {
+   "company": "LAZ Parking California (5455 West 111th Street)",
+   "county": "Los Angeles County",
+   "notice": "2026-08-06",
+   "effective": "2026-10-06",
+   "employees": "58",
+   "kind": "Layoff Permanent",
+   "industry": "81 Other Services Except Public Administration"
+  },
+  {
+   "company": "LAZ Parking California (5251 West 98th Street)",
+   "county": "Los Angeles County",
+   "notice": "2026-08-06",
+   "effective": "2026-10-06",
+   "employees": "50",
+   "kind": "Layoff Permanent",
+   "industry": "81 Other Services Except Public Administration"
+  },
+  {
+   "company": "Staples Fulfillment Center",
+   "county": "Los Angeles County",
+   "notice": "2026-08-05",
+   "effective": "2026-10-09",
+   "employees": "109",
+   "kind": "Closure Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Essendant Co.",
+   "county": "Riverside County",
+   "notice": "2026-08-03",
+   "effective": "2026-10-03",
+   "employees": "4",
+   "kind": "Closure Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Essendant Co.",
+   "county": "Sacramento County",
+   "notice": "2026-08-03",
+   "effective": "2026-10-03",
+   "employees": "99",
+   "kind": "Closure Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Silgan Containers",
+   "county": "Stanislaus County",
+   "notice": "2026-07-21",
+   "effective": "2026-07-21",
+   "employees": "60",
+   "kind": "Layoff Temporary",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Renteria Vineyard Management",
+   "county": "Napa County",
+   "notice": "2026-08-07",
+   "effective": "2026-10-15",
+   "employees": "91",
+   "kind": "Layoff Temporary",
+   "industry": "11 Agriculture Forestry Fishing Hunting"
+  },
+  {
+   "company": "G3 Enterprises",
+   "county": "Stanislaus County",
+   "notice": "2026-08-07",
+   "effective": "2026-10-06",
+   "employees": "66",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Bumble Bee Foods, LLC",
+   "county": "Los Angeles County",
+   "notice": "2026-08-11",
+   "effective": "2026-11-19",
+   "employees": "197",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "ZOLL Medical Corporation",
+   "county": "Riverside County",
+   "notice": "2026-08-11",
+   "effective": "2027-02-01",
+   "employees": "78",
+   "kind": "Closure Permanent",
+   "industry": "81 Other Services Except Public Administration"
+  },
+  {
+   "company": "Sharp Metropolitan Medical Campus  - Sharp Memorial Hospital",
+   "county": "San Diego County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "20",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Sharp Metropolitan Medical Campus - Sharp Mesa Vista",
+   "county": "San Diego County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "134",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Sharp Metropolitan Medical Group - Sharp McDonald Center",
+   "county": "San Diego County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Sharp Metropolitan Medical Campus - Sharp Mary Birch Hospital",
+   "county": "San Diego County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "7",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Sharp Metropolitan Medical Campus - Sharp Outpatient Pavilion",
+   "county": "San Diego County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Adventist Health Glendale",
+   "county": "Los Angeles County",
+   "notice": "2026-08-11",
+   "effective": "2026-09-01",
+   "employees": "7",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "EBALDC (100 9th Street)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "4",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (121 E 12th Street)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (1448 10th Street)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (1825 San Pablo Ave., Suite 200)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "20",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (188 11th Street)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "4",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (1935 Seminary Ave)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (1955 San Pablo Ave)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "9",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (2201 Brush St.)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (2555 International BLVD)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (283 13th Street)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "4",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (2946 International BLVD)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (3501 San Pablo Ave)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "9",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (3850 San Pablo Ave)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (700 Willow Street)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (801 Pine Street)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "4",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (918 Clay Street)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (989 Brush Street)",
+   "county": "Alameda County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (120 Macdonald Ave)",
+   "county": "Contra Costa County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "EBALDC (907 Lake Street)",
+   "county": "Contra Costa County",
+   "notice": "2026-08-11",
+   "effective": "2026-10-10",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "92 Public Administration"
+  },
+  {
+   "company": "Universal City Studios Productions LLLP",
+   "county": "Los Angeles County",
+   "notice": "2026-08-13",
+   "effective": "2026-10-13",
+   "employees": "14",
+   "kind": "Layoff Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "Netflix, Inc.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-13",
+   "effective": "2026-07-14",
+   "employees": "59",
+   "kind": "Layoff Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "Roskam Baking Company dba Organic Milling",
+   "county": "Los Angeles County",
+   "notice": "2026-08-17",
+   "effective": "2026-10-02",
+   "employees": "115",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "LeeMAH Electronics",
+   "county": "San Mateo County",
+   "notice": "2026-08-17",
+   "effective": "2026-10-16",
+   "employees": "205",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Corteva Agriscience LLC",
+   "county": "Contra Costa County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-30",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Stockton Truss LLC",
+   "county": "San Joaquin County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-18",
+   "employees": "65",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Volume Services, Inc. (Sodexo)",
+   "county": "Ventura County",
+   "notice": "2026-08-17",
+   "effective": "2026-10-16",
+   "employees": "93",
+   "kind": "Layoff Permanent",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "Stone Brewing Co., LLC - Executive Place",
+   "county": "San Diego County",
+   "notice": "2026-08-19",
+   "effective": "2026-10-19",
+   "employees": "6",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Stone Brewing Co., LLC - Harmony Grove",
+   "county": "San Diego County",
+   "notice": "2026-08-19",
+   "effective": "2026-10-19",
+   "employees": "2",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Stone Brewing CO., LLC - Citracado Parkway",
+   "county": "San Diego County",
+   "notice": "2026-08-19",
+   "effective": "2026-10-19",
+   "employees": "50",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Flying Food Group, LLC",
+   "county": "San Mateo County",
+   "notice": "2026-08-14",
+   "effective": "2026-10-13",
+   "employees": "72",
+   "kind": "Closure Permanent",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "Silgan Containers",
+   "county": "Stanislaus County",
+   "notice": "2026-08-12",
+   "effective": "2026-10-12",
+   "employees": "120",
+   "kind": "Layoff Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Haas Automation, Inc.",
+   "county": "Ventura County",
+   "notice": "2026-08-19",
+   "effective": "2026-11-02",
+   "employees": "73",
+   "kind": "Relocation Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Blue Shield of California",
+   "county": "Alameda County",
+   "notice": "2026-08-21",
+   "effective": "2026-10-20",
+   "employees": "25",
+   "kind": "Layoff Permanent",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "Blue Shield of California (Building C)",
+   "county": "El Dorado County",
+   "notice": "2026-08-21",
+   "effective": "2026-10-20",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "Blue Shield of California (Building B)",
+   "county": "El Dorado County",
+   "notice": "2026-08-21",
+   "effective": "2026-10-20",
+   "employees": "12",
+   "kind": "Layoff Permanent",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "Blue Shield of California",
+   "county": "Los Angeles County",
+   "notice": "2026-08-21",
+   "effective": "2026-10-20",
+   "employees": "8",
+   "kind": "Layoff Permanent",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "Blue Shield of California",
+   "county": "Los Angeles County",
+   "notice": "2026-08-21",
+   "effective": "2026-10-20",
+   "employees": "3",
+   "kind": "Layoff Permanent",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "Blue Shield of California",
+   "county": "Sacramento County",
+   "notice": "2026-08-21",
+   "effective": "2026-10-20",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "Blue Shield of California",
+   "county": "San Diego County",
+   "notice": "2026-08-21",
+   "effective": "2026-10-20",
+   "employees": "4",
+   "kind": "Layoff Permanent",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "Blue Shield of California",
+   "county": "San Joaquin County",
+   "notice": "2026-08-21",
+   "effective": "2026-10-20",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "Cellares Corporation",
+   "county": "San Mateo County",
+   "notice": "2026-08-21",
+   "effective": "2026-10-20",
+   "employees": "100",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Apple, Inc. - Cupertino",
+   "county": "Santa Clara County",
+   "notice": "2026-08-20",
+   "effective": "2026-10-19",
+   "employees": "79",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Apple, Inc. - Sunnyvale",
+   "county": "Santa Clara County",
+   "notice": "2026-08-20",
+   "effective": "2026-10-19",
+   "employees": "28",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Apple, Inc. - Maude Ave.",
+   "county": "Santa Clara County",
+   "notice": "2026-08-20",
+   "effective": "2026-10-19",
+   "employees": "40",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Jabil Inc.",
+   "county": "Santa Clara County",
+   "notice": "2026-08-20",
+   "effective": "2026-11-23",
+   "employees": "382",
+   "kind": "Closure Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "BFG Supply Co., LLC",
+   "county": "San Bernardino County",
+   "notice": "2026-08-24",
+   "effective": "2026-10-25",
+   "employees": "37",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "BFG Supply Co., LLC",
+   "county": "Yolo County",
+   "notice": "2026-08-24",
+   "effective": "2026-10-25",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Levine Management Group, Inc.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-08-17",
+   "employees": "72",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "John Muir Physician Network - 5860 Owens Drive",
+   "county": "Alameda County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "John Muir Health - Treat Blvd.",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "23",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "John Muir Health - 1450 Treat Blvd.",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "4",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "John Muir Health - 1601 Ygnacio Valley Road",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "15",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "John Muir Health - 177 La Casa Via",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "John Muir Health - 2540 East Street",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "15",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "John Muir Health - 2540 East Street",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "3",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "John Muir Health - 2740 Grant Street",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "John Muir Health - 3480 Buskirk Ave.",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "John Muir Health - 5003 Commercial Circle",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "John Muir Physician Network - 1450 Treat Blvd.",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "6",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "John Muir Physician Network - 1601 Ygnacio Valley Road",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "John Muir Physician Network - 2700 Grant Street",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "John Muir Behavioral Health - 2740 Grant Street",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "John Muir Health - 2700 Grant Street",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-10-28",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "RTX",
+   "county": "Los Angeles County",
+   "notice": "2026-08-25",
+   "effective": "2026-10-23",
+   "employees": "7",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Raley's Store No. 336",
+   "county": "Contra Costa County",
+   "notice": "2026-08-27",
+   "effective": "2026-11-03",
+   "employees": "51",
+   "kind": "Closure Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Stanford Health Care - 1830 Embarcadero Rd.",
+   "county": "Santa Clara County",
+   "notice": "2026-08-28",
+   "effective": "2026-11-02",
+   "employees": "79",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Stanford Health Care - 1840 Embarcadero Rd.",
+   "county": "Santa Clara County",
+   "notice": "2026-08-28",
+   "effective": "2026-11-02",
+   "employees": "16",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Blue Diamond Growers",
+   "county": "Sacramento County",
+   "notice": "2026-08-28",
+   "effective": "2026-10-30",
+   "employees": "53",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Power Safety Service, LLC",
+   "county": "San Joaquin County",
+   "notice": "2026-08-28",
+   "effective": "2026-11-06",
+   "employees": "189",
+   "kind": "Closure Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Telecare Corporation - Brighter Tomorrow, Program 162",
+   "county": "Ventura County",
+   "notice": "2026-08-28",
+   "effective": "2026-10-29",
+   "employees": "23",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Telecare Corporation - House of Transitions",
+   "county": "Ventura County",
+   "notice": "2026-08-28",
+   "effective": "2026-10-29",
+   "employees": "16",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Telecare Corporation - Recovery Starship",
+   "county": "Ventura County",
+   "notice": "2026-08-28",
+   "effective": "2026-10-29",
+   "employees": "16",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Telecare Corporation - Stonehedge",
+   "county": "Ventura County",
+   "notice": "2026-08-28",
+   "effective": "2026-10-29",
+   "employees": "13",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Astrion",
+   "county": "Kern County",
+   "notice": "2026-08-28",
+   "effective": "2026-09-30",
+   "employees": "28",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Amazon - SJC13",
+   "county": "Santa Clara County",
+   "notice": "2026-08-28",
+   "effective": "2026-10-20",
+   "employees": "70",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Synopsys, Inc.",
+   "county": "Santa Clara County",
+   "notice": "2026-08-31",
+   "effective": "2026-12-16",
+   "employees": "128",
+   "kind": "Layoff Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "Amazon - SF019",
+   "county": "San Francisco County",
+   "notice": "2026-08-28",
+   "effective": "2026-10-20",
+   "employees": "78",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "24Hr Homecare, LLC",
+   "county": "Los Angeles County",
+   "notice": "2026-08-31",
+   "effective": "2026-09-15",
+   "employees": "738",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Clarmil Manufacturing Corporation",
+   "county": "Alameda County",
+   "notice": "2026-08-28",
+   "effective": "2026-10-30",
+   "employees": "108",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Arsenal Biosciences, Inc.",
+   "county": "San Mateo County",
+   "notice": "2026-08-31",
+   "effective": "2026-10-29",
+   "employees": "58",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "PayPal",
+   "county": "Santa Clara County",
+   "notice": "2026-08-31",
+   "effective": "2026-10-30",
+   "employees": "251",
+   "kind": "Layoff Permanent",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "Renewal by Andersen LLC",
+   "county": "Los Angeles County",
+   "notice": "2026-09-01",
+   "effective": "2026-11-02",
+   "employees": "153",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Renewal by Andersen LLC",
+   "county": "Orange County",
+   "notice": "2026-09-01",
+   "effective": "2026-11-02",
+   "employees": "79",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Renewal by Andersen LLC",
+   "county": "Orange County",
+   "notice": "2026-09-01",
+   "effective": "2026-11-02",
+   "employees": "52",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Foundation for California Community Colleges",
+   "county": "Sacramento County",
+   "notice": "2026-09-02",
+   "effective": "2026-10-30",
+   "employees": "178",
+   "kind": "Layoff Permanent",
+   "industry": "61 Educational Services"
+  },
+  {
+   "company": "Ventana Grill",
+   "county": "San Luis Obispo County",
+   "notice": "2026-09-02",
+   "effective": "2026-09-18",
+   "employees": "82",
+   "kind": "Closure Temporary",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "OVG Hospitality",
+   "county": "Ventura County",
+   "notice": "2026-09-03",
+   "effective": "2026-11-15",
+   "employees": "128",
+   "kind": "Layoff Permanent",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "Homeless Health Care Los Angeles - Crocker Street",
+   "county": "Los Angeles County",
+   "notice": "2026-09-02",
+   "effective": "2026-11-03",
+   "employees": "117",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Homeless Health Care Los Angeles - Maple Ave.",
+   "county": "Los Angeles County",
+   "notice": "2026-09-02",
+   "effective": "2026-11-03",
+   "employees": "16",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Homeless Health Care Los Angeles - 2nd Street",
+   "county": "Los Angeles County",
+   "notice": "2026-09-02",
+   "effective": "2026-11-03",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Grain Craft, LLC",
+   "county": "San Bernardino County",
+   "notice": "2026-09-01",
+   "effective": "2026-10-30",
+   "employees": "3",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "SonTek (Xylem, Inc.)",
+   "county": "San Diego County",
+   "notice": "2026-09-04",
+   "effective": "2026-11-06",
+   "employees": "36",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Eggo Company dba Kellanova",
+   "county": "Santa Clara County",
+   "notice": "2026-09-04",
+   "effective": "2026-11-04",
+   "employees": "112",
+   "kind": "Closure Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Ruiz Food Products, Inc.",
+   "county": "Tulare County",
+   "notice": "2026-09-04",
+   "effective": "2026-11-04",
+   "employees": "176",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Shell Catalyst & Technologies",
+   "county": "Contra Costa County",
+   "notice": "2026-09-09",
+   "effective": "2026-11-30",
+   "employees": "64",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Trailer Park, Inc.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-27",
+   "effective": "2026-07-07",
+   "employees": "119",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "University of Southern California (1042 Downey Way)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-09",
+   "effective": "2026-11-04",
+   "employees": "7",
+   "kind": "Layoff Permanent",
+   "industry": "61 Educational Services"
+  },
+  {
+   "company": "University of Southern California (1149 S. Hill Street)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-09",
+   "effective": "2026-11-04",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "61 Educational Services"
+  },
+  {
+   "company": "University of Southern California (1150 S. Olive Street)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-09",
+   "effective": "2026-11-04",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "61 Educational Services"
+  },
+  {
+   "company": "University of Southern California (12015 E Waterfront Dr.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-09",
+   "effective": "2026-11-04",
+   "employees": "8",
+   "kind": "Layoff Permanent",
+   "industry": "61 Educational Services"
+  },
+  {
+   "company": "University of Southern California (3649 McClintock Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-09",
+   "effective": "2026-11-04",
+   "employees": "21",
+   "kind": "Layoff Permanent",
+   "industry": "61 Educational Services"
+  },
+  {
+   "company": "University of Southern California (3740 McClintock Ave)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-09",
+   "effective": "2026-11-04",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "61 Educational Services"
+  },
+  {
+   "company": "University of Southern California (4676 Admiralty Way)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-09",
+   "effective": "2026-11-04",
+   "employees": "15",
+   "kind": "Layoff Permanent",
+   "industry": "61 Educational Services"
+  },
+  {
+   "company": "University of Southern California (746 W Adams Blvd.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-09",
+   "effective": "2026-11-04",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "61 Educational Services"
+  },
+  {
+   "company": "University of Southern California (854 Downey Way)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-09",
+   "effective": "2026-11-04",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "61 Educational Services"
+  },
+  {
+   "company": "University of Southern California (941 Bloom Walk)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-09",
+   "effective": "2026-11-04",
+   "employees": "4",
+   "kind": "Layoff Permanent",
+   "industry": "61 Educational Services"
+  },
+  {
+   "company": "Sapporo U.S.A. (1999 Citracado Parkway)",
+   "county": "San Diego County",
+   "notice": "2026-09-09",
+   "effective": "2026-11-13",
+   "employees": "200",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Sapporo U.S.A. (2865 Executive Place)",
+   "county": "San Diego County",
+   "notice": "2026-09-09",
+   "effective": "2026-11-13",
+   "employees": "6",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Sapporo U.S.A. (2005 Harmony Grove Rd)",
+   "county": "San Diego County",
+   "notice": "2026-09-09",
+   "effective": "2026-11-13",
+   "employees": "6",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Fuji Food Products, Inc.",
+   "county": "Los Angeles County",
+   "notice": "2026-09-10",
+   "effective": "2026-11-13",
+   "employees": "35",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "LeeMah Electronics",
+   "county": "San Mateo County",
+   "notice": "2026-09-11",
+   "effective": "2026-12-21",
+   "employees": "62",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Uber Technologies, Inc. - 200 Mathilda Place",
+   "county": "Santa Clara County",
+   "notice": "2026-09-02",
+   "effective": "2026-11-02",
+   "employees": "94",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Uber technologies, Inc. - 190 Mathilda Place",
+   "county": "Santa Clara County",
+   "notice": "2026-09-02",
+   "effective": "2026-11-02",
+   "employees": "43",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Oracle Pleasanton Campus (Pleasanton Campus)",
+   "county": "Alameda County",
+   "notice": "2026-09-14",
+   "effective": "2026-11-13",
+   "employees": "63",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Oracle America, Inc.",
+   "county": "San Mateo County",
+   "notice": "2026-09-14",
+   "effective": "2026-11-13",
+   "employees": "279",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Oracle America, Inc.",
+   "county": "Santa Clara County",
+   "notice": "2026-09-14",
+   "effective": "2026-11-13",
+   "employees": "99",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Uber Technologies, Inc. - 1655 3rd Street",
+   "county": "San Francisco County",
+   "notice": "2026-09-02",
+   "effective": "2026-11-02",
+   "employees": "151",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Uber Technologies, Inc. 1725 3rd Street",
+   "county": "San Francisco County",
+   "notice": "2026-09-02",
+   "effective": "2026-11-02",
+   "employees": "102",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Full Steam Staffing (2121 Boeing Way)",
+   "county": "San Joaquin County",
+   "notice": "2026-09-15",
+   "effective": "2026-11-04",
+   "employees": "91",
+   "kind": "Closure Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Full Steam Staffing (4239 Pock Lane)",
+   "county": "San Joaquin County",
+   "notice": "2026-09-15",
+   "effective": "2026-11-04",
+   "employees": "19",
+   "kind": "Closure Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "DesigneRx Pharmaceuticals, Inc.",
+   "county": "Solano County",
+   "notice": "2026-09-14",
+   "effective": "2026-11-15",
+   "employees": "7",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Pathways Community Services dba Clarvida",
+   "county": "Orange County",
+   "notice": "2026-09-01",
+   "effective": "2026-11-01",
+   "employees": "35",
+   "kind": "Closure Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Pathways Community Services dba Clarvida",
+   "county": "Orange County",
+   "notice": "2026-09-01",
+   "effective": "2026-11-01",
+   "employees": "32",
+   "kind": "Closure Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Maya Cinemas Fresno 16",
+   "county": "Fresno County",
+   "notice": "2026-09-16",
+   "effective": "2026-09-15",
+   "employees": "86",
+   "kind": "Closure Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "Levine Management Group, Inc. - 822 SRobertson",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "17",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Candlewood",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "2",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - San Dimas",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "3",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Ratner St.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "1",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. 95th Street",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "2",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Towne Avenue",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "4",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine management Groups, Inc. - Normandie Ave",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "2",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Group, Inc. - Rural Dr.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "4",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Group, Inc. - James M. Wood Blvd",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "2",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Group, Inc. - Gale Ave.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "2",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Potrero Grande",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "1",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Mesa St.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "2",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - 900-906 Crenshaw Blvd",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "1",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups. Inc. - Kingsley Dr.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "1",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Beachwood Dr.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "1",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Manhattan Pl",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "1",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Valley Blvd.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "4",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - 1053 S. New Hampshire Ave.-",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "1",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - 1057 S, New Hampshire Ave",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "1",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - 980 Palm Ave.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "2",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Arrow Highway",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "1",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Glendale Blvd",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "1",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Leveine Management Groups - 415 S. Oleander Ave.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "1",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - 425 S. Oleander Ave.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "3",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Canada Blvd.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "1",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Sunset Pl.",
+   "county": "Los Angeles County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "2",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Cypress Road",
+   "county": "Ventura County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "2",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Ponderosa Dr.",
+   "county": "Ventura County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "2",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Levine Management Groups, Inc. - Carmelita Ct.",
+   "county": "Ventura County",
+   "notice": "2026-08-18",
+   "effective": "2026-10-20",
+   "employees": "1",
+   "kind": "Layoff Not known at this time",
+   "industry": "53 Real Estate and Rental Leasing"
+  },
+  {
+   "company": "Amy's Kitchen, LLC",
+   "county": "Sonoma County",
+   "notice": "2026-09-17",
+   "effective": "2026-12-18",
+   "employees": "200",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Safeway, Inc. - Stoneridge Mall Road",
+   "county": "Alameda County",
+   "notice": "2026-09-17",
+   "effective": "2026-11-20",
+   "employees": "4",
+   "kind": "Layoff Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Safeway, Inc. - Dublin Canyon Road",
+   "county": "Alameda County",
+   "notice": "2026-09-17",
+   "effective": "2026-11-20",
+   "employees": "46",
+   "kind": "Layoff Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Intel Corporation - Robert Noyce Building",
+   "county": "Santa Clara County",
+   "notice": "2026-09-18",
+   "effective": "2026-09-30",
+   "employees": "22",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Intel Corporation, Inc. - SC-9",
+   "county": "Santa Clara County",
+   "notice": "2026-09-18",
+   "effective": "2026-09-30",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Intel Corporation - SC-11",
+   "county": "Santa Clara County",
+   "notice": "2026-09-18",
+   "effective": "2026-09-30",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Intel Corporation - SC-12",
+   "county": "Santa Clara County",
+   "notice": "2026-09-18",
+   "effective": "2026-09-30",
+   "employees": "24",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "IPS Nationwide, Inc.",
+   "county": "Alameda County",
+   "notice": "2026-09-18",
+   "effective": "2026-11-17",
+   "employees": "212",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "IPS Nationwide, Inc.",
+   "county": "Orange County",
+   "notice": "2026-09-18",
+   "effective": "2026-11-17",
+   "employees": "50",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Kaiser (1800 Harrison St.)",
+   "county": "Alameda County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser (One Kaiser Plaza)",
+   "county": "Alameda County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "11",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser",
+   "county": "Alameda County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "22",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser",
+   "county": "Los Angeles County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser (393 E. Walnut St.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser (74 N. Pasadena Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser (75N. Fair Oaks Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "3",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser (99 S. Oakland Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "20",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser",
+   "county": "Orange County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser (1830 California Ave.)",
+   "county": "Riverside County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser (1840 California Ave.)",
+   "county": "Riverside County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "4",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser",
+   "county": "Sacramento County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser",
+   "county": "Sacramento County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser (17140 Bernardo Center Dr.)",
+   "county": "San Diego County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser (3840 Murphy Canyon Rd.)",
+   "county": "San Diego County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser (8954 Rio San Diego Dr.)",
+   "county": "San Diego County",
+   "notice": "2026-09-21",
+   "effective": "2026-11-20",
+   "employees": "72",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "RTX",
+   "county": "Los Angeles County",
+   "notice": "2026-09-22",
+   "effective": "2026-11-27",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Capstone Delivery Inc.",
+   "county": "Los Angeles County",
+   "notice": "2026-09-23",
+   "effective": "2026-11-21",
+   "employees": "106",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "Quixote Studio Services - North Valley Campus A",
+   "county": "Los Angeles County",
+   "notice": "2026-09-15",
+   "effective": "2026-11-14",
+   "employees": "24",
+   "kind": "Layoff Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "Quixote Studio Services - North Valley",
+   "county": "Los Angeles County",
+   "notice": "2026-09-15",
+   "effective": "2026-11-14",
+   "employees": "29",
+   "kind": "Layoff Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "Quixote Studio Services - Sylmar South",
+   "county": "Los Angeles County",
+   "notice": "2026-09-15",
+   "effective": "2026-11-14",
+   "employees": "3",
+   "kind": "Layoff Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "Quixote Studio Services - Sylmar North",
+   "county": "Los Angeles County",
+   "notice": "2026-09-15",
+   "effective": "2026-11-14",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "Key Energy Services, LLC - Bakersfield Location",
+   "county": "Kern County",
+   "notice": "2026-09-23",
+   "effective": "2026-11-22",
+   "employees": "53",
+   "kind": "Closure Temporary",
+   "industry": "21 Mining Quarrying Oil and Gas Exraction"
+  },
+  {
+   "company": "Randstad Inhouse Services, LLC (Dreyer's)",
+   "county": "Kern County",
+   "notice": "2026-09-24",
+   "effective": "2026-11-19",
+   "employees": "426",
+   "kind": "Closure Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Key Energy Services, LLC - Ventura Location",
+   "county": "Ventura County",
+   "notice": "2026-09-23",
+   "effective": "2026-11-22",
+   "employees": "4",
+   "kind": "Closure Temporary",
+   "industry": "21 Mining Quarrying Oil and Gas Exraction"
+  },
+  {
+   "company": "City of Hope",
+   "county": "Los Angeles County",
+   "notice": "2026-09-23",
+   "effective": "2026-11-24",
+   "employees": "73",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "SAC Health (1003 East Brier Drive)",
+   "county": "San Bernardino County",
+   "notice": "2026-09-22",
+   "effective": "2026-09-28",
+   "employees": "42",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "SAC Health (250 South G St.)",
+   "county": "San Bernardino County",
+   "notice": "2026-09-22",
+   "effective": "2026-09-28",
+   "employees": "9",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Randstad Inhouse Services, LLC (Dreyer's)",
+   "county": "Tulare County",
+   "notice": "2026-09-24",
+   "effective": "2026-11-22",
+   "employees": "90",
+   "kind": "Closure Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Dreyer's Grand Ice Cream",
+   "county": "Kern County",
+   "notice": "2026-09-22",
+   "effective": "2026-11-19",
+   "employees": "221",
+   "kind": "Closure Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "City National Bank - Flower Street",
+   "county": "Los Angeles County",
+   "notice": "2026-09-24",
+   "effective": "2026-11-23",
+   "employees": "4",
+   "kind": "Layoff Not known at this time",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "City National Bank - Grand Ave.",
+   "county": "Los Angeles County",
+   "notice": "2026-09-24",
+   "effective": "2026-11-23",
+   "employees": "15",
+   "kind": "Layoff Not known at this time",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "Covenant Aviation Security, LLC",
+   "county": "San Francisco County",
+   "notice": "2026-09-28",
+   "effective": "2026-11-30",
+   "employees": "1279",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "BioMarin Pharmaceutical Inc.",
+   "county": "Marin County",
+   "notice": "2026-09-24",
+   "effective": "2026-12-04",
+   "employees": "117",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Workday Inc.",
+   "county": "Alameda County",
+   "notice": "2026-09-29",
+   "effective": "2026-11-30",
+   "employees": "142",
+   "kind": "Layoff Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "Corteva Agriscience LLC",
+   "county": "Contra Costa County",
+   "notice": "2026-09-28",
+   "effective": "2026-10-30",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Constellis, LLC (1060 N Eastern Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (1104 N. Eastern Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (11515 S. Colima Rd.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (11700 S. Alameda St.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (11703 S. Alameda St.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (11703 W. Alameda St.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (12335 Civic Center Dr.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (1310 W Imperial Hwy)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (13483 Fiji Way)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (1445 McKinley Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (150 N Hudson Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (21356 S. Avalon Blvd.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (21695 Valley Blvd.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (26123 S. Narbonne Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (26201 Golden Valley Rd.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (270 S. Walnut Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (270 W. Walnut Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (27050 Agoura Rd.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (29380 The Old Road)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (441 Bauchet St.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (4554 N. Briggs Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (501 W. Lancaster Blvd.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (5019 E 3rd St.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (5130 N. Clark Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (6631 S Passons Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (750 E Ave Q)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (780 N. San Vicenta Blvd.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Constellis, LLC (8838 E. Las Tunas Dr.)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-29",
+   "effective": "2026-10-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Dreyer's Grand Ice Cream",
+   "county": "Tulare County",
+   "notice": "2026-09-22",
+   "effective": "2026-11-19",
+   "employees": "221",
+   "kind": "Closure Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "DLVR (A Corp)",
+   "county": "Los Angeles County",
+   "notice": "2026-09-30",
+   "effective": "2026-12-04",
+   "employees": "60",
+   "kind": "Closure Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "McKinley Paper and Packaging Company",
+   "county": "Los Angeles County",
+   "notice": "2026-09-28",
+   "effective": "2026-11-30",
+   "employees": "45",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Becton, Dickinson and Company (BD)",
+   "county": "San Diego County",
+   "notice": "2026-09-24",
+   "effective": "2026-09-01",
+   "employees": "85",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "TruFusion West Hollywood LLC",
+   "county": "Los Angeles County",
+   "notice": "2026-10-01",
+   "effective": "2026-11-30",
+   "employees": "92",
+   "kind": "Closure Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "Magic Leap, Inc.",
+   "county": "Santa Clara County",
+   "notice": "2026-10-01",
+   "effective": "2026-12-01",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Blue Diamond Growers",
+   "county": "Sacramento County",
+   "notice": "2026-10-02",
+   "effective": "2026-12-04",
+   "employees": "3",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Monroe Operations, LLC, dba Newport Healthcare - Pimlico",
+   "county": "Ventura County",
+   "notice": "2026-09-30",
+   "effective": "2026-09-30",
+   "employees": "3",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Monroe Operations, LLC, dba Newport Healthcare - Alhambra",
+   "county": "Ventura County",
+   "notice": "2026-09-30",
+   "effective": "2026-09-30",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Monroe Operations, LLC, dba Newport Healthcare - Presilla",
+   "county": "Ventura County",
+   "notice": "2026-09-30",
+   "effective": "2026-09-30",
+   "employees": "8",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Monroe Operations, LLC, dba Newport Healthcare - Read",
+   "county": "Ventura County",
+   "notice": "2026-09-30",
+   "effective": "2026-09-30",
+   "employees": "6",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Monroe Operations, LLC, dba Newport Healthcare - Valley Vista",
+   "county": "Ventura County",
+   "notice": "2026-09-30",
+   "effective": "2026-09-30",
+   "employees": "18",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser Foundation Hospitals and Kaiser Foundation Health Plan, Inc.",
+   "county": "Alameda County",
+   "notice": "2026-10-05",
+   "effective": "2026-12-04",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser Foundation Hospitals and Kaiser Foundation Health Plan, Inc.",
+   "county": "Alameda County",
+   "notice": "2026-10-05",
+   "effective": "2026-12-04",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser Foundation Hospitals and Kaiser Foundation Health Plan, Inc. (74 N. Pasadena Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-10-05",
+   "effective": "2026-12-04",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser Foundation Hospitals and Kaiser Foundation Health Plan, Inc. (393 E. Walnut St.)",
+   "county": "Los Angeles County",
+   "notice": "2026-10-05",
+   "effective": "2026-12-04",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser Foundation Hospitals and Kaiser Foundation Health Plan, Inc.",
+   "county": "San Diego County",
+   "notice": "2026-10-05",
+   "effective": "2026-12-04",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "AMF Bowling Centers, Inc. Castle Park",
+   "county": "Riverside County",
+   "notice": "2026-10-05",
+   "effective": "2026-12-04",
+   "employees": "130",
+   "kind": "Layoff Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "Caribou Biosciences, Inc.",
+   "county": "Alameda County",
+   "notice": "2026-10-06",
+   "effective": "2026-12-07",
+   "employees": "87",
+   "kind": "Closure Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Cayuga Home for Children",
+   "county": "Los Angeles County",
+   "notice": "2026-10-05",
+   "effective": "2027-01-04",
+   "employees": "12",
+   "kind": "Closure Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Neogen Care Home Health Agency",
+   "county": "Los Angeles County",
+   "notice": "2026-09-30",
+   "effective": "2026-09-11",
+   "employees": "148",
+   "kind": "Closure Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "ODS Technologies LP and Betfair Interactive US LLC",
+   "county": "Los Angeles County",
+   "notice": "2026-10-01",
+   "effective": "2026-11-30",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "Beachbody, LLC",
+   "county": "Los Angeles County",
+   "notice": "2026-10-06",
+   "effective": "2026-12-07",
+   "employees": "80",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Jacuzzi",
+   "county": "San Bernardino County",
+   "notice": "2026-10-08",
+   "effective": "2026-12-07",
+   "employees": "42",
+   "kind": "Closure Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Haas Automation, Inc.",
+   "county": "Ventura County",
+   "notice": "2026-10-07",
+   "effective": "2027-01-04",
+   "employees": "74",
+   "kind": "Relocation Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Sapporo U.S.A. - Executive Place",
+   "county": "San Diego County",
+   "notice": "2026-10-09",
+   "effective": "2026-12-11",
+   "employees": "1",
+   "kind": "Closure Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Sapporo U.S.A - Citracado Parkway",
+   "county": "San Diego County",
+   "notice": "2026-10-09",
+   "effective": "2026-12-11",
+   "employees": "2",
+   "kind": "Closure Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Phillips 66 - Wilmington",
+   "county": "Los Angeles County",
+   "notice": "2026-10-09",
+   "effective": "2026-12-09",
+   "employees": "5",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Phillips 66 - Carson",
+   "county": "Los Angeles County",
+   "notice": "2026-10-09",
+   "effective": "2026-12-09",
+   "employees": "3",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Kaiser Foundation Hospitals and Kaiser Foundation Health Plan, Inc.",
+   "county": "Alameda County",
+   "notice": "2026-10-12",
+   "effective": "2026-12-11",
+   "employees": "7",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser Foundation Hospitals and Kaiser Foundation Health Plan, Inc.",
+   "county": "Sacramento County",
+   "notice": "2026-10-12",
+   "effective": "2026-12-11",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "ServiceNow, Inc.",
+   "county": "Santa Clara County",
+   "notice": "2026-10-13",
+   "effective": "2026-12-14",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "ServiceNow, Inc.",
+   "county": "San Diego County",
+   "notice": "2026-10-13",
+   "effective": "2026-12-14",
+   "employees": "18",
+   "kind": "Layoff Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "The Neil Jones Food Company dba Tomatek",
+   "county": "Fresno County",
+   "notice": "2026-10-14",
+   "effective": "2026-12-14",
+   "employees": "116",
+   "kind": "Layoff Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Menzies Aviation",
+   "county": "Los Angeles County",
+   "notice": "2026-10-05",
+   "effective": "2026-11-19",
+   "employees": "137",
+   "kind": "Layoff Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "Fender Musical Instruments Corporation",
+   "county": "Riverside County",
+   "notice": "2026-10-15",
+   "effective": "2026-12-14",
+   "employees": "533",
+   "kind": "Closure Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Myers Power Products, Inc.",
+   "county": "San Bernardino County",
+   "notice": "2026-10-09",
+   "effective": "2026-12-15",
+   "employees": "206",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Formagrid Inc. dba Airtable",
+   "county": "San Francisco County",
+   "notice": "2026-10-15",
+   "effective": "2027-01-15",
+   "employees": "190",
+   "kind": "Layoff Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "Silverado Senior Living Managment Inc.",
+   "county": "Los Angeles County",
+   "notice": "2026-10-14",
+   "effective": "2026-12-15",
+   "employees": "7",
+   "kind": "Closure Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Baloian Farms",
+   "county": "Fresno County",
+   "notice": "2026-10-01",
+   "effective": "2026-10-30",
+   "employees": "106",
+   "kind": "Layoff Temporary",
+   "industry": "11 Agriculture Forestry Fishing Hunting"
+  },
+  {
+   "company": "Kaiser Foundation Hospitals and Kaiser Foundation Health Plan, Inc. (1800 Harrison St.)",
+   "county": "Alameda County",
+   "notice": "2026-10-19",
+   "effective": "2026-12-18",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser Foundation Hospitals and Kaiser Foundation Health Plan, Inc. (One Kaiser Plaza)",
+   "county": "Alameda County",
+   "notice": "2026-10-19",
+   "effective": "2026-12-18",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser Foundation Hospitals and Kaiser Foundation Health Plan, Inc. (75 N. Fair Oaks Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-10-19",
+   "effective": "2026-12-18",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser Foundation Hospitals and Kaiser Foundation Health Plan, Inc. (99 S. Oakland Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-10-19",
+   "effective": "2026-12-18",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser Foundation Hospitals and Kaiser Foundation Health Plan, Inc.",
+   "county": "Marin County",
+   "notice": "2026-10-19",
+   "effective": "2026-12-18",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser Foundation Hospitals and Kaiser Foundation Health Plan, Inc.",
+   "county": "Riverside County",
+   "notice": "2026-10-19",
+   "effective": "2026-12-18",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Kaiser Foundation Hospitals and Kaiser Foundation Health Plan, Inc.",
+   "county": "Sacramento County",
+   "notice": "2026-10-19",
+   "effective": "2026-12-18",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Tree Service Unlimited Inc.",
+   "county": "El Dorado County",
+   "notice": "2026-10-13",
+   "effective": "2026-12-14",
+   "employees": "137",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Netflix, Inc.",
+   "county": "Los Angeles County",
+   "notice": "2026-10-16",
+   "effective": "2026-09-14",
+   "employees": "267",
+   "kind": "Layoff Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "Netflix, Inc.",
+   "county": "Santa Clara County",
+   "notice": "2026-10-16",
+   "effective": "2026-09-14",
+   "employees": "227",
+   "kind": "Layoff Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "Dreyer's Grand Ice Cream",
+   "county": "Kern County",
+   "notice": "2026-10-20",
+   "effective": "2026-12-19",
+   "employees": "380",
+   "kind": "Closure Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Safeway, Inc.",
+   "county": "Contra Costa County",
+   "notice": "2026-10-20",
+   "effective": "2026-12-20",
+   "employees": "92",
+   "kind": "Closure Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Randstad (Dreyer's Grand Ice Cream)",
+   "county": "Tulare County",
+   "notice": "2026-10-20",
+   "effective": "2026-12-19",
+   "employees": "91",
+   "kind": "Closure Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Dreyer's Grand Ice Cream",
+   "county": "Kern County",
+   "notice": "2026-10-19",
+   "effective": "2026-12-19",
+   "employees": "715",
+   "kind": "Closure Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "eBay Inc.",
+   "county": "Santa Clara County",
+   "notice": "2026-10-21",
+   "effective": "2026-10-21",
+   "employees": "229",
+   "kind": "Layoff Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "DesigneRx Pharmaceuticals, Inc.",
+   "county": "Solano County",
+   "notice": "2026-10-21",
+   "effective": "2026-12-23",
+   "employees": "6",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Dreyer's Grand Ice Cream",
+   "county": "Tulare County",
+   "notice": "2026-10-19",
+   "effective": "2026-12-19",
+   "employees": "448",
+   "kind": "Closure Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Georg Fischer Signet LLC",
+   "county": "Los Angeles County",
+   "notice": "2026-10-22",
+   "effective": "2026-12-21",
+   "employees": "107",
+   "kind": "Closure Temporary",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Intel Corporation",
+   "county": "Sacramento County",
+   "notice": "2026-10-22",
+   "effective": "2026-10-31",
+   "employees": "67",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "24Hr Homecare",
+   "county": "Los Angeles County",
+   "notice": "2026-10-01",
+   "effective": "2026-12-17",
+   "employees": "875",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Conduent State & Local Solutions, Inc.",
+   "county": "San Francisco County",
+   "notice": "2026-10-23",
+   "effective": "2026-12-22",
+   "employees": "64",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "The Madrona",
+   "county": "Sonoma County",
+   "notice": "2026-10-23",
+   "effective": "2027-01-03",
+   "employees": "77",
+   "kind": "Closure Temporary",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "Everidge Inc.",
+   "county": "San Bernardino County",
+   "notice": "2026-10-25",
+   "effective": "2027-02-26",
+   "employees": "90",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Tawa, Inc. dba 99 Ranch Market",
+   "county": "San Bernardino County",
+   "notice": "2026-10-26",
+   "effective": "2026-11-15",
+   "employees": "49",
+   "kind": "Closure Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Tawa, Inc. dba 99 Ranch Market",
+   "county": "Alameda County",
+   "notice": "2026-10-26",
+   "effective": "2026-12-05",
+   "employees": "54",
+   "kind": "Closure Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Frontapp, Inc.",
+   "county": "San Francisco County",
+   "notice": "2026-10-27",
+   "effective": "2026-10-27",
+   "employees": "53",
+   "kind": "Layoff Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "Walt Disney Parks & Resorts US, Inc.",
+   "county": "Los Angeles County",
+   "notice": "2026-10-27",
+   "effective": "2026-12-29",
+   "employees": "159",
+   "kind": "Layoff Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "Levy",
+   "county": "Alameda County",
+   "notice": "2026-10-26",
+   "effective": "2026-12-31",
+   "employees": "181",
+   "kind": "Closure Permanent",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "Artiva Biotherapeutics, Inc.",
+   "county": "San Diego County",
+   "notice": "2026-10-27",
+   "effective": "2026-12-31",
+   "employees": "131",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Dropbox, Inc.",
+   "county": "San Francisco County",
+   "notice": "2026-10-28",
+   "effective": "2026-11-18",
+   "employees": "57",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "24 Hr Homecare",
+   "county": "Los Angeles County",
+   "notice": "2026-10-28",
+   "effective": "2027-01-01",
+   "employees": "14",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "Comcast",
+   "county": "Alameda County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "82",
+   "kind": "Layoff Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "Worldwide Flight Services, Inc.",
+   "county": "San Diego County",
+   "notice": "2026-10-29",
+   "effective": "2027-01-04",
+   "employees": "59",
+   "kind": "Layoff Permanent",
+   "industry": "48-49 Transportation and Warehousing"
+  },
+  {
+   "company": "Eterna Management, LLC",
+   "county": "Orange County",
+   "notice": "2026-10-23",
+   "effective": "2026-12-22",
+   "employees": "124",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Eterna Management",
+   "county": "Orange County",
+   "notice": "2026-10-23",
+   "effective": "2026-12-22",
+   "employees": "6",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "The Vons Companies Inc.",
+   "county": "Orange County",
+   "notice": "2026-10-30",
+   "effective": "2027-01-02",
+   "employees": "78",
+   "kind": "Closure Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Renewable Solar, Inc.",
+   "county": "Kings County",
+   "notice": "2026-10-30",
+   "effective": "2026-12-30",
+   "employees": "56",
+   "kind": "Layoff Permanent",
+   "industry": "22 Utilities"
+  },
+  {
+   "company": "iLEAD Lancaster",
+   "county": "Los Angeles County",
+   "notice": "2026-10-30",
+   "effective": "2026-12-31",
+   "employees": "119",
+   "kind": "Layoff Permanent",
+   "industry": "61 Educational Services"
+  },
+  {
+   "company": "AEG Management Oakland LLC",
+   "county": "Alameda County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "1605",
+   "kind": "Layoff Permanent",
+   "industry": "71 Arts Entertainment and Recreation"
+  },
+  {
+   "company": "Avidity Biosciences, Inc.",
+   "county": "San Diego County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "40",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Sapporo U.S.A.",
+   "county": "San Diego County",
+   "notice": "2026-10-30",
+   "effective": "2026-12-11",
+   "employees": "1",
+   "kind": "Closure Permanent",
+   "industry": "42 Wholesale Trade"
+  },
+  {
+   "company": "Endeavors",
+   "county": "San Diego County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "31",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "RTX",
+   "county": "Los Angeles County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "14",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Econolite Control Products, Inc.",
+   "county": "Orange County",
+   "notice": "2026-10-30",
+   "effective": "2026-12-31",
+   "employees": "13",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Danone USA PBC",
+   "county": "Los Angeles County",
+   "notice": "2026-10-30",
+   "effective": "2026-12-29",
+   "employees": "135",
+   "kind": "Closure Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Community Tree Service, LLC",
+   "county": "Monterey County",
+   "notice": "2026-10-30",
+   "effective": "2027-01-02",
+   "employees": "163",
+   "kind": "Layoff Permanent",
+   "industry": "11 Agriculture Forestry Fishing Hunting"
+  },
+  {
+   "company": "Pacific Coast Grill Inc.",
+   "county": "San Diego County",
+   "notice": "2026-10-30",
+   "effective": "2026-03-01",
+   "employees": "119",
+   "kind": "Closure Temporary",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "Raley's",
+   "county": "Sonoma County",
+   "notice": "2026-10-28",
+   "effective": "2026-12-10",
+   "employees": "40",
+   "kind": "Closure Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Davey Tree Surgery Company (Remote)",
+   "county": "Alameda County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "57",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Davey Tree Surgery Company (2505 N Palm Drive)",
+   "county": "Los Angeles County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "64",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Davey Tree Surgery Company (1847 144th Street)",
+   "county": "Los Angeles County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "12",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Davey Tree Surgery Company (12694 Los Nietos Road)",
+   "county": "Los Angeles County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "39",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Davey Tree Surgery Company (244 Hall Road)",
+   "county": "Monterey County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "34",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Davey Tree Surgery Company (8188 Katella Avenue)",
+   "county": "Orange County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "37",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Davey Tree Surgery Company (R/O 6 Church Street)",
+   "county": "Santa Clara County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "20",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Davey Tree Surgery Company (E/O Crittenden Lane)",
+   "county": "Santa Clara County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "19",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Davey Tree Surgery (5843 Graham Hill Road)",
+   "county": "Santa Cruz County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "64",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Davey Tree Surgery Company (132 Roache Road)",
+   "county": "Santa Cruz County",
+   "notice": "2026-10-29",
+   "effective": "2026-12-31",
+   "employees": "22",
+   "kind": "Layoff Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Chick-fil-A - Worthy Integrated Holdings LLC",
+   "county": "Ventura County",
+   "notice": "2026-11-02",
+   "effective": "2026-12-31",
+   "employees": "87",
+   "kind": "Closure Permanent",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "Roundabout Entertainment, Inc.",
+   "county": "Los Angeles County",
+   "notice": "2026-10-30",
+   "effective": "2026-12-29",
+   "employees": "81",
+   "kind": "Closure Permanent",
+   "industry": "51 Information"
+  },
+  {
+   "company": "Welcome Market, Inc. (99 Ranch Market)",
+   "county": "Alameda County",
+   "notice": "2026-10-26",
+   "effective": "2026-12-05",
+   "employees": "54",
+   "kind": "Closure Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Amazon",
+   "county": "Los Angeles County",
+   "notice": "2026-11-02",
+   "effective": "2027-01-31",
+   "employees": "94",
+   "kind": "Layoff Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "Cepheid (B1)",
+   "county": "Santa Clara County",
+   "notice": "2026-10-28",
+   "effective": "2026-12-28",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Cepheid (B4)",
+   "county": "Santa Clara County",
+   "notice": "2026-10-28",
+   "effective": "2026-12-28",
+   "employees": "23",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Cepheid (B5)",
+   "county": "Santa Clara County",
+   "notice": "2026-10-28",
+   "effective": "2026-12-28",
+   "employees": "2",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Cepheid (B6)",
+   "county": "Santa Clara County",
+   "notice": "2026-10-28",
+   "effective": "2026-12-28",
+   "employees": "6",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Cepheid (B7)",
+   "county": "Santa Clara County",
+   "notice": "2026-10-28",
+   "effective": "2026-12-28",
+   "employees": "25",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Cepheid (B7+)",
+   "county": "Santa Clara County",
+   "notice": "2026-10-28",
+   "effective": "2026-12-28",
+   "employees": "1",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Cepheid (Remote)",
+   "county": "Santa Clara County",
+   "notice": "2026-10-28",
+   "effective": "2026-12-28",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "31-33 Manufacturing"
+  },
+  {
+   "company": "Wedgewood Village Pharmacy, LLC",
+   "county": "Santa Clara County",
+   "notice": "2026-11-02",
+   "effective": "2027-01-04",
+   "employees": "71",
+   "kind": "Layoff Permanent",
+   "industry": "44-45 Retail Trade"
+  },
+  {
+   "company": "City National Bank (555 S. Flower Street)",
+   "county": "Los Angeles County",
+   "notice": "2026-11-03",
+   "effective": "2027-01-08",
+   "employees": "11",
+   "kind": "Layoff Permanent",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "City National Bank (350 S. Grand Ave.)",
+   "county": "Los Angeles County",
+   "notice": "2026-11-03",
+   "effective": "2027-01-08",
+   "employees": "11",
+   "kind": "Layoff Permanent",
+   "industry": "52 Finance and Insurance"
+  },
+  {
+   "company": "JVS SoCal",
+   "county": "Los Angeles County",
+   "notice": "2026-10-27",
+   "effective": "2026-12-31",
+   "employees": "63",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "JVS SoCal",
+   "county": "Los Angeles County",
+   "notice": "2026-10-27",
+   "effective": "2026-12-31",
+   "employees": "33",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "JVS SoCal",
+   "county": "Los Angeles County",
+   "notice": "2026-10-27",
+   "effective": "2026-12-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "JVS SoCal",
+   "county": "Los Angeles County",
+   "notice": "2026-10-27",
+   "effective": "2026-12-31",
+   "employees": "5",
+   "kind": "Layoff Permanent",
+   "industry": "62 Healthcare and Social Assistance"
+  },
+  {
+   "company": "AES Corporation",
+   "county": "Los Angeles County",
+   "notice": "2026-11-03",
+   "effective": "2027-01-06",
+   "employees": "28",
+   "kind": "Layoff Permanent",
+   "industry": "22 Utilities"
+  },
+  {
+   "company": "ServiceNow, Inc.",
+   "county": "Santa Clara County",
+   "notice": "2026-11-04",
+   "effective": "2027-01-04",
+   "employees": "37",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Chick-fil-A - Hollins Group LLC - Orangethorpe",
+   "county": "Orange County",
+   "notice": "2026-11-03",
+   "effective": "2027-01-08",
+   "employees": "14",
+   "kind": "Closure Temporary",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "Chick-fil-A - Hollins Group LLC - La Palma",
+   "county": "Orange County",
+   "notice": "2026-11-03",
+   "effective": "2027-01-08",
+   "employees": "24",
+   "kind": "Closure Temporary",
+   "industry": "72 Accommodation and Food Services"
+  },
+  {
+   "company": "AES Corporation",
+   "county": "Orange County",
+   "notice": "2026-11-03",
+   "effective": "2027-01-06",
+   "employees": "13",
+   "kind": "Layoff Permanent",
+   "industry": "22 Utilities"
+  },
+  {
+   "company": "Eclipse Advantage, LLC",
+   "county": "Riverside County",
+   "notice": "2026-11-04",
+   "effective": "2027-01-04",
+   "employees": "35",
+   "kind": "Closure Permanent",
+   "industry": "56 Administrative and Support and Waste Management and Remediation"
+  },
+  {
+   "company": "Crinetics Pharmaceuticals, Inc.",
+   "county": "San Diego County",
+   "notice": "2026-11-03",
+   "effective": "2026-01-04",
+   "employees": "78",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "ServiceNow, Inc.",
+   "county": "San Diego County",
+   "notice": "2026-11-04",
+   "effective": "2027-01-04",
+   "employees": "25",
+   "kind": "Layoff Permanent",
+   "industry": "54 Professional Scientific and Technical Services"
+  },
+  {
+   "company": "Quince & Co, LLC",
+   "county": "San Francisco County",
+   "notice": "2026-11-03",
+   "effective": "2027-01-16",
+   "employees": "34",
+   "kind": "Closure Temporary",
+   "industry": "72 Accommodation and Food Services"
+  }
+ ]
+}
