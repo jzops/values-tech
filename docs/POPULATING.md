@@ -70,7 +70,23 @@ An entity becomes gradeable at **3 receipts across 2 distinct topics.**
   source_type: 'news', stance_date: '2025-02-05', verified: true },
 ```
 
-Append to the `stances` array in `src/lib/mock-data.ts`.
+Append **above the marker** in `src/lib/mock-data.ts`:
+
+```
+  // <<< APPEND NEW RECEIPTS ABOVE THIS LINE >>>
+```
+
+The corpus is split into `receipts1..N` chunks that `stances` spreads together.
+That is not cosmetic. A single array literal this large trips TypeScript's union
+complexity limit (TS2590), and a populate run once worked around it by casting
+the whole array `as any` — which silenced type checking for **every** receipt,
+so a bad `position` or a misspelled field would have compiled silently. Chunking
+keeps the checking; do not re-introduce the cast, and do not merge the chunks.
+
+There is therefore no single closing bracket to append before. An importer that
+looked for the next bare `]` wrote 221 receipts into the `stats` array instead,
+and `check:data` passed, because they were syntactically valid Stats. Use the
+marker.
 
 - **`id`** — next integer after the current max. Never reuse. Two batches once
   both started at 1200 and 26 receipts became permanently unreachable.

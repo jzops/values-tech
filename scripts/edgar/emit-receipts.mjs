@@ -46,8 +46,10 @@ for (const d of drops) {
 const path = new URL('../../src/lib/mock-data.ts', import.meta.url)
 const src = fs.readFileSync(path, 'utf8')
 const lines = src.split('\n')
-const close = lines.findIndex((l, i) => i > 127 && l === ']')
-if (close === -1) throw new Error('could not find the end of the stances array')
+// The stances array is chunked (TS2590); append at the explicit marker rather
+// than hunting for a closing bracket.
+const close = lines.findIndex(l => l.includes('APPEND NEW RECEIPTS ABOVE'))
+if (close === -1) throw new Error('append marker not found in mock-data.ts')
 
 lines.splice(close, 0, '', '  // DEI language removed from annual reports — sourced from SEC EDGAR full-text', '  // search and verified against each filing. See scripts/edgar/.', ...rows)
 fs.writeFileSync(path, lines.join('\n'))

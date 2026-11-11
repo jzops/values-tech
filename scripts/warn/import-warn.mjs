@@ -13,7 +13,8 @@ import fs from 'node:fs'
 const here = p => new URL(p, import.meta.url)
 const jiti = createJiti(import.meta.url, { interopDefault: true })
 const { companies, stances } = await jiti.import('../../src/lib/mock-data.ts')
-const { rows, source_url, report } = JSON.parse(fs.readFileSync(here('./ca-warn.json'), 'utf8'))
+const fileArg = (() => { const i = process.argv.indexOf('--file'); return i > -1 ? process.argv[i + 1] : './ca-warn.json' })()
+const { rows, source_url, report } = JSON.parse(fs.readFileSync(here(fileArg), 'utf8'))
 const { blocklist } = JSON.parse(fs.readFileSync(here('./blocklist.json'), 'utf8'))
 const blocked = new Set(blocklist)
 
@@ -45,8 +46,9 @@ for (const c of companies) {
 
 // Don't restate a layoff already on file for the same company and month.
 const existing = new Set(
-  stances.filter(s => s.entity_type === 'company' && s.topic === 'layoffs')
-         .map(s => `${s.entity_id}|${(s.stance_date || '').slice(0, 7)}`)
+  stances.filter(s => s.entity_type === 'company' && s.topic === 'layoffs' &&
+                      s.source_type === 'government_record')
+         .map(s => `${s.entity_id}|${s.stance_date}`)
 )
 
 const esc = s => String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'")
@@ -57,7 +59,7 @@ let id = Math.max(...stances.map(s => Number(s.id) || 0)) + 1
 const out = [], skipped = []
 for (const e of [...events.values()].sort((a, b) => b.total - a.total)) {
   if (!e.total || !e.notice) continue
-  if (existing.has(`${e.company.id}|${e.notice.slice(0, 7)}`)) { skipped.push(`${e.company.name} (${e.notice})`); continue }
+  if (existing.has(`${e.company.id}|${e.notice}`)) { skipped.push(`${e.company.name} (${e.notice})`); continue }
 
   const counties = [...e.counties].sort()
   const sites = e.counties.size
@@ -95,8 +97,11 @@ for (const e of [...events.values()].sort((a, b) => b.total - a.total)) {
 if (process.argv.includes('--write') && out.length) {
   const path = new URL('../../src/lib/mock-data.ts', import.meta.url)
   const lines = fs.readFileSync(path, 'utf8').split('\n')
-  const start = lines.findIndex(l => l.startsWith('export const stances'))
-  const close = lines.findIndex((l, i) => i > start && l === ']')
+  // The stances array is chunked (TS2590), so there is no single closing
+  // bracket to find — an earlier version matched the next bare ']' and wrote
+  // 221 receipts into the stats array instead. Append at the explicit marker.
+  const close = lines.findIndex(l => l.includes('APPEND NEW RECEIPTS ABOVE'))
+  if (close === -1) throw new Error('append marker not found in mock-data.ts')
   lines.splice(close, 0, '',
     `  // California WARN filings — ${report.split('A detailed')[0].trim()}`,
     '  // Exact headcounts from a mandatory state filing. See scripts/warn/.',
