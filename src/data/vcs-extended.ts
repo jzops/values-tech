@@ -84,7 +84,7 @@ export const extendedVCs: VC[] = [
   { id: '267', name: 'Third Rock Ventures', slug: 'third-rock', logo_url: 'https://icon.horse/icon/thirdrockventures.com', website: 'https://thirdrockventures.com', description: 'Biotech company builder.', aum: '$4B+' },
   { id: '268', name: 'General Catalyst Health', slug: 'gc-health', logo_url: 'https://icon.horse/icon/generalcatalyst.com', website: 'https://generalcatalyst.com', description: 'GC healthcare investing.', aum: '$3B+' },
   { id: '269', name: 'Kinnevik', slug: 'kinnevik', logo_url: 'https://icon.horse/icon/kinnevik.com', website: 'https://kinnevik.com', description: 'European health and consumer.', aum: '$10B+' },
-  { id: '270', name: 'GV Healthcare', slug: 'gv-health', logo_url: 'https://icon.horse/icon/gv.com', website: 'https://gv.com', description: 'Google healthcare investing.', aum: '$2B+' },
+  // Deleted: GV Healthcare (id='270') - duplicate of GV Life Sciences (id='164', vcs.ts)
 
   // More Fintech
   { id: '271', name: 'Flourish Ventures', slug: 'flourish', logo_url: 'https://icon.horse/icon/flourishventures.com', website: 'https://flourishventures.com', description: 'Fintech for good.', aum: '$1B+' },
