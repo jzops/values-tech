@@ -7283,6 +7283,9 @@ const receipts6: Stance[] = [
   // Alex Karp (person ID 16) - politics: distancing from Trump after midterm losses
   { id: '3082', entity_type: 'person', entity_id: '16', topic: 'politics', position: 'mixed', summary: 'In November 2026, Palantir CEO Alex Karp claimed he has been a Democrat his "whole life," despite Palantir receiving billions in contracts from the Trump administration. This distancing came after Democrats\' midterm electoral gains. Karp\'s FEC records show $360K to Republican PACs in 2025 and over $400K to Democratic committees in 2020-2024, confirming bipartisan political engagement rather than consistent party affiliation.', source_url: 'https://www.semafor.com/article/11/19/2026/tech-leaders-distance-themselves-from-trump-administration-following-midterms-defeat', source_type: 'news', stance_date: '2026-11-19', verified: true },
 
+  // Melanie Perkins (person ID 29) - layoffs: led Canva's 22% workforce reduction with generous severance
+  { id: '3083', entity_type: 'person', entity_id: '29', topic: 'layoffs', position: 'mixed', summary: 'Led Canva\'s largest restructuring, cutting 1,271 employees (22%) on November 4, 2026. In her announcement email, Perkins called it "our hardest moment ever" and "our hardest year yet," taking personal responsibility as growth slowed for the first time in a decade. Her severance package—six months salary regardless of location, healthcare continuation, $10,000 entrepreneurial grants, waived vesting cliffs, and MacBook retention—earned widespread praise. Fast Company noted the company "is showing other leaders how to handle layoffs gracefully."', source_url: 'https://www.fastcompany.com/91635782/canva-just-laid-off-1200-people-but-its-severance-package-is-earning-praise', source_type: 'news', stance_date: '2026-11-04', verified: true },
+
   // <<< APPEND NEW RECEIPTS ABOVE THIS LINE >>>
 ]
 
