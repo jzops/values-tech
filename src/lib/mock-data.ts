@@ -976,7 +976,7 @@ const receipts1: Stance[] = [
   { id: '358', entity_type: 'company', entity_id: '86', topic: 'layoffs', position: 'opposed', summary: 'Laid off 17% (1,500+) in 2023, another 5% in 2024. CEO Jeff Lawson stepped down. Segment sold.', source_url: 'https://www.twilio.com/blog/important-company-news-layoffs', source_type: 'company_website', stance_date: '2023-02-13', verified: true },
 
   // Zendesk (ID 87)
-  { id: '359', entity_type: 'company', entity_id: '87', topic: 'layoffs', position: 'opposed', summary: 'Laid off 8% after going private in 2022. Additional cuts in 2024 under PE ownership.', source_url: 'https://www.zendesk.com/', source_type: 'company_website', stance_date: '2023-05-01', verified: true },
+  { id: '359', entity_type: 'company', entity_id: '87', topic: 'layoffs', position: 'opposed', summary: 'Laid off nearly 5% of workforce after going private in November 2022 via $10.2B acquisition by Hellman & Friedman and Permira. Additional cuts followed under PE ownership as the company shifted focus from growth to profitability.', source_url: 'https://www.channele2e.com/news/zendesk-layoffs-2022-staff-cuts-will-impact-nearly-5-of-employees', source_type: 'news', stance_date: '2022-11-01', verified: true },
 
   // Atlassian (ID 40)
   { id: '360', entity_type: 'company', entity_id: '40', topic: 'layoffs', position: 'opposed', summary: 'Laid off 5% of workforce (500+) in March 2023. Co-CEOs blamed need to "rebalance" teams.', source_url: 'https://www.atlassian.com/blog/announcements/company-update-march-2023', source_type: 'company_website', stance_date: '2023-03-06', verified: true },
@@ -996,7 +996,7 @@ const receipts1: Stance[] = [
   { id: '367', entity_type: 'company', entity_id: '98', topic: 'layoffs', position: 'supported', summary: 'No significant layoffs during tech downturn. Continued hiring. CEO Olivier Pomel focused on growth.', source_url: 'https://www.datadoghq.com/careers/', source_type: 'company_website', stance_date: '2024-01-01', verified: true },
 
   // Splunk (ID 99)
-  { id: '368', entity_type: 'company', entity_id: '99', topic: 'layoffs', position: 'opposed', summary: 'Laid off 4% pre-Cisco acquisition. Cisco integration expected to bring more cuts.', source_url: 'https://www.splunk.com/', source_type: 'company_website', stance_date: '2024-03-01', verified: true },
+  { id: '368', entity_type: 'company', entity_id: '99', topic: 'layoffs', position: 'opposed', summary: 'Laid off 4% of workforce (325+) in early 2023, then cut another 7% (500+) in November 2023 just weeks after Cisco announced $28B acquisition. Cisco completed the takeover in March 2024.', source_url: 'https://www.cybersecuritydive.com/news/splunk-layoffs/698484/', source_type: 'news', stance_date: '2023-11-01', verified: true },
 
   // CrowdStrike (ID 116)
   { id: '369', entity_type: 'company', entity_id: '116', topic: 'worker_treatment', position: 'opposed', summary: 'Global IT outage July 2024 caused by faulty update. Blamed individual employee. $10B+ damages. CEO George Kurtz deflected responsibility.', source_url: 'https://www.reuters.com/technology/crowdstrike-outage-2024-07-19/', source_type: 'news', stance_date: '2024-07-19', verified: true },
@@ -1026,7 +1026,7 @@ const receipts1: Stance[] = [
   { id: '380', entity_type: 'company', entity_id: '120', topic: 'layoffs', position: 'opposed', summary: 'Laid off 20% (400+) in 2023. Dropped SMB customers. Focus on enterprise only.', source_url: 'https://www.brex.com/blog/layoffs', source_type: 'company_website', stance_date: '2023-01-01', verified: true },
 
   // Chime (ID 121)
-  { id: '381', entity_type: 'company', entity_id: '121', topic: 'layoffs', position: 'opposed', summary: 'Laid off 12% of workforce (160+) in 2023. Neobank delaying IPO and cutting costs.', source_url: 'https://www.chime.com/', source_type: 'company_website', stance_date: '2023-09-01', verified: true },
+  { id: '381', entity_type: 'company', entity_id: '121', topic: 'layoffs', position: 'opposed', summary: 'Laid off 12% of workforce (about 150 of 1,300 staff) in November 2022. CEO Chris Britt cited "current market dynamics" and stated cuts would help the neobank "flourish regardless of market conditions" while pursuing profitability.', source_url: 'https://techcrunch.com/2022/11/02/digital-bank-chime-is-cutting-costs-across-the-board-including-12-of-staff', source_type: 'news', stance_date: '2022-11-02', verified: true },
 
   // Affirm (ID 38)
   { id: '382', entity_type: 'company', entity_id: '38', topic: 'layoffs', position: 'opposed', summary: 'Laid off 19% of workforce in 2023. BNPL company Max Levchin blamed interest rate environment.', source_url: 'https://www.affirm.com/company/news', source_type: 'company_website', stance_date: '2023-02-08', verified: true },
@@ -1052,7 +1052,7 @@ const receipts1: Stance[] = [
   { id: '390', entity_type: 'company', entity_id: '128', topic: 'layoffs', position: 'opposed', summary: 'Laid off 10% of workforce in 2023. EdTech company blamed post-pandemic normalization.', source_url: 'https://blog.coursera.org/', source_type: 'company_website', stance_date: '2023-04-01', verified: true },
 
   // Chegg (ID 129)
-  { id: '391', entity_type: 'company', entity_id: '129', topic: 'layoffs', position: 'opposed', summary: 'Laid off 23% as ChatGPT destroyed homework help business. Stock crashed 98% from peak.', source_url: 'https://investor.chegg.com/', source_type: 'company_website', stance_date: '2024-06-01', verified: true },
+  { id: '391', entity_type: 'company', entity_id: '129', topic: 'layoffs', position: 'opposed', summary: 'Cut 67% of workforce across multiple rounds as ChatGPT destroyed homework help business. Stock crashed 99% from $95 peak to under $1. CEO blamed AI, stating ChatGPT became "as material" to decline as Google AI Overviews. Net loss of $837M in 2024.', source_url: 'https://www.kron4.com/news/bay-area/chegg-layoffs-company-to-cut-over-300-jobs-ceo-blames-ai/', source_type: 'news', stance_date: '2024-11-01', verified: true },
   { id: '392', entity_type: 'company', entity_id: '129', topic: 'ai_ethics', position: 'mixed', summary: 'Business model disrupted by AI. Now trying to pivot to AI tutoring. Academic integrity concerns about platform.', source_url: 'https://www.chegg.com/', source_type: 'company_website', stance_date: '2024-01-01', verified: true },
 
   // ========== MORE VC STANCES ==========
@@ -1136,7 +1136,7 @@ const receipts1: Stance[] = [
   { id: '424', entity_type: 'company', entity_id: '131', topic: 'layoffs', position: 'opposed', summary: 'Laid off 1,000+ in Max streaming merger. Content wiped from platforms. Writers/actors strikes.', source_url: 'https://wbd.com/', source_type: 'company_website', stance_date: '2023-08-01', verified: true },
 
   // Paramount (ID 132)
-  { id: '425', entity_type: 'company', entity_id: '132', topic: 'layoffs', position: 'opposed', summary: 'Laid off 15% of US workforce in 2024. Bob Bakish ousted. Merger uncertainty. Streaming losses.', source_url: 'https://www.paramount.com/', source_type: 'company_website', stance_date: '2024-08-01', verified: true },
+  { id: '425', entity_type: 'company', entity_id: '132', topic: 'layoffs', position: 'opposed', summary: 'Laid off about 800 employees (3% of workforce) in February 2024, then announced $500M in cuts affecting 2,000+ positions (15% of US workforce) later that year. CEO Bob Bakish stepped down April 30, 2024 amid merger uncertainty and streaming losses.', source_url: 'https://variety.com/2024/tv/news/paramount-global-layoffs-ceo-bakish-memo-1235909218/', source_type: 'news', stance_date: '2024-02-13', verified: true },
 
   // Roku (ID 133)
   { id: '426', entity_type: 'company', entity_id: '133', topic: 'layoffs', position: 'opposed', summary: 'Laid off 10% (360+) in 2023, then 6% more in 2024. Streaming platform cutting costs.', source_url: 'https://www.roku.com/about', source_type: 'company_website', stance_date: '2024-02-01', verified: true },
@@ -1164,7 +1164,7 @@ const receipts1: Stance[] = [
   { id: '434', entity_type: 'company', entity_id: '160', topic: 'worker_treatment', position: 'mixed', summary: 'Seller strike over fee increases. Platform criticized for favoring mass producers. Etsy original mission abandoned.', source_url: 'https://www.theverge.com/2022/4/etsy-seller-strike-fees', source_type: 'news', stance_date: '2022-04-11', verified: true },
 
   // Wayfair (ID 161)
-  { id: '435', entity_type: 'company', entity_id: '161', topic: 'layoffs', position: 'opposed', summary: 'Laid off 13% (1,750+) in January 2024. Third round of mass layoffs. CEO Niraj Shah cutting costs.', source_url: 'https://www.wayfair.com/', source_type: 'company_website', stance_date: '2024-01-19', verified: true },
+  { id: '435', entity_type: 'company', entity_id: '161', topic: 'layoffs', position: 'opposed', summary: 'Laid off 1,650 employees (13% of global workforce, 19% of corporate team) in January 2024. CEO Niraj Shah said "we went overboard in hiring" during COVID. Third round of cuts since 2022, expected to save $280M annually.', source_url: 'https://www.cbsnews.com/news/wayfair-layoffs-1650-employees/', source_type: 'news', stance_date: '2024-01-19', verified: true },
   { id: '436', entity_type: 'company', entity_id: '161', topic: 'remote_work', position: 'opposed', summary: 'Required RTO 4 days/week in 2024. CEO Niraj Shah criticized employees for "work-life balance."', source_url: 'https://www.businessinsider.com/wayfair-ceo-niraj-shah-work-life-balance-2024-1', source_type: 'news', stance_date: '2024-01-01', verified: true },
 
   // Wish (ID 162)
@@ -1238,7 +1238,7 @@ const receipts2: Stance[] = [
 
   // MORE LAYOFFS ACROSS COMPANIES
   { id: '465', entity_type: 'company', entity_id: '42', topic: 'layoffs', position: 'opposed', summary: 'Box laid off 7% (170+) in 2024. Enterprise storage company cost cutting despite cloud growth.', source_url: 'https://www.box.com/', source_type: 'company_website', stance_date: '2024-01-01', verified: true },
-  { id: '467', entity_type: 'company', entity_id: '44', topic: 'layoffs', position: 'opposed', summary: 'Wix laid off 6% (400+) in 2024. Israeli website builder cutting costs despite profitability.', source_url: 'https://www.wix.com/', source_type: 'company_website', stance_date: '2024-01-01', verified: true },
+  { id: '467', entity_type: 'company', entity_id: '44', topic: 'layoffs', position: 'opposed', summary: 'Wix cut 20% of workforce (about 1,000 employees) in 2026, the largest layoff in company history. CEO Avishai Abrahami said the company had "no choice" due to shekel strength (up 30% vs USD) and AI pressures. Multiple prior rounds since 2022 reduced staff from 6,100 peak.', source_url: 'https://www.ynetnews.com/business/article/ryroptbxme', source_type: 'news', stance_date: '2026-05-01', verified: true },
   { id: '468', entity_type: 'company', entity_id: '203', topic: 'layoffs', position: 'mixed', summary: 'Webflow small layoffs in 2024. No-code platform avoiding mass cuts. Vlad Magdalin cautious.', source_url: 'https://webflow.com/', source_type: 'company_website', stance_date: '2024-01-01', verified: true },
   { id: '469', entity_type: 'company', entity_id: '61', topic: 'layoffs', position: 'opposed', summary: 'Airtable laid off 27% (270+) in 2023. Spreadsheet-database hybrid cutting deep.', source_url: 'https://www.airtable.com/', source_type: 'company_website', stance_date: '2023-12-01', verified: true },
   { id: '470', entity_type: 'company', entity_id: '209', topic: 'layoffs', position: 'opposed', summary: 'Coda laid off 17% in 2023. Document collaboration tool restructuring.', source_url: 'https://coda.io/', source_type: 'company_website', stance_date: '2023-10-01', verified: true },
